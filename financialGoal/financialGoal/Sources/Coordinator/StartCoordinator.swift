@@ -16,6 +16,7 @@ public class StartCoordinator: Coordinator {
     }
     
     public func start() {
-        
+        let screenViewController = SignInViewController()
+        self.navigationController.pushViewController(screenViewController, animated: true)
     }
 }
