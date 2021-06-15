@@ -49,6 +49,7 @@
 		C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D926791E2500BB9729 /* LoginView.swift */; };
 		C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75DA26791E2500BB9729 /* LoginViewController.swift */; };
 		C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */; };
+		C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75EE2679417B00BB9729 /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		C1AD75D926791E2500BB9729 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C1AD75DA26791E2500BB9729 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		C1AD75EE2679417B00BB9729 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringConstants.swift; path = financialGoal/Sources/Infrastructure/Constants/Login/StringConstants.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 			children = (
 				C1AD75D126791E0200BB9729 /* FontsConstants.swift */,
 				C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */,
+				C1AD75EE2679417B00BB9729 /* StringConstants.swift */,
 			);
 			name = Login;
 			path = "../../../../../../ios-financial-goal-ANTIGO/financialGoal/financialGoal/Sources/Infrastructure/Constants/Login";
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
