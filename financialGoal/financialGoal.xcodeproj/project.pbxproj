@@ -44,6 +44,11 @@
 		3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE996282677BC070068E95B /* LocalizableStrings.swift */; };
 		3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */; };
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
+		C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D126791E0200BB9729 /* FontsConstants.swift */; };
+		C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */; };
+		C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D926791E2500BB9729 /* LoginView.swift */; };
+		C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75DA26791E2500BB9729 /* LoginViewController.swift */; };
+		C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +112,11 @@
 		3FE996282677BC070068E95B /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = accessibilityFinancialGoalLocalizeble.strings; sourceTree = "<group>"; };
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
+		C1AD75D126791E0200BB9729 /* FontsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
+		C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
+		C1AD75D926791E2500BB9729 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C1AD75DA26791E2500BB9729 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +262,7 @@
 		3FE99617267794280068E95B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */,
 				3FE996192677A4770068E95B /* Coordinator.swift */,
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
 			);
@@ -261,6 +272,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C1AD75D826791E2500BB9729 /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +298,7 @@
 		3FE9961F2677A4EB0068E95B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				C1AD75D026791E0200BB9729 /* Login */,
 				1CC542D026791A1400A807B4 /* FontConstants.swift */,
 				1CC542CF26791A1400A807B4 /* ImageConstant.swift */,
 				3FE996202677A50E0068E95B /* ColorConstant.swift */,
@@ -309,6 +322,25 @@
 				3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */,
 			);
 			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
+		C1AD75D026791E0200BB9729 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C1AD75D126791E0200BB9729 /* FontsConstants.swift */,
+				C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */,
+			);
+			name = Login;
+			path = "../../../../../../ios-financial-goal-ANTIGO/financialGoal/financialGoal/Sources/Infrastructure/Constants/Login";
+			sourceTree = "<group>";
+		};
+		C1AD75D826791E2500BB9729 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C1AD75D926791E2500BB9729 /* LoginView.swift */,
+				C1AD75DA26791E2500BB9729 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,13 +497,18 @@
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
+				C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */,
+				C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
+				C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */,
+				C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
+				C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,8 +686,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U847YAAMJ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = financialGoal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,8 +706,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U847YAAMJ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = financialGoal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,6 +16,7 @@ public class StartCoordinator: Coordinator {
     }
     
     public func start() {
-        
+        let loginVC = LoginViewController()
+        self.navigationController.pushViewController(loginVC, animated: true)
     }
 }
