@@ -16,6 +16,7 @@ public class StartCoordinator: Coordinator {
     }
     
     public func start() {
-        
+        let loggedOutViewController = LoggedOutViewController()
+        self.navigationController.pushViewController(loggedOutViewController, animated: true)
     }
 }

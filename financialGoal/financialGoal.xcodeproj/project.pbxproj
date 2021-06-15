@@ -28,6 +28,9 @@
 		1CC542FA26791A3B00A807B4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */; };
 		1CC542FB26791A3B00A807B4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */; };
 		1CC542FC26791A3B00A807B4 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */; };
+		1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430926791DC800A807B4 /* LoggedOutView.swift */; };
+		1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */; };
+		1CC5431726791FC700A807B4 /* LoggedOutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5431626791FC700A807B4 /* LoggedOutCoordinator.swift */; };
 		3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E3267792B70068E95B /* AppDelegate.swift */; };
 		3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E5267792B70068E95B /* SceneDelegate.swift */; };
 		3FE995E8267792B70068E95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E7267792B70068E95B /* ViewController.swift */; };
@@ -85,6 +88,9 @@
 		1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1CC5430926791DC800A807B4 /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutView.swift; path = financialGoal/Sources/Infrastructure/Constants/LoggedOutView.swift; sourceTree = SOURCE_ROOT; };
+		1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutViewController.swift; path = financialGoal/Sources/Infrastructure/Constants/LoggedOutViewController.swift; sourceTree = SOURCE_ROOT; };
+		1CC5431626791FC700A807B4 /* LoggedOutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutCoordinator.swift; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE995E5267792B70068E95B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 			children = (
 				3FE996192677A4770068E95B /* Coordinator.swift */,
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
+				1CC5431626791FC700A807B4 /* LoggedOutCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -261,6 +268,8 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CC5430926791DC800A807B4 /* LoggedOutView.swift */,
+				1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -464,11 +473,14 @@
 			files = (
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
+				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */,
+				1CC5431726791FC700A807B4 /* LoggedOutCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
+				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
@@ -689,7 +701,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
