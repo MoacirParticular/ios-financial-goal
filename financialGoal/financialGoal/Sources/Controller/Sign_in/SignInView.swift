@@ -11,42 +11,44 @@ class SignInView: UIView {
     
     // MARK: - Attributes
     
-    // label
+    // MARK: - Label
     let lbSubtitle: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Coisas desse tipo"
-        label.font = UIFont(name: "helvetica", size: 30)
+        label.text = ValuesSignIn_one.subtitile
+        label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
+        label.font = UIFont.fontPatternRoboto(size: StaticConfigLabel.subtitleSize)
+        label.font = UIFont.systemFont(ofSize: StaticConfigLabel.subtitleSize, weight: .light)
         return label
     }()
-    
     let lbDescription: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Descrição do campo"
-        label.font = UIFont(name: "helvetica", size: 16)
+        label.textColor = .descriptioneColor
+        label.text = ValuesSignIn_one.description
+        label.font = UIFont.fontPatternRoboto(size: StaticConfigLabel.descriptionSize)
+        label.font = UIFont.systemFont(ofSize: StaticConfigLabel.descriptionSize, weight: .light)
         return label
     }()
     
-    //TextField
+    // MARK: - TextField
     let txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
         tField.borderStyle = .roundedRect
         tField.addShadow()
-//        tField.roundCorners(corners: [.topLeft, .topRight], radius: 30)
-        tField.layer.shadowOpacity = 0.2
-        tField.placeholder = "algo a ser digitado"
+        tField.placeholder = ValuesSignIn_one.placeholder
         return tField
     }()
     
+    // MARK: - Button
     let bttnContinue: UIButton = {
         let bttn = UIButton()
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal
-        bttn.layer.cornerRadius = 6
+        bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
-        bttn.setTitle("Continue", for: .normal)
+        bttn.setTitle(ValuesSignIn_one.buttonTitle, for: .normal)
         return bttn
     }()
     
@@ -68,41 +70,28 @@ class SignInView: UIView {
     func alignLbSubtitle() {
         self.addSubview(lbSubtitle)
         NSLayoutConstraint.activate([
-            lbSubtitle.safeAreaLayoutGuide.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            lbSubtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
+            lbSubtitle.safeAreaLayoutGuide.topAnchor.constraint(
+                equalTo: self.safeAreaLayoutGuide.topAnchor, constant: ValuesConstraintsLabel.identTop),
+            lbSubtitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: ValuesConstraintsLabel.identLeft),
+            lbSubtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: ValuesConstraintsLabel.identRight)
         ])
     }
     func alignLbDescription() {
         self.addSubview(lbDescription)
-        NSLayoutConstraint.activate([
-            lbDescription.topAnchor.constraint(equalTo: lbSubtitle.bottomAnchor, constant: 20),
-            lbDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-        ])
+        NSLayoutConstraint.alignDefaultLabels(lbDescription, lbSubtitle.bottomAnchor, self)
     }
     func alignTxtField() {
         self.addSubview(txtField)
+        NSLayoutConstraint.alignDefault(txtField, lbDescription.bottomAnchor, self)
         NSLayoutConstraint.activate([
-            txtField.topAnchor.constraint(equalTo: lbDescription.bottomAnchor, constant: 20),
-            txtField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            txtField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            txtField.heightAnchor.constraint(equalToConstant: 60)
+            txtField.heightAnchor.constraint(equalToConstant: ValuesConstraintsTextField.height)
         ])
     }
     func alignBttnContinue() {
         self.addSubview(bttnContinue)
+        NSLayoutConstraint.alignDefaultButton(bttnContinue, self)
         NSLayoutConstraint.activate([
-            bttnContinue.topAnchor.constraint(equalTo: txtField.bottomAnchor, constant: 20),
-            bttnContinue.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            bttnContinue.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            bttnContinue.heightAnchor.constraint(equalToConstant: 60)
+            bttnContinue.heightAnchor.constraint(equalToConstant: ValuesConstraintsButton.height)
         ])
-    }
-}
-extension UITextField {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
     }
 }

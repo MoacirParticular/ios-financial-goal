@@ -44,6 +44,7 @@
 		3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE996282677BC070068E95B /* LocalizableStrings.swift */; };
 		3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */; };
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
+		891925FB2679294500EECCB5 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891925FA2679294500EECCB5 /* StaticThings.swift */; };
 		8935592C26791D9E00F154E0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935592B26791D9D00F154E0 /* SignInViewController.swift */; };
 		8935593426791DCF00F154E0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935593326791DCF00F154E0 /* SignInView.swift */; };
 		8935593926791DEF00F154E0 /* ExtensionUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935593826791DEF00F154E0 /* ExtensionUsed.swift */; };
@@ -110,6 +111,7 @@
 		3FE996282677BC070068E95B /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = accessibilityFinancialGoalLocalizeble.strings; sourceTree = "<group>"; };
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
+		891925FA2679294500EECCB5 /* StaticThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		8935592B26791D9D00F154E0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8935593326791DCF00F154E0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8935593826791DEF00F154E0 /* ExtensionUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUsed.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				8935592B26791D9D00F154E0 /* SignInViewController.swift */,
 				8935593326791DCF00F154E0 /* SignInView.swift */,
 				8935593826791DEF00F154E0 /* ExtensionUsed.swift */,
+				891925FA2679294500EECCB5 /* StaticThings.swift */,
 			);
 			path = Sign_in;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891925FB2679294500EECCB5 /* StaticThings.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,

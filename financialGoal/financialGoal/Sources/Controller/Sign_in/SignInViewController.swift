@@ -19,6 +19,14 @@ class SignInViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "asdsadsa"
+        self.title = ScreenAttributes.screenTitle
+        adjustKeyboardAppear()
+    }
+
+    func adjustKeyboardAppear() {
+        let height = 3 * (UIScreen.main.bounds.height / 5)
+        NSLayoutConstraint.activate([
+            self.view.heightAnchor.constraint(equalToConstant: height)
+        ])
     }
 }
