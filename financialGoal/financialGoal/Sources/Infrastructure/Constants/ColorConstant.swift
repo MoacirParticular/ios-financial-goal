@@ -22,6 +22,11 @@ public extension UIColor {
     static var greenCustomGoal: UIColor {
         return UIColor(named: "greenCustomGoal") ?? UIColor.black
     }
+    @objc
+    static var customColorPageControl: UIColor {
+        return UIColor(named: "customColorPageControl") ?? UIColor.gray
+    }
+    
 }
 
 

@@ -16,7 +16,6 @@ class LoggedOutViewController: UIViewController {
         loggedOutView.scrollView.delegate = self
         loggedOutView.addToViewControllerPageControl(view: view)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .white
     }
     
     override func loadView() {

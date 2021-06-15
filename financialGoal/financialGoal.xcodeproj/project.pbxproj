@@ -88,8 +88,8 @@
 		1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		1CC5430926791DC800A807B4 /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutView.swift; path = financialGoal/Sources/Infrastructure/Constants/LoggedOutView.swift; sourceTree = SOURCE_ROOT; };
-		1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutViewController.swift; path = financialGoal/Sources/Infrastructure/Constants/LoggedOutViewController.swift; sourceTree = SOURCE_ROOT; };
+		1CC5430926791DC800A807B4 /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutView.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutView.swift; sourceTree = SOURCE_ROOT; };
+		1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutViewController.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutViewController.swift; sourceTree = SOURCE_ROOT; };
 		1CC5431626791FC700A807B4 /* LoggedOutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutCoordinator.swift; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +164,15 @@
 				1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */,
 			);
 			path = roboto;
+			sourceTree = "<group>";
+		};
+		1CC5431E267935D900A807B4 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5430926791DC800A807B4 /* LoggedOutView.swift */,
+				1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
 			sourceTree = "<group>";
 		};
 		3FE995D7267792B70068E95B = {
@@ -268,8 +277,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1CC5430926791DC800A807B4 /* LoggedOutView.swift */,
-				1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */,
+				1CC5431E267935D900A807B4 /* LoggedOut */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
