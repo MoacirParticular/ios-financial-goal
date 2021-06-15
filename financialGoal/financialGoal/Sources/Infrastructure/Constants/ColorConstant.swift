@@ -9,18 +9,20 @@ import UIKit
 
 public extension UIColor {
     @objc
-    static var backgroundColor: UIColor {
-        return UIColor.white
+    static var backgroundCustomGoal: UIColor {
+        return UIColor(named: "backgroundCustomGoal") ?? UIColor.gray
     }
     
     @objc
-    static var textColor: UIColor {
-        return UIColor.black
+    static var blackCustomGoal: UIColor {
+        return UIColor(named: "blackblackCustomGoal") ?? UIColor.black
     }
     
     @objc
-    static var labelColor: UIColor {
-        return UIColor.gray
+    static var greenCustomGoal: UIColor {
+        return UIColor(named: "greenCustomGoal") ?? UIColor.black
     }
 }
+
+
 
