@@ -26,7 +26,11 @@ public extension UIColor {
     static var customColorPageControl: UIColor {
         return UIColor(named: "customColorPageControl") ?? UIColor.gray
     }
-    
+    @objc
+    static var customColorTextButton: UIColor {
+        return UIColor(named: "customColorTextButton") ?? UIColor.gray
+    }
+        
 }
 
 

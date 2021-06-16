@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIFont {
-    static func fontPatternRoboto(size: CGFloat) -> UIFont? {
-        return UIFont(name: "Roboto-Black", size: size)
+    static var fontPatternRoboto: UIFont {
+        return UIFont(name: "Roboto-Black", size: 16)!
     }
 }

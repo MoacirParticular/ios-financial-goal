@@ -42,7 +42,8 @@ class LoggedOutView: UIView {
     public func configureScrollView(view: UIView){
         scrollView.contentSize = CGSize(width: view.frame.size.width*4, height: scrollView.frame.size.height)
         scrollView.isPagingEnabled = true
-    
+        scrollView.showsHorizontalScrollIndicator = false
+        
         for i in 0..<4{
             let page = UIImageView(frame: CGRect(x: CGFloat(i) * view.frame.size.width, y: 0, width: view.frame.size.width, height: scrollView.frame.size.height))
             page.image = imagePage[i]
@@ -71,8 +72,9 @@ class LoggedOutView: UIView {
         button.frame = .zero
         button.layer.cornerRadius = 6
         button.backgroundColor = .greenCustomGoal
+        button.titleLabel?.font = .fontPatternRoboto
         button.setTitle("ABRA SUA CONTA", for: .normal)
-        button.tintColor = .backgroundCustomGoal
+        button.tintColor = .customColorTextButton
         return button
     }()
     
@@ -82,8 +84,9 @@ class LoggedOutView: UIView {
         button.frame = .zero
         button.layer.cornerRadius = 6
         button.backgroundColor = .blackCustomGoal
+        button.titleLabel?.font = .fontPatternRoboto
         button.setTitle("LOGIN", for: .normal)
-        button.tintColor = .backgroundCustomGoal
+        button.tintColor = .customColorTextButton
         return button
     }()
     
@@ -113,8 +116,6 @@ class LoggedOutView: UIView {
        ])
    }
    
-   
-    
     //MARK: Actions Buttons
     @objc
     func createAccountActionButton(sender: UIButton!) {
