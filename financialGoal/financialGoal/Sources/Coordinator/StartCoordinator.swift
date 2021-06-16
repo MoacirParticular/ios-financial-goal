@@ -20,8 +20,8 @@ import UIKit
         loggedOutViewController.onLoginButton = { setLogin in
             switch setLogin {
             case .CreateAccount:
-                print("Create account")
-                
+                let coordinator = SignInCoordinator(navigationController: self.navigationController)
+                coordinator.start()
             case .Login:
                 print("Login")
             }

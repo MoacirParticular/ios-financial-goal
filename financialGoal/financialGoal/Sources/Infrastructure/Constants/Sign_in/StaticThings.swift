@@ -18,8 +18,8 @@ struct ValuesSignIn_one {
 }
 
 struct StaticConfigLabel {
-    static let subtitleSize: CGFloat = 23
-    static let subtitleNumberOfLines: Int = 23
+//    static let subtitleSize: CGFloat = 23
+    static let subtitleNumberOfLines: Int = 0
     static let descriptionSize: CGFloat = 15
 }
 

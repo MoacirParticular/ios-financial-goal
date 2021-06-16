@@ -18,17 +18,17 @@ class SignInView: UIView {
         UIView.configInitailElements(label)
         label.text = ValuesSignIn_one.subtitile
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
-        label.font = UIFont.fontPatternRoboto(size: StaticConfigLabel.subtitleSize)
-        label.font = UIFont.systemFont(ofSize: StaticConfigLabel.subtitleSize, weight: .light)
+        label.font = .fontLabelTitleRegular
+        label.font = .fontLabelTitleRegular
         return label
     }()
     let lbDescription: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.textColor = .descriptioneColor
+        label.textColor = .customColorPageControl
         label.text = ValuesSignIn_one.description
-        label.font = UIFont.fontPatternRoboto(size: StaticConfigLabel.descriptionSize)
-        label.font = UIFont.systemFont(ofSize: StaticConfigLabel.descriptionSize, weight: .light)
+        label.font = .fontLabelSubTitleRegular
+        label.font = .fontLabelSubTitleRegular
         return label
     }()
     
@@ -51,7 +51,7 @@ class SignInView: UIView {
         bttn.backgroundColor = .blackCustomGoal
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
-        bttn.titleLabel?.font = UIFont.fontPatternRoboto(size: ValuesConstraintsButton.titleSize)
+        bttn.titleLabel?.font = .fontButtonsBlack
         bttn.setTitle(ValuesSignIn_one.buttonTitle, for: .normal)
         bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         return bttn
