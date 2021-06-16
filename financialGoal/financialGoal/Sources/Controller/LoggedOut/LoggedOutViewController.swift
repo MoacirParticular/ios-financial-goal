@@ -9,6 +9,8 @@ import UIKit
 
 class LoggedOutViewController: UIViewController {
     
+    var onLoginButton: ((_ setLogin: LoginType ) -> Void)?
+    
     let loggedOutView = LoggedOutView(frame: .zero)
     
     override func viewDidLoad() {
@@ -16,6 +18,7 @@ class LoggedOutViewController: UIViewController {
         loggedOutView.scrollView.delegate = self
         loggedOutView.addToViewControllerPageControl(view: view)
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        setActions()
     }
     
     override func loadView() {
@@ -25,6 +28,13 @@ class LoggedOutViewController: UIViewController {
         super.viewDidLayoutSubviews()
         loggedOutView.setFramePageScroll(view: view)
     }
+    //MARK: Actions Buttons
+    private func setActions() {
+        loggedOutView.onLoginButton = { setLogin in
+            self.onLoginButton?(setLogin)
+        }
+    }
+
 }
 // Liga o scrollView com o page controll
 extension LoggedOutViewController: UIScrollViewDelegate{

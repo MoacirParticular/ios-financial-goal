@@ -9,6 +9,9 @@ import UIKit
 
 class LoggedOutView: UIView {
     
+    //MARK: Actions Buttons
+    var onLoginButton: ((_ setLogin: LoginType ) -> Void)?
+    
     //MARK: PageControl
     let imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
     
@@ -93,7 +96,7 @@ class LoggedOutView: UIView {
     
     func setButtonCreateAccount(){
        buttonCreateAccount.addTarget(self, action: #selector(createAccountActionButton), for: .touchUpInside)
-      
+        
        addSubview(buttonCreateAccount)
        NSLayoutConstraint.activate([
         buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonCreateAccount),
@@ -104,8 +107,7 @@ class LoggedOutView: UIView {
    }
     
     func setButtonLogin() {
-       buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
-        
+        buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
        addSubview(buttonLogin)
        NSLayoutConstraint.activate([
         buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonLogin),
@@ -118,13 +120,13 @@ class LoggedOutView: UIView {
     //MARK: Actions Buttons
     @objc
     func createAccountActionButton(sender: UIButton!) {
-        print("Button create account acionado")
+        onLoginButton?(LoginType.CreateAccount)
     }
     
     @objc
     func loginActionButton(sender: UIButton!) {
-        print("Button login acionado")
-
+        onLoginButton?(LoginType.Login)
+        
     }
     
     //MARK: Cria e seta os buttons
