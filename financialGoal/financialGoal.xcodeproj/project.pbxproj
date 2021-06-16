@@ -50,6 +50,11 @@
 		3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE996282677BC070068E95B /* LocalizableStrings.swift */; };
 		3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */; };
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
+		891925FB2679294500EECCB5 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891925FA2679294500EECCB5 /* StaticThings.swift */; };
+		89192603267A664700EECCB5 /* SignIn2Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignIn2Coordinator.swift */; };
+		8935592C26791D9E00F154E0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935592B26791D9D00F154E0 /* SignInViewController.swift */; };
+		8935593426791DCF00F154E0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935593326791DCF00F154E0 /* SignInView.swift */; };
+		8935593926791DEF00F154E0 /* ExtensionUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935593826791DEF00F154E0 /* ExtensionUsed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,11 @@
 		3FE996282677BC070068E95B /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = accessibilityFinancialGoalLocalizeble.strings; sourceTree = "<group>"; };
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
+		891925FA2679294500EECCB5 /* StaticThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
+		89192602267A664700EECCB5 /* SignIn2Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn2Coordinator.swift; sourceTree = "<group>"; };
+		8935592B26791D9D00F154E0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8935593326791DCF00F154E0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8935593826791DEF00F154E0 /* ExtensionUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUsed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +295,7 @@
 			children = (
 				3FE996192677A4770068E95B /* Coordinator.swift */,
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
+				89192602267A664700EECCB5 /* SignIn2Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -343,6 +354,17 @@
 				3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */,
 			);
 			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
+		8935592A26791D6E00F154E0 /* Sign_in */ = {
+			isa = PBXGroup;
+			children = (
+				8935592B26791D9D00F154E0 /* SignInViewController.swift */,
+				8935593326791DCF00F154E0 /* SignInView.swift */,
+				8935593826791DEF00F154E0 /* ExtensionUsed.swift */,
+				891925FA2679294500EECCB5 /* StaticThings.swift */,
+			);
+			path = Sign_in;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +518,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891925FB2679294500EECCB5 /* StaticThings.swift in Sources */,
+				89192603267A664700EECCB5 /* SignIn2Coordinator.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
@@ -510,9 +534,12 @@
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
+				8935592C26791D9E00F154E0 /* SignInViewController.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
+				8935593926791DEF00F154E0 /* ExtensionUsed.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
+				8935593426791DCF00F154E0 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
