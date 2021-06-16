@@ -28,6 +28,7 @@ struct ValuesConstraintsTextField {
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
     static let height: CGFloat = 52
+    static let textIdent: CGFloat = 15
 }
 
 struct ValuesConstraintsLabel {
@@ -42,6 +43,7 @@ struct ValuesConstraintsButton {
     static let identRight: CGFloat = ValuesConstraintsTextField.identRight
     static let identBotton: CGFloat = -20
     static let radiusValue: CGFloat = 6
+    static let titleSize: CGFloat = 16
 }
 struct ShadowTextField {
     static let shadowWidth: CGFloat = -6

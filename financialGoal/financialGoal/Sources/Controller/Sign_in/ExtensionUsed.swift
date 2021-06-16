@@ -50,3 +50,16 @@ extension NSLayoutConstraint {
 extension UIColor {
     static let descriptioneColor: UIColor = #colorLiteral(red: 0.5882352941, green: 0.5882352941, blue: 0.5882352941, alpha: 1)
 }
+
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
+}

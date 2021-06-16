@@ -11,6 +11,7 @@ class SignInViewController: UIViewController {
     
     // MARK: - Attributes
     let overrideView = SignInView(frame: .zero)
+    var buttonAction: (() -> Void)?
     
     // MARK: - Methods/ Functions
     
@@ -20,9 +21,16 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = ScreenAttributes.screenTitle
+        getButtonAction()
         adjustKeyboardAppear()
     }
 
+    private func getButtonAction() {
+        overrideView.buttonAction = {
+            self.buttonAction?()
+            print("Hora de mudar de tela!")
+        }
+    }
     func adjustKeyboardAppear() {
         let height = 3 * (UIScreen.main.bounds.height / 5)
         NSLayoutConstraint.activate([

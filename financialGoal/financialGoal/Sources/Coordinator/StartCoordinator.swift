@@ -17,6 +17,12 @@ public class StartCoordinator: Coordinator {
     
     public func start() {
         let screenViewController = SignInViewController()
+        
+        screenViewController.buttonAction = {
+            let signIn2Coordinator = SignIn2Coordinator(navigationController: self.navigationController)
+            signIn2Coordinator.start()
+        }
         self.navigationController.pushViewController(screenViewController, animated: true)
+        
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class SignInView: UIView {
     
     // MARK: - Attributes
+    var buttonAction: (() -> Void)?
     
     // MARK: - Label
     let lbSubtitle: UILabel = {
@@ -38,6 +39,8 @@ class SignInView: UIView {
         tField.borderStyle = .roundedRect
         tField.addShadow()
         tField.placeholder = ValuesSignIn_one.placeholder
+        tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
+        tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
     }()
     
@@ -48,7 +51,9 @@ class SignInView: UIView {
         bttn.backgroundColor = .blackCustomGoal
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
+        bttn.titleLabel?.font = UIFont.fontPatternRoboto(size: ValuesConstraintsButton.titleSize)
         bttn.setTitle(ValuesSignIn_one.buttonTitle, for: .normal)
+        bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         return bttn
     }()
     
@@ -67,6 +72,13 @@ class SignInView: UIView {
         alignTxtField()
         alignBttnContinue()
     }
+    
+    // MARK: - ButtonAction
+    @objc func receiveActionButton(sender: UIButton!) {
+        self.buttonAction?()
+    }
+    
+    // MARK: - Constraints
     func alignLbSubtitle() {
         self.addSubview(lbSubtitle)
         NSLayoutConstraint.activate([
