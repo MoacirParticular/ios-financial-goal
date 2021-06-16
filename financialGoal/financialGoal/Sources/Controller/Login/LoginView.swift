@@ -9,6 +9,7 @@ import UIKit
 
 class LoginView: UIView {
     
+    var onLoginButton: ((_ option: Int) -> Void)?
 
 //MARK: TextFields
 
@@ -21,6 +22,11 @@ class LoginView: UIView {
     textField.font = UIFont.systemFont(ofSize: 17)
     textField.backgroundColor = .white
     textField.layer.cornerRadius = cornerRadiusTF
+    
+    
+    textField.leftView = UITextField(frame: CGRect(x: 0, y: 0, width: 5, height: 10))
+    textField.leftViewMode = .always
+    
     textField.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     textField.addShadow()
     
@@ -122,9 +128,14 @@ class LoginView: UIView {
     func loginActionButton (sender: UIButton!) {
         print("Tentando logar")
     }
+    
+    
 
+    
     @objc
     func forgotPasswordActionButton (sender: UIButton!) {
+        onLoginButton?(1)
+    
         print("Usuário esqueceu a senha")
         //print(textFieldUsuario.text!)
     }
@@ -148,6 +159,7 @@ class LoginView: UIView {
         setButtonForgotPassword()
 
     }
+    
 }
 
 // Shadow TextField
@@ -160,3 +172,5 @@ extension UITextField {
         self.layer.shadowOpacity = 0.08
     }
 }
+
+

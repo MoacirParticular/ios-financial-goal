@@ -44,6 +44,7 @@
 		3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE996282677BC070068E95B /* LocalizableStrings.swift */; };
 		3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */; };
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
+		C15A6E39267A846300B23B05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6E38267A846300B23B05 /* AlertViewController.swift */; };
 		C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D126791E0200BB9729 /* FontsConstants.swift */; };
 		C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */; };
 		C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D926791E2500BB9729 /* LoginView.swift */; };
@@ -113,6 +114,7 @@
 		3FE996282677BC070068E95B /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = accessibilityFinancialGoalLocalizeble.strings; sourceTree = "<group>"; };
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
+		C15A6E38267A846300B23B05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C1AD75D126791E0200BB9729 /* FontsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
 		C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
 		C1AD75D926791E2500BB9729 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			children = (
 				C1AD75D926791E2500BB9729 /* LoginView.swift */,
 				C1AD75DA26791E2500BB9729 /* LoginViewController.swift */,
+				C15A6E38267A846300B23B05 /* AlertViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */,
 				C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */,
+				C15A6E39267A846300B23B05 /* AlertViewController.swift in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
