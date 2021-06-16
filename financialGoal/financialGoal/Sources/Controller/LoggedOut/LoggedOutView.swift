@@ -10,7 +10,6 @@ import UIKit
 class LoggedOutView: UIView {
     
     //MARK: PageControl
-    
     let imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
     
     public let scrollView = UIScrollView()
@@ -70,10 +69,10 @@ class LoggedOutView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.frame = .zero
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
         button.backgroundColor = .greenCustomGoal
-        button.titleLabel?.font = .fontPatternRoboto
-        button.setTitle("ABRA SUA CONTA", for: .normal)
+        button.titleLabel?.font = .fontButtonsBlack
+        button.setTitle(StringConstants.titleButtonCreateAccount, for: .normal)
         button.tintColor = .customColorTextButton
         return button
     }()
@@ -82,10 +81,10 @@ class LoggedOutView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.frame = .zero
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
         button.backgroundColor = .blackCustomGoal
-        button.titleLabel?.font = .fontPatternRoboto
-        button.setTitle("LOGIN", for: .normal)
+        button.titleLabel?.font = .fontButtonsBlack
+        button.setTitle(StringConstants.titleButtonLogin, for: .normal)
         button.tintColor = .customColorTextButton
         return button
     }()
@@ -97,10 +96,10 @@ class LoggedOutView: UIView {
       
        addSubview(buttonCreateAccount)
        NSLayoutConstraint.activate([
-           buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -144),
-           buttonCreateAccount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-           buttonCreateAccount.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-           buttonCreateAccount.heightAnchor.constraint(equalToConstant: 52)
+        buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonCreateAccount),
+        buttonCreateAccount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
+        buttonCreateAccount.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
+        buttonCreateAccount.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
        ])
    }
     
@@ -109,10 +108,10 @@ class LoggedOutView: UIView {
         
        addSubview(buttonLogin)
        NSLayoutConstraint.activate([
-           buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -77),
-           buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-           buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-           buttonLogin.heightAnchor.constraint(equalToConstant: 52)
+        buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonLogin),
+        buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
+        buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
+        buttonLogin.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
        ])
    }
    

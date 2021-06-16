@@ -8,7 +8,17 @@
 import UIKit
 
 public extension UIFont {
-    static var fontPatternRoboto: UIFont {
-        return UIFont(name: "Roboto-Black", size: 16)!
+    
+    static let fontDefaultGeorgia = UIFont(name: "Georgia", size: 16) ?? UIFont()
+    
+    static var fontButtonsBlack: UIFont {
+        return UIFont(name: "Roboto-Black", size: 16) ?? fontDefaultGeorgia
+    }
+    static var fontLabelTitleRegular: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 24) ?? fontDefaultGeorgia
+    }
+    static var fontLabelSubTitleRegular: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 15) ?? fontDefaultGeorgia
     }
 }
+
