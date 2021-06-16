@@ -5,17 +5,29 @@
 //  Created by Moacir Lamego on 14/06/21.
 //
 
-import Foundation
 import UIKit
 
-public class StartCoordinator: Coordinator {
+ class StartCoordinator: Coordinator {
     let navigationController: UINavigationController
    
     init (navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    public func start() {
+     func start() {
+        let loggedOutViewController = LoggedOutViewController()
+        
+        loggedOutViewController.onLoginButton = { setLogin in
+            switch setLogin {
+            case .CreateAccount:
+                print("Create account")
+                
+            case .Login:
+                print("Login")
+            }
+           
+        }
+        self.navigationController.pushViewController(loggedOutViewController, animated: true)
         
     }
 }

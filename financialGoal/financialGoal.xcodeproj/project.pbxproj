@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstant.swift */; };
+		1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstants.swift */; };
 		1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542D026791A1400A807B4 /* FontConstants.swift */; };
 		1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */; };
 		1CC542EB26791A3B00A807B4 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D826791A3B00A807B4 /* Roboto-Light.ttf */; };
@@ -28,6 +28,12 @@
 		1CC542FA26791A3B00A807B4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */; };
 		1CC542FB26791A3B00A807B4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */; };
 		1CC542FC26791A3B00A807B4 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */; };
+		1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430926791DC800A807B4 /* LoggedOutView.swift */; };
+		1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */; };
+		1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC543252679847E00A807B4 /* ButtonConstants.swift */; };
+		1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5432B267A355000A807B4 /* StringConstants.swift */; };
+		1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54335267A3BB700A807B4 /* LoginType.swift */; };
+		1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */; };
 		3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E3267792B70068E95B /* AppDelegate.swift */; };
 		3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E5267792B70068E95B /* SceneDelegate.swift */; };
 		3FE995E8267792B70068E95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E7267792B70068E95B /* ViewController.swift */; };
@@ -64,7 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CC542CF26791A1400A807B4 /* ImageConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
+		1CC542CF26791A1400A807B4 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		1CC542D026791A1400A807B4 /* FontConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		1CC542D826791A3B00A807B4 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -85,6 +91,12 @@
 		1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1CC5430926791DC800A807B4 /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutView.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutView.swift; sourceTree = SOURCE_ROOT; };
+		1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutViewController.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutViewController.swift; sourceTree = SOURCE_ROOT; };
+		1CC543252679847E00A807B4 /* ButtonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConstants.swift; sourceTree = "<group>"; };
+		1CC5432B267A355000A807B4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		1CC54335267A3BB700A807B4 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAndScrollConstants.swift; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE995E5267792B70068E95B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +170,25 @@
 				1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */,
 			);
 			path = roboto;
+			sourceTree = "<group>";
+		};
+		1CC5431E267935D900A807B4 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5430926791DC800A807B4 /* LoggedOutView.swift */,
+				1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		1CC5432A267A350900A807B4 /* Logged_Out */ = {
+			isa = PBXGroup;
+			children = (
+				1CC543252679847E00A807B4 /* ButtonConstants.swift */,
+				1CC542CF26791A1400A807B4 /* ImageConstants.swift */,
+				1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */,
+			);
+			path = Logged_Out;
 			sourceTree = "<group>";
 		};
 		3FE995D7267792B70068E95B = {
@@ -261,6 +292,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CC5431E267935D900A807B4 /* LoggedOut */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +311,7 @@
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
+				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -286,8 +319,9 @@
 		3FE9961F2677A4EB0068E95B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				1CC5432A267A350900A807B4 /* Logged_Out */,
+				1CC5432B267A355000A807B4 /* StringConstants.swift */,
 				1CC542D026791A1400A807B4 /* FontConstants.swift */,
-				1CC542CF26791A1400A807B4 /* ImageConstant.swift */,
 				3FE996202677A50E0068E95B /* ColorConstant.swift */,
 			);
 			path = Constants;
@@ -463,12 +497,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
+				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
+				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
+				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
+				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
+				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
-				1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */,
+				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
+				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
@@ -689,7 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
