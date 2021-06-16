@@ -8,9 +8,10 @@
 import UIKit
 
 public extension UIColor {
+    
     @objc
     static var backgroundCustomGoal: UIColor {
-        return UIColor(named: "backgroundCustomGoal") ?? UIColor.gray
+        return UIColor(named: "backgroundCustomGoal") ?? UIColor.white
     }
     
     @objc
@@ -20,16 +21,23 @@ public extension UIColor {
     
     @objc
     static var greenCustomGoal: UIColor {
-        return UIColor(named: "greenCustomGoal") ?? UIColor.black
+        return UIColor(named: "greenCustomGoal") ?? UIColor.systemGreen
     }
+    
     @objc
     static var customColorPageControl: UIColor {
         return UIColor(named: "customColorPageControl") ?? UIColor.gray
     }
+    
     @objc
     static var customColorTextButton: UIColor {
         return UIColor(named: "customColorTextButton") ?? UIColor.gray
     }
+    @objc
+    static var customColorRoxo: UIColor {
+        return UIColor(named: "customColorRoxo") ?? UIColor.purple
+    }
+    
         
 }
 

@@ -11,12 +11,17 @@ public extension UIFont {
     
     static let fontDefaultGeorgia = UIFont(name: "Georgia", size: 16) ?? UIFont()
     
+    //MARK: Tamanho e Fonte dos botões
     static var fontButtonsBlack: UIFont {
         return UIFont(name: "Roboto-Black", size: 16) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho e fonte dos titulos
     static var fontLabelTitleRegular: UIFont {
         return UIFont(name: "Roboto-Regular", size: 24) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho e fonte dos subtitulos
     static var fontLabelSubTitleRegular: UIFont {
         return UIFont(name: "Roboto-Regular", size: 15) ?? fontDefaultGeorgia
     }

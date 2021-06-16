@@ -13,13 +13,13 @@ class LoggedOutView: UIView {
     var onLoginButton: ((_ setLogin: LoginType ) -> Void)?
     
     //MARK: PageControl
-    let imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
+    var imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
     
     public let scrollView = UIScrollView()
     
     public let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.numberOfPages = 4
+        pageControl.numberOfPages = PageAndScrollConstants.numberPages
         pageControl.pageIndicatorTintColor = .customColorPageControl
         pageControl.currentPageIndicatorTintColor = .greenCustomGoal
         
@@ -37,17 +37,17 @@ class LoggedOutView: UIView {
     // rola o slide de acordo com o click no page control
     @objc private func pageControlDidChange(_ sender: UIPageControl){
         let current = sender.currentPage
-        scrollView.setContentOffset(CGPoint(x: CGFloat(current) * scrollView.frame.size.width, y: 0), animated: true)
+        scrollView.setContentOffset(CGPoint(x: CGFloat(current) * scrollView.frame.size.width, y: PageAndScrollConstants.numberZero), animated: true)
     }
     
     //MARK: ScrollView
     public func configureScrollView(view: UIView){
-        scrollView.contentSize = CGSize(width: view.frame.size.width*4, height: scrollView.frame.size.height)
+        scrollView.contentSize = CGSize(width: view.frame.size.width*PageAndScrollConstants.numberFour, height: scrollView.frame.size.height)
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         
-        for i in 0..<4{
-            let page = UIImageView(frame: CGRect(x: CGFloat(i) * view.frame.size.width, y: 0, width: view.frame.size.width, height: scrollView.frame.size.height))
+        for i in PageAndScrollConstants.numberZeroFor..<PageAndScrollConstants.numberPages{
+            let page = UIImageView(frame: CGRect(x: CGFloat(i) * view.frame.size.width, y: PageAndScrollConstants.numberZero, width: view.frame.size.width, height: scrollView.frame.size.height))
             page.image = imagePage[i]
             scrollView.addSubview(page)
         }
@@ -59,10 +59,10 @@ class LoggedOutView: UIView {
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         
-        pageControl.frame = CGRect(x: 0, y: scrollView.frame.size.height-18, width: view.frame.size.width, height: 70)
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: screenHeight / 5 * 3.3)
+        pageControl.frame = CGRect(x: PageAndScrollConstants.numberZero, y: scrollView.frame.size.height-PageAndScrollConstants.numberEighteen, width: view.frame.size.width, height: PageAndScrollConstants.numberSeventy)
+        scrollView.frame = CGRect(x: PageAndScrollConstants.numberZero, y: PageAndScrollConstants.numberZero, width: view.frame.size.width, height: screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberThreePointThree)
         
-        if scrollView.subviews.count == 2 {
+        if scrollView.subviews.count == PageAndScrollConstants.numberTwo {
             configureScrollView(view: view)
         }
     }
@@ -136,7 +136,7 @@ class LoggedOutView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(StringConstants.requiredError)
     }
     
     func createViewButton(){
