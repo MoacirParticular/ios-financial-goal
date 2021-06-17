@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  SignInMailView.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 14/06/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInView: UIView {
+class SignInMailView: UIView {
     
     // MARK: - Attributes
     var buttonAction: (() -> Void)?
@@ -16,7 +16,7 @@ class SignInView: UIView {
     let lbSubtitle: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = ValuesSignIn_one.subtitile
+        label.text = ValuesSignIn_Mail.subtitile
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
         label.font = .fontLabelTitleRegular
         label.font = .fontLabelTitleRegular
@@ -26,7 +26,7 @@ class SignInView: UIView {
         let label = UILabel()
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_one.description
+        label.text = ValuesSignIn_Mail.description
         label.font = .fontLabelSubTitleRegular
         label.font = .fontLabelSubTitleRegular
         return label
@@ -38,7 +38,7 @@ class SignInView: UIView {
         UIView.configInitailElements(tField)
         tField.borderStyle = .roundedRect
         tField.addShadow()
-        tField.placeholder = ValuesSignIn_one.placeholder
+        tField.placeholder = ValuesSignIn_Mail.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
@@ -52,7 +52,7 @@ class SignInView: UIView {
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
-        bttn.setTitle(ValuesSignIn_one.buttonTitle, for: .normal)
+        bttn.setTitle(ValuesSignIn_Mail.buttonTitle, for: .normal)
         bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         return bttn
     }()
@@ -62,10 +62,12 @@ class SignInView: UIView {
         super.init(frame: frame)
         createView()
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func createView() {
+    
+    private func createView() {
         self.backgroundColor = .backgroundCustomGoal
         alignLbSubtitle()
         alignLbDescription()
@@ -74,12 +76,12 @@ class SignInView: UIView {
     }
     
     // MARK: - ButtonAction
-    @objc func receiveActionButton(sender: UIButton!) {
+    @objc private func receiveActionButton(sender: UIButton!) {
         self.buttonAction?()
     }
     
     // MARK: - Constraints
-    func alignLbSubtitle() {
+    private func alignLbSubtitle() {
         self.addSubview(lbSubtitle)
         NSLayoutConstraint.activate([
             lbSubtitle.safeAreaLayoutGuide.topAnchor.constraint(
@@ -88,22 +90,25 @@ class SignInView: UIView {
             lbSubtitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: ValuesConstraintsLabel.identRight)
         ])
     }
-    func alignLbDescription() {
+    
+    private func alignLbDescription() {
         self.addSubview(lbDescription)
         NSLayoutConstraint.alignDefaultLabels(lbDescription, lbSubtitle.bottomAnchor, self)
     }
-    func alignTxtField() {
+    
+    private func alignTxtField() {
         self.addSubview(txtField)
         NSLayoutConstraint.alignDefault(txtField, lbDescription.bottomAnchor, self)
         NSLayoutConstraint.activate([
             txtField.heightAnchor.constraint(equalToConstant: ValuesConstraintsTextField.height)
         ])
     }
-    func alignBttnContinue() {
+    
+    private func alignBttnContinue() {
         self.addSubview(bttnContinue)
         NSLayoutConstraint.alignDefaultButton(bttnContinue, self)
         NSLayoutConstraint.activate([
-            bttnContinue.heightAnchor.constraint(equalToConstant: ValuesConstraintsButton.height)
+            
         ])
     }
 }
