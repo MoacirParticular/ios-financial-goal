@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstant.swift */; };
+		1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstants.swift */; };
 		1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542D026791A1400A807B4 /* FontConstants.swift */; };
 		1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */; };
 		1CC542EB26791A3B00A807B4 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D826791A3B00A807B4 /* Roboto-Light.ttf */; };
@@ -28,6 +28,12 @@
 		1CC542FA26791A3B00A807B4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */; };
 		1CC542FB26791A3B00A807B4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */; };
 		1CC542FC26791A3B00A807B4 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */; };
+		1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430926791DC800A807B4 /* LoggedOutView.swift */; };
+		1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */; };
+		1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC543252679847E00A807B4 /* ButtonConstants.swift */; };
+		1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5432B267A355000A807B4 /* StringConstants.swift */; };
+		1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54335267A3BB700A807B4 /* LoginType.swift */; };
+		1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */; };
 		3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E3267792B70068E95B /* AppDelegate.swift */; };
 		3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E5267792B70068E95B /* SceneDelegate.swift */; };
 		3FE995E8267792B70068E95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E7267792B70068E95B /* ViewController.swift */; };
@@ -51,6 +57,14 @@
 		C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75DA26791E2500BB9729 /* LoginViewController.swift */; };
 		C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */; };
 		C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75EE2679417B00BB9729 /* StringConstants.swift */; };
+		89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignInCoordinator.swift */; };
+		89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */; };
+		89365A51267A7F150087531D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A50267A7F150087531D /* UITextField+.swift */; };
+		89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A5B267A7FC80087531D /* SignIn2Coordinator.swift */; };
+		896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDB267A779B004A05F3 /* UIView+.swift */; };
+		896ABDE0267A779B004A05F3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInView.swift */; };
+		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
+		896ABDE2267A779B004A05F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CC542CF26791A1400A807B4 /* ImageConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
+		1CC542CF26791A1400A807B4 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		1CC542D026791A1400A807B4 /* FontConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		1CC542D826791A3B00A807B4 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -92,6 +106,12 @@
 		1CC542E726791A3B00A807B4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1CC542E826791A3B00A807B4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1CC542E926791A3B00A807B4 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1CC5430926791DC800A807B4 /* LoggedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutView.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutView.swift; sourceTree = SOURCE_ROOT; };
+		1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedOutViewController.swift; path = financialGoal/Sources/Controller/LoggedOut/LoggedOutViewController.swift; sourceTree = SOURCE_ROOT; };
+		1CC543252679847E00A807B4 /* ButtonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConstants.swift; sourceTree = "<group>"; };
+		1CC5432B267A355000A807B4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		1CC54335267A3BB700A807B4 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAndScrollConstants.swift; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE995E5267792B70068E95B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +141,14 @@
 		C1AD75DA26791E2500BB9729 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C1AD75EE2679417B00BB9729 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringConstants.swift; path = financialGoal/Sources/Infrastructure/Constants/Login/StringConstants.swift; sourceTree = SOURCE_ROOT; };
+		89192602267A664700EECCB5 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
+		89365A50267A7F150087531D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		89365A5B267A7FC80087531D /* SignIn2Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn2Coordinator.swift; sourceTree = "<group>"; };
+		896ABDDB267A779B004A05F3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		896ABDDC267A779B004A05F3 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
+		896ABDDE267A779B004A05F3 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +202,25 @@
 			path = roboto;
 			sourceTree = "<group>";
 		};
+		1CC5431E267935D900A807B4 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5430926791DC800A807B4 /* LoggedOutView.swift */,
+				1CC5430E26791E3900A807B4 /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		1CC5432A267A350900A807B4 /* Logged_Out */ = {
+			isa = PBXGroup;
+			children = (
+				1CC543252679847E00A807B4 /* ButtonConstants.swift */,
+				1CC542CF26791A1400A807B4 /* ImageConstants.swift */,
+				1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */,
+			);
+			path = Logged_Out;
+			sourceTree = "<group>";
+		};
 		3FE995D7267792B70068E95B = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +228,7 @@
 				3FE995F9267792BB0068E95B /* financialGoalTests */,
 				3FE99604267792BC0068E95B /* financialGoalUITests */,
 				3FE995E1267792B70068E95B /* Products */,
+				896ABDCE267A76FE004A05F3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +317,8 @@
 				C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */,
 				3FE996192677A4770068E95B /* Coordinator.swift */,
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
+				89192602267A664700EECCB5 /* SignInCoordinator.swift */,
+				89365A5B267A7FC80087531D /* SignIn2Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -277,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				C1AD75D826791E2500BB9729 /* Login */,
+				896ABDDA267A779B004A05F3 /* Sign_in */,
+				1CC5431E267935D900A807B4 /* LoggedOut */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,7 +336,10 @@
 		3FE9961B2677A4970068E95B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				896ABDDB267A779B004A05F3 /* UIView+.swift */,
 				3FE9961C2677A4B30068E95B /* String+.swift */,
+				89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */,
+				89365A50267A7F150087531D /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +347,7 @@
 		3FE9961E2677A4DD0068E95B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
@@ -303,8 +359,10 @@
 			isa = PBXGroup;
 			children = (
 				C1AD75D026791E0200BB9729 /* Login */,
+				896ABDEC267A7ACD004A05F3 /* Sign_in */,
+				1CC5432A267A350900A807B4 /* Logged_Out */,
+				1CC5432B267A355000A807B4 /* StringConstants.swift */,
 				1CC542D026791A1400A807B4 /* FontConstants.swift */,
-				1CC542CF26791A1400A807B4 /* ImageConstant.swift */,
 				3FE996202677A50E0068E95B /* ColorConstant.swift */,
 			);
 			path = Constants;
@@ -347,6 +405,28 @@
 				C15A6E38267A846300B23B05 /* AlertViewController.swift */,
 			);
 			path = Login;
+		896ABDCE267A76FE004A05F3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		896ABDDA267A779B004A05F3 /* Sign_in */ = {
+			isa = PBXGroup;
+			children = (
+				896ABDDC267A779B004A05F3 /* SignInView.swift */,
+				896ABDDE267A779B004A05F3 /* SignInViewController.swift */,
+			);
+			path = Sign_in;
+			sourceTree = "<group>";
+		};
+		896ABDEC267A7ACD004A05F3 /* Sign_in */ = {
+			isa = PBXGroup;
+			children = (
+				896ABDDD267A779B004A05F3 /* StaticThings.swift */,
+			);
+			path = Sign_in;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,18 +581,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */,
+				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
+				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
+				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
+				896ABDE0267A779B004A05F3 /* SignInView.swift in Sources */,
+				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
+				896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */,
+				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
+				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */,
-				1CC542D126791A1400A807B4 /* ImageConstant.swift in Sources */,
 				C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */,
+				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
+				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
+				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
+				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
+				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */,
 				C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */,
 				C15A6E39267A846300B23B05 /* AlertViewController.swift in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
+				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
+				896ABDE2267A779B004A05F3 /* SignInViewController.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
@@ -736,7 +830,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -758,7 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U847YAAMJ9;
 				INFOPLIST_FILE = financialGoalTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
