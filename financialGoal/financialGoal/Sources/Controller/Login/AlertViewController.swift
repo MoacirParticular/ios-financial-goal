@@ -13,15 +13,15 @@ class AlertViewController: UIAlertController {
     
     func addAlertAtributes(alert: UIAlertController) -> UIAlertController{
         
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        let alert = UIAlertController(title: ConstantLogin.alertTitle, message: ConstantLogin.alertMessage, preferredStyle: .alert)
         alert.addTextField { (email) in
         email.keyboardType = .emailAddress
-        email.placeholder = alertPlaceHolderTF
+            email.placeholder = ConstantLogin.alertPlaceHolderTF
         }
-        let cancel = UIAlertAction(title: alertActiontitleCancel, style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: ConstantLogin.alertActiontitleCancel, style: .cancel, handler: nil)
         alert.addAction(cancel)
         
-        let ok = UIAlertAction(title: alertActiontitleOK, style: .default) {
+        let ok = UIAlertAction(title: ConstantLogin.alertActiontitleOK, style: .default) {
          (action) in
             guard let email = alert.textFields?[0].text else {return}
             print(email)
@@ -32,8 +32,8 @@ class AlertViewController: UIAlertController {
     
     func callAlertForgotPass() -> UIAlertController{
 
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        let ok = UIAlertAction(title: alertActiontitleOK, style: .default)
+        let alert = UIAlertController(title: ConstantLogin.alertTitle, message: ConstantLogin.alertMessage, preferredStyle: .alert)
+        let ok = UIAlertAction(title: ConstantLogin.alertActiontitleOK, style: .default)
         alert.addAction(ok)
         return alert
     }

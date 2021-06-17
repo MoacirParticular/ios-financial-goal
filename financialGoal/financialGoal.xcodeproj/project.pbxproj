@@ -50,13 +50,6 @@
 		3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE996282677BC070068E95B /* LocalizableStrings.swift */; };
 		3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */; };
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
-		C15A6E39267A846300B23B05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6E38267A846300B23B05 /* AlertViewController.swift */; };
-		C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D126791E0200BB9729 /* FontsConstants.swift */; };
-		C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */; };
-		C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75D926791E2500BB9729 /* LoginView.swift */; };
-		C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75DA26791E2500BB9729 /* LoginViewController.swift */; };
-		C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */; };
-		C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD75EE2679417B00BB9729 /* StringConstants.swift */; };
 		89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignInCoordinator.swift */; };
 		89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */; };
 		89365A51267A7F150087531D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A50267A7F150087531D /* UITextField+.swift */; };
@@ -65,6 +58,15 @@
 		896ABDE0267A779B004A05F3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInView.swift */; };
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInViewController.swift */; };
+		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
+		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
+		C178D352267AC9F50079072F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34F267AC9F50079072F /* LoginViewController.swift */; };
+		C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D356267ACA100079072F /* LoginCoordinator.swift */; };
+		C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D35E267ACA620079072F /* ConstraintsConstants.swift */; };
+		C1AD75D326791E0200BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C1AD75DB26791E2500BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C1AD75E126791E4A00BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,13 +136,6 @@
 		3FE996282677BC070068E95B /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		3FE9962A2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = accessibilityFinancialGoalLocalizeble.strings; sourceTree = "<group>"; };
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
-		C15A6E38267A846300B23B05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		C1AD75D126791E0200BB9729 /* FontsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
-		C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
-		C1AD75D926791E2500BB9729 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C1AD75DA26791E2500BB9729 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		C1AD75EE2679417B00BB9729 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringConstants.swift; path = financialGoal/Sources/Infrastructure/Constants/Login/StringConstants.swift; sourceTree = SOURCE_ROOT; };
 		89192602267A664700EECCB5 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		89365A50267A7F150087531D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -149,6 +144,11 @@
 		896ABDDC267A779B004A05F3 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C178D356267ACA100079072F /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,7 +314,7 @@
 		3FE99617267794280068E95B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C1AD75E026791E4A00BB9729 /* LoginCoordinator.swift */,
+				C178D356267ACA100079072F /* LoginCoordinator.swift */,
 				3FE996192677A4770068E95B /* Coordinator.swift */,
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
 				89192602267A664700EECCB5 /* SignInCoordinator.swift */,
@@ -326,7 +326,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C1AD75D826791E2500BB9729 /* Login */,
+				C178D34C267AC9F50079072F /* Login */,
 				896ABDDA267A779B004A05F3 /* Sign_in */,
 				1CC5431E267935D900A807B4 /* LoggedOut */,
 			);
@@ -358,7 +358,7 @@
 		3FE9961F2677A4EB0068E95B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				C1AD75D026791E0200BB9729 /* Login */,
+				C178D35B267ACA620079072F /* Login */,
 				896ABDEC267A7ACD004A05F3 /* Sign_in */,
 				1CC5432A267A350900A807B4 /* Logged_Out */,
 				1CC5432B267A355000A807B4 /* StringConstants.swift */,
@@ -386,25 +386,6 @@
 			path = LocalizableStrings;
 			sourceTree = "<group>";
 		};
-		C1AD75D026791E0200BB9729 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				C1AD75D126791E0200BB9729 /* FontsConstants.swift */,
-				C1AD75D226791E0200BB9729 /* ConstraintsConstants.swift */,
-				C1AD75EE2679417B00BB9729 /* StringConstants.swift */,
-			);
-			name = Login;
-			path = "../../../../../../ios-financial-goal-ANTIGO/financialGoal/financialGoal/Sources/Infrastructure/Constants/Login";
-			sourceTree = "<group>";
-		};
-		C1AD75D826791E2500BB9729 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				C1AD75D926791E2500BB9729 /* LoginView.swift */,
-				C1AD75DA26791E2500BB9729 /* LoginViewController.swift */,
-				C15A6E38267A846300B23B05 /* AlertViewController.swift */,
-			);
-			path = Login;
 		896ABDCE267A76FE004A05F3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +408,24 @@
 				896ABDDD267A779B004A05F3 /* StaticThings.swift */,
 			);
 			path = Sign_in;
+			sourceTree = "<group>";
+		};
+		C178D34C267AC9F50079072F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C178D34D267AC9F50079072F /* LoginView.swift */,
+				C178D34E267AC9F50079072F /* AlertViewController.swift */,
+				C178D34F267AC9F50079072F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C178D35B267ACA620079072F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C178D35E267ACA620079072F /* ConstraintsConstants.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,8 +579,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1AD75EF2679417B00BB9729 /* StringConstants.swift in Sources */,
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
+				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
@@ -592,26 +591,28 @@
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
 				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
-				C1AD75DC26791E2500BB9729 /* LoginViewController.swift in Sources */,
-				C1AD75D426791E0200BB9729 /* ConstraintsConstants.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
+				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
+				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
-				C1AD75D326791E0200BB9729 /* FontsConstants.swift in Sources */,
-				C1AD75DB26791E2500BB9729 /* LoginView.swift in Sources */,
-				C15A6E39267A846300B23B05 /* AlertViewController.swift in Sources */,
+				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
+				C1AD75D326791E0200BB9729 /* (null) in Sources */,
+				C1AD75DB26791E2500BB9729 /* (null) in Sources */,
+				C15A6E39267A846300B23B05 /* (null) in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				896ABDE2267A779B004A05F3 /* SignInViewController.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
-				C1AD75E126791E4A00BB9729 /* LoginCoordinator.swift in Sources */,
+				C1AD75E126791E4A00BB9729 /* (null) in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
+				C178D351267AC9F50079072F /* AlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

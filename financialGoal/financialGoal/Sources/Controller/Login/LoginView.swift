@@ -16,16 +16,17 @@ class LoginView: UIView {
    lazy var textFieldUsuario:UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = (placeHolderUsername)
+    textField.placeholder = (ConstantLogin.placeHolderUsername)
     textField.keyboardType = UIKeyboardType.emailAddress
     textField.returnKeyType = UIReturnKeyType.default
     textField.font = UIFont.systemFont(ofSize: 17)
     textField.backgroundColor = .white
-    textField.layer.cornerRadius = cornerRadiusTF
+//    textField.layer.cornerRadius =
+    textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
+    textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
     
-    
-    textField.leftView = UITextField(frame: CGRect(x: 0, y: 0, width: 5, height: 10))
-    textField.leftViewMode = .always
+//    textField.leftView = UITextField(frame: CGRect(x: 0, y: 0, width: 5, height: 10))
+//    textField.leftViewMode = .always
     
     textField.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     textField.addShadow()
@@ -37,7 +38,7 @@ class LoginView: UIView {
    lazy var textFieldSenha:UITextField = {
     var textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = (placeHolderPassword)
+    textField.placeholder = (ConstantLogin.placeHolderPassword)
     textField.keyboardType = UIKeyboardType.default
     textField.returnKeyType = UIReturnKeyType.done
     textField.font = UIFont.systemFont(ofSize: 17)
@@ -47,6 +48,8 @@ class LoginView: UIView {
     textField.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     textField.borderStyle = UITextField.BorderStyle.none
     textField.layer.shadowColor = UIColor.gray.cgColor
+    textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
+    textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.addShadow()
     
     return textField
@@ -84,7 +87,7 @@ class LoginView: UIView {
         button.frame = .zero
         button.layer.cornerRadius = cornerRadiusButton
         button.backgroundColor = .blackCustomGoal   //ALTERAR COR
-        button.setTitle(titleButtonLogin, for: .normal)
+        button.setTitle(ConstantLogin.titleButtonLogin, for: .normal)
        
         return button
     }()
@@ -95,7 +98,7 @@ class LoginView: UIView {
         button.frame = .zero
         button.setTitleColor(.blackCustomGoal, for: .normal)          //ALTERAR COR
         button.contentHorizontalAlignment = .left
-        button.setTitle(titleButtonPassword, for: .normal)
+        button.setTitle(ConstantLogin.titleButtonPassword, for: .normal)
         return button
     }()
 
@@ -164,13 +167,13 @@ class LoginView: UIView {
 
 // Shadow TextField
 
-extension UITextField {
-
-    func addShadow() {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: -6, height: 0)
-        self.layer.shadowOpacity = 0.08
-    }
-}
+//extension UITextField {
+//
+//    func addShadow() {
+//        self.layer.shadowColor = UIColor.black.cgColor
+//        self.layer.shadowOffset = CGSize(width: -6, height: 0)
+//        self.layer.shadowOpacity = 0.08
+//    }
+//}
 
 

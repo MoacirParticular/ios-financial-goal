@@ -23,7 +23,9 @@ import UIKit
                 let coordinator = SignInCoordinator(navigationController: self.navigationController)
                 coordinator.start()
             case .Login:
-                print("Login")
+                let coordinator = LoginCoordinator(navigationController: self.navigationController)
+                coordinator.start()
+           
             }
            
         }
