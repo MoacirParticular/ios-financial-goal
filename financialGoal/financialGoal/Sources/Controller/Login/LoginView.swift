@@ -9,9 +9,9 @@ import UIKit
 
 class LoginView: UIView {
     
-    var onLoginButton: ((_ option: Int) -> Void)?
+    var onLoginButton: ((_ option: LoginActionType) -> Void)?
 
-//MARK: TextFields
+    //MARK: TextFields
 
    lazy var textFieldUsuario:UITextField = {
     let textField = UITextField()
@@ -21,19 +21,13 @@ class LoginView: UIView {
     textField.returnKeyType = UIReturnKeyType.default
     textField.font = UIFont.systemFont(ofSize: 17)
     textField.backgroundColor = .white
-//    textField.layer.cornerRadius =
+    textField.layer.cornerRadius = cornerRadiusTF
     textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-    
-//    textField.leftView = UITextField(frame: CGRect(x: 0, y: 0, width: 5, height: 10))
-//    textField.leftViewMode = .always
-    
     textField.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     textField.addShadow()
-    
     return textField
    }()
-    
     
    lazy var textFieldSenha:UITextField = {
     var textField = UITextField()
@@ -51,7 +45,6 @@ class LoginView: UIView {
     textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.addShadow()
-    
     return textField
    }()
     
@@ -64,10 +57,9 @@ class LoginView: UIView {
         textFieldUsuario.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(constraintRightTFUsername)),
         textFieldUsuario.heightAnchor.constraint(equalToConstant: CGFloat(constraintHeightTFUsername)),
         textFieldUsuario.widthAnchor.constraint(equalToConstant: CGFloat(constraintWidthTFUsername))
-        
        ])
     }
-    
+
     func setTextFieldSenha() {
         addSubview(textFieldSenha)
         NSLayoutConstraint.activate([
@@ -88,21 +80,25 @@ class LoginView: UIView {
         button.layer.cornerRadius = cornerRadiusButton
         button.backgroundColor = .blackCustomGoal   //ALTERAR COR
         button.setTitle(ConstantLogin.titleButtonLogin, for: .normal)
-       
+        button.titleLabel?.font = .fontButtonsBlack
         return button
+        
     }()
 
     let buttonForgotPassword: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.frame = .zero
-        button.setTitleColor(.blackCustomGoal, for: .normal)          //ALTERAR COR
+        button.setTitleColor(.blackCustomGoal, for: .normal)
         button.contentHorizontalAlignment = .left
         button.setTitle(ConstantLogin.titleButtonPassword, for: .normal)
+        button.titleLabel?.font = .fontForgetPasswordSubTitleRegular
+        
         return button
     }()
 
     //MARK: Constraints Buttons
+    
     func setButtonLogin(){
        buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
        
@@ -129,33 +125,29 @@ class LoginView: UIView {
 
     @objc
     func loginActionButton (sender: UIButton!) {
-        print("Tentando logar")
+        //onLoginButton?(.Login)
     }
     
-    
 
-    
     @objc
     func forgotPasswordActionButton (sender: UIButton!) {
-        onLoginButton?(1)
-    
-        print("Usuário esqueceu a senha")
-        //print(textFieldUsuario.text!)
+        onLoginButton?(.Alert)
     }
 
-
-
+    //Chamando a View
     override init(frame: CGRect){
         super.init(frame: frame)
         createView()
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(StringConstants.requiredError)
     }
-
+    
+    //Função para a criação da View com os elementos criados acima.
+    
     func createView() {
-        self.backgroundColor = .backgroundCustomGoal           //ALTERAR COR
+        self.backgroundColor = .backgroundCustomGoal
         setTextFieldUsuario()
         setTextFieldSenha()
         setButtonLogin()
@@ -164,16 +156,3 @@ class LoginView: UIView {
     }
     
 }
-
-// Shadow TextField
-
-//extension UITextField {
-//
-//    func addShadow() {
-//        self.layer.shadowColor = UIColor.black.cgColor
-//        self.layer.shadowOffset = CGSize(width: -6, height: 0)
-//        self.layer.shadowOpacity = 0.08
-//    }
-//}
-
-

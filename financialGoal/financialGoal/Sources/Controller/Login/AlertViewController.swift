@@ -10,12 +10,13 @@ import UIKit
 
 
 class AlertViewController: UIAlertController {
+
     
-    func addAlertAtributes(alert: UIAlertController) -> UIAlertController{
+    func addAlertAtributes() -> UIAlertController{
         
         let alert = UIAlertController(title: ConstantLogin.alertTitle, message: ConstantLogin.alertMessage, preferredStyle: .alert)
         alert.addTextField { (email) in
-        email.keyboardType = .emailAddress
+            email.keyboardType = .emailAddress
             email.placeholder = ConstantLogin.alertPlaceHolderTF
         }
         let cancel = UIAlertAction(title: ConstantLogin.alertActiontitleCancel, style: .cancel, handler: nil)
@@ -27,15 +28,6 @@ class AlertViewController: UIAlertController {
             print(email)
         }
         alert.addAction(ok)
-            return alert
-        }
-    
-    func callAlertForgotPass() -> UIAlertController{
-
-        let alert = UIAlertController(title: ConstantLogin.alertTitle, message: ConstantLogin.alertMessage, preferredStyle: .alert)
-        let ok = UIAlertAction(title: ConstantLogin.alertActiontitleOK, style: .default)
-        alert.addAction(ok)
-        return alert
+    return alert
     }
 }
-

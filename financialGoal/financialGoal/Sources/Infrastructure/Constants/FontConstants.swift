@@ -25,5 +25,10 @@ public extension UIFont {
     static var fontLabelSubTitleRegular: UIFont {
         return UIFont(name: "Roboto-Regular", size: 15) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho e fonte button "Esqueci minha senha"
+    static var fontForgetPasswordSubTitleRegular: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 13) ?? fontDefaultGeorgia
+    }
 }
 

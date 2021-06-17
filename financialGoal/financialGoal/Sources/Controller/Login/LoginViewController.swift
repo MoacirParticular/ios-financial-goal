@@ -11,9 +11,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
-    //MARK: Propertys
-    
     var loginView = LoginView(frame: .zero)
     let alertVC = AlertViewController()
     
@@ -32,12 +29,15 @@ class LoginViewController: UIViewController {
     
     private func getActionButton() {
         loginView.onLoginButton = { option in
-            var alert = self.alertVC.callAlertForgotPass()
-            alert = self.alertVC.addAlertAtributes(alert: alert)
-            self.present(alert, animated: true, completion: nil)
+            switch option {
+            case .Login:
+                print("Tentando Login")
+            default:
+                let alert = self.alertVC.addAlertAtributes()
+                self.present(alert, animated: true, completion: nil)
+            }
+            
         }
     }
-
- 
 }
 
