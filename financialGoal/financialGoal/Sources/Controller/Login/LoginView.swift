@@ -9,19 +9,48 @@ import UIKit
 
 class LoginView: UIView {
     
+    //MARK: Properties
     var onLoginButton: ((_ option: LoginActionType) -> Void)?
 
-    //MARK: TextFields
+    //MARK: Starting creations
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        createView()
+    }
 
+    required init?(coder: NSCoder) {
+        fatalError(StringConstants.requiredError)
+    }
+    
+    //MARK: Grouping creations
+    func createView() {
+        self.backgroundColor = .backgroundCustomGoal
+        setTextFieldUsuario()
+        setTextFieldSenha()
+        setButtonLogin()
+        setButtonForgotPassword()
+    }
+    
+    //MARK: Actions Buttons
+    @objc
+    func loginActionButton (sender: UIButton!) {
+    }
+    
+    @objc
+    func forgotPasswordActionButton (sender: UIButton!) {
+        onLoginButton?(.Alert)
+    }
+    
+   //MARK: Create TextFields
    lazy var textFieldUsuario:UITextField = {
     let textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = (ConstantLogin.placeHolderUsername)
+    textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
+    textField.placeholder = (StringConstantsLogin.placeHolderUsername)
     textField.keyboardType = UIKeyboardType.emailAddress
     textField.returnKeyType = UIReturnKeyType.default
-    textField.font = UIFont.systemFont(ofSize: 17)
-    textField.backgroundColor = .white
-    textField.layer.cornerRadius = cornerRadiusTF
+    textField.font = UIFont.fontTextFieldLogin
+    textField.backgroundColor = .customColorTextField
+    textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
     textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -31,14 +60,14 @@ class LoginView: UIView {
     
    lazy var textFieldSenha:UITextField = {
     var textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = (ConstantLogin.placeHolderPassword)
+    textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
+    textField.placeholder = (StringConstantsLogin.placeHolderPassword)
     textField.keyboardType = UIKeyboardType.default
     textField.returnKeyType = UIReturnKeyType.done
-    textField.font = UIFont.systemFont(ofSize: 17)
+    textField.font = UIFont.fontTextFieldLogin
     textField.isSecureTextEntry = true
-    textField.backgroundColor = UIColor.white
-    textField.layer.cornerRadius = cornerRadiusTF
+    textField.backgroundColor = .customColorTextField
+    textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
     textField.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     textField.borderStyle = UITextField.BorderStyle.none
     textField.layer.shadowColor = UIColor.gray.cgColor
@@ -52,107 +81,67 @@ class LoginView: UIView {
     func setTextFieldUsuario() {
         addSubview(textFieldUsuario)
         NSLayoutConstraint.activate([
-        textFieldUsuario.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 52),
-        textFieldUsuario.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(constraintLeftTFUsername)),
-        textFieldUsuario.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(constraintRightTFUsername)),
-        textFieldUsuario.heightAnchor.constraint(equalToConstant: CGFloat(constraintHeightTFUsername)),
-        textFieldUsuario.widthAnchor.constraint(equalToConstant: CGFloat(constraintWidthTFUsername))
+            textFieldUsuario.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: ConstantsConstraintsLogin.topAnchorTFusername),
+            textFieldUsuario.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsLogin.leftTFUsername),
+            textFieldUsuario.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsLogin.rightTFUsername),
+            textFieldUsuario.heightAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.heightTFUsername),
+            textFieldUsuario.widthAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.widthTFUsername)
        ])
     }
 
     func setTextFieldSenha() {
         addSubview(textFieldSenha)
         NSLayoutConstraint.activate([
-        textFieldSenha.topAnchor.constraint(equalTo: self.textFieldUsuario.bottomAnchor, constant: 1),
-        textFieldSenha.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(constraintLeftTFPassword)),
-        textFieldSenha.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(constraintRightTFPassword)),
-        textFieldSenha.heightAnchor.constraint(equalToConstant: CGFloat(constraintHeightTFPassword))
+            textFieldSenha.topAnchor.constraint(equalTo: self.textFieldUsuario.bottomAnchor, constant: ConstantsConstraintsPassword.topAnchorPassword),
+            textFieldSenha.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(ConstantsConstraintsPassword.leftTFPassword)),
+            textFieldSenha.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(ConstantsConstraintsPassword.rightTFPassword)),
+            textFieldSenha.heightAnchor.constraint(equalToConstant: ConstantsConstraintsPassword.heightTFPassword)
        ])
     }
 
-    //MARK: Buttons
-    
+    //MARK: Create Buttons
     let buttonLogin: UIButton = {
         let button = UIButton()
-    
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.frame = .zero
-        button.layer.cornerRadius = cornerRadiusButton
-        button.backgroundColor = .blackCustomGoal   //ALTERAR COR
-        button.setTitle(ConstantLogin.titleButtonLogin, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
+        button.frame = ConstantsConstraintsBtLogin.frameBtLogin
+        button.layer.cornerRadius = ConstantsConstraintsBtLogin.cornerRadiusButton
+        button.backgroundColor = .blackCustomGoal
+        button.setTitle(StringConstantsLogin.titleButtonLogin, for: .normal)
         button.titleLabel?.font = .fontButtonsBlack
         return button
-        
     }()
 
     let buttonForgotPassword: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.frame = .zero
+        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
+        button.frame = ConstantsConstraintsBtForgetPass.frameBtForgotPass
         button.setTitleColor(.blackCustomGoal, for: .normal)
         button.contentHorizontalAlignment = .left
-        button.setTitle(ConstantLogin.titleButtonPassword, for: .normal)
+        button.setTitle(StringConstantsLogin.titleButtonPassword, for: .normal)
         button.titleLabel?.font = .fontForgetPasswordSubTitleRegular
-        
         return button
     }()
 
     //MARK: Constraints Buttons
-    
     func setButtonLogin(){
        buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
-       
        addSubview(buttonLogin)
        NSLayoutConstraint.activate([
-        buttonLogin.topAnchor.constraint(equalTo: self.textFieldSenha.bottomAnchor, constant: constraintTopAnchorbtLogin),
-        buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: constraintLeftAnchorBtLogin),
-        buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: constraintRightAnchorBtLogin),
-        buttonLogin.heightAnchor.constraint(equalToConstant: constraintHeightAnchorbtLogin)
+        buttonLogin.topAnchor.constraint(equalTo: self.textFieldSenha.bottomAnchor, constant: ConstantsConstraintsBtLogin.topAnchorbtLogin),
+        buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsBtLogin.leftAnchorBtLogin),
+        buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsBtLogin.rightAnchorBtLogin),
+        buttonLogin.heightAnchor.constraint(equalToConstant: ConstantsConstraintsBtLogin.heightAnchorbtLogin)
        ])
     }
+    
     func setButtonForgotPassword(){
         buttonForgotPassword.addTarget(self, action: #selector(forgotPasswordActionButton), for: .touchUpInside)
         addSubview(buttonForgotPassword)
         NSLayoutConstraint.activate([
-        buttonForgotPassword.topAnchor.constraint(equalTo: self.buttonLogin.bottomAnchor, constant: constraintTopAnchorBtForgotPass),
-        buttonForgotPassword.leftAnchor.constraint(equalTo: self.leftAnchor, constant: constraintLeftAnchorBtForgotPass),
-        buttonForgotPassword.rightAnchor.constraint(equalTo: self.rightAnchor, constant: constraintRightAnchorBtForgotPass),
-        buttonForgotPassword.heightAnchor.constraint(equalToConstant: constraintHeightAnchorBtForgotPass)
+            buttonForgotPassword.topAnchor.constraint(equalTo: self.buttonLogin.bottomAnchor, constant: ConstantsConstraintsBtForgetPass.topAnchorBtForgotPass),
+            buttonForgotPassword.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsBtForgetPass.leftAnchorBtForgotPass),
+            buttonForgotPassword.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsBtForgetPass.rightAnchorBtForgotPass),
+            buttonForgotPassword.heightAnchor.constraint(equalToConstant: ConstantsConstraintsBtForgetPass.heightAnchorBtForgotPass)
        ])
     }
-
-    //MARK: Actions Buttons
-
-    @objc
-    func loginActionButton (sender: UIButton!) {
-        //onLoginButton?(.Login)
-    }
-    
-
-    @objc
-    func forgotPasswordActionButton (sender: UIButton!) {
-        onLoginButton?(.Alert)
-    }
-
-    //Chamando a View
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        createView()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError(StringConstants.requiredError)
-    }
-    
-    //Função para a criação da View com os elementos criados acima.
-    
-    func createView() {
-        self.backgroundColor = .backgroundCustomGoal
-        setTextFieldUsuario()
-        setTextFieldSenha()
-        setButtonLogin()
-        setButtonForgotPassword()
-
-    }
-    
 }

@@ -30,5 +30,10 @@ public extension UIFont {
     static var fontForgetPasswordSubTitleRegular: UIFont {
         return UIFont(name: "Roboto-Regular", size: 13) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho e fonte TextField Tela Login"
+    static var fontTextFieldLogin: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 18) ?? fontDefaultGeorgia
+    }
 }
 

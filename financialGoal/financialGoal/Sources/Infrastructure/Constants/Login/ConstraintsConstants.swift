@@ -7,49 +7,36 @@
 
 import UIKit
 
-//MARK: Constants Constraints TextField Username
-let constraintLeftTFUsername:Int = 16
-let constraintRightTFUsername:Int = -16
-let constraintHeightTFUsername:Int = 60
-let constraintWidthTFUsername:Int = 10
+struct ConstantsConstraintsLogin {
+    static let leftTFUsername:CGFloat = 16
+    static let rightTFUsername:CGFloat = -16
+    static let heightTFUsername:CGFloat = 60
+    static let widthTFUsername:CGFloat = 10
+    static let cornerRadiusTF:CGFloat = 9
+    static let topAnchorTFusername:CGFloat = 36
+    static let maskIntoConstraints:Bool = false
+}
 
-//MARK: Constants Constraints TextField Password
-let constraintLeftTFPassword:Int = 16
-let constraintRightTFPassword:Int = -16
-let constraintHeightTFPassword:Int = 60
-//Font placeholder Textfields:
-//Font: Roboto
-//Size: 18
+struct ConstantsConstraintsPassword {
+    static let leftTFPassword:CGFloat = 16
+    static let rightTFPassword:CGFloat = -16
+    static let heightTFPassword:CGFloat = 60
+    static let topAnchorPassword:CGFloat = 1
+}
 
-//MARK: Constants Corner Radius Buttons
-let cornerRadiusButton:CGFloat = 6
+struct ConstantsConstraintsBtLogin {
+    static let cornerRadiusButton:CGFloat = 6
+    static let topAnchorbtLogin:CGFloat = 22
+    static let leftAnchorBtLogin:CGFloat = 16
+    static let rightAnchorBtLogin:CGFloat = -16
+    static let heightAnchorbtLogin:CGFloat = 52
+    static let frameBtLogin:CGRect = .zero
+}
 
-
-//MARK: Constants Corner Radius TextFields
-let cornerRadiusTF:CGFloat = 9
-
-
-//MARK: Constants Constraints Login Button
-
-let constraintTopAnchorbtLogin:CGFloat = 20
-let constraintLeftAnchorBtLogin:CGFloat = 16
-let constraintRightAnchorBtLogin:CGFloat = -16
-let constraintHeightAnchorbtLogin:CGFloat = 52
-
-//Font Buttons
-//Font: Roboto
-//Size: 16px
-
-//MARK: Constants Constraints Forgot Password Button
-
-let constraintTopAnchorBtForgotPass:CGFloat = 15
-let constraintLeftAnchorBtForgotPass:CGFloat = 16
-let constraintRightAnchorBtForgotPass:CGFloat = -13
-let constraintHeightAnchorBtForgotPass:CGFloat = 52
-
-
-//MARK: Fonts button Forgot Password:
-
-//Font: Roboto
-//Size: 13
-
+struct ConstantsConstraintsBtForgetPass {
+    static let topAnchorBtForgotPass:CGFloat = 22
+    static let leftAnchorBtForgotPass:CGFloat = 16
+    static let rightAnchorBtForgotPass:CGFloat = -13
+    static let heightAnchorBtForgotPass:CGFloat = 52
+    static let frameBtForgotPass:CGRect = .zero
+}
