@@ -37,6 +37,7 @@ class SignInMailView: UIView {
         tField.backgroundColor = .customColorTextField
         tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
+        tField.keyboardType = UIKeyboardType.emailAddress
         tField.placeholder = ValuesSignIn_Mail.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)

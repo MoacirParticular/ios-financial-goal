@@ -37,6 +37,7 @@ class SignInPasswdView: UIView {
         tField.backgroundColor = .customColorTextField
         tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
+        tField.isSecureTextEntry = true
         tField.placeholder = ValuesSignIn_Passwd.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
