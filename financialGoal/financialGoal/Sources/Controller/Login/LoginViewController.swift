@@ -11,33 +11,32 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
-    //MARK: Propertys
-    
+    //MARK: Proprieties:
     var loginView = LoginView(frame: .zero)
     let alertVC = AlertViewController()
     
+    //MARK: Lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .backgroundCustomGoal
         getActionButton()
-   
     }
     
     override func loadView() {
         self.view = loginView
     }
     
-    //MARK: Actions
-    
+    //MARK: Actions Buttons:
     private func getActionButton() {
         loginView.onLoginButton = { option in
-            var alert = self.alertVC.callAlertForgotPass()
-            alert = self.alertVC.addAlertAtributes(alert: alert)
-            self.present(alert, animated: true, completion: nil)
+            switch option {
+            case .Login:
+                print("Tentando Login")
+            default:
+                let alert = self.alertVC.alertView()
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
-
- 
 }
 

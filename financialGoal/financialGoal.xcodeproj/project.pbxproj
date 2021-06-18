@@ -58,6 +58,8 @@
 		896ABDE0267A779B004A05F3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInView.swift */; };
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInViewController.swift */; };
+		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
+		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
 		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
@@ -144,6 +146,8 @@
 		896ABDDC267A779B004A05F3 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
+		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +351,7 @@
 		3FE9961E2677A4DD0068E95B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
@@ -424,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				C178D35E267ACA620079072F /* ConstraintsConstants.swift */,
+				C12D2293267B971B002C0275 /* StringConstantsLogin.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 			files = (
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
+				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
@@ -597,6 +604,7 @@
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
+				C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
