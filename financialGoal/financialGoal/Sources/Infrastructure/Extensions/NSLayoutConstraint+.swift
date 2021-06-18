@@ -26,7 +26,8 @@ extension NSLayoutConstraint {
         NSLayoutConstraint.activate([
             viewElement.bottomAnchor.constraint(equalTo: viewReferenceBase.bottomAnchor, constant: ValuesConstraintsButton.identBotton),
             viewElement.leadingAnchor.constraint(equalTo: viewReferenceBase.leadingAnchor, constant: ValuesConstraintsButton.identLeft),
-            viewElement.trailingAnchor.constraint(equalTo: viewReferenceBase.trailingAnchor, constant: ValuesConstraintsButton.identRight)
+            viewElement.trailingAnchor.constraint(equalTo: viewReferenceBase.trailingAnchor, constant: ValuesConstraintsButton.identRight),
+            viewElement.heightAnchor.constraint(equalToConstant: ValuesConstraintsButton.height)
         ])
     }
 }

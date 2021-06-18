@@ -10,11 +10,26 @@ import UIKit
 struct ScreenAttributes {
     static let screenTitle: String = "Abra sua conta"
 }
-struct ValuesSignIn_one {
+struct ValuesSignIn_Mail {
     static let subtitile = "Abra sua conta em 2 minutos. É gratis!"
     static let description = "Insira seu e-mail para começar."
     static let placeholder = "e-mail"
     static let buttonTitle = "CONTINUAR"
+}
+
+struct ValuesSignIn_Name {
+    static let subtitile = "Quase lá"
+    static let description = "Defina como devemos chamar você."
+    static let placeholder = "primeiro nome ou apelido"
+    static let buttonTitle = "CONTINUAR"
+}
+
+struct ValuesSignIn_Passwd {
+    static let subtitile = "Último passo"
+    static let description = "Crie uma senha segura para acessar sua conta."
+    static let placeholder = "senha"
+    static let buttonTitle = "CRIAR CONTA"
+    static let observation = "por favor, crie uma senha com pelo menos 8 dígitos"
 }
 
 struct StaticConfigLabel {

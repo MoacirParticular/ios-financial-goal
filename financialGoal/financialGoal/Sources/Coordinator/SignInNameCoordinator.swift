@@ -1,5 +1,5 @@
 //
-//  SignInCoordinator.swift
+//  SignInNameCoordinator.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 16/06/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SignInCoordinator: Coordinator {
+public class SignInNameCoordinator: Coordinator {
     let navigationController: UINavigationController
    
     init (navigationController: UINavigationController) {
@@ -15,10 +15,10 @@ public class SignInCoordinator: Coordinator {
     }
     
     public func start() {
-        let screenViewController = SignInMailViewController()
+        let screenViewController = SignInNameViewController()
         
         screenViewController.buttonAction = {
-            let newVc = SignInNameCoordinator(navigationController: self.navigationController)
+            let newVc = SignInPasswdCoordinator(navigationController: self.navigationController)
             newVc.start()
         }
         self.navigationController.pushViewController(screenViewController, animated: true)
