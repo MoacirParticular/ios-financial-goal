@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     static func configInitailElements(_ viewElement: UIView) {
-        viewElement.translatesAutoresizingMaskIntoConstraints = false
-        viewElement.frame = .zero
+        viewElement.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        viewElement.frame = FrameConstants.frameZero
     }
 }

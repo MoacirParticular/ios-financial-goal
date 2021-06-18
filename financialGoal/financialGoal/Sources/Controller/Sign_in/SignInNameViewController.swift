@@ -10,7 +10,7 @@ import UIKit
 class SignInNameViewController: UIViewController {
     
     // MARK: - Attributes
-    let overrideView = SignInNameView(frame: .zero)
+    let overrideView = SignInNameView(frame: FrameConstants.frameZero)
     var buttonAction: (() -> Void)?
     
     // MARK: - Methods/ Functions

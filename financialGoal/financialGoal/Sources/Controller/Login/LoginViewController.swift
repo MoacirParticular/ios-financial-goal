@@ -12,7 +12,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: Proprieties:
-    var loginView = LoginView(frame: .zero)
+    var loginView = LoginView(frame: FrameConstants.frameZero)
     let alertVC = AlertViewController()
     
     //MARK: Lifecycle:
