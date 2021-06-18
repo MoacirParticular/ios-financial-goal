@@ -9,7 +9,7 @@ import Foundation
 
 struct StringConstantsLogin {
     static let screenTitleLogin:String = "Login"
-    static let placeHolderUsername:String = "username"
+    static let placeHolderUsername:String = "usuario"
     static let placeHolderPassword:String = "senha"
     static let titleButtonLogin:String = "LOGIN"
     static let titleButtonPassword:String = "esqueci minha senha"
@@ -20,6 +20,6 @@ struct StringContantsAlertForgotPass {
     static let message:String = "Insira um email para enviarmos um link para redefinir sua senha."
     static let placeHolderTF:String = "digite seu email"
     static let actiontitleOK:String = "Ok"
-    static let actiontitleCancel:String = "Cancel"
+    static let actiontitleCancel:String = "Cancelar"
 }
 

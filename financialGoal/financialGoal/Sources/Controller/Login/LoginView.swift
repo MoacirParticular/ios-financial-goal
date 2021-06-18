@@ -25,8 +25,8 @@ class LoginView: UIView {
     //MARK: Grouping creations
     func createView() {
         self.backgroundColor = .backgroundCustomGoal
-        setTextFieldUsuario()
-        setTextFieldSenha()
+        setTextFieldUser()
+        setTextFieldPassword()
         setButtonLogin()
         setButtonForgotPassword()
     }
@@ -42,7 +42,7 @@ class LoginView: UIView {
     }
     
    //MARK: Create TextFields
-   lazy var textFieldUsuario:UITextField = {
+   lazy var textFieldUser:UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
     textField.placeholder = (StringConstantsLogin.placeHolderUsername)
@@ -58,14 +58,14 @@ class LoginView: UIView {
     return textField
    }()
     
-   lazy var textFieldSenha:UITextField = {
+   lazy var textFieldPassword:UITextField = {
     var textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
     textField.placeholder = (StringConstantsLogin.placeHolderPassword)
     textField.keyboardType = UIKeyboardType.default
     textField.returnKeyType = UIReturnKeyType.done
     textField.font = UIFont.fontTextFieldLogin
-    textField.isSecureTextEntry = true
+    textField.isSecureTextEntry = ConstantsConstraintsLogin.constantIsSecureTextEntry
     textField.backgroundColor = .customColorTextField
     textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
     textField.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -78,24 +78,24 @@ class LoginView: UIView {
    }()
     
     //MARK: Constraints TextFields
-    func setTextFieldUsuario() {
-        addSubview(textFieldUsuario)
+    func setTextFieldUser() {
+        addSubview(textFieldUser)
         NSLayoutConstraint.activate([
-            textFieldUsuario.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: ConstantsConstraintsLogin.topAnchorTFusername),
-            textFieldUsuario.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsLogin.leftTFUsername),
-            textFieldUsuario.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsLogin.rightTFUsername),
-            textFieldUsuario.heightAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.heightTFUsername),
-            textFieldUsuario.widthAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.widthTFUsername)
+            textFieldUser.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: ConstantsConstraintsLogin.topAnchorTFusername),
+            textFieldUser.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsLogin.leftTFUsername),
+            textFieldUser.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsLogin.rightTFUsername),
+            textFieldUser.heightAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.heightTFUsername),
+            textFieldUser.widthAnchor.constraint(equalToConstant: ConstantsConstraintsLogin.widthTFUsername)
        ])
     }
 
-    func setTextFieldSenha() {
-        addSubview(textFieldSenha)
+    func setTextFieldPassword() {
+        addSubview(textFieldPassword)
         NSLayoutConstraint.activate([
-            textFieldSenha.topAnchor.constraint(equalTo: self.textFieldUsuario.bottomAnchor, constant: ConstantsConstraintsPassword.topAnchorPassword),
-            textFieldSenha.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(ConstantsConstraintsPassword.leftTFPassword)),
-            textFieldSenha.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(ConstantsConstraintsPassword.rightTFPassword)),
-            textFieldSenha.heightAnchor.constraint(equalToConstant: ConstantsConstraintsPassword.heightTFPassword)
+            textFieldPassword.topAnchor.constraint(equalTo: self.textFieldUser.bottomAnchor, constant: ConstantsConstraintsPassword.topAnchorPassword),
+            textFieldPassword.leftAnchor.constraint(equalTo: self.leftAnchor, constant: CGFloat(ConstantsConstraintsPassword.leftTFPassword)),
+            textFieldPassword.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(ConstantsConstraintsPassword.rightTFPassword)),
+            textFieldPassword.heightAnchor.constraint(equalToConstant: ConstantsConstraintsPassword.heightTFPassword)
        ])
     }
 
@@ -127,7 +127,7 @@ class LoginView: UIView {
        buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
        addSubview(buttonLogin)
        NSLayoutConstraint.activate([
-        buttonLogin.topAnchor.constraint(equalTo: self.textFieldSenha.bottomAnchor, constant: ConstantsConstraintsBtLogin.topAnchorbtLogin),
+        buttonLogin.topAnchor.constraint(equalTo: self.textFieldPassword.bottomAnchor, constant: ConstantsConstraintsBtLogin.topAnchorbtLogin),
         buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsBtLogin.leftAnchorBtLogin),
         buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsBtLogin.rightAnchorBtLogin),
         buttonLogin.heightAnchor.constraint(equalToConstant: ConstantsConstraintsBtLogin.heightAnchorbtLogin)

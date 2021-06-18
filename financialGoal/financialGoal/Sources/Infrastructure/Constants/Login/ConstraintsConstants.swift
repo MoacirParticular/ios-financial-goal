@@ -15,6 +15,7 @@ struct ConstantsConstraintsLogin {
     static let cornerRadiusTF:CGFloat = 9
     static let topAnchorTFusername:CGFloat = 36
     static let maskIntoConstraints:Bool = false
+    static let constantIsSecureTextEntry:Bool = true
 }
 
 struct ConstantsConstraintsPassword {

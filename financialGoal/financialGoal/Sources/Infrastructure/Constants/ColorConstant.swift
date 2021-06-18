@@ -41,6 +41,10 @@ public extension UIColor {
     static var customColorTextField: UIColor {
         return UIColor(named: "customColorTextField") ?? UIColor.white
     }
+    @objc
+    static var customColorShadow: UIColor {
+        return UIColor(named: "customColorShadow") ?? UIColor.black
+    }
     
         
 }

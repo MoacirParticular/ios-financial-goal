@@ -19,7 +19,7 @@ extension UITextField {
         self.rightViewMode = .always
     }
     func addShadow() {
-        self.layer.shadowColor = UIColor.customColorTextField.cgColor
+        self.layer.shadowColor = UIColor.customColorShadow.cgColor
         self.layer.shadowOffset = CGSize(width: ShadowTextField.shadowWidth, height: ShadowTextField.shadowHeight)
         self.layer.shadowRadius = ShadowTextField.shadowRadius
         self.layer.shadowOpacity = ShadowTextField.shadowOpacity
