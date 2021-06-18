@@ -113,7 +113,6 @@ class LoginView: UIView {
 
     let buttonForgotPassword: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .red
         button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
         button.frame = ConstantsConstraintsBtForgetPass.frameBtForgotPass
         button.setTitleColor(.blackCustomGoal, for: .normal)

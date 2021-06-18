@@ -37,7 +37,6 @@ struct ConstantsConstraintsBtLogin {
 struct ConstantsConstraintsBtForgetPass {
     static let topAnchorBtForgotPass:CGFloat = 22
     static let leftAnchorBtForgotPass:CGFloat = 16
-    static let rightAnchorBtForgotPass:CGFloat = -236
     static let heightAnchorBtForgotPass:CGFloat = 15
     static let frameBtForgotPass:CGRect = .zero
 }
