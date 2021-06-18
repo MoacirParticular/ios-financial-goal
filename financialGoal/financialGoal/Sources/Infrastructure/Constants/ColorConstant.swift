@@ -37,6 +37,10 @@ public extension UIColor {
     static var customColorRoxo: UIColor {
         return UIColor(named: "customColorRoxo") ?? UIColor.purple
     }
+    @objc
+    static var customColorTextField: UIColor {
+        return UIColor(named: "customColorTextField") ?? UIColor.white
+    }
     
         
 }

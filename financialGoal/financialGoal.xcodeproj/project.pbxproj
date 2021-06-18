@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */; };
 		1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstants.swift */; };
 		1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542D026791A1400A807B4 /* FontConstants.swift */; };
 		1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */; };
@@ -63,6 +64,8 @@
 		896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInMailView.swift */; };
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */; };
+		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
+		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
 		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
@@ -92,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
 		1CC542CF26791A1400A807B4 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		1CC542D026791A1400A807B4 /* FontConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 		896ABDDC267A779B004A05F3 /* SignInMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailView.swift; sourceTree = "<group>"; };
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailViewController.swift; sourceTree = "<group>"; };
+		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
+		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 				1CC543252679847E00A807B4 /* ButtonConstants.swift */,
 				1CC542CF26791A1400A807B4 /* ImageConstants.swift */,
 				1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */,
+				1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */,
 			);
 			path = Logged_Out;
 			sourceTree = "<group>";
@@ -358,6 +365,7 @@
 		3FE9961E2677A4DD0068E95B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
@@ -439,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				C178D35E267ACA620079072F /* ConstraintsConstants.swift */,
+				C12D2293267B971B002C0275 /* StringConstantsLogin.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -598,6 +607,7 @@
 				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
 				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
+				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
@@ -619,6 +629,10 @@
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,
+				C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */,
+				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
+				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
+				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
