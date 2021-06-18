@@ -61,9 +61,9 @@ struct ValuesConstraintsButton {
     static let titleSize: CGFloat = 16
 }
 struct ShadowTextField {
-    static let shadowWidth: CGFloat = -6
-    static let shadowHeight: CGFloat = 4
-    static let shadowRadius: CGFloat = 2.0
+    static let shadowWidth: CGFloat = -4
+    static let shadowHeight: CGFloat = 0
+    static let shadowRadius: CGFloat = 6.0
     static let shadowOpacity: Float = 0.1
     
 }
