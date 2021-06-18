@@ -13,65 +13,67 @@ class LoggedOutView: UIView {
     var onLoginButton: ((_ setLogin: LoginType ) -> Void)?
     
     //MARK: PageControl
-    var imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
+    private let imagePage: [UIImage] = [.imageDescomplicou, .imagePlanejamento, .imageFicaDica, .imageNaPalmaDaMao]
     
-    public let scrollView = UIScrollView()
+    let scrollView = UIScrollView()
     
-    public let pageControl: UIPageControl = {
+    let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.numberOfPages = PageAndScrollConstants.numberPages
         pageControl.pageIndicatorTintColor = .customColorPageControl
         pageControl.currentPageIndicatorTintColor = .greenCustomGoal
-        
         return pageControl
     }()
     
-     // Adiciona a pageControl e scroll na view
-    func addToViewControllerPageControl(view: UIView){
-        view.backgroundColor = .backgroundCustomGoal
+    //MARK: Adiciona o pageControl e scroll na view
+    func addToViewControllerPageControl(){
+        self.backgroundColor = .backgroundCustomGoal
         pageControl.addTarget(self, action: #selector(pageControlDidChange(_:)), for: .valueChanged)
-        view.addSubview(scrollView)
-        view.addSubview(pageControl)
+        self.addSubview(scrollView)
+        self.addSubview(pageControl)
     }
     
-    // rola o slide de acordo com o click no page control
+    //MARK: Rola o slide de acordo com o click no pageControl
     @objc private func pageControlDidChange(_ sender: UIPageControl){
         let current = sender.currentPage
         scrollView.setContentOffset(CGPoint(x: CGFloat(current) * scrollView.frame.size.width, y: PageAndScrollConstants.numberZero), animated: true)
     }
     
-    //MARK: ScrollView
-    public func configureScrollView(view: UIView){
-        scrollView.contentSize = CGSize(width: view.frame.size.width*PageAndScrollConstants.numberFour, height: scrollView.frame.size.height)
+    //MARK: Propertis ScrollView
+    func configureScrollView(){
+        scrollView.contentSize = CGSize(width: self.frame.size.width*PageAndScrollConstants.numberFour, height: scrollView.frame.size.height)
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         
-        for i in PageAndScrollConstants.numberZeroFor..<PageAndScrollConstants.numberPages{
-            let page = UIImageView(frame: CGRect(x: CGFloat(i) * view.frame.size.width, y: PageAndScrollConstants.numberZero, width: view.frame.size.width, height: scrollView.frame.size.height))
-            page.image = imagePage[i]
+         //MARK: Seta as imagens no Scroll
+        for i in PageAndScrollConstants.numberZeroFor..<self.imagePage.count{
+            let page = UIImageView(frame: CGRect(x: CGFloat(i) * self.frame.size.width, y: PageAndScrollConstants.numberZero, width: self.frame.size.width, height: scrollView.frame.size.height))
+            page.image = self.imagePage[i]
             scrollView.addSubview(page)
         }
     }
-
     
-    // Define o tamanho do scroll(imagem) e do pageControl
-    func setFramePageScroll(view: UIView){
+    //MARK: Define o tamanho do scrollView e do pageControl
+    func setFramePageScroll(){
+        
+        //Pega a altura do device
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         
-        pageControl.frame = CGRect(x: PageAndScrollConstants.numberZero, y: scrollView.frame.size.height-PageAndScrollConstants.numberEighteen, width: view.frame.size.width, height: PageAndScrollConstants.numberSeventy)
-        scrollView.frame = CGRect(x: PageAndScrollConstants.numberZero, y: PageAndScrollConstants.numberZero, width: view.frame.size.width, height: screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberThreePointThree)
+        //Constants do scrolView e pageControl
+        pageControl.frame = CGRect(x: PageAndScrollConstants.numberZero, y: scrollView.frame.size.height-PageAndScrollConstants.numberEighteen, width: self.frame.size.width, height: PageAndScrollConstants.numberSeventy)
+        scrollView.frame = CGRect(x: PageAndScrollConstants.numberZero, y: PageAndScrollConstants.numberZero, width: self.frame.size.width, height: screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberThreePointThree)
         
+        //Chama a função pra configurar o scroll
         if scrollView.subviews.count == PageAndScrollConstants.numberTwo {
-            configureScrollView(view: view)
+            configureScrollView()
         }
     }
     
     //MARK: BUTTONS
-    let buttonCreateAccount: UIButton = {
+     let buttonCreateAccount: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.frame = .zero
+        button.frame = FrameConstants.frameZero
         button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
         button.backgroundColor = .greenCustomGoal
         button.titleLabel?.font = .fontButtonsBlack
@@ -83,7 +85,7 @@ class LoggedOutView: UIView {
     let buttonLogin: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.frame = .zero
+        button.frame = FrameConstants.frameZero
         button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
         button.backgroundColor = .blackCustomGoal
         button.titleLabel?.font = .fontButtonsBlack
@@ -93,30 +95,28 @@ class LoggedOutView: UIView {
     }()
     
     //MARK: Constraints Buttons
-    
     func setButtonCreateAccount(){
-       buttonCreateAccount.addTarget(self, action: #selector(createAccountActionButton), for: .touchUpInside)
-        
-       addSubview(buttonCreateAccount)
-       NSLayoutConstraint.activate([
-        buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonCreateAccount),
-        buttonCreateAccount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
-        buttonCreateAccount.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
-        buttonCreateAccount.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
-       ])
-   }
+        buttonCreateAccount.addTarget(self, action: #selector(createAccountActionButton), for: .touchUpInside)
+        addSubview(buttonCreateAccount)
+        NSLayoutConstraint.activate([
+            buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonCreateAccount),
+            buttonCreateAccount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
+            buttonCreateAccount.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
+            buttonCreateAccount.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
+        ])
+    }
     
     func setButtonLogin() {
         buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
-       addSubview(buttonLogin)
-       NSLayoutConstraint.activate([
-        buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonLogin),
-        buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
-        buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
-        buttonLogin.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
-       ])
-   }
-   
+        addSubview(buttonLogin)
+        NSLayoutConstraint.activate([
+            buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonLogin),
+            buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
+            buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
+            buttonLogin.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)
+        ])
+    }
+    
     //MARK: Actions Buttons
     @objc
     func createAccountActionButton(sender: UIButton!) {
@@ -129,19 +129,25 @@ class LoggedOutView: UIView {
         
     }
     
-    //MARK: Cria e seta os buttons
+    //MARK: Cria e seta elementos na view
+    private func createViewButton(){
+        setButtonCreateAccount()
+        setButtonLogin()
+    }
+    
+    private func setView(){
+        createViewButton()
+        pageControl.numberOfPages = self.imagePage.count
+        addToViewControllerPageControl()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        createViewButton()
+        setView()
     }
     
     required init?(coder: NSCoder) {
         fatalError(StringConstants.requiredError)
-    }
-    
-    func createViewButton(){
-        setButtonCreateAccount()
-        setButtonLogin()
     }
     
 }

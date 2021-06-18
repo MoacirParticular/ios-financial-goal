@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */; };
 		1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstants.swift */; };
 		1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542D026791A1400A807B4 /* FontConstants.swift */; };
 		1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */; };
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
 		1CC542CF26791A1400A807B4 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		1CC542D026791A1400A807B4 /* FontConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				1CC543252679847E00A807B4 /* ButtonConstants.swift */,
 				1CC542CF26791A1400A807B4 /* ImageConstants.swift */,
 				1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */,
+				1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */,
 			);
 			path = Logged_Out;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
+				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
