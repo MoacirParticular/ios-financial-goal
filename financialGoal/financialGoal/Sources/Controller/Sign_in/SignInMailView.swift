@@ -34,7 +34,8 @@ class SignInMailView: UIView {
     let txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
-        tField.borderStyle = .roundedRect
+        tField.backgroundColor = .customColorTextField
+        tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
         tField.placeholder = ValuesSignIn_Mail.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
@@ -98,7 +99,7 @@ class SignInMailView: UIView {
         self.addSubview(txtField)
         NSLayoutConstraint.alignDefault(txtField, lbDescription.bottomAnchor, self)
         NSLayoutConstraint.activate([
-            txtField.heightAnchor.constraint(equalToConstant: ValuesConstraintsTextField.height)
+            txtField.heightAnchor.constraint(equalToConstant: ConstantsTextField.height)
         ])
     }
     

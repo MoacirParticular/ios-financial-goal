@@ -12,7 +12,7 @@ struct ConstantsConstraintsLogin {
     static let rightTFUsername:CGFloat = -16
     static let heightTFUsername:CGFloat = 60
     static let widthTFUsername:CGFloat = 10
-    static let cornerRadiusTF:CGFloat = 9
+    static let cornerRadiusTF:CGFloat = 10
     static let topAnchorTFusername:CGFloat = 36
     static let maskIntoConstraints:Bool = false
     static let constantIsSecureTextEntry:Bool = true

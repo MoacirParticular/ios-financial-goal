@@ -10,6 +10,5 @@ import UIKit
 struct FrameConstants {
     //MARK: Frames
     static let frameZero: CGRect = .zero
+    static let frameAutoresizing: Bool = false
 }
-
-

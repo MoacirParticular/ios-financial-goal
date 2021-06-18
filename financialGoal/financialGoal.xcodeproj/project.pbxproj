@@ -64,6 +64,7 @@
 		896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInMailView.swift */; };
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */; };
+		8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982EFF1267D17F40002085E /* UIViewController+.swift */; };
 		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
 		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -158,6 +159,7 @@
 		896ABDDC267A779B004A05F3 /* SignInMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailView.swift; sourceTree = "<group>"; };
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailViewController.swift; sourceTree = "<group>"; };
+		8982EFF1267D17F40002085E /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -233,7 +235,6 @@
 				1CC543252679847E00A807B4 /* ButtonConstants.swift */,
 				1CC542CF26791A1400A807B4 /* ImageConstants.swift */,
 				1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */,
-				1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */,
 			);
 			path = Logged_Out;
 			sourceTree = "<group>";
@@ -358,6 +359,7 @@
 				3FE9961C2677A4B30068E95B /* String+.swift */,
 				89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */,
 				89365A50267A7F150087531D /* UITextField+.swift */,
+				8982EFF1267D17F40002085E /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +383,7 @@
 				896ABDEC267A7ACD004A05F3 /* Sign_in */,
 				1CC5432A267A350900A807B4 /* Logged_Out */,
 				1CC5432B267A355000A807B4 /* StringConstants.swift */,
+				1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */,
 				1CC542D026791A1400A807B4 /* FontConstants.swift */,
 				3FE996202677A50E0068E95B /* ColorConstant.swift */,
 			);
@@ -630,11 +633,12 @@
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,
 				C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */,
-				89365A5C267A7FC80087531D /* SignIn2Coordinator.swift in Sources */,
+				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
+				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
 				C1AD75DB26791E2500BB9729 /* (null) in Sources */,
 				C15A6E39267A846300B23B05 /* (null) in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 class SignInPasswdViewController: UIViewController {
     
     // MARK: - Attributes
-    let overrideView = SignInPasswdView(frame: .zero)
+    let overrideView = SignInPasswdView(frame: FrameConstants.frameZero)
     var buttonAction: (() -> Void)?
     
     // MARK: - Methods/ Functions

@@ -32,23 +32,27 @@ struct ValuesSignIn_Passwd {
     static let observation = "por favor, crie uma senha com pelo menos 8 dígitos"
 }
 
+struct ConstantsTextField {
+    static let height:CGFloat = 60
+    static let cornerRadius:CGFloat = 10
+}
+
 struct StaticConfigLabel {
-//    static let subtitleSize: CGFloat = 23
     static let subtitleNumberOfLines: Int = 0
     static let descriptionSize: CGFloat = 15
 }
 
 struct ValuesConstraintsTextField {
-    static let identTop: CGFloat = 19
+    static let identTop: CGFloat = 200
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
-    static let height: CGFloat = 60
     static let textIdent: CGFloat = 15
 }
 
 struct ValuesConstraintsLabel {
     static let identTop: CGFloat = 20
-    static let identLeft: CGFloat = 24
+    static let identObservationTop: CGFloat = 8
+    static let identLeft: CGFloat = 20
     static let identRight: CGFloat = -24
 }
 

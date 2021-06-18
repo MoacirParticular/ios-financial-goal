@@ -26,7 +26,7 @@ class SignInPasswdView: UIView {
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
         label.text = ValuesSignIn_Passwd.description
-        label.font = .fontDescriptionRegular
+        label.font = .fontLabelSubTitleRegular
         return label
     }()
     
@@ -34,7 +34,8 @@ class SignInPasswdView: UIView {
     let txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
-        tField.borderStyle = .roundedRect
+        tField.backgroundColor = .customColorTextField
+        tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
         tField.placeholder = ValuesSignIn_Passwd.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
@@ -46,7 +47,9 @@ class SignInPasswdView: UIView {
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
         label.text = ValuesSignIn_Passwd.observation
-        label.font = .fontLabelSubTitleRegular
+        label.font = .fontDescriptionRegular
+//        label.backgroundColor = .cyan
+        label.textAlignment = .center
         return label
     }()
     
@@ -105,14 +108,14 @@ class SignInPasswdView: UIView {
     
     private func alignLbObservation() {
         self.addSubview(lbObservation)
-        NSLayoutConstraint.alignDefaultLabels(lbObservation, txtField.bottomAnchor, self)
+        NSLayoutConstraint.alignDefaultLabelObservation(lbObservation, txtField.bottomAnchor, self)
     }
     
     private func alignTxtField() {
         self.addSubview(txtField)
         NSLayoutConstraint.alignDefault(txtField, lbDescription.bottomAnchor, self)
         NSLayoutConstraint.activate([
-            txtField.heightAnchor.constraint(equalToConstant: ValuesConstraintsTextField.height)
+            txtField.heightAnchor.constraint(equalToConstant: ConstantsTextField.height)
         ])
     }
     

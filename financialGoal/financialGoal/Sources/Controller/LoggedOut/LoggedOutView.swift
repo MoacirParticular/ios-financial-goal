@@ -72,7 +72,7 @@ class LoggedOutView: UIView {
     //MARK: BUTTONS
      let buttonCreateAccount: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         button.frame = FrameConstants.frameZero
         button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
         button.backgroundColor = .greenCustomGoal
