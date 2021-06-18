@@ -20,7 +20,7 @@ class SignInPasswdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ScreenAttributes.screenTitle
+        navigationTitleConfig(title: ScreenAttributes.screenTitle )
         getButtonAction()
         listennerKeyBoard()
     }

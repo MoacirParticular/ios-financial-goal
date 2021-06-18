@@ -20,11 +20,11 @@ class SignInMailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ScreenAttributes.screenTitle
+        navigationTitleConfig(title: ScreenAttributes.screenTitle )
         getButtonAction()
         listennerKeyBoard()
     }
-
+    
     private func getButtonAction() {
         overrideView.buttonAction = {
             self.buttonAction?()
@@ -55,5 +55,11 @@ extension UIViewController {
     
     @objc func keyboardHide(sender: Notification) {
         self.view.translatesAutoresizingMaskIntoConstraints = true
+    }
+    
+    func navigationTitleConfig(title: String){
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = title
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.tintColor = .black
     }
 }

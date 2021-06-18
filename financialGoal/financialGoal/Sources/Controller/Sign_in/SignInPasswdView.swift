@@ -19,7 +19,6 @@ class SignInPasswdView: UIView {
         label.text = ValuesSignIn_Passwd.subtitile
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
         label.font = .fontLabelTitleRegular
-        label.font = .fontLabelTitleRegular
         return label
     }()
     let lbDescription: UILabel = {
@@ -27,7 +26,7 @@ class SignInPasswdView: UIView {
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
         label.text = ValuesSignIn_Passwd.description
-        label.font = .fontLabelSubTitleRegular
+        label.font = .fontDescriptionRegular
         return label
     }()
     

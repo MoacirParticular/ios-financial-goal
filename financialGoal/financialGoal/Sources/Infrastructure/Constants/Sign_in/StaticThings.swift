@@ -42,7 +42,7 @@ struct ValuesConstraintsTextField {
     static let identTop: CGFloat = 19
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
-    static let height: CGFloat = 52
+    static let height: CGFloat = 60
     static let textIdent: CGFloat = 15
 }
 

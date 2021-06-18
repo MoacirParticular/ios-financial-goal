@@ -8,6 +8,7 @@
 import Foundation
 
 struct StringConstantsLogin {
+    static let screenTitleLogin:String = "Login"
     static let placeHolderUsername:String = "username"
     static let placeHolderPassword:String = "senha"
     static let titleButtonLogin:String = "LOGIN"

@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .backgroundCustomGoal
         getActionButton()
+        navigationTitleConfig(title: StringConstantsLogin.screenTitleLogin )
     }
     
     override func loadView() {
