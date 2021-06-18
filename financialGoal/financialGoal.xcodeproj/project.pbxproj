@@ -56,6 +56,9 @@
 		89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */; };
 		895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D4267BF47A00C4BE4B /* SignInNameView.swift */; };
 		895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */; };
+		895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */; };
+		895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58E6267BFFFB00C4BE4B /* SignInPasswdViewController.swift */; };
+		895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */; };
 		896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDB267A779B004A05F3 /* UIView+.swift */; };
 		896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInMailView.swift */; };
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
@@ -144,6 +147,9 @@
 		89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameCoordinator.swift; sourceTree = "<group>"; };
 		895D58D4267BF47A00C4BE4B /* SignInNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameView.swift; sourceTree = "<group>"; };
 		895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameViewController.swift; sourceTree = "<group>"; };
+		895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdView.swift; sourceTree = "<group>"; };
+		895D58E6267BFFFB00C4BE4B /* SignInPasswdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdViewController.swift; sourceTree = "<group>"; };
+		895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdCoordinator.swift; sourceTree = "<group>"; };
 		896ABDDB267A779B004A05F3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		896ABDDC267A779B004A05F3 /* SignInMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailView.swift; sourceTree = "<group>"; };
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
@@ -323,6 +329,7 @@
 				3FE996222677A6550068E95B /* StartCoordinator.swift */,
 				89192602267A664700EECCB5 /* SignInCoordinator.swift */,
 				89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */,
+				895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -404,6 +411,8 @@
 				896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */,
 				895D58D4267BF47A00C4BE4B /* SignInNameView.swift */,
 				895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */,
+				895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */,
+				895D58E6267BFFFB00C4BE4B /* SignInPasswdViewController.swift */,
 			);
 			path = Sign_in;
 			sourceTree = "<group>";
@@ -586,11 +595,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
+				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
+				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
+				895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */,
 				896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */,
 				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
 				896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */,

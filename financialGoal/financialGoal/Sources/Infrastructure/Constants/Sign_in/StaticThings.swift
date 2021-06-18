@@ -24,6 +24,14 @@ struct ValuesSignIn_Name {
     static let buttonTitle = "CONTINUAR"
 }
 
+struct ValuesSignIn_Passwd {
+    static let subtitile = "Último passo"
+    static let description = "Crie uma senha segura para acessar sua conta."
+    static let placeholder = "senha"
+    static let buttonTitle = "CRIAR CONTA"
+    static let observation = "por favor, crie uma senha com pelo menos 8 dígitos"
+}
+
 struct StaticConfigLabel {
 //    static let subtitleSize: CGFloat = 23
     static let subtitleNumberOfLines: Int = 0

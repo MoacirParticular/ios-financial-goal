@@ -19,7 +19,6 @@ class SignInMailView: UIView {
         label.text = ValuesSignIn_Mail.subtitile
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
         label.font = .fontLabelTitleRegular
-        label.font = .fontLabelTitleRegular
         return label
     }()
     let lbDescription: UILabel = {
@@ -27,7 +26,6 @@ class SignInMailView: UIView {
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
         label.text = ValuesSignIn_Mail.description
-        label.font = .fontLabelSubTitleRegular
         label.font = .fontLabelSubTitleRegular
         return label
     }()

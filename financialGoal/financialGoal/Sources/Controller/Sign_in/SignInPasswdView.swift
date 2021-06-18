@@ -1,5 +1,5 @@
 //
-//  SignInNameView.swift
+//  SignInPasswdView.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 17/06/21.
@@ -7,15 +7,18 @@
 
 import UIKit
 
-class SignInNameView: UIView {
+class SignInPasswdView: UIView {
+    
+    // MARK: - Attributes
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
     let lbSubtitle: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = ValuesSignIn_Name.subtitile
+        label.text = ValuesSignIn_Passwd.subtitile
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
+        label.font = .fontLabelTitleRegular
         label.font = .fontLabelTitleRegular
         return label
     }()
@@ -23,7 +26,7 @@ class SignInNameView: UIView {
         let label = UILabel()
         UIView.configInitailElements(label)
         label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_Name.description
+        label.text = ValuesSignIn_Passwd.description
         label.font = .fontLabelSubTitleRegular
         return label
     }()
@@ -34,10 +37,18 @@ class SignInNameView: UIView {
         UIView.configInitailElements(tField)
         tField.borderStyle = .roundedRect
         tField.addShadow()
-        tField.placeholder = ValuesSignIn_Name.placeholder
+        tField.placeholder = ValuesSignIn_Passwd.placeholder
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
+    }()
+    let lbObservation: UILabel = {
+        let label = UILabel()
+        UIView.configInitailElements(label)
+        label.textColor = .customColorPageControl
+        label.text = ValuesSignIn_Passwd.observation
+        label.font = .fontLabelSubTitleRegular
+        return label
     }()
     
     // MARK: - Button
@@ -48,7 +59,7 @@ class SignInNameView: UIView {
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
-        bttn.setTitle(ValuesSignIn_Name.buttonTitle, for: .normal)
+        bttn.setTitle(ValuesSignIn_Passwd.buttonTitle, for: .normal)
         bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         return bttn
     }()
@@ -68,6 +79,7 @@ class SignInNameView: UIView {
         alignLbSubtitle()
         alignLbDescription()
         alignTxtField()
+        alignLbObservation()
         alignBttnContinue()
     }
     
@@ -92,6 +104,11 @@ class SignInNameView: UIView {
         NSLayoutConstraint.alignDefaultLabels(lbDescription, lbSubtitle.bottomAnchor, self)
     }
     
+    private func alignLbObservation() {
+        self.addSubview(lbObservation)
+        NSLayoutConstraint.alignDefaultLabels(lbObservation, txtField.bottomAnchor, self)
+    }
+    
     private func alignTxtField() {
         self.addSubview(txtField)
         NSLayoutConstraint.alignDefault(txtField, lbDescription.bottomAnchor, self)
@@ -108,3 +125,4 @@ class SignInNameView: UIView {
         ])
     }
 }
+
