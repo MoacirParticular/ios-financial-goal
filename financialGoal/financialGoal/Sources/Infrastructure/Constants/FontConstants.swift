@@ -35,5 +35,10 @@ public extension UIFont {
     static var fontTextFieldLogin: UIFont {
         return UIFont(name: "Roboto-Regular", size: 18) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho e fonte descrição
+    static var fontDescriptionRegular: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 13) ?? fontDefaultGeorgia
+    }
 }
 
