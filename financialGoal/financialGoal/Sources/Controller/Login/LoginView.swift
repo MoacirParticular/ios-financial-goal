@@ -140,7 +140,6 @@ class LoginView: UIView {
         NSLayoutConstraint.activate([
             buttonForgotPassword.topAnchor.constraint(equalTo: self.buttonLogin.bottomAnchor, constant: ConstantsConstraintsBtForgetPass.topAnchorBtForgotPass),
             buttonForgotPassword.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ConstantsConstraintsBtForgetPass.leftAnchorBtForgotPass),
-            buttonForgotPassword.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ConstantsConstraintsBtForgetPass.rightAnchorBtForgotPass),
             buttonForgotPassword.heightAnchor.constraint(equalToConstant: ConstantsConstraintsBtForgetPass.heightAnchorBtForgotPass)
        ])
     }
