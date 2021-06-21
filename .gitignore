@@ -3,12 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
-<<<<<<< HEAD
-
-## Arquivo com a chave da api
-=======
->>>>>>> parent of b2b5cd7 (git ignore)
-ConstantApiKey.swift
+financialGoal/financialGoal/Sources/Infrastructure/Constants/Internal/ConstantApiKey.swift
 
 xcuserdata/
 .DS_Store
