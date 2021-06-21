@@ -77,6 +77,7 @@
 		C1AD75D326791E0200BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75DB26791E2500BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75E126791E4A00BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F726C226811CB100F3B997 /* UsersModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C178D356267ACA100079072F /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
+		C1F726C226811CB100F3B997 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,7 +321,7 @@
 				3FE9961E2677A4DD0068E95B /* Infrastructure */,
 				3FE996182677942B0068E95B /* Controller */,
 				3FE99617267794280068E95B /* Coordinator */,
-				3FE99616267794250068E95B /* Model */,
+				C1F726C126811C9300F3B997 /* Model */,
 				3FE99615267794210068E95B /* ViewModel */,
 			);
 			path = Sources;
@@ -330,13 +332,6 @@
 			children = (
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		3FE99616267794250068E95B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3FE99617267794280068E95B /* Coordinator */ = {
@@ -464,6 +459,14 @@
 				C12D2293267B971B002C0275 /* StringConstantsLogin.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C1F726C126811C9300F3B997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1F726C226811CB100F3B997 /* UsersModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,6 +662,7 @@
 				896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
+				C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
 				C1AD75E126791E4A00BB9729 /* (null) in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
