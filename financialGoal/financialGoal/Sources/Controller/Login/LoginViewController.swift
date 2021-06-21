@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     
     override func loadView() {
         self.view = loginView
+        
     }
     
     //MARK: Actions Buttons:
