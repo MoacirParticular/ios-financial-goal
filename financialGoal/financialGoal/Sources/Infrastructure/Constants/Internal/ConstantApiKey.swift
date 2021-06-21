@@ -8,5 +8,5 @@
 import Foundation
 
 struct ApiKey {
-    static public var value = "Aqui vai o valor da api key"
+    static public var value = ""
 }
