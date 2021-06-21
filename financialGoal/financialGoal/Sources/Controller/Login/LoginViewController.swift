@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     var loginView = LoginView(frame: FrameConstants.frameZero)
     let alertVC = AlertViewController()
     
+    let requestLogin = RequestLogin()
+    
     //MARK: Lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class LoginViewController: UIViewController {
         loginView.onLoginButton = { option in
             switch option {
             case .Login:
-                print("Tentando Login")
+                self.requestLogin.openRequest()
             default:
                 let alert = self.alertVC.alertView()
                 self.present(alert, animated: true, completion: nil)
