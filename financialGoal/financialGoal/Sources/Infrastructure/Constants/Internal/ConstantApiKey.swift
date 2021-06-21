@@ -8,5 +8,5 @@
 import Foundation
 
 struct ApiKey {
-    static public var value = "f"
+    static public var value = ""
 }
