@@ -7,11 +7,15 @@
 
 import Foundation
 
-class RequestBuilder {
+protocol RequestBuilderSignInProtocol {
+    func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest
+}
+
+class RequestBuilderSignIn: RequestBuilderSignInProtocol {
     
-    func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest{
+    func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest {
         let url: URL = {
-            guard let url = ApiUrlRequest(operation: .signIn).getData() else { return URL(string: String.empty)!}
+            guard let url = ApiUrlRequest(operation: .signIn).getData() else { return URL(string: String.empty)! }
             return url
         }()
         var request = URLRequest(url: url)
