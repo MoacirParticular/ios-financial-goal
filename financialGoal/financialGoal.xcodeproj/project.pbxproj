@@ -78,6 +78,7 @@
 		C1AD75E126791E4A00BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F726C226811CB100F3B997 /* UsersModel.swift */; };
 		C1F726CC26812CD000F3B997 /* ConstantApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F726CB26812CD000F3B997 /* ConstantApiKey.swift */; };
+		C1F726D526812FF500F3B997 /* RequestForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F726D426812FF500F3B997 /* RequestForgotPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
 		C1F726C226811CB100F3B997 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		C1F726CB26812CD000F3B997 /* ConstantApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApiKey.swift; sourceTree = "<group>"; };
+		C1F726D426812FF500F3B997 /* RequestForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestForgotPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +324,7 @@
 		3FE99615267794210068E95B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1F726D326812F5700F3B997 /* RecoveryPassword */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -467,6 +470,14 @@
 				C1F726CB26812CD000F3B997 /* ConstantApiKey.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		C1F726D326812F5700F3B997 /* RecoveryPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C1F726D426812FF500F3B997 /* RequestForgotPassword.swift */,
+			);
+			path = RecoveryPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,6 +650,7 @@
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
+				C1F726D526812FF500F3B997 /* RequestForgotPassword.swift in Sources */,
 				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
