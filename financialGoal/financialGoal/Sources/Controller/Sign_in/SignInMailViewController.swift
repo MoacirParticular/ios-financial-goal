@@ -15,6 +15,7 @@ class SignInMailViewController: UIViewController {
     
     // MARK: - Methods/ Functions
     override func loadView() {
+        dataRecover()
         self.view = self.overrideView
     }
     
@@ -25,9 +26,24 @@ class SignInMailViewController: UIViewController {
         listennerKeyBoard()
     }
     
+    private func dataRecover() {
+        overrideView.txtField.text = SignInData.username
+    }
+    
     private func getButtonAction() {
         overrideView.buttonAction = {
-            self.buttonAction?()
+            guard let receivedMail = self.overrideView.txtField.text else { return }
+            if self.checkMail(receivedMail) {
+                SignInData.username = receivedMail
+                self.buttonAction?()
+            } else {
+                self.showDefaultAlert(.DearUser, .MailError)
+            }
         }
     }
+    
+    private func checkMail(_ username: String) -> Bool {
+        return String().isValidEmail(username)
+    }
 }
+

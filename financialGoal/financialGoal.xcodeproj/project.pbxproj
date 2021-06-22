@@ -62,13 +62,16 @@
 		895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */; };
 		896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDB267A779B004A05F3 /* UIView+.swift */; };
 		896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDC267A779B004A05F3 /* SignInMailView.swift */; };
-		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
+		896ABDE1267A779B004A05F3 /* StringSignInConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StringSignInConstants.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */; };
 		8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982EFF1267D17F40002085E /* UIViewController+.swift */; };
 		89C9FF98268130A200B45338 /* ConstantApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FF97268130A200B45338 /* ConstantApiKey.swift */; };
 		89C9FF9E2681333100B45338 /* RequestSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FF9D2681333100B45338 /* RequestSignIn.swift */; };
 		89C9FFA626815E7300B45338 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFA526815E7300B45338 /* RequestBuilder.swift */; };
 		89C9FFAB26815ECB00B45338 /* ApiUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */; };
+		89C9FFCA2682450100B45338 /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFC92682450100B45338 /* SignInData.swift */; };
+		89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFCE2682652000B45338 /* StringAlertConstants.swift */; };
+		89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */; };
 		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
 		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -162,13 +165,16 @@
 		895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdCoordinator.swift; sourceTree = "<group>"; };
 		896ABDDB267A779B004A05F3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		896ABDDC267A779B004A05F3 /* SignInMailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailView.swift; sourceTree = "<group>"; };
-		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
+		896ABDDD267A779B004A05F3 /* StringSignInConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSignInConstants.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailViewController.swift; sourceTree = "<group>"; };
 		8982EFF1267D17F40002085E /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		89C9FF97268130A200B45338 /* ConstantApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApiKey.swift; sourceTree = "<group>"; };
 		89C9FF9D2681333100B45338 /* RequestSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSignIn.swift; sourceTree = "<group>"; };
 		89C9FFA526815E7300B45338 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlRequest.swift; sourceTree = "<group>"; };
+		89C9FFC92682450100B45338 /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
+		89C9FFCE2682652000B45338 /* StringAlertConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlertConstants.swift; sourceTree = "<group>"; };
+		89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlStructEnum.swift; sourceTree = "<group>"; };
 		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -435,7 +441,8 @@
 		896ABDEC267A7ACD004A05F3 /* Sign_in */ = {
 			isa = PBXGroup;
 			children = (
-				896ABDDD267A779B004A05F3 /* StaticThings.swift */,
+				896ABDDD267A779B004A05F3 /* StringSignInConstants.swift */,
+				89C9FFCE2682652000B45338 /* StringAlertConstants.swift */,
 			);
 			path = Sign_in;
 			sourceTree = "<group>";
@@ -473,6 +480,23 @@
 			path = Codable;
 			sourceTree = "<group>";
 		};
+		89C9FFD326826E0300B45338 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				89C9FFD426826E2F00B45338 /* Sign_in */,
+				89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		89C9FFD426826E2F00B45338 /* Sign_in */ = {
+			isa = PBXGroup;
+			children = (
+				89C9FFC92682450100B45338 /* SignInData.swift */,
+			);
+			path = Sign_in;
+			sourceTree = "<group>";
+		};
 		C178D34C267AC9F50079072F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +520,7 @@
 			isa = PBXGroup;
 			children = (
 				89C9FFBC2682228A00B45338 /* Codable */,
+				89C9FFD326826E0300B45338 /* Struct */,
 				89C9FFBB2682228200B45338 /* Provider */,
 				89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */,
 			);
@@ -660,13 +685,14 @@
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
+				89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
 				895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */,
 				896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */,
 				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
-				896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */,
+				896ABDE1267A779B004A05F3 /* StringSignInConstants.swift in Sources */,
 				89C9FFA626815E7300B45338 /* RequestBuilder.swift in Sources */,
 				89C9FF98268130A200B45338 /* ConstantApiKey.swift in Sources */,
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
@@ -677,6 +703,7 @@
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
 				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
+				89C9FFCA2682450100B45338 /* SignInData.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
@@ -703,6 +730,7 @@
 				C1AD75E126791E4A00BB9729 /* (null) in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
 				C178D351267AC9F50079072F /* AlertViewController.swift in Sources */,
+				89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
