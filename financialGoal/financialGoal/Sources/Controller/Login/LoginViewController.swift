@@ -45,22 +45,28 @@ class LoginViewController: UIViewController {
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
-                print(messsage)
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Caro usuário", message: messsage, preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "Ok", style: .default) { (action) in
-                         let navigation = self.navigationController
-                            //let loginCoordinator = StartCoordinator(navigationController: navigation)
-                            //loginCoordinator.start()
+                
+                if returnData.res == true {
+                    print("PROXIMA TELA")
+                    
+                }else{
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Login", message: messsage, preferredStyle: .alert)
+                        let ok = UIAlertAction(title: "Ok", style: .default) { (action) in
+                            
+                        }
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
                     }
-                    alert.addAction(ok)
-                    self.present(alert, animated: true, completion: nil)
+                    
+                    
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
+    
     
     func setResultTextField() {
         guard let username = self.loginView.textFieldUser.text else { return }
