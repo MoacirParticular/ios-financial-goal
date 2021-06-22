@@ -15,7 +15,7 @@ class RecoveryPassword {
         let url =  URL(string: "https://zdktzx1nbi.execute-api.sa-east-1.amazonaws.com/dev/recovery-password/")!
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = [
-            "x-api-key": ConstantApiKey.value
+            "x-api-key": ApiKey.value
         ]
         
         let body = ["username": "leojportes@gmail.com"]
