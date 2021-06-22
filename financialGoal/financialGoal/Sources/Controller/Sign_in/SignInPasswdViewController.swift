@@ -27,20 +27,26 @@ class SignInPasswdViewController: UIViewController {
 //    result.get().message
     private func getButtonAction() {
         overrideView.buttonAction = {
+            guard let passwd = self.overrideView.txtField.text else { return }
             self.buttonAction?()
-            self.requestApi()
+            self.requestApi(passwd)
         }
     }
     
-    private func requestApi() {
-        Request().signIn("teste", "teste", "teste") { (result) in
+    private func requestApi(_ passwd: String) {
+        RequestSignIn().signIn("ios3@ios.com", "Jonattan", passwd) { (result) in
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
                 print(messsage)
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Caro usuário", message: messsage, preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    let ok = UIAlertAction(title: "Ok", style: .default) { (action) in
+                        if let navigation = self.navigationController {
+                            let loginCoordinator = StartCoordinator(navigationController: navigation)
+                            loginCoordinator.start()
+                        }
+                    }
                     alert.addAction(ok)
                     self.present(alert, animated: true, completion: nil)
                 }
