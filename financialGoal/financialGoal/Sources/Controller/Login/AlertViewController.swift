@@ -8,8 +8,10 @@
 import UIKit
 
 class AlertViewController: UIAlertController {
-
-    func alertView() -> UIAlertController{
+    var textF: UITextField?
+    
+    func alertView(view: UIViewController) -> UIAlertController{
+        
         let alert = UIAlertController(title: StringContantsAlertForgotPass.title, message: StringContantsAlertForgotPass.message, preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.keyboardType = .emailAddress
@@ -18,11 +20,32 @@ class AlertViewController: UIAlertController {
         let cancel = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleCancel, style: .cancel, handler: nil)
         alert.addAction(cancel)
         let ok = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleOK, style: .default) {
-         (action) in
-            guard let email = alert.textFields?[0].text else {return}
+            (action) in
+            guard let email = alert.textFields?.first?.text else {return}
             print(email)
+            DispatchQueue.main.async {
+                self.requestAlert(view: view, username: email)
+            }
         }
         alert.addAction(ok)
         return alert
+    }
+    
+    func requestAlert(view: UIViewController, username: String){
+        RequestRecoveryPass().recoveryPass(username) { (result) in
+            switch (result){
+            case .success(let userData):
+                guard let message = userData.message else { return }
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Caro usuário", message: message, preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "Ok", style: .default)
+                    alert.addAction(ok)
+                    view.present(alert, animated: true, completion: nil)
+                }
+                print(message)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

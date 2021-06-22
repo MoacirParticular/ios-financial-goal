@@ -7,23 +7,21 @@
 
 import Foundation
 
-protocol RequestBuilderSignInProtocol {
-    func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest
+protocol RequestBuilderRecoveryPassProtocol {
+    func recoveryPass(_ username: String) -> URLRequest
 }
 
-class RequestBuilderSignIn: RequestBuilderSignInProtocol {
+class RequestBuilderRecoveryPass: RequestBuilderRecoveryPassProtocol {
     
-    func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest {
+    func recoveryPass(_ username: String) -> URLRequest {
         let url: URL = {
-            guard let url = ApiUrlRequest(operation: .signIn).getData() else { return URL(string: String.empty)! }
+            guard let url = ApiUrlRequest(operation: .forgot).getData() else { return URL(string: String.empty)! }
             return url
         }()
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = [ "x-api-key": ApiKey.value ]
         let body = [
             "username" : username,
-            "nickname" : nickname,
-            "password" : password
         ]
         do {
             let bodyData = try JSONSerialization.data(withJSONObject: body, options: [])

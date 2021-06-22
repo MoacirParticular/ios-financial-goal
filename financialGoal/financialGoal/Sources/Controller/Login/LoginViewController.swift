@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             case .Login:
                 print("Tentando Login")
             default:
-                let alert = self.alertVC.alertView()
+                let alert = self.alertVC.alertView(view: self)
                 self.present(alert, animated: true, completion: nil)
             }
         }

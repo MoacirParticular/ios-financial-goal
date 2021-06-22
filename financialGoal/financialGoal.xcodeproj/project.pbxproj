@@ -65,13 +65,14 @@
 		896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDD267A779B004A05F3 /* StaticThings.swift */; };
 		896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */; };
 		8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982EFF1267D17F40002085E /* UIViewController+.swift */; };
-		89C9FFAB26815ECB00B45338 /* ApiUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */; };
-		C1034B8D268233580055B644 /* RequestForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1034B8C268233580055B644 /* RequestForgotPassword.swift */; };
 		C1034B94268233610055B644 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1034B92268233610055B644 /* RequestBuilder.swift */; };
 		C1034B95268233610055B644 /* RequestSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1034B93268233610055B644 /* RequestSignIn.swift */; };
 		C1034B9D268233DA0055B644 /* ConstantApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1034B9C268233DA0055B644 /* ConstantApiKey.swift */; };
+		C11C644226826F5300A85286 /* RequestBuilderRecoveryPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C643F26826F5300A85286 /* RequestBuilderRecoveryPass.swift */; };
+		C11C644326826F5300A85286 /* RequestRecoveryPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11C644026826F5300A85286 /* RequestRecoveryPass.swift */; };
 		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
 		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
+		C1491A4326826DAE00AF1D81 /* ApiUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1491A4226826DAE00AF1D81 /* ApiUrlRequest.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
 		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
@@ -166,13 +167,14 @@
 		896ABDDD267A779B004A05F3 /* StaticThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticThings.swift; sourceTree = "<group>"; };
 		896ABDDE267A779B004A05F3 /* SignInMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMailViewController.swift; sourceTree = "<group>"; };
 		8982EFF1267D17F40002085E /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlRequest.swift; sourceTree = "<group>"; };
-		C1034B8C268233580055B644 /* RequestForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestForgotPassword.swift; sourceTree = "<group>"; };
 		C1034B92268233610055B644 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		C1034B93268233610055B644 /* RequestSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSignIn.swift; sourceTree = "<group>"; };
 		C1034B9C268233DA0055B644 /* ConstantApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApiKey.swift; sourceTree = "<group>"; };
+		C11C643F26826F5300A85286 /* RequestBuilderRecoveryPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilderRecoveryPass.swift; sourceTree = "<group>"; };
+		C11C644026826F5300A85286 /* RequestRecoveryPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRecoveryPass.swift; sourceTree = "<group>"; };
 		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
+		C1491A4226826DAE00AF1D81 /* ApiUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiUrlRequest.swift; path = Sign_in/ApiUrlRequest.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,8 @@
 		89C9FFBB2682228200B45338 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				C1491A4226826DAE00AF1D81 /* ApiUrlRequest.swift */,
+				C11C643D26826F5300A85286 /* RecoveryPassword */,
 				C1034B91268233610055B644 /* Sign_in */,
 			);
 			path = Provider;
@@ -466,23 +470,24 @@
 			path = Codable;
 			sourceTree = "<group>";
 		};
-		C1034B8B268233580055B644 /* RecoveryPassword */ = {
-			isa = PBXGroup;
-			children = (
-				C1034B8C268233580055B644 /* RequestForgotPassword.swift */,
-			);
-			path = RecoveryPassword;
-			sourceTree = "<group>";
-		};
 		C1034B91268233610055B644 /* Sign_in */ = {
 			isa = PBXGroup;
 			children = (
-				C1034B8B268233580055B644 /* RecoveryPassword */,
 				C1034B92268233610055B644 /* RequestBuilder.swift */,
 				C1034B93268233610055B644 /* RequestSignIn.swift */,
 			);
 			path = Sign_in;
 			sourceTree = "<group>";
+		};
+		C11C643D26826F5300A85286 /* RecoveryPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C11C643F26826F5300A85286 /* RequestBuilderRecoveryPass.swift */,
+				C11C644026826F5300A85286 /* RequestRecoveryPass.swift */,
+			);
+			name = RecoveryPassword;
+			path = financialGoal/Sources/Model/Provider/RecoveryPassword;
+			sourceTree = SOURCE_ROOT;
 		};
 		C178D34C267AC9F50079072F /* Login */ = {
 			isa = PBXGroup;
@@ -508,7 +513,6 @@
 			children = (
 				89C9FFBC2682228A00B45338 /* Codable */,
 				89C9FFBB2682228200B45338 /* Provider */,
-				89C9FFAA26815ECB00B45338 /* ApiUrlRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,13 +671,14 @@
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
 				C1034B94268233610055B644 /* RequestBuilder.swift in Sources */,
 				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
-				C1034B8D268233580055B644 /* RequestForgotPassword.swift in Sources */,
 				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
+				C11C644226826F5300A85286 /* RequestBuilderRecoveryPass.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				C1034B9D268233DA0055B644 /* ConstantApiKey.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
+				C11C644326826F5300A85286 /* RequestRecoveryPass.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
 				895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */,
@@ -682,12 +687,12 @@
 				896ABDE1267A779B004A05F3 /* StaticThings.swift in Sources */,
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
 				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
-				89C9FFAB26815ECB00B45338 /* ApiUrlRequest.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
 				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
+				C1491A4326826DAE00AF1D81 /* ApiUrlRequest.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
