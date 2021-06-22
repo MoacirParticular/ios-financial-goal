@@ -1,22 +1,22 @@
 //
-//  RequestSignIn.swift
+//  requestLogin.swift
 //  financialGoal
 //
-//  Created by Jonattan Moises Sousa on 21/06/21.
+//  Created by Renilson Moreira Ferreira on 21/06/21.
 //
 
 import Foundation
 
-typealias returnCompletionLogin = (Result<ReturnDecode, Error>) -> Void
+typealias returnCompletion = (Result<ReturnDecode, Error>) -> Void
 
-protocol RequestSignInProtocol {
-    func signIn(_ name: String, _ nickname: String, _ password: String, completionHandler: @escaping returnCompletion)
+protocol RequestLoginProtocol {
+    func login(_ username: String, _ password: String, completionHandler: @escaping returnCompletion)
 }
 
-final class RequestSignIn: RequestSignInProtocol {
+final class requestLogin: RequestLoginProtocol {
     
-    func signIn(_ username: String, _ nickname: String, _ password: String, completionHandler: @escaping returnCompletion) {
-        let bodyTask = RequestBuilderSignIn().signIn(username, nickname, password)
+    func login(_ username: String, _ password: String, completionHandler: @escaping returnCompletion) {
+        let bodyTask = RequestBuilderLogin().login(username, password)
         let session = URLSession.shared
         let task = session.dataTask(with: bodyTask) { (data, response, error) in
             if let error = error {
@@ -29,9 +29,7 @@ final class RequestSignIn: RequestSignInProtocol {
                     completionHandler(.failure(error))
                 }
             }
-        }
+        } 
         task.resume()
     }
 }
-
-
