@@ -12,6 +12,8 @@
 		1CC238BF26823325000653F6 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238BC26823325000653F6 /* RequestBuilder.swift */; };
 		1CC238C026823325000653F6 /* RequestSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238BD26823325000653F6 /* RequestSignIn.swift */; };
 		1CC238C526823594000653F6 /* RequestBuilderLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238C426823594000653F6 /* RequestBuilderLogin.swift */; };
+		1CC238F426827715000653F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238F326827715000653F6 /* HomeViewController.swift */; };
+		1CC238FC2682774D000653F6 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238FB2682774D000653F6 /* HomeCoordinator.swift */; };
 		1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542CF26791A1400A807B4 /* ImageConstants.swift */; };
 		1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC542D026791A1400A807B4 /* FontConstants.swift */; };
 		1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */; };
@@ -108,6 +110,8 @@
 		1CC238BC26823325000653F6 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		1CC238BD26823325000653F6 /* RequestSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSignIn.swift; sourceTree = "<group>"; };
 		1CC238C426823594000653F6 /* RequestBuilderLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderLogin.swift; sourceTree = "<group>"; };
+		1CC238F326827715000653F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1CC238FB2682774D000653F6 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1CC542CF26791A1400A807B4 /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		1CC542D026791A1400A807B4 /* FontConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1CC542D726791A3B00A807B4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -224,6 +228,14 @@
 				1CC238BD26823325000653F6 /* RequestSignIn.swift */,
 			);
 			path = Sign_in;
+			sourceTree = "<group>";
+		};
+		1CC238F2268276FC000653F6 /* home1 */ = {
+			isa = PBXGroup;
+			children = (
+				1CC238F326827715000653F6 /* HomeViewController.swift */,
+			);
+			path = home1;
 			sourceTree = "<group>";
 		};
 		1CC542D626791A3B00A807B4 /* roboto */ = {
@@ -363,6 +375,7 @@
 				89192602267A664700EECCB5 /* SignInCoordinator.swift */,
 				89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */,
 				895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */,
+				1CC238FB2682774D000653F6 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CC238F2268276FC000653F6 /* home1 */,
 				C178D34C267AC9F50079072F /* Login */,
 				896ABDDA267A779B004A05F3 /* Sign_in */,
 				1CC5431E267935D900A807B4 /* LoggedOut */,
@@ -699,6 +713,7 @@
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,
 				C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */,
+				1CC238FC2682774D000653F6 /* HomeCoordinator.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
@@ -708,6 +723,7 @@
 				1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */,
 				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
+				1CC238F426827715000653F6 /* HomeViewController.swift in Sources */,
 				C1AD75DB26791E2500BB9729 /* (null) in Sources */,
 				C15A6E39267A846300B23B05 /* (null) in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,

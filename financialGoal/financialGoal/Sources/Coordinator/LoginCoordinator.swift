@@ -17,7 +17,16 @@ public class LoginCoordinator: Coordinator {
     
     public func start() {
         let screenLoginViewController = LoginViewController()
-        
+        screenLoginViewController.setViewHome = { action in
+            if action == .Logado {
+                print("--FUNCIONOU")
+                let home = HomeCoordinator(navigationController: self.navigationController)
+                home.start()
+                
+            }
+            
+        }
+    
         self.navigationController.pushViewController(screenLoginViewController, animated: true)
         
     }

@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     //MARK: Proprieties:
     var loginView = LoginView(frame: FrameConstants.frameZero)
     let alertVC = AlertViewController()
+    
+    var setViewHome: ((_ login: LoginActionType) -> Void)?
         
     //MARK: Lifecycle:
     override func viewDidLoad() {
@@ -33,11 +35,18 @@ class LoginViewController: UIViewController {
             switch option {
             case .Login:
                 self.setResultTextField()
+                
             default:
                 let alert = self.alertVC.alertView()
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func setResultTextField() {
+        guard let username = self.loginView.textFieldUser.text else { return }
+        guard let password = self.loginView.textFieldPassword.text else { return }
+        self.requestApi(username, password)
     }
     
     private func requestApi(_ username: String, _ password:String) {
@@ -48,7 +57,7 @@ class LoginViewController: UIViewController {
                 
                 if returnData.res == true {
                     print("PROXIMA TELA")
-                    
+                    self.setViewHome?(.Logado)
                 }else{
                     DispatchQueue.main.async {
                         let alert = UIAlertController(title: "Login", message: messsage, preferredStyle: .alert)
@@ -67,11 +76,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    func setResultTextField() {
-        guard let username = self.loginView.textFieldUser.text else { return }
-        guard let password = self.loginView.textFieldPassword.text else { return }
-        self.requestApi(username, password)
-    }
 }
 
