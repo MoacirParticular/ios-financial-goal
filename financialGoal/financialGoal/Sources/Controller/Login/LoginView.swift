@@ -34,6 +34,7 @@ class LoginView: UIView {
     //MARK: Actions Buttons
     @objc
     func loginActionButton (sender: UIButton!) {
+        onLoginButton?(.Login)
     }
     
     @objc

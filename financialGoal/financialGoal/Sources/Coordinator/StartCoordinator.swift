@@ -25,7 +25,6 @@ import UIKit
             case .Login:
                 let coordinator = LoginCoordinator(navigationController: self.navigationController)
                 coordinator.start()
-           
             }
            
         }

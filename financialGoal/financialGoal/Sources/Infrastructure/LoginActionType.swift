@@ -10,4 +10,5 @@ import Foundation
 enum LoginActionType: CodingKey {
     case Login
     case Alert
+    case Logado
 }
