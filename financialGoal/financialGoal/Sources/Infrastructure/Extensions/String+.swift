@@ -12,7 +12,9 @@ extension String {
 }
 
 extension String {
-    func isValidEmail(_ email: String) -> Bool {
+    var isValidEmail: Bool { return mailValidator(self) }
+    
+    func mailValidator(_ email: String) -> Bool {
         let emailChars = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailChars)
         return emailPred.evaluate(with: email)

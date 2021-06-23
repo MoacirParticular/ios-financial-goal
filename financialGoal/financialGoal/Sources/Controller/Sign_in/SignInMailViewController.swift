@@ -43,7 +43,7 @@ class SignInMailViewController: UIViewController {
     }
     
     private func checkMail(_ username: String) -> Bool {
-        return String().isValidEmail(username)
+        return username.isValidEmail
     }
 }
 
