@@ -24,35 +24,43 @@ class SignInPasswdViewController: UIViewController {
         getButtonAction()
         listennerKeyBoard()
     }
-//    result.get().message
+    
     private func getButtonAction() {
         overrideView.buttonAction = {
-            guard let passwd = self.overrideView.txtField.text else { return }
-            self.buttonAction?()
-            self.requestApi(passwd)
+            if let passwd = self.overrideView.txtField.text {
+                if self.checkPassword(passwd) {
+                    self.requestApi(passwd) { (messageToAlert) in
+                        self.showAlert(.DearUser, messageToAlert)
+                        if messageToAlert.contains("já cadastrado") {
+                            
+                        }
+                        self.buttonAction?()
+                    }
+                } else {
+                    self.showDefaultAlert(.Warning, .NoPasswd)
+                }
+            }
         }
     }
     
-    private func requestApi(_ passwd: String) {
-        RequestSignIn().signIn("ios3@ios.com", "Jonattan", passwd) { (result) in
+    private func checkPassword(_ password: String) -> Bool {
+        if password != String.empty {
+            return true
+        }
+        return false
+    }
+    
+    private func requestApi(_ passwd: String, completionHandler: @escaping(String) -> Void) {
+        RequestSignIn().signIn(SignInData.username, SignInData.nickname, passwd) { (result) in
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
-                print(messsage)
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Caro usuário", message: messsage, preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "Ok", style: .default) { (action) in
-                        if let navigation = self.navigationController {
-                            let loginCoordinator = StartCoordinator(navigationController: navigation)
-                            loginCoordinator.start()
-                        }
-                    }
-                    alert.addAction(ok)
-                    self.present(alert, animated: true, completion: nil)
-                }
+                completionHandler(messsage)
             case .failure(let error):
-                print(error.localizedDescription)
+                completionHandler(error.localizedDescription)
             }
         }
     }
 }
+
+
