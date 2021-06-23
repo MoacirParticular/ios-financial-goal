@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     //MARK: Checa os dados digitados no textField
     private func checkDataTextField(){
         guard let password = self.loginView.textFieldPassword.text else { return }
-        guard let username = self.loginView.textFieldUser.text else { return }
+        guard let username = self.loginView.textFieldUser.text?.lowercased() else { return }
         if username.isValidEmail{
             if password != String.empty{
                 self.requestApi(username, password)
