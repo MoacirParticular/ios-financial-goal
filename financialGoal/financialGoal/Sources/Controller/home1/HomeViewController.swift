@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .green
         self.title = "Tela Home"
+        self.removeActivity()
     }
     
     override func viewWillAppear(_ animated: Bool) {
