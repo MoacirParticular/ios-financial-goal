@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             case .Login:
                 self.checkDataTextField()
             default:
-                let alert = self.alertVC.alertView()
+                let alert = self.alertVC.alertView(view: self)
                 self.present(alert, animated: true, completion: nil)
             }
         }
