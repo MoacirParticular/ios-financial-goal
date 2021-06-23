@@ -34,8 +34,7 @@ class LoginViewController: UIViewController {
         loginView.onLoginButton = { option in
             switch option {
             case .Login:
-                self.setResultTextField()
-                
+                self.checkDataTextField()
             default:
                 let alert = self.alertVC.alertView()
                 self.present(alert, animated: true, completion: nil)
@@ -43,32 +42,41 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func setResultTextField() {
-        guard let username = self.loginView.textFieldUser.text else { return }
+    //MARK: Checa os dados digitados no textField
+    private func checkDataTextField(){
         guard let password = self.loginView.textFieldPassword.text else { return }
-        self.requestApi(username, password)
+        guard let username = self.loginView.textFieldUser.text else { return }
+        if password != String.empty{
+            self.requestApi(username, password)
+        } else{
+            self.setAlert("Atenção", "Informe uma senha valida", "Ok")
+        }
     }
     
+    //MARK: Alert padrão
+    func setAlert(_ title: String, _ message: String, _ titleResult: String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let ok = UIAlertAction(title: titleResult, style: .default) { (action) in
+            }
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+       
+    }
+    
+    //MARK: Resposta da API com alert ou direcionando para home
     private func requestApi(_ username: String, _ password:String) {
         requestLogin().login(username, password) { (result) in
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
                 
+                //Leva o usuario para home caso a resposta seja true
                 if returnData.res == true {
-                    print("PROXIMA TELA")
                     self.setViewHome?(.Logado)
                 }else{
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Login", message: messsage, preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "Ok", style: .default) { (action) in
-                            
-                        }
-                        alert.addAction(ok)
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                    
-                    
+                    self.setAlert("Login", messsage, "Ok")
                 }
             case .failure(let error):
                 print(error.localizedDescription)
