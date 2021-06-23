@@ -45,24 +45,16 @@ class LoginViewController: UIViewController {
     //MARK: Checa os dados digitados no textField
     private func checkDataTextField(){
         guard let password = self.loginView.textFieldPassword.text else { return }
-        guard let username = self.loginView.textFieldUser.text else { return }
-        if password != String.empty{
-            self.requestApi(username, password)
-        } else{
-            self.setAlert("Atenção", "Informe uma senha valida", "Ok")
-        }
-    }
-    
-    //MARK: Alert padrão
-    func setAlert(_ title: String, _ message: String, _ titleResult: String){
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let ok = UIAlertAction(title: titleResult, style: .default) { (action) in
+        guard let username = self.loginView.textFieldUser.text?.lowercased() else { return }
+        if username.isValidEmail{
+            if password != String.empty{
+                self.requestApi(username, password)
+            } else{
+                self.showDefaultAlert(.Warning, .NoPasswd)
             }
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
+        }else{
+            self.showDefaultAlert(.Warning, .MailError)
         }
-       
     }
     
     //MARK: Resposta da API com alert ou direcionando para home
@@ -76,7 +68,7 @@ class LoginViewController: UIViewController {
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
                 }else{
-                    self.setAlert("Login", messsage, "Ok")
+                    self.showAlert(.DearUser, messsage)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
