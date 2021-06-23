@@ -1,5 +1,5 @@
 //
-//  StaticText.swift
+//  StringSignInConstants.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 15/06/21.
