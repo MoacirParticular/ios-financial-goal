@@ -14,7 +14,7 @@ enum AlertTitle: CustomStringConvertible {
     var description: String {
         switch self {
         case .DearUser:
-            return "Caro usuário,"
+            return "Caro usuário"
         case .Warning:
             return "Atenção!"
         }
