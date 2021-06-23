@@ -37,4 +37,22 @@ extension UIViewController {
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.tintColor = .black
     }
+    
+    func showAlert(_ title: AlertTitle, _ message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title.description, message: message, preferredStyle: .alert)
+            let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showDefaultAlert(_ title: AlertTitle, _ message: AlertMessage) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title.description, message: message.description, preferredStyle: .alert)
+            let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
