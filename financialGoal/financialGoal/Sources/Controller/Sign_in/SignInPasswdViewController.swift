@@ -34,7 +34,7 @@ class SignInPasswdViewController: UIViewController {
             }
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
-                self.showAlertStatusSignIn(.Warning, messageToAlert, status)
+                self.showAlertStatusSignIn(.CountSuccess, messageToAlert, status)
             }
         }
     }

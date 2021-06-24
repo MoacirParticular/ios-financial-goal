@@ -10,8 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
-        self.title = "Tela Home"
+        self.view.backgroundColor = .greenCustomGoal
         self.removeActivity()
     }
     
