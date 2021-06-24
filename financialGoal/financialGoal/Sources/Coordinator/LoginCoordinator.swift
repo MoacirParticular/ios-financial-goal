@@ -10,29 +10,27 @@ import UIKit
 
 public class LoginCoordinator: Coordinator {
     let navigationController: UINavigationController
+    let screenLoginViewController = LoginViewController()
    
     init (navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     public func start() {
-        let screenLoginViewController = LoginViewController()
-        
+        actionCoordinator(true)
+    }
+    
+    public func startToSignIn() {
+        actionCoordinator(false)
+    }
+    
+    private func actionCoordinator(_ animated: Bool) {
         screenLoginViewController.setViewHome = { action in
             if action == .Logado {
                 let home = HomeCoordinator(navigationController: self.navigationController)
                 home.start()
-                
             }
-            
         }
-        self.navigationController.pushViewController(screenLoginViewController, animated: true)
-        
-    }
-    public func startToSignIn(){
-        let screenLoginViewController = LoginViewController()
-        
-        self.navigationController.pushViewController(screenLoginViewController, animated: false)
-        
+        self.navigationController.pushViewController(screenLoginViewController, animated: animated)
     }
 }
