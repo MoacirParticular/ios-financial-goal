@@ -36,11 +36,9 @@ class SignInPasswdViewController: UIViewController {
                 self.showDefaultAlert(.Warning, .NoPasswd)
                 return
             }
-            DispatchQueue.global().async {
-                self.requestApi(passwd) { (messageToAlert,status) in
-                    self.showAlertStatusSignIn(.DearUser, messageToAlert, status)
-                }
-                sleep(3)
+            self.showActivity()
+            self.requestApi(passwd) { (messageToAlert,status) in
+                self.showAlertStatusSignIn(.DearUser, messageToAlert, status)
             }
         }
     }
@@ -68,6 +66,7 @@ class SignInPasswdViewController: UIViewController {
             }
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
+            self.removeActivity()
         }
     }
     

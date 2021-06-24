@@ -26,8 +26,13 @@ public class LoginCoordinator: Coordinator {
             }
             
         }
-    
         self.navigationController.pushViewController(screenLoginViewController, animated: true)
+        
+    }
+    public func startToSignIn(){
+        let screenLoginViewController = LoginViewController()
+        
+        self.navigationController.pushViewController(screenLoginViewController, animated: false)
         
     }
 }

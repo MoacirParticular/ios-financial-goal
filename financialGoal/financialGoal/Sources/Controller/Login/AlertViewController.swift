@@ -21,8 +21,8 @@ class AlertViewController: UIAlertController {
         alert.addAction(cancel)
         let ok = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleOK, style: .default) {
             (action) in
+            view.showActivity()
             guard let email = alert.textFields?.first?.text else {return}
-            print(email)
             DispatchQueue.main.async {
                 self.requestAlert(view: view, username: email)
             }
@@ -37,12 +37,12 @@ class AlertViewController: UIAlertController {
             case .success(let userData):
                 guard let message = userData.message else { return }
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Caro usuário", message: message, preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "Ok", style: .default)
+                    let alert = UIAlertController(title: AlertTitle.DearUser.description, message: message, preferredStyle: .alert)
+                    let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default)
                     alert.addAction(ok)
                     view.present(alert, animated: true, completion: nil)
+                    view.removeActivity()
                 }
-                print(message)
             case .failure(let error):
                 print(error.localizedDescription)
             }
