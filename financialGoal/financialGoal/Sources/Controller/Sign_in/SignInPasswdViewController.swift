@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum StatusSignIn {
-    case Success
-    case Failure
-}
 class SignInPasswdViewController: UIViewController {
     
     // MARK: - Attributes

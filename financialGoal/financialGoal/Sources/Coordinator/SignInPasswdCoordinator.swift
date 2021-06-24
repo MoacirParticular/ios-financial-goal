@@ -19,12 +19,12 @@ public class SignInPasswdCoordinator: Coordinator {
         screenViewController.status = { status in
             switch status {
             case .Failure:
-                print(status)
+                break
             case .Success:
                 DispatchQueue.main.async {
                     repeat {
                         self.navigationController.viewControllers.removeLast()
-                    } while self.navigationController.viewControllers.count > 1
+                    } while self.navigationController.viewControllers.count > ElementsInNavigation.one
                     let login = LoginCoordinator(navigationController: self.navigationController)
                     login.startToSignIn()
                 }

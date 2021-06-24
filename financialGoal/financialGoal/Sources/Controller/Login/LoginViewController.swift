@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = .backgroundCustomGoal
         getActionButton()
         navigationTitleConfig(title: StringConstantsLogin.screenTitleLogin )
+        self.dataRecover()
     }
     
     override func loadView() {
@@ -76,6 +77,16 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    private func dataRecover() {
+            loginView.textFieldUser.text = SignInData.username
+            self.dataRestore()
+        }
+        
+        private func dataRestore() {
+            SignInData.username = String.empty
+            SignInData.nickname = String.empty
+        }
     
 }
 
