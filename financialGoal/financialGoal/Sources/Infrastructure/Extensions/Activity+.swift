@@ -7,19 +7,19 @@
 
 import UIKit
 
-fileprivate var aView : UIView?
+var aView: UIView?
 
 extension UIViewController {
     
     func showActivity() {
         aView = UIView(frame: self.view.bounds)
-        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        aView?.backgroundColor = .customColorActivity
         
-        let ai = UIActivityIndicatorView(style: .whiteLarge)
-        ai.center = aView!.center
+        let ai = UIActivityIndicatorView(style: .large)
+        ai.center = aView?.center ?? UIView().center
         ai.startAnimating()
         aView?.addSubview(ai)
-        self.view?.addSubview(aView!)
+        self.view?.addSubview(aView ?? UIView())
       
     }
     

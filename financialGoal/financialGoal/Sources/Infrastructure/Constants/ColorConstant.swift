@@ -45,6 +45,10 @@ public extension UIColor {
     static var customColorShadow: UIColor {
         return UIColor(named: "customColorShadow") ?? UIColor.black
     }
+    @objc
+    static var customColorActivity: UIColor {
+        return UIColor(named: "customColorActivity") ?? UIColor.gray
+    }
     
         
 }
