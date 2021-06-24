@@ -29,12 +29,12 @@ class SignInPasswdViewController: UIViewController {
         overrideView.buttonAction = {
             guard let passwd = self.overrideView.txtField.text else { return }
             if passwd == String.empty {
-                self.showDefaultAlert(.Warning, .NoPasswd)
+                self.showDefaultAlert(.InvalidMail, .NoPasswd)
                 return
             }
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
-                self.showAlertStatusSignIn(.DearUser, messageToAlert, status)
+                self.showAlertStatusSignIn(.Warning, messageToAlert, status)
             }
         }
     }
@@ -49,7 +49,7 @@ class SignInPasswdViewController: UIViewController {
                 guard let messsage = returnData.message else { return }
                 completionHandler(messsage,status)
             case .failure(let error):
-                self.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
+                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
     }

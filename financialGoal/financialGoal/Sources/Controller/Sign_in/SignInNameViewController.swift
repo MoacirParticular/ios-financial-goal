@@ -37,7 +37,7 @@ class SignInNameViewController: UIViewController {
                     SignInData.nickname = receivedNickname
                     self.buttonAction?()
                 } else {
-                    self.showDefaultAlert(.DearUser, .NoNickname)
+                    self.showDefaultAlert(.Warning, .NoNickname)
                 }
             }
         }
