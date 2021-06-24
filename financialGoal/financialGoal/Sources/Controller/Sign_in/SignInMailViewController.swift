@@ -32,7 +32,7 @@ class SignInMailViewController: UIViewController {
     
     private func getButtonAction() {
         overrideView.buttonAction = {
-            guard let receivedMail = self.overrideView.txtField.text else { return }
+            guard let receivedMail = self.overrideView.txtField.text?.lowercased() else { return }
             if self.checkMail(receivedMail) {
                 SignInData.username = receivedMail
                 self.buttonAction?()

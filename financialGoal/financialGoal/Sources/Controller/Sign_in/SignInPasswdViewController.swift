@@ -7,11 +7,15 @@
 
 import UIKit
 
+enum StatusSignIn {
+    case Success
+    case Failure
+}
 class SignInPasswdViewController: UIViewController {
     
     // MARK: - Attributes
     let overrideView = SignInPasswdView(frame: FrameConstants.frameZero)
-    var buttonAction: (() -> Void)?
+    var status: ((_ status: StatusSignIn) -> Void)?
     
     // MARK: - Methods/ Functions
     override func loadView() {
@@ -27,39 +31,54 @@ class SignInPasswdViewController: UIViewController {
     
     private func getButtonAction() {
         overrideView.buttonAction = {
-            if let passwd = self.overrideView.txtField.text {
-                if self.checkPassword(passwd) {
-                    self.requestApi(passwd) { (messageToAlert) in
-                        self.showAlert(.DearUser, messageToAlert)
-                        if messageToAlert.contains("já cadastrado") {
-                            
-                        }
-                        self.buttonAction?()
-                    }
-                } else {
-                    self.showDefaultAlert(.Warning, .NoPasswd)
+            guard let passwd = self.overrideView.txtField.text else { return }
+            if passwd == String.empty {
+                self.showDefaultAlert(.Warning, .NoPasswd)
+                return
+            }
+            DispatchQueue.global().async {
+                self.requestApi(passwd) { (messageToAlert,status) in
+                    self.showAlertStatusSignIn(.DearUser, messageToAlert, status)
                 }
+                sleep(3)
             }
         }
     }
     
-    private func checkPassword(_ password: String) -> Bool {
-        if password != String.empty {
-            return true
-        }
-        return false
-    }
-    
-    private func requestApi(_ passwd: String, completionHandler: @escaping(String) -> Void) {
+    private func requestApi(_ passwd: String, completionHandler: @escaping(String,Bool) -> Void) {
+        
         RequestSignIn().signIn(SignInData.username, SignInData.nickname, passwd) { (result) in
+            var status = false
             switch(result) {
             case .success(let returnData):
+                status = returnData.res ?? status
                 guard let messsage = returnData.message else { return }
-                completionHandler(messsage)
+                completionHandler(messsage,status)
             case .failure(let error):
-                completionHandler(error.localizedDescription)
+                completionHandler(error.localizedDescription,status)
             }
         }
+    }
+    
+    private func showAlertStatusSignIn(_ title: AlertTitle, _ message: String, _ status: Bool) {
+        DispatchQueue.main.sync {
+            let alert = UIAlertController(title: title.description, message: message, preferredStyle: .alert)
+            let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default) { (action) in
+                self.status?(self.setActionValue(message, status))
+            }
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func setActionValue(_ messageToAlert: String, _ status: Bool) -> StatusSignIn {
+        if messageToAlert.contains("já cadastrado") {
+            return .Success
+        }
+        if status {
+            return .Success
+        }
+        return .Failure
     }
 }
 
