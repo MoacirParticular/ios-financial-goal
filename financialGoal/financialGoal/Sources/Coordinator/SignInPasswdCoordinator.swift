@@ -26,7 +26,7 @@ public class SignInPasswdCoordinator: Coordinator {
                         self.navigationController.viewControllers.removeLast()
                     } while self.navigationController.viewControllers.count > 1
                     let login = LoginCoordinator(navigationController: self.navigationController)
-                    login.start()
+                    login.startToSignIn()
                 }
             }
         }
