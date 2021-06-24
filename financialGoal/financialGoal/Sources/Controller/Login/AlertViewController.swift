@@ -36,14 +36,14 @@ class AlertViewController: UIAlertController {
             case .success(let userData):
                 guard let message = userData.message else { return }
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: AlertTitle.DearUser.description, message: message, preferredStyle: .alert)
+                    let alert = UIAlertController(title: AlertTitle.Warning.description, message: message, preferredStyle: .alert)
                     let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default)
                     alert.addAction(ok)
                     view.present(alert, animated: true, completion: nil)
                     view.removeActivity()
                 }
             case .failure(let error):
-                view.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
+                view.showDefaultAlert(.Warning, AlertMessage.NoConnection)
                 print("TESTEEEEEEEEE",error.self)
             }
         }

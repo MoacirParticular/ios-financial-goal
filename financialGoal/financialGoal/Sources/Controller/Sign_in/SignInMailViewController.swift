@@ -37,7 +37,7 @@ class SignInMailViewController: UIViewController {
                 SignInData.username = receivedMail
                 self.buttonAction?()
             } else {
-                self.showDefaultAlert(.DearUser, .MailError)
+                self.showDefaultAlert(.Warning, .MailError)
             }
         }
     }

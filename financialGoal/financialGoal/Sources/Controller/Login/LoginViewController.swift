@@ -48,13 +48,13 @@ class LoginViewController: UIViewController {
         guard let password = self.loginView.textFieldPassword.text else { return }
         guard let username = self.loginView.textFieldUser.text?.lowercased() else { return }
         if username.isValidEmail{
-            if password != String.empty{
+            if password.isValidPassword {
                 self.requestApi(username, password)
             } else{
-                self.showDefaultAlert(.Warning, .NoPasswd)
+                self.showDefaultAlert(.InvalidPassword, .NoPasswd)
             }
         }else{
-            self.showDefaultAlert(.Warning, .MailError)
+            self.showDefaultAlert(.InvalidMail, .MailError)
         }
     }
     
@@ -70,10 +70,10 @@ class LoginViewController: UIViewController {
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
                 }else{
-                    self.showAlert(.DearUser, messsage)
+                    self.showAlert(.Warning, messsage)
                 }
             case .failure(let error):
-                self.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
+                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
     }

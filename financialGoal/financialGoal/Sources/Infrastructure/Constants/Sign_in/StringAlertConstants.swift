@@ -8,15 +8,18 @@
 import Foundation
 
 enum AlertTitle: CustomStringConvertible {
-    case DearUser
     case Warning
+    case InvalidMail
+    case InvalidPassword
     
     var description: String {
         switch self {
-        case .DearUser:
-            return "Caro usuário"
         case .Warning:
             return "Atenção"
+        case .InvalidMail:
+            return "E-mail inválido"
+        case .InvalidPassword:
+            return "Senha inválida"
         }
     }
 }
@@ -34,9 +37,9 @@ enum AlertMessage: CustomStringConvertible {
         case .NoNickname:
             return "Digite um nome ou apelido."
         case .NoPasswd:
-            return "Digite uma senha."
+            return "Digite uma senha com 8 ou mais caractéres."
         case .NoConnection:
-            return "Erro de Conexão"
+            return "Erro de conexão."
         }
     }
 }
