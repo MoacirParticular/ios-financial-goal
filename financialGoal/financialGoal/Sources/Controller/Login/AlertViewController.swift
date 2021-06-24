@@ -45,7 +45,7 @@ class AlertViewController: UIAlertController {
                     view.removeActivity()
                 }
             case .failure( _):
-                self.showAlertError(view: view, .DearUser, .MailError)
+                self.showAlertError(view: view, .InvalidMail, .MailError)
             }
         }
     }
