@@ -19,8 +19,7 @@ class AlertViewController: UIAlertController {
         }
         let cancel = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleCancel, style: .cancel, handler: nil)
         alert.addAction(cancel)
-        let ok = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleOK, style: .default) {
-            (action) in
+        let ok = UIAlertAction(title: StringContantsAlertForgotPass.actiontitleOK, style: .default) { (action) in
             view.showActivity()
             guard let email = alert.textFields?.first?.text else {return}
             DispatchQueue.main.async {
@@ -44,7 +43,8 @@ class AlertViewController: UIAlertController {
                     view.removeActivity()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                view.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
+                print("TESTEEEEEEEEE",error.self)
             }
         }
     }

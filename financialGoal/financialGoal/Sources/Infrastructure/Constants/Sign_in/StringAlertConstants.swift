@@ -25,6 +25,7 @@ enum AlertMessage: CustomStringConvertible {
     case MailError
     case NoNickname
     case NoPasswd
+    case NoConnection
     
     var description: String {
         switch self {
@@ -34,6 +35,8 @@ enum AlertMessage: CustomStringConvertible {
             return "Digite um nome ou apelido."
         case .NoPasswd:
             return "Digite uma senha."
+        case .NoConnection:
+            return "Erro de Conexão"
         }
     }
 }
