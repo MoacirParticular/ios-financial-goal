@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
     
     //MARK: Resposta da API com alert ou direcionando para home
     private func requestApi(_ username: String, _ password:String) {
+        self.showActivity()
         requestLogin().login(username, password) { (result) in
             switch(result) {
             case .success(let returnData):

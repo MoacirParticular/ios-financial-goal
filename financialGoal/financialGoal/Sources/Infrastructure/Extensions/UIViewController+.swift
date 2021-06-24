@@ -40,6 +40,7 @@ extension UIViewController {
     
     func showAlert(_ title: AlertTitle, _ message: String) {
         DispatchQueue.main.async {
+            self.removeActivity()
             let alert = UIAlertController(title: title.description, message: message, preferredStyle: .alert)
             let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default)
             alert.addAction(ok)

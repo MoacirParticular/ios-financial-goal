@@ -16,7 +16,7 @@ enum AlertTitle: CustomStringConvertible {
         case .DearUser:
             return "Caro usuário"
         case .Warning:
-            return "Atenção!"
+            return "Atenção"
         }
     }
 }
