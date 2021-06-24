@@ -28,8 +28,8 @@ class SignInPasswdViewController: UIViewController {
     private func getButtonAction() {
         overrideView.buttonAction = {
             guard let passwd = self.overrideView.txtField.text else { return }
-            if passwd == String.empty {
-                self.showDefaultAlert(.InvalidMail, .NoPasswd)
+            if !passwd.isValidPassword {
+                self.showDefaultAlert(.InvalidPassword, .NoPasswd)
                 return
             }
             self.showActivity()
