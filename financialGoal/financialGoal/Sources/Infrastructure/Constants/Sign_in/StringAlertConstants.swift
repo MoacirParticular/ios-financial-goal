@@ -12,6 +12,7 @@ enum AlertTitle: CustomStringConvertible {
     case InvalidMail
     case InvalidPassword
     case InvalidNickname
+    case DearUser
     
     var description: String {
         switch self {
@@ -23,6 +24,8 @@ enum AlertTitle: CustomStringConvertible {
             return "Nome ou apelido inválido"
         case .InvalidPassword:
             return "Senha inválida"
+        case .DearUser:
+            return "Caro usuário!"
         }
     }
 }
