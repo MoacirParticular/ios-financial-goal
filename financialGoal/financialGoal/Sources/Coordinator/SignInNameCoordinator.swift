@@ -16,7 +16,6 @@ public class SignInNameCoordinator: Coordinator {
     
     public func start() {
         let screenViewController = SignInNameViewController()
-        
         screenViewController.buttonAction = {
             let newVc = SignInPasswdCoordinator(navigationController: self.navigationController)
             newVc.start()

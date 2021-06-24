@@ -16,7 +16,6 @@ public class SignInCoordinator: Coordinator {
     
     public func start() {
         let screenViewController = SignInMailViewController()
-        
         screenViewController.buttonAction = {
             let newVc = SignInNameCoordinator(navigationController: self.navigationController)
             newVc.start()
