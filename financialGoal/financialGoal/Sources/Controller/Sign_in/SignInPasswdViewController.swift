@@ -49,7 +49,7 @@ class SignInPasswdViewController: UIViewController {
                 guard let messsage = returnData.message else { return }
                 completionHandler(messsage,status)
             case .failure(let error):
-                completionHandler(error.localizedDescription,status)
+                self.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
             }
         }
     }

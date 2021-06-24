@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
                     self.showAlert(.DearUser, messsage)
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showDefaultAlert(.DearUser, AlertMessage.NoConnection)
             }
         }
     }
