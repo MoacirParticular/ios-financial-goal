@@ -43,7 +43,7 @@ struct StaticConfigLabel {
 }
 
 struct ValuesConstraintsTextField {
-    static let identTop: CGFloat = 200
+    static let identTop: CGFloat = 20
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
     static let textIdent: CGFloat = 15
