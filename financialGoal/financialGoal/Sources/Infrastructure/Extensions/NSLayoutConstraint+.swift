@@ -10,7 +10,7 @@ import UIKit
 extension NSLayoutConstraint {
     @objc static func alignDefault(_ viewElement: UIView, _ viewReference: NSLayoutYAxisAnchor, _ viewBase: UIView) {
         NSLayoutConstraint.activate([
-            viewElement.topAnchor.constraint(equalTo: viewBase.topAnchor, constant: ValuesConstraintsTextField.identTop),
+            viewElement.topAnchor.constraint(equalTo: viewReference, constant: ValuesConstraintsTextField.identTop),
             viewElement.leadingAnchor.constraint(equalTo: viewBase.leadingAnchor, constant: ValuesConstraintsTextField.identLeft),
             viewElement.trailingAnchor.constraint(equalTo: viewBase.trailingAnchor, constant: ValuesConstraintsTextField.identRight)
         ])

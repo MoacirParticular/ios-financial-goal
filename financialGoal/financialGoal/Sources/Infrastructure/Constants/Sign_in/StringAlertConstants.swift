@@ -27,7 +27,7 @@ enum AlertTitle: CustomStringConvertible {
         case .InvalidPassword:
             return "Senha inválida"
         case .DearUser:
-            return "Caro usuário!"
+            return "Caro usuário"
 
         case .CountSuccess:
             return "Parabéns"
