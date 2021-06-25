@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+public class LoginView: UIView {
     
     //MARK: Properties
     var onLoginButton: ((_ option: LoginActionType) -> Void)?

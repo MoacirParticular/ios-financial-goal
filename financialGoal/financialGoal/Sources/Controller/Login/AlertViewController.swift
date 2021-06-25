@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertViewController: UIAlertController {
+public class AlertViewController: UIAlertController {
     
     func alertView(view: UIViewController) -> UIAlertController {
         let alert = UIAlertController(title: StringContantsAlertForgotPass.title, message: StringContantsAlertForgotPass.message, preferredStyle: .alert)
@@ -32,7 +32,7 @@ class AlertViewController: UIAlertController {
         return alert
     }
     
-    func requestAlert(view: UIViewController, username: String) {
+    public func requestAlert(view: UIViewController, username: String) {
         RequestRecoveryPass().recoveryPass(username) { (result) in
             switch (result) {
             case .success(let userData):

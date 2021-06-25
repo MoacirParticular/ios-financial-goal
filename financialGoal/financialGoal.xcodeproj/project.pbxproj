@@ -92,6 +92,7 @@
 		C1AD75D326791E0200BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75DB26791E2500BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75E126791E4A00BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C1CB569B26861A3500DB3E82 /* RecoverypassRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CB569A26861A3500DB3E82 /* RecoverypassRequestTests.swift */; };
 		C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F726C226811CB100F3B997 /* UsersModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +201,7 @@
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C178D356267ACA100079072F /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
+		C1CB569A26861A3500DB3E82 /* RecoverypassRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverypassRequestTests.swift; sourceTree = "<group>"; };
 		C1F726C226811CB100F3B997 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -335,6 +337,7 @@
 			children = (
 				3FE995FA267792BB0068E95B /* financialGoalTests.swift */,
 				3FE995FC267792BB0068E95B /* Info.plist */,
+				C1CB569A26861A3500DB3E82 /* RecoverypassRequestTests.swift */,
 				1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */,
 			);
 			path = financialGoalTests;
@@ -797,6 +800,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CB569B26861A3500DB3E82 /* RecoverypassRequestTests.swift in Sources */,
 				3FE995FB267792BB0068E95B /* financialGoalTests.swift in Sources */,
 				1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */,
 			);
