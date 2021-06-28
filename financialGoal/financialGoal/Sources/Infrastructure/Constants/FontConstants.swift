@@ -40,5 +40,10 @@ public extension UIFont {
     static var fontDescriptionRegular: UIFont {
         return UIFont(name: "Roboto-Regular", size: 13) ?? fontDefaultGeorgia
     }
+    
+    //MARK: Tamanho da fonte NickName tela home
+    static var fontNickNameHome: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 32) ?? fontDefaultGeorgia
+    }
 }
 

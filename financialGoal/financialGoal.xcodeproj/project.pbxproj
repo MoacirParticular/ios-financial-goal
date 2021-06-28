@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
+		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
+		1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* iconsHome.swift */; };
+		1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* IconsConstants.swift */; };
 		1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */; };
 		1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */; };
 		1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238BA26823325000653F6 /* RequestLogin.swift */; };
@@ -118,6 +121,9 @@
 
 /* Begin PBXFileReference section */
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
+		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1C7BB240268A7BF900D0E196 /* iconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconsHome.swift; sourceTree = "<group>"; };
+		1C7BB245268A7E6200D0E196 /* IconsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsConstants.swift; sourceTree = "<group>"; };
 		1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+.swift"; sourceTree = "<group>"; };
 		1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
 		1CC238BA26823325000653F6 /* RequestLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
@@ -236,6 +242,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7BB23C268A7ABA00D0E196 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C7BB240268A7BF900D0E196 /* iconsHome.swift */,
+				1C7BB245268A7E6200D0E196 /* IconsConstants.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		1CC238B926823325000653F6 /* LoginApi */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				1CC238F326827715000653F6 /* HomeViewController.swift */,
+				1C7BB22F268A3D0A00D0E196 /* HomeView.swift */,
 			);
 			path = home1;
 			sourceTree = "<group>";
@@ -447,6 +463,7 @@
 		3FE9961F2677A4EB0068E95B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				1C7BB23C268A7ABA00D0E196 /* Home */,
 				89C9FF962681309300B45338 /* Internal */,
 				C178D35B267ACA620079072F /* Login */,
 				896ABDEC267A7ACD004A05F3 /* Sign_in */,
@@ -797,6 +814,8 @@
 				C11FD8ED26838035009D5C9D /* ApiUrlRequest.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
+				1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */,
+				1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */,
 				1CC238BF26823325000653F6 /* RequestBuilder.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
@@ -804,6 +823,7 @@
 				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
 				1CC238F426827715000653F6 /* HomeViewController.swift in Sources */,
+				1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */,
 				C1AD75DB26791E2500BB9729 /* (null) in Sources */,
 				C15A6E39267A846300B23B05 /* (null) in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
