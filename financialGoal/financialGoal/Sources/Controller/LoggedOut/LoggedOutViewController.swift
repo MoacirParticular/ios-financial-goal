@@ -14,8 +14,10 @@ class LoggedOutViewController: UIViewController {
     private let loggedOutView = LoggedOutView(frame: FrameConstants.frameZero)
     
     override func viewDidLoad() {
+        self.showActivity()
         setupView()
         setActions()
+        callAutoLogin()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +50,35 @@ class LoggedOutViewController: UIViewController {
             self.onLoginButton?(setLogin)
         }
     }
-
+    
+    func callAutoLogin(){
+        var user = String.empty
+        var pass = String.empty
+        var containCredential:Bool = false
+        
+        if let userKey = UserDefaults.standard.value(forKey: StringConstants.userKey) as? String{
+            user = userKey
+            if let passKey = UserDefaults.standard.value(forKey: StringConstants.passKey) as? String{
+                pass = passKey
+                containCredential = true
+            }
+        }
+        if containCredential{
+            requestLogin().login(user, pass) { (result) in
+                switch(result) {
+                case .success(let returnData):
+                    if returnData.res == true {
+                        DispatchQueue.main.async {
+                            let homeViewController = HomeViewController()
+                            self.navigationController?.pushViewController(homeViewController, animated: true)
+                        }
+                    }
+                case .failure( _):
+                    self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+                }
+            }
+        }
+    }
 }
 
 //MARK: Liga o scrollView com o page controll

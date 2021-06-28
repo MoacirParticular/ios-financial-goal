@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
     
     override func loadView() {
         self.view = loginView
-        
     }
     
     //MARK: Actions Buttons:
@@ -65,27 +64,32 @@ class LoginViewController: UIViewController {
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
-                //Leva o usuario para home caso a resposta seja true
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
+                    self.saveCredentials(user: username, pass: password)
                 }else{
                     self.showAlert(.Warning, messsage)
                 }
-            case .failure(let error):
+            case .failure( _):
                 self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
     }
     
     private func dataRecover() {
-            loginView.textFieldUser.text = SignInData.username
-            self.dataRestore()
-        }
-        
-        private func dataRestore() {
-            SignInData.username = String.empty
-            SignInData.nickname = String.empty
-        }
+        loginView.textFieldUser.text = SignInData.username
+        self.dataRestore()
+    }
+    
+    private func dataRestore() {
+        SignInData.username = String.empty
+        SignInData.nickname = String.empty
+    }
+    
+    private func saveCredentials(user:String, pass:String){
+        UserDefaults.standard.set(user, forKey: StringConstants.userKey)
+        UserDefaults.standard.set(pass, forKey: StringConstants.passKey)
+    }
     
 }
 
