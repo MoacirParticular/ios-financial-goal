@@ -49,6 +49,12 @@ public extension UIColor {
     static var customColorActivity: UIColor {
         return UIColor(named: "customColorActivity") ?? UIColor.gray
     }
+    @objc
+    static var customColorResultLabel: UIColor {
+        return UIColor(named: "customColorResultLabel") ?? UIColor.white
+    }
+    
+    
     
         
 }
