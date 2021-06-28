@@ -21,6 +21,7 @@ public class LoginCoordinator: Coordinator {
     }
     
     public func startToSignIn() {
+        self.navigationController.navigationBar.topItem?.backButtonTitle = StringConstantsLogin.screenTitleLogin
         actionCoordinator(false)
     }
     
