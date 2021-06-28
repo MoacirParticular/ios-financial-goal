@@ -52,14 +52,13 @@ class RequestSignInTests: XCTestCase {
         }
     }
     
-    func testMustBeCreateUserWithSuccess() {
-        let expReturn = expectation(description: "Verifica se cadastrado com sucesso")
-        self.request.signIn("ios33@ios.com", "Fulano", "1234509883") { (apiReturn) in
+    func testMustBeCreateUserWithoutSuccess() {
+        let expReturn = expectation(description: "Verifica se houve erro no  cadastro")
+        self.request.signIn("ios35@ios.com", "Fulano", "1234509883") { (apiReturn) in
             switch(apiReturn) {
             case .success(let data):
                 if let message = data.message {
                     self.binaryResult = !message.contains(VerifiersSingIn.CreateWithSuccess)
-                    //                    print("Mensagem retornada: ",message)
                 }
                 expReturn.fulfill()
                 return
@@ -73,7 +72,7 @@ class RequestSignInTests: XCTestCase {
             if let error = error {
                 XCTFail("--- ERROR testMustBeCreateWithSuccess: \(error)")
             }
-            XCTAssertFalse(self.binaryResult, "Usuário já existe na base de dados")
+            XCTAssertTrue(self.binaryResult, "Usuário cadastrado")
         }
     }
 }
