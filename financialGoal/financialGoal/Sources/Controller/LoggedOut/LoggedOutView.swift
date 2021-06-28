@@ -46,8 +46,11 @@ class LoggedOutView: UIView {
         
          //MARK: Seta as imagens no Scroll
         for i in PageAndScrollConstants.numberZeroFor..<self.imagePage.count{
+            
             let page = UIImageView(frame: CGRect(x: CGFloat(i) * self.frame.size.width, y: PageAndScrollConstants.numberZero, width: self.frame.size.width, height: scrollView.frame.size.height))
+            
             page.image = self.imagePage[i]
+            
             scrollView.addSubview(page)
         }
     }
@@ -57,11 +60,17 @@ class LoggedOutView: UIView {
         
         //Pega a altura do device
         let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        
+        var screenHeight = screenSize.height
+        if screenHeight > PageAndScrollConstants.deviceScreenSize {
+            screenHeight = screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberTrue
+        }else{
+            screenHeight = screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberThreePointThree
+        }
+    
         //Constants do scrolView e pageControl
         pageControl.frame = CGRect(x: PageAndScrollConstants.numberZero, y: scrollView.frame.size.height-PageAndScrollConstants.numberEighteen, width: self.frame.size.width, height: PageAndScrollConstants.numberSeventy)
-        scrollView.frame = CGRect(x: PageAndScrollConstants.numberZero, y: PageAndScrollConstants.numberZero, width: self.frame.size.width, height: screenHeight / PageAndScrollConstants.numberFive * PageAndScrollConstants.numberThreePointThree)
+        
+        scrollView.frame = CGRect(x: PageAndScrollConstants.numberZero, y: PageAndScrollConstants.numberZero, width: self.frame.size.width, height: screenHeight)
         
         //Chama a função pra configurar o scroll
         if scrollView.subviews.count == PageAndScrollConstants.numberTwo {
@@ -98,6 +107,10 @@ class LoggedOutView: UIView {
     func setButtonCreateAccount(){
         buttonCreateAccount.addTarget(self, action: #selector(createAccountActionButton), for: .touchUpInside)
         addSubview(buttonCreateAccount)
+        // Seta os botões de acordo com o tamanho do device
+        if UIScreen.main.bounds.height > PageAndScrollConstants.deviceScreenSize {
+            ButtonConstants.bottomAnchorButtonCreateAccount = ButtonConstants.bottomAnchorButtonCreateAccountBigger
+        }
         NSLayoutConstraint.activate([
             buttonCreateAccount.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonCreateAccount),
             buttonCreateAccount.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
@@ -109,8 +122,9 @@ class LoggedOutView: UIView {
     func setButtonLogin() {
         buttonLogin.addTarget(self, action: #selector(loginActionButton), for: .touchUpInside)
         addSubview(buttonLogin)
+        
         NSLayoutConstraint.activate([
-            buttonLogin.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: ButtonConstants.bottomAnchorButtonLogin),
+            buttonLogin.topAnchor.constraint(equalTo: self.buttonCreateAccount.bottomAnchor, constant: ButtonConstants.distanceButtons),
             buttonLogin.leftAnchor.constraint(equalTo: self.leftAnchor, constant: ButtonConstants.leftAnchorButtons),
             buttonLogin.rightAnchor.constraint(equalTo: self.rightAnchor, constant: ButtonConstants.rightAnchorButtons),
             buttonLogin.heightAnchor.constraint(equalToConstant: ButtonConstants.heightAnchorButtons)

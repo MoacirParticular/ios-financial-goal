@@ -10,11 +10,13 @@ import UIKit
 struct ButtonConstants {
     
     //MARK: Constants
-    static let bottomAnchorButtonCreateAccount: CGFloat = -144
-    static let bottomAnchorButtonLogin: CGFloat = -77
+    static var bottomAnchorButtonCreateAccount: CGFloat = -144
+    static let bottomAnchorButtonCreateAccountBigger: CGFloat = -200
+    static var bottomAnchorButtonLogin: CGFloat = -77
     static let leftAnchorButtons: CGFloat = 16
     static let rightAnchorButtons: CGFloat = -16
     static let heightAnchorButtons: CGFloat = 52
+    static let distanceButtons: CGFloat = 15
     
     //MARK: Properties Buttons
     static let cornerRadiusButtom: CGFloat = 6

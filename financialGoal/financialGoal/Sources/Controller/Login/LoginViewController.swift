@@ -65,7 +65,6 @@ class LoginViewController: UIViewController {
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
-                
                 //Leva o usuario para home caso a resposta seja true
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
