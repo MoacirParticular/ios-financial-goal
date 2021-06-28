@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         getActionButton()
         navigationTitleConfig(title: StringConstantsLogin.screenTitleLogin )
         self.dataRecover()
+    
     }
     
     override func loadView() {
@@ -56,6 +57,7 @@ class LoginViewController: UIViewController {
         }else{
             self.showDefaultAlert(.InvalidMail, .MailError)
         }
+        
     }
     
     //MARK: Resposta da API com alert ou direcionando para home
@@ -68,24 +70,61 @@ class LoginViewController: UIViewController {
                 //Leva o usuario para home caso a resposta seja true
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
+                    self.saveCredentials(user: username, pass: password)
                 }else{
                     self.showAlert(.Warning, messsage)
                 }
-            case .failure(let error):
+            case .failure( _):
                 self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
     }
     
     private func dataRecover() {
-            loginView.textFieldUser.text = SignInData.username
-            self.dataRestore()
-        }
-        
-        private func dataRestore() {
-            SignInData.username = String.empty
-            SignInData.nickname = String.empty
-        }
+        loginView.textFieldUser.text = SignInData.username
+        self.dataRestore()
+    }
+    
+    private func dataRestore() {
+        SignInData.username = String.empty
+        SignInData.nickname = String.empty
+    }
+    
+    private func saveCredentials(user:String, pass:String){
+        UserDefaults.standard.set(user, forKey: "user")
+        UserDefaults.standard.set(pass, forKey: "pass")
+    }
+    
+    
+//    func callAutoLogin(){
+//        var user = String.empty
+//        var pass = String.empty
+//        var containCredential:Bool = false
+//
+//        if let userKey = UserDefaults.standard.value(forKey: "user") as? String{
+//            user = userKey
+//            if let passKey = UserDefaults.standard.value(forKey: "pass") as? String{
+//                pass = passKey
+//                containCredential = true
+//            }
+//        }
+//        if containCredential{
+//
+//            self.showActivity()
+//
+//            requestLogin().login(user, pass) { (result) in
+//                switch(result) {
+//                case .success(let returnData):
+//                    if returnData.res == true {
+//                        let homeViewController = HomeViewController()
+//                        self.navigationController?.pushViewController(homeViewController, animated: true)
+//                    }
+//                case .failure( _):
+//                    self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+//                }
+//            }
+//        }
+//    }
     
 }
 

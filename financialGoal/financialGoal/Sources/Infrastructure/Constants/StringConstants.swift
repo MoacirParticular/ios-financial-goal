@@ -14,4 +14,8 @@ struct StringConstants {
     
     //MARK: String do required error
     static let requiredError = "init(coder:) has not been implemented"
+    
+    //MARK: String Autologin Key UserDefault
+    static let userKey = "user"
+    static let passKey = "pass"
 }
