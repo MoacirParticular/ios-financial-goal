@@ -8,7 +8,7 @@
 import XCTest
 @testable import financialGoal
 
-class RequestSignInTest: XCTestCase {
+class RequestLoginTest: XCTestCase {
     
     var request = requestLogin()
     var textReturn: String = String.empty
@@ -20,7 +20,7 @@ class RequestSignInTest: XCTestCase {
     override class func tearDown() {
     }
     
-    func testDeveRetornarSenhaInválida() {
+    func testDeveRetornarSenhaInválidaLogin() {
         
         let exp = expectation(description: "Checa se senha de cadastro falhar")
         self.request.login("fulano@gmail.com", "12345") { (apiReturn) in
