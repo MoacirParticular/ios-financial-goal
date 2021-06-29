@@ -32,7 +32,7 @@ class CustomCell: UICollectionViewCell {
         title.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: 142),
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: 96),
             title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1),
             title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -1),
         ])
@@ -43,7 +43,7 @@ class CustomCell: UICollectionViewCell {
         icon.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: 35),
+            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             //icon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1),
             icon.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -6),
         ])

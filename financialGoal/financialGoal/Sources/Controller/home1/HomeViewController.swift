@@ -15,10 +15,9 @@ struct CustomData {
 class HomeViewController: UIViewController {
     
     let data = [
-        CustomData(title: "Calculadora", icon: #imageLiteral(resourceName: "IconCorrecaoIndice")),
+        CustomData(title: "Calculadora", icon: .iconMoneyCalc),
         CustomData(title: "Simulador", icon: #imageLiteral(resourceName: "iconSimulador"))
     ]
-    
 
      let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -35,17 +34,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.removeActivity()
 
-        
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         
         let screenSize = UIScreen.main.bounds
         var screenHeight = screenSize.height
         
-        collectionView.topAnchor.constraint(equalTo: self.homeView.topScreenView.topAnchor, constant: screenHeight/2 * 0.80).isActive = true
+        let widthCollection = screenHeight / 2 - 75
+        
+        collectionView.topAnchor.constraint(equalTo: self.homeView.topScreenView.topAnchor, constant: widthCollection).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 44).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
+        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.45).isActive = true
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/1.5)
+        return CGSize(width: 109, height: 124)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -76,6 +76,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
         cell.setupView(title: data[indexPath.row].title, icon: data[indexPath.row].icon)
+        cell.layer.cornerRadius = 20
+
         return cell
     }
     

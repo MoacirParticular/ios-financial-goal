@@ -23,4 +23,11 @@ public extension UIImage {
     static var imageIconIoga: UIImage {
         return UIImage(named: "iconIoga")!
     }
+    
+    @objc
+    static var iconMoneyCalc: UIImage {
+        return UIImage(named: "iconMoneyCalc")!
+    }
+    
+    
 }
