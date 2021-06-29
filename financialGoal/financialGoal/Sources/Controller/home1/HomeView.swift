@@ -72,7 +72,7 @@ class HomeView: UIView {
 
     }
     
-    //MARK: Label
+    //MARK: Label nome ou apelido
     lazy var labelNickName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
@@ -92,13 +92,52 @@ class HomeView: UIView {
             labelNickName.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IconsConstants.constantZero)
         ])
     }
-
+    
+    //MARK: Botão ultima visualização
+    var buttonLastSimulation: UIButton = {
+       let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        button.backgroundColor = .customColorResultLabel
+        button.layer.cornerRadius = 4
+        button.setTitle("Acesse sua última simulação >", for: .normal)
+        button.titleLabel?.font = .fontLabelSubTitleRegular
+        
+        button.titleLabel?.numberOfLines = 2
+        button.titleEdgeInsets = UIEdgeInsets(top: 25, left: 13, bottom: 61, right: 60)
+        button.contentHorizontalAlignment = .left
+        button.semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
+        
+        button.setTitleColor(.blackCustomGoal, for: .normal)
+        button.setImage(.imageIconIoga, for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 27, left: 60, bottom: 27, right: 14)
+    
+        
+        button.layer.shadowColor = UIColor.customColorShadow.cgColor
+        button.layer.shadowOffset = CGSize(width: ShadowTextField.shadowWidth, height: ShadowTextField.shadowHeight)
+        button.layer.shadowRadius = ShadowTextField.shadowRadius
+        button.layer.shadowOpacity = ShadowTextField.shadowOpacity
+       return button
+   }()
+   
+   func setButtonLastSimulation(){
+       addSubview(buttonLastSimulation)
+   
+       NSLayoutConstraint.activate([
+        buttonLastSimulation.topAnchor.constraint(equalTo: self.topScreenView.bottomAnchor, constant: IconsConstants.bottomAnchorButtonSimulation),
+        buttonLastSimulation.leftAnchor.constraint(equalTo: self.leftAnchor, constant: IconsConstants.leftAnchorButtonSimulation ),
+        buttonLastSimulation.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IconsConstants.rightAnchorButtonSimulation),
+        buttonLastSimulation.heightAnchor.constraint(equalToConstant: IconsConstants.heightAnchorButtonSimulation)
+       ])
+   }
+   
+    
     //MARK: Cria e seta elementos na view
     private func setView(){
         setTopScreenView()
         setLabelNickName()
         setButtonIconNotification()
         setButtonIconCalculator()
+        setButtonLastSimulation()
         self.backgroundColor = .backgroundCustomGoal
     }
     

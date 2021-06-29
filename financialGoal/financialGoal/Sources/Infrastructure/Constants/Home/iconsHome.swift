@@ -11,11 +11,16 @@ public extension UIImage {
 
     @objc
     static var imageIconNotification: UIImage {
-        return UIImage(named: "IconSino")!
-    }
-    @objc
-    static var imageIconCalculatorTop: UIImage {
-        return UIImage(named: "IconCalc")!
+        return UIImage(named: "iconSino")!
     }
     
+    @objc
+    static var imageIconCalculatorTop: UIImage {
+        return UIImage(named: "iconCalc")!
+    }
+    
+    @objc
+    static var imageIconIoga: UIImage {
+        return UIImage(named: "iconIoga")!
+    }
 }

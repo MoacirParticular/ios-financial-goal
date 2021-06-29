@@ -24,4 +24,11 @@ struct IconsConstants {
     
     //MARK: Label Nickname
     static let topAnchorLabelNickname: CGFloat = 112
+    
+    //MARK: Botão ultima simulação
+    static let bottomAnchorButtonSimulation: CGFloat = 141
+    static let leftAnchorButtonSimulation: CGFloat = 42
+    static let rightAnchorButtonSimulation: CGFloat = -42
+    static let heightAnchorButtonSimulation: CGFloat = 122
 }
+
