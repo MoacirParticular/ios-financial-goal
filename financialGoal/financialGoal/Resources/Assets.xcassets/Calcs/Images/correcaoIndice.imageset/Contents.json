@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "CorrecaoIndice.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "CorrecaoIndice.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

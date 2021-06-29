@@ -69,7 +69,7 @@ class LoggedOutViewController: UIViewController {
                 case .success(let returnData):
                     if returnData.res == true {
                         DispatchQueue.main.async {
-                            let homeViewController = HomeViewController()
+                            let homeViewController = CalcsViewController()
                             self.navigationController?.pushViewController(homeViewController, animated: true)
                         }
                     }
