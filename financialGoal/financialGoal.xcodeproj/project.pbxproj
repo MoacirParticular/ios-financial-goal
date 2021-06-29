@@ -64,6 +64,9 @@
 		3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */; };
 		89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignInCoordinator.swift */; };
 		89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89266BBC2684F7330033D52C /* StatusSignIn.swift */; };
+		892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */; };
+		892A29EA268B8D9F00DF9299 /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29E9268B8D9F00DF9299 /* MonthlyView.swift */; };
+		892A29EF268B9D6A00DF9299 /* CalcScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29EE268B9D6A00DF9299 /* CalcScreenData.swift */; };
 		89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */; };
 		89365A51267A7F150087531D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A50267A7F150087531D /* UITextField+.swift */; };
 		89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */; };
@@ -185,6 +188,9 @@
 		3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessibilityLocalizebleStrings.swift; sourceTree = "<group>"; };
 		89192602267A664700EECCB5 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		89266BBC2684F7330033D52C /* StatusSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSignIn.swift; sourceTree = "<group>"; };
+		892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstants.swift; sourceTree = "<group>"; };
+		892A29E9268B8D9F00DF9299 /* MonthlyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		892A29EE268B9D6A00DF9299 /* CalcScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcScreenData.swift; sourceTree = "<group>"; };
 		89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		89365A50267A7F150087531D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		89365A5B267A7FC80087531D /* SignInNameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameCoordinator.swift; sourceTree = "<group>"; };
@@ -469,6 +475,7 @@
 		3FE9961F2677A4EB0068E95B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				892A29DD268B8CAB00DF9299 /* Monthly */,
 				1C7BB23C268A7ABA00D0E196 /* Home */,
 				89C9FF962681309300B45338 /* Internal */,
 				C178D35B267ACA620079072F /* Login */,
@@ -498,6 +505,15 @@
 				3FE9962C2677C6A00068E95B /* accessibilityLocalizebleStrings.swift */,
 			);
 			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
+		892A29DD268B8CAB00DF9299 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */,
+				892A29EE268B9D6A00DF9299 /* CalcScreenData.swift */,
+			);
+			path = Monthly;
 			sourceTree = "<group>";
 		};
 		893AA49626869AE100F291B3 /* PlusCoverage */ = {
@@ -550,6 +566,7 @@
 		89ACC035268B58A800851CEC /* Monthly */ = {
 			isa = PBXGroup;
 			children = (
+				892A29E9268B8D9F00DF9299 /* MonthlyView.swift */,
 				89ACC036268B58CA00851CEC /* MonthlyViewController.swift */,
 			);
 			path = Monthly;
@@ -805,6 +822,7 @@
 				896ABDE1267A779B004A05F3 /* StringSignInConstants.swift in Sources */,
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
 				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
+				892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */,
 				1CC238C526823594000653F6 /* RequestBuilderLogin.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				1CC238C026823325000653F6 /* RequestSignIn.swift in Sources */,
@@ -821,6 +839,8 @@
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
+				892A29EF268B9D6A00DF9299 /* CalcScreenData.swift in Sources */,
+				892A29EA268B8D9F00DF9299 /* MonthlyView.swift in Sources */,
 				C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */,
 				1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,

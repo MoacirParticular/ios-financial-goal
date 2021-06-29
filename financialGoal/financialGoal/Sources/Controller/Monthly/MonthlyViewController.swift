@@ -8,9 +8,10 @@
 import UIKit
 
 class MonthlyViewController: UIViewController {
+    let viewHome = MonthlyView(frame: .zero)
     
     override func loadView() {
-        //
+        self.view = viewHome
     }
     override func viewDidLoad() {
         super.viewDidLoad()
