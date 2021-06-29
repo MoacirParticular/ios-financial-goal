@@ -40,10 +40,53 @@ class MonthlyView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .backgroundCustomGoal
+        configElements(infoScreen: InfoCalcScreen.monthly)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configElements(infoScreen: CalcScreenData) {
+        lbFirst.text = infoScreen.firstLabel
+        alignLabel(label: lbFirst, top: self, first: true)
+        
+        alignTextField(textField: tfFirst, top: lbFirst)
+        
+        lbSecond.text = infoScreen.secondLabel
+        alignLabel(label: lbSecond, top: tfFirst)
+        
+        alignTextField(textField: tfSecond, top: lbSecond)
+        
+        lbThird.text = infoScreen.thirdLabel
+        alignLabel(label: lbThird, top: tfSecond)
+        
+        alignTextField(textField: tfThird, top: lbThird)
+        
+        var viewBase: UIView = tfThird
+        switch (infoScreen.screen) {
+        case .Monthly:
+            alignCaseMonthyScreen(infoScreen: infoScreen)
+            viewBase = tfFourth
+            break
+        case .Yearly:
+            break
+        }
+        
+        lbFifth.text = infoScreen.fifthLabel
+        alignLabel(label: lbFifth, top: viewBase)
+        
+        alignTextField(textField: tfFifth, top: lbFifth)// Sera estatico
+        
+        alignButton(button: bttnCalcular, top: tfFifth)
+        
+    }
+    
+    private func alignCaseMonthyScreen(infoScreen: CalcScreenData) {
+        lbFourth.text = infoScreen.fourthLabel
+        alignLabel(label: lbFourth, top: tfThird)
+        
+        alignTextField(textField: tfFourth, top: lbFourth)
     }
     private func createLabel() -> UILabel {
         let label = UILabel()
@@ -63,5 +106,45 @@ class MonthlyView: UIView {
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
+    }
+    
+    // MARK: - Constraints
+    private func alignLabel(label: UILabel, top: UIView, first: Bool = false) {
+        self.addSubview(label)
+        if first {
+            NSLayoutConstraint.activate([
+                    label.topAnchor.constraint(
+                        equalTo: top.topAnchor, constant: MonthlyLabelConstraints.firstIdentTop)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                    label.topAnchor.constraint(equalTo: top.bottomAnchor, constant: MonthlyLabelConstraints.identTop)])
+        }
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: MonthlyConstraints.identLeft),
+            label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: MonthlyConstraints.identRight)
+        ])
+    }
+    
+    private func alignTextField(textField: UITextField, top: UIView) {
+        self.addSubview(textField)
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(
+                equalTo: top.bottomAnchor, constant: MonthlyTextFieldsConstraints.identTop),
+            textField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: MonthlyConstraints.identLeft),
+            textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: MonthlyConstraints.identRight),
+            textField.heightAnchor.constraint(equalToConstant: MonthlyTextFieldsConstraints.height)
+        ])
+    }
+    
+    private func alignButton(button: UIButton, top: UIView) {
+        self.addSubview(button)
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(
+                equalTo: top.bottomAnchor, constant: MonthlyButtonConstraints.identTop),
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: MonthlyConstraints.identLeft),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: MonthlyConstraints.identRight),
+            button.heightAnchor.constraint(equalToConstant: MonthlyButtonConstraints.height)
+        ])
     }
 }
