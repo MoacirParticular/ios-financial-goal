@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     ]
     
 
-    fileprivate let collectionView: UICollectionView = {
+     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -39,8 +39,11 @@ class HomeViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 280).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        let screenSize = UIScreen.main.bounds
+        var screenHeight = screenSize.height
+        
+        collectionView.topAnchor.constraint(equalTo: self.homeView.topScreenView.topAnchor, constant: screenHeight/2 * 0.80).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 44).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
         collectionView.delegate = self
@@ -63,7 +66,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2)
+        return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/1.5)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -72,53 +75,10 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
-        cell.setupView(title: "teste")
+        cell.setupView(title: data[indexPath.row].title, icon: data[indexPath.row].icon)
         return cell
     }
     
     
 }
 
-class CustomCell: UICollectionViewCell {
-    
-    
-    var title: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.textColor = .black
-        
-        return label
-    }()
-    func setupView(title: String) {
-        setTitle()
-        
-        self.title.text = title
-    }
-    
-    private func setTitle() {
-        addSubview(title)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: 96),
-            title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1),
-            title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -1),
-        ])
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        contentView.backgroundColor = .yellow
-
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    
-}
