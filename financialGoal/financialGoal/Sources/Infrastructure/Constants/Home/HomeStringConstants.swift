@@ -8,8 +8,6 @@
 import Foundation
 
 struct HomeStringConstants {
-    //MARK: Titles Buttons
-    static let nickNameString = "Renilson Moreira"
     
     //MARK: buttonLastSimulation
     static let textLastSimulation = "Acesse sua última simulação >"
