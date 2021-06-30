@@ -102,6 +102,9 @@
 		C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589ACB268B66EE00390BAF /* CalcsViewController.swift */; };
 		C1589B03268B88C900390BAF /* CalcsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C16764F8268CDEDA001B90B8 /* IconsCalcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16764F7268CDEDA001B90B8 /* IconsCalcs.swift */; };
+		C16764FD268CE500001B90B8 /* CalcsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */; };
+		C1676502268CE69F001B90B8 /* CalcsTypesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */; };
 		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
 		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
 		C178D352267AC9F50079072F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34F267AC9F50079072F /* LoginViewController.swift */; };
@@ -236,6 +239,9 @@
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
 		C1589ACB268B66EE00390BAF /* CalcsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsViewController.swift; sourceTree = "<group>"; };
 		C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTableViewCell.swift; sourceTree = "<group>"; };
+		C16764F7268CDEDA001B90B8 /* IconsCalcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsCalcs.swift; sourceTree = "<group>"; };
+		C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsCoordinator.swift; sourceTree = "<group>"; };
+		C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTypesScreen.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -458,6 +464,7 @@
 				895D58EB267C00C700C4BE4B /* SignInPasswdCoordinator.swift */,
 				1CC238FB2682774D000653F6 /* HomeCoordinator.swift */,
 				89ACC02D268B57E000851CEC /* MonthlyCoordinator.swift */,
+				C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -496,6 +503,7 @@
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
+				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -649,6 +657,7 @@
 			children = (
 				C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */,
 				C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */,
+				C16764F7268CDEDA001B90B8 /* IconsCalcs.swift */,
 			);
 			path = Calcs;
 			sourceTree = "<group>";
@@ -881,6 +890,7 @@
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				89ACC037268B58CA00851CEC /* MonthlyViewController.swift in Sources */,
 				89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */,
+				C16764F8268CDEDA001B90B8 /* IconsCalcs.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
@@ -898,6 +908,7 @@
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				1CC238C026823325000653F6 /* RequestSignIn.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
+				C16764FD268CE500001B90B8 /* CalcsCoordinator.swift in Sources */,
 				896822D42684EE3200DC5476 /* ConstantApiKey.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
 				89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */,
@@ -913,6 +924,7 @@
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				892A29EF268B9D6A00DF9299 /* CalcScreenData.swift in Sources */,
+				C1676502268CE69F001B90B8 /* CalcsTypesScreen.swift in Sources */,
 				892A29EA268B8D9F00DF9299 /* ApplicationCalcView.swift in Sources */,
 				C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */,
 				1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */,

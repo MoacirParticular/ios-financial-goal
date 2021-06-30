@@ -17,6 +17,7 @@ class MonthlyViewController: UIViewController, viewCalcProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationTitleConfig(title: "Aplicação mensal")
     }
 
     func setUp() {

@@ -10,6 +10,7 @@ class CalcsViewController: UIViewController {
     
     //MARK: - Propertys
     var tableView = UITableView()
+    var onButtonCalcs: ((_ screen: CalcsTypesScreen) -> Void)?
     
     //MARK: - DidLoad
     override func viewDidLoad() {
@@ -37,14 +38,13 @@ class CalcsViewController: UIViewController {
     //MARK: Números de linhas da sessão da tabela
 extension CalcsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CalcsTypes.calcTypes[tableView.tag].calcTypesName.count
+        return CalcsTypes.calcTypes.count
     }
 
     //MARK: Aplicando Propriedades na Célula da TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: StringConstants.cellIdentifier, for: indexPath) as? CalcsTableViewCell else { fatalError(StringConstants.fatalErroCell) }
-        cell.iconImage.image = UIImage(named: CalcsTypes.calcTypes[tableView.tag].imageIconsGallery[indexPath.row])
-        cell.calcLabel.text = CalcsTypes.calcTypes[tableView.tag].calcTypesName[indexPath.row]
+        cell.setSelected(data: CalcsTypes.calcTypes[indexPath.row])
         cell.backgroundView = UIView(backgroundColor: .colorBackgroundCell)
         cell.backgroundView?.addSeparator()
         cell.selectedBackgroundView?.addSeparator()
@@ -54,6 +54,12 @@ extension CalcsViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: Aplicando tamanho de altura da linha da TableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ValueCalcsConstants.valueHeightForRowAt
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(CalcsTypes.calcTypes[indexPath.row].screenType)
+        
+        self.onButtonCalcs?(CalcsTypes.calcTypes[indexPath.row].screenType)
     }
   
 }

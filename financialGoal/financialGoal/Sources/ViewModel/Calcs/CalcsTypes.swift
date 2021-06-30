@@ -9,12 +9,8 @@ import Foundation
 
 public struct CalcsTypes {
     
-    static let calcTypes = [CalcsModel(calcTypesName: [StringConstantsCalcs.investMensal,
-                                                       StringConstantsCalcs.investAplicUnic,
-                                                       StringConstantsCalcs.correcaoIndice,
-                                                       StringConstantsCalcs.conversaoTaxas],
-                                       imageIconsGallery: [StringConstantsCalcs.imageInvestMensal,
-                                                           StringConstantsCalcs.imageInvestAplicUnic,
-                                                           StringConstantsCalcs.imageCorrecaoIndice,
-                                                           StringConstantsCalcs.imageConversaoTaxas])]
+    static let calcTypes = [CalcsModel(calcTypesName: StringConstantsCalcs.investMensal, imageIconsGallery: .imageInvestMensal, screenType: .Monthly),
+                            CalcsModel(calcTypesName: StringConstantsCalcs.investAplicUnic, imageIconsGallery: .aplicacaoUnica, screenType: .Yearly),
+                            CalcsModel(calcTypesName: StringConstantsCalcs.correcaoIndice, imageIconsGallery: .correcaoIndice, screenType: .Yearly),
+                            CalcsModel(calcTypesName: StringConstantsCalcs.conversaoTaxas, imageIconsGallery: .conversaoTaxas, screenType: .Yearly)]
 }

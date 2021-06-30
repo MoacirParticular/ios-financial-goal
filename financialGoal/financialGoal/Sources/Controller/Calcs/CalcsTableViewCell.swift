@@ -31,9 +31,11 @@ class CalcsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setSelected(data: CalcsModel){
         addSubview(backView)
+        
+        self.iconImage.image = data.imageIconsGallery
+        self.calcLabel.text = data.calcTypesName
         backView.addSubview(iconImage)
         backView.addSubview(calcLabel)
     }
