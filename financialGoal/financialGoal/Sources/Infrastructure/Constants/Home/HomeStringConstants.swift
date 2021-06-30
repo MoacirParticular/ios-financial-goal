@@ -18,6 +18,7 @@ struct HomeStringConstants {
     static let identifier = "cell"
     
     //MARK: Titulo dos itens
-    static let calculadora = "Calculadora"
-    static let simulador = "Simulador"
+    static let calculator = "Calculadora"
+    static let simulator = "Simulador"
 }
+

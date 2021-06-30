@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let data = [
-        CustomData(title: HomeStringConstants.calculadora, icon: .iconMoneyCalc),
-        CustomData(title: HomeStringConstants.simulador, icon: .iconSimulator)
+        CustomData(title: HomeStringConstants.calculator, icon: .iconMoneyCalc),
+        CustomData(title: HomeStringConstants.simulator, icon: .iconSimulator)
     ]
     
     var homeView = HomeView(frame: FrameConstants.frameZero)
@@ -49,8 +49,17 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         cell.setupView(title: data[indexPath.row].title, icon: data[indexPath.row].icon)
         cell.backgroundColor = .colorOrangeCollection
         cell.layer.cornerRadius = HomeConstants.cornerRadiusFour
-
         return cell
+    }
+    
+    // CONECTAR A TABLE VIEW AQUI
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Informa que o simulador esta indisponivel
+        if data[indexPath.row].title == HomeStringConstants.simulator{
+            showDefaultAlert(.Warning, .SimulatorUnavailable)
+        }
+       
     }
     
 }
