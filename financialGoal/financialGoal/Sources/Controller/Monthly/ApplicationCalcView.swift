@@ -1,5 +1,5 @@
 //
-//  MonthlyView.swift
+//  ApplicationCalcView.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 29/06/21.
@@ -7,7 +7,16 @@
 
 import UIKit
 
-class MonthlyView: UIView {
+protocol viewCalcProtocol {
+    var viewCalc: ApplicationCalcView { get }
+}
+extension viewCalcProtocol {
+    func setupView(infoScreen: CalcScreenData, viewBase: UIView) {
+        viewCalc.configElements(infoScreen: infoScreen)
+        viewCalc.setUp(viewBase: viewBase)
+    }
+}
+class ApplicationCalcView: UIView {
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
@@ -40,27 +49,24 @@ class MonthlyView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .backgroundCustomGoal
-        configElements(infoScreen: InfoCalcScreen.monthly)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Configuration elements
     func configElements(infoScreen: CalcScreenData) {
         lbFirst.text = infoScreen.firstLabel
         alignLabel(label: lbFirst, top: self, first: true)
-        
         alignTextField(textField: tfFirst, top: lbFirst)
         
         lbSecond.text = infoScreen.secondLabel
         alignLabel(label: lbSecond, top: tfFirst)
-        
         alignTextField(textField: tfSecond, top: lbSecond)
         
         lbThird.text = infoScreen.thirdLabel
         alignLabel(label: lbThird, top: tfSecond)
-        
         alignTextField(textField: tfThird, top: lbThird)
         
         var viewBase: UIView = tfThird
@@ -75,26 +81,25 @@ class MonthlyView: UIView {
         
         lbFifth.text = infoScreen.fifthLabel
         alignLabel(label: lbFifth, top: viewBase)
-        
         alignTextField(textField: tfFifth, top: lbFifth)// Sera estatico
         
         alignButton(button: bttnCalcular, top: tfFifth)
-        
     }
     
+    // MARK: - Monthly configuration
     private func alignCaseMonthyScreen(infoScreen: CalcScreenData) {
         lbFourth.text = infoScreen.fourthLabel
         alignLabel(label: lbFourth, top: tfThird)
-        
         alignTextField(textField: tfFourth, top: lbFourth)
     }
+    
+    // MARK: - Element Factory
     private func createLabel() -> UILabel {
         let label = UILabel()
         label.font = .fontLabelCalc
         UIView.configInitailElements(label)
         return label
     }
-    
     
     private func createTextField() -> UITextField {
         let tField = UITextField()
@@ -107,8 +112,23 @@ class MonthlyView: UIView {
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
     }
+}
+
+extension ApplicationCalcView {
     
     // MARK: - Constraints
+    func setUp(viewBase: UIView) {
+        viewBase.addSubview(self)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: viewBase.topAnchor),
+            self.centerXAnchor.constraint(equalTo: viewBase.centerXAnchor),
+            self.widthAnchor.constraint(equalTo: viewBase.widthAnchor),
+            self.bottomAnchor.constraint(equalTo: self.bttnCalcular.bottomAnchor, constant: MonthlyConstraints.identBottom),
+            self.bottomAnchor.constraint(equalTo: viewBase.bottomAnchor),
+        ])
+    }
+    
     private func alignLabel(label: UILabel, top: UIView, first: Bool = false) {
         self.addSubview(label)
         if first {

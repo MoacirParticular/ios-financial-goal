@@ -65,7 +65,7 @@
 		89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignInCoordinator.swift */; };
 		89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89266BBC2684F7330033D52C /* StatusSignIn.swift */; };
 		892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */; };
-		892A29EA268B8D9F00DF9299 /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29E9268B8D9F00DF9299 /* MonthlyView.swift */; };
+		892A29EA268B8D9F00DF9299 /* ApplicationCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */; };
 		892A29EF268B9D6A00DF9299 /* CalcScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29EE268B9D6A00DF9299 /* CalcScreenData.swift */; };
 		89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */; };
 		89365A51267A7F150087531D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89365A50267A7F150087531D /* UITextField+.swift */; };
@@ -189,7 +189,7 @@
 		89192602267A664700EECCB5 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		89266BBC2684F7330033D52C /* StatusSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSignIn.swift; sourceTree = "<group>"; };
 		892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstants.swift; sourceTree = "<group>"; };
-		892A29E9268B8D9F00DF9299 /* MonthlyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCalcView.swift; sourceTree = "<group>"; };
 		892A29EE268B9D6A00DF9299 /* CalcScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcScreenData.swift; sourceTree = "<group>"; };
 		89365A4B267A7ED50087531D /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		89365A50267A7F150087531D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 		89ACC035268B58A800851CEC /* Monthly */ = {
 			isa = PBXGroup;
 			children = (
-				892A29E9268B8D9F00DF9299 /* MonthlyView.swift */,
+				892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */,
 				89ACC036268B58CA00851CEC /* MonthlyViewController.swift */,
 			);
 			path = Monthly;
@@ -840,7 +840,7 @@
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				892A29EF268B9D6A00DF9299 /* CalcScreenData.swift in Sources */,
-				892A29EA268B8D9F00DF9299 /* MonthlyView.swift in Sources */,
+				892A29EA268B8D9F00DF9299 /* ApplicationCalcView.swift in Sources */,
 				C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */,
 				1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,

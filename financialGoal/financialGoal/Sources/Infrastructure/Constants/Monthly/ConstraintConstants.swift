@@ -10,9 +10,10 @@ import UIKit
 struct MonthlyConstraints {
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
+    static let identBottom: CGFloat = 67
 }
 struct MonthlyLabelConstraints {
-    static let firstIdentTop: CGFloat = 136
+    static let firstIdentTop: CGFloat = 32
     static let identTop: CGFloat = 16
 }
 
@@ -22,7 +23,7 @@ struct MonthlyTextFieldsConstraints {
 }
 
 struct MonthlyButtonConstraints {
-    static let identTop: CGFloat = 2 // 32
+    static let identTop: CGFloat = 32
     static let height: CGFloat = ValuesConstraintsButton.height
 }
 

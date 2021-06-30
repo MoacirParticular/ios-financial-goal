@@ -7,14 +7,21 @@
 
 import UIKit
 
-class MonthlyViewController: UIViewController {
-    let viewHome = MonthlyView(frame: .zero)
+class MonthlyViewController: UIViewController, viewCalcProtocol {
+    var viewCalc: ApplicationCalcView = ApplicationCalcView(frame: .zero)
+    let scrollView: UIScrollView = UIScrollView(frame: .zero)
     
     override func loadView() {
-        self.view = viewHome
+        self.setUp()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.removeActivity()
+    }
+
+    func setUp() {
+        self.viewCalc.configElements(infoScreen: InfoCalcScreen.monthly)
+        self.setupView(infoScreen: InfoCalcScreen.monthly, viewBase: scrollView)
+        self.view = scrollView
     }
 }
