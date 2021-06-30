@@ -5,7 +5,7 @@
 //  Created by Leonardo Oliveira Portes on 29/06/21.
 //
 
-import Foundation
+import UIKit
 
 struct StringConstantsCalcs {
     
@@ -17,10 +17,5 @@ struct StringConstantsCalcs {
     static let investAplicUnic:String = "Investimento com aplicação única"
     static let correcaoIndice:String = "Correção de valor por um índice"
     static let conversaoTaxas:String = "Conversão de taxas"
-    
-    //MARK: Nomes das imagens do diretório Assets
-    static let imageInvestMensal:String = "investimentoMensal"
-    static let imageInvestAplicUnic:String = "aplicacaoUnica"
-    static let imageCorrecaoIndice:String = "correcaoIndice"
-    static let imageConversaoTaxas:String = "conversaoTaxas"
 }
+

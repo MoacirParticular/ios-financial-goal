@@ -7,9 +7,9 @@
 
 import UIKit
 
- class StartCoordinator: Coordinator {
+class StartCoordinator: Coordinator {
     let navigationController: UINavigationController
-   
+    
     init (navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -29,10 +29,7 @@ import UIKit
                 let coordinator = HomeCoordinator(navigationController: self.navigationController)
                 coordinator.start()
             }
-            
-            
         }
         self.navigationController.pushViewController(loggedOutViewController, animated: true)
-        
     }
 }

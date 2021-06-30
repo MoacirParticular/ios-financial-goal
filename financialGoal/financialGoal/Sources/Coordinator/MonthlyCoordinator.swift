@@ -20,6 +20,4 @@ public class MonthlyCoordinator: Coordinator {
             self.navigation.pushViewController(screenViewController, animated: true)
         }
     }
-    
-    
 }

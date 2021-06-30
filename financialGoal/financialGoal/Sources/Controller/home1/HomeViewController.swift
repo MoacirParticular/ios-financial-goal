@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var onScreenSelected: ((_ setSelected: LoginActionType ) -> Void)?
+    
     let data = [
         CustomData(title: HomeStringConstants.calculator, icon: .iconMoneyCalc),
         CustomData(title: HomeStringConstants.simulator, icon: .iconSimulator)
@@ -56,20 +58,15 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         return cell
     }
     
-    // CONECTAR A TABLE VIEW AQUI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //Informa que o simulador esta indisponivel
+      
         if data[indexPath.row].title == HomeStringConstants.simulator{
             showDefaultAlert(.Warning, .SimulatorUnavailable)
         }else{
-            DispatchQueue.main.async {
-                let homeViewController = CalcsViewController()
-                self.navigationController?.pushViewController(homeViewController, animated: true)
-            }
+            self.onScreenSelected?(.Calcs)
         }
-       
     }
-    
 }
 
