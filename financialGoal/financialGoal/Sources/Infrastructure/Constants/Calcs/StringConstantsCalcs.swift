@@ -9,6 +9,9 @@ import Foundation
 
 struct StringConstantsCalcs {
     
+    //MARK: Titulo da tableView
+    static let screenTitleCalcs: String = "Calculadoras"
+    
     //MARK: Títulos das Calculadoras
     static let investMensal:String = "Investimento com aplicação mensal"
     static let investAplicUnic:String = "Investimento com aplicação única"

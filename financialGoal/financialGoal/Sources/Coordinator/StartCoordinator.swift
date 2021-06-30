@@ -14,7 +14,7 @@ import UIKit
         self.navigationController = navigationController
     }
     
-     func start() {
+    func start() {
         let loggedOutViewController = LoggedOutViewController()
         
         loggedOutViewController.onLoginButton = { setLogin in
@@ -25,8 +25,12 @@ import UIKit
             case .Login:
                 let coordinator = LoginCoordinator(navigationController: self.navigationController)
                 coordinator.start()
+            case .AutoLogin:
+                let coordinator = HomeCoordinator(navigationController: self.navigationController)
+                coordinator.start()
             }
-           
+            
+            
         }
         self.navigationController.pushViewController(loggedOutViewController, animated: true)
         

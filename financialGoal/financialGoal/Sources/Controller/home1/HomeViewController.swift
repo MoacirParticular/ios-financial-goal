@@ -27,6 +27,10 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     override func loadView() {
         self.view = homeView
@@ -58,6 +62,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         //Informa que o simulador esta indisponivel
         if data[indexPath.row].title == HomeStringConstants.simulator{
             showDefaultAlert(.Warning, .SimulatorUnavailable)
+        }else{
+            DispatchQueue.main.async {
+                let homeViewController = CalcsViewController()
+                self.navigationController?.pushViewController(homeViewController, animated: true)
+            }
         }
        
     }

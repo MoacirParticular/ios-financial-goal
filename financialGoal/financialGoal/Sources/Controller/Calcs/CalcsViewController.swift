@@ -15,6 +15,7 @@ class CalcsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        navigationTitleConfig(title: StringConstantsCalcs.screenTitleCalcs )
     }
     
     override func didReceiveMemoryWarning() {

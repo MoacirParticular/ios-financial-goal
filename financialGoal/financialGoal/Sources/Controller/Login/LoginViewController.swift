@@ -64,8 +64,10 @@ class LoginViewController: UIViewController {
             switch(result) {
             case .success(let returnData):
                 guard let messsage = returnData.message else { return }
+                guard let nickNameLogado = returnData.user?.nickname else {return}
                 if returnData.res == true {
                     self.setViewHome?(.Logado)
+                    SignInData.nickname = nickNameLogado
                     self.saveCredentials(user: username, pass: password)
                 }else{
                     self.showAlert(.Warning, messsage)

@@ -57,7 +57,7 @@ class HomeView: UIView {
     lazy var labelNickName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        label.text = HomeStringConstants.nickNameString
+        label.text = SignInData.nickname
         label.font = .fontNickNameHome
         label.textColor = .customColorResultLabel
         label.textAlignment = .center
