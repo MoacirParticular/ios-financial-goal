@@ -18,4 +18,8 @@ struct StringConstants {
     //MARK: String Autologin Key UserDefault
     static let userKey = "user"
     static let passKey = "pass"
+    
+    //MARK: String de criação Cell tela Calcs
+    static let fatalErroCell:String = "Unable to create cell"
+    static let cellIdentifier:String = "cell"
 }

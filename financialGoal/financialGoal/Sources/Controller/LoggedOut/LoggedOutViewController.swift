@@ -8,7 +8,6 @@
 import UIKit
 
 class LoggedOutViewController: UIViewController {
-    
     var onLoginButton: ((_ setLogin: LoginType ) -> Void)?
     
     private let loggedOutView = LoggedOutView(frame: FrameConstants.frameZero)
@@ -67,12 +66,10 @@ class LoggedOutViewController: UIViewController {
             requestLogin().login(user, pass) { (result) in
                 switch(result) {
                 case .success(let returnData):
+                    guard let nickNameLogado = returnData.user?.nickname else {return}
                     if returnData.res == true {
-                        DispatchQueue.main.async {
-//                            let homeViewController = HomeViewController()
-                            let homeViewController = MonthlyViewController()
-                            self.navigationController?.pushViewController(homeViewController, animated: true)
-                        }
+                        SignInData.nickname = nickNameLogado
+                        self.onLoginButton?(.AutoLogin)
                     }
                 case .failure( _):
                     self.showDefaultAlert(.Warning, AlertMessage.NoConnection)

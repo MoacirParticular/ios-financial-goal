@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
-		1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* iconsHome.swift */; };
-		1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* IconsConstants.swift */; };
+		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
+		1C7BB246268A7E6200D0E196 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* HomeConstants.swift */; };
+		1C7BB272268BAFCB00D0E196 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB271268BAFCB00D0E196 /* CustomCell.swift */; };
+		1C7BB28F268BE6B900D0E196 /* HomeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */; };
+		1C7BB29A268BE98F00D0E196 /* HomeListOfItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */; };
 		1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */; };
 		1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */; };
 		1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238BA26823325000653F6 /* RequestLogin.swift */; };
@@ -89,17 +92,25 @@
 		89C9FFCA2682450100B45338 /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFC92682450100B45338 /* SignInData.swift */; };
 		89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFCE2682652000B45338 /* StringAlertConstants.swift */; };
 		89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */; };
+		C1184DAD268BF88C00A6AA57 /* ValueCalcsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */; };
+		C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */; };
 		C11FD8ED26838035009D5C9D /* ApiUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11FD8EC26838035009D5C9D /* ApiUrlRequest.swift */; };
 		C11FD8F426838056009D5C9D /* RequestRecoveryPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11FD8F226838055009D5C9D /* RequestRecoveryPass.swift */; };
 		C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11FD8F326838055009D5C9D /* RequestBuilderRecoveryPass.swift */; };
 		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
 		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
+		C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589ACB268B66EE00390BAF /* CalcsViewController.swift */; };
+		C1589B03268B88C900390BAF /* CalcsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C178D350267AC9F50079072F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34D267AC9F50079072F /* LoginView.swift */; };
 		C178D351267AC9F50079072F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34E267AC9F50079072F /* AlertViewController.swift */; };
 		C178D352267AC9F50079072F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34F267AC9F50079072F /* LoginViewController.swift */; };
 		C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D356267ACA100079072F /* LoginCoordinator.swift */; };
 		C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D35E267ACA620079072F /* ConstraintsConstants.swift */; };
+		C1A18A8F268B9D8F002E252B /* CalcsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */; };
+		C1A18A9C268BDE39002E252B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9A268BDE39002E252B /* OFL.txt */; };
+		C1A18A9D268BDE39002E252B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */; };
+		C1A18AA3268BEBC7002E252B /* CalcsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A18AA2268BEBC7002E252B /* CalcsModel.swift */; };
 		C1AD75D326791E0200BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75DB26791E2500BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C1AD75E126791E4A00BB9729 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -127,8 +138,11 @@
 /* Begin PBXFileReference section */
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		1C7BB240268A7BF900D0E196 /* iconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconsHome.swift; sourceTree = "<group>"; };
-		1C7BB245268A7E6200D0E196 /* IconsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsConstants.swift; sourceTree = "<group>"; };
+		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
+		1C7BB245268A7E6200D0E196 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
+		1C7BB271268BAFCB00D0E196 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStringConstants.swift; sourceTree = "<group>"; };
+		1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListOfItems.swift; sourceTree = "<group>"; };
 		1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+.swift"; sourceTree = "<group>"; };
 		1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
 		1CC238BA26823325000653F6 /* RequestLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
@@ -213,16 +227,24 @@
 		89C9FFC92682450100B45338 /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
 		89C9FFCE2682652000B45338 /* StringAlertConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlertConstants.swift; sourceTree = "<group>"; };
 		89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlStructEnum.swift; sourceTree = "<group>"; };
+		C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCalcsConstants.swift; sourceTree = "<group>"; };
+		C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsCalcs.swift; sourceTree = "<group>"; };
 		C11FD8EC26838035009D5C9D /* ApiUrlRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlRequest.swift; sourceTree = "<group>"; };
 		C11FD8F226838055009D5C9D /* RequestRecoveryPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRecoveryPass.swift; sourceTree = "<group>"; };
 		C11FD8F326838055009D5C9D /* RequestBuilderRecoveryPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilderRecoveryPass.swift; sourceTree = "<group>"; };
 		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
+		C1589ACB268B66EE00390BAF /* CalcsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsViewController.swift; sourceTree = "<group>"; };
+		C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTableViewCell.swift; sourceTree = "<group>"; };
 		C178D34D267AC9F50079072F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C178D34E267AC9F50079072F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C178D356267ACA100079072F /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
+		C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTypes.swift; sourceTree = "<group>"; };
+		C1A18A9A268BDE39002E252B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		C1A18AA2268BEBC7002E252B /* CalcsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsModel.swift; sourceTree = "<group>"; };
 		C1CB569A26861A3500DB3E82 /* RecoverypassRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverypassRequestTests.swift; sourceTree = "<group>"; };
 		C1F726C226811CB100F3B997 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,8 +277,9 @@
 		1C7BB23C268A7ABA00D0E196 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1C7BB240268A7BF900D0E196 /* iconsHome.swift */,
-				1C7BB245268A7E6200D0E196 /* IconsConstants.swift */,
+				1C7BB240268A7BF900D0E196 /* IconsHome.swift */,
+				1C7BB245268A7E6200D0E196 /* HomeConstants.swift */,
+				1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -284,6 +307,8 @@
 			children = (
 				1CC238F326827715000653F6 /* HomeViewController.swift */,
 				1C7BB22F268A3D0A00D0E196 /* HomeView.swift */,
+				1C7BB271268BAFCB00D0E196 /* CustomCell.swift */,
+				1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */,
 			);
 			path = home1;
 			sourceTree = "<group>";
@@ -389,6 +414,7 @@
 		3FE99613267793170068E95B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1A18A99268BDE39002E252B /* PoppinsRegular */,
 				1CC542D626791A3B00A807B4 /* roboto */,
 				3FE996242677BB0C0068E95B /* Strings */,
 				3FE995E3267792B70068E95B /* AppDelegate.swift */,
@@ -416,6 +442,7 @@
 		3FE99615267794210068E95B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1A18AA1268BEBA9002E252B /* Calcs */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -439,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				89ACC035268B58A800851CEC /* Monthly */,
+				C1589ACA268B66CB00390BAF /* Calcs */,
 				1CC238F2268276FC000653F6 /* home1 */,
 				C178D34C267AC9F50079072F /* Login */,
 				896ABDDA267A779B004A05F3 /* Sign_in */,
@@ -476,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				892A29DD268B8CAB00DF9299 /* Monthly */,
+				C1184DAB268BF86400A6AA57 /* Calcs */,
 				1C7BB23C268A7ABA00D0E196 /* Home */,
 				89C9FF962681309300B45338 /* Internal */,
 				C178D35B267ACA620079072F /* Login */,
@@ -615,6 +644,15 @@
 			path = Sign_in;
 			sourceTree = "<group>";
 		};
+		C1184DAB268BF86400A6AA57 /* Calcs */ = {
+			isa = PBXGroup;
+			children = (
+				C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */,
+				C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */,
+			);
+			path = Calcs;
+			sourceTree = "<group>";
+		};
 		C11FD8F126838055009D5C9D /* RecoveryPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,6 +660,15 @@
 				C11FD8F326838055009D5C9D /* RequestBuilderRecoveryPass.swift */,
 			);
 			path = RecoveryPassword;
+			sourceTree = "<group>";
+		};
+		C1589ACA268B66CB00390BAF /* Calcs */ = {
+			isa = PBXGroup;
+			children = (
+				C1589ACB268B66EE00390BAF /* CalcsViewController.swift */,
+				C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */,
+			);
+			path = Calcs;
 			sourceTree = "<group>";
 		};
 		C178D34C267AC9F50079072F /* Login */ = {
@@ -641,6 +688,24 @@
 				C12D2293267B971B002C0275 /* StringConstantsLogin.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C1A18A99268BDE39002E252B /* PoppinsRegular */ = {
+			isa = PBXGroup;
+			children = (
+				C1A18A9A268BDE39002E252B /* OFL.txt */,
+				C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */,
+			);
+			path = PoppinsRegular;
+			sourceTree = "<group>";
+		};
+		C1A18AA1268BEBA9002E252B /* Calcs */ = {
+			isa = PBXGroup;
+			children = (
+				C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */,
+				C1A18AA2268BEBC7002E252B /* CalcsModel.swift */,
+			);
+			path = Calcs;
 			sourceTree = "<group>";
 		};
 		C1F726C126811C9300F3B997 /* Model */ = {
@@ -772,6 +837,8 @@
 				1CC542EA26791A3B00A807B4 /* Roboto-Medium.ttf in Resources */,
 				1CC542F926791A3B00A807B4 /* Roboto-BlackItalic.ttf in Resources */,
 				3FE9962B2677C5F40068E95B /* accessibilityFinancialGoalLocalizeble.strings in Resources */,
+				C1A18A9D268BDE39002E252B /* Poppins-Regular.ttf in Resources */,
+				C1A18A9C268BDE39002E252B /* OFL.txt in Resources */,
 				1CC542EB26791A3B00A807B4 /* Roboto-Light.ttf in Resources */,
 				3FE995ED267792BB0068E95B /* Assets.xcassets in Resources */,
 				1CC542F426791A3B00A807B4 /* Roboto-ThinItalic.ttf in Resources */,
@@ -808,6 +875,7 @@
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
 				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
 				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
+				C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
@@ -816,11 +884,14 @@
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
+				C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */,
 				895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */,
+				C1A18A8F268B9D8F002E252B /* CalcsTypes.swift in Sources */,
 				896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */,
 				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
 				896ABDE1267A779B004A05F3 /* StringSignInConstants.swift in Sources */,
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
+				C1589B03268B88C900390BAF /* CalcsTableViewCell.swift in Sources */,
 				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
 				892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */,
 				1CC238C526823594000653F6 /* RequestBuilderLogin.swift in Sources */,
@@ -835,6 +906,8 @@
 				89C9FFCA2682450100B45338 /* SignInData.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				89ACC02E268B57E000851CEC /* MonthlyCoordinator.swift in Sources */,
+				1C7BB28F268BE6B900D0E196 /* HomeStringConstants.swift in Sources */,
+				1C7BB272268BAFCB00D0E196 /* CustomCell.swift in Sources */,
 				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
@@ -850,13 +923,15 @@
 				C11FD8ED26838035009D5C9D /* ApiUrlRequest.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
-				1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */,
-				1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */,
+				1C7BB246268A7E6200D0E196 /* HomeConstants.swift in Sources */,
+				1C7BB29A268BE98F00D0E196 /* HomeListOfItems.swift in Sources */,
+				1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */,
 				1CC238BF26823325000653F6 /* RequestBuilder.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
 				1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */,
 				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
+				C1184DAD268BF88C00A6AA57 /* ValueCalcsConstants.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
 				1CC238F426827715000653F6 /* HomeViewController.swift in Sources */,
 				1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */,
@@ -865,6 +940,7 @@
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */,
+				C1A18AA3268BEBC7002E252B /* CalcsModel.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */,

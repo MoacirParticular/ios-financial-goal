@@ -28,7 +28,6 @@ enum AlertTitle: CustomStringConvertible {
             return "Senha inválida"
         case .DearUser:
             return "Caro usuário"
-
         case .CountSuccess:
             return "Parabéns"
 
@@ -41,6 +40,8 @@ enum AlertMessage: CustomStringConvertible {
     case NoNickname
     case NoPasswd
     case NoConnection
+    case SimulatorUnavailable
+
     
     var description: String {
         switch self {
@@ -52,6 +53,8 @@ enum AlertMessage: CustomStringConvertible {
             return "Digite uma senha com 8 ou mais caractéres."
         case .NoConnection:
             return "Erro de conexão."
+        case .SimulatorUnavailable:
+            return "Simulador não disponível"
         }
     }
 }
