@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
-		1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* iconsHome.swift */; };
-		1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* IconsConstants.swift */; };
+		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
+		1C7BB246268A7E6200D0E196 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* HomeConstants.swift */; };
+		1C7BB272268BAFCB00D0E196 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB271268BAFCB00D0E196 /* CustomCell.swift */; };
+		1C7BB28F268BE6B900D0E196 /* HomeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */; };
+		1C7BB29A268BE98F00D0E196 /* HomeListOfItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */; };
 		1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */; };
 		1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */; };
 		1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC238BA26823325000653F6 /* RequestLogin.swift */; };
@@ -122,8 +125,11 @@
 /* Begin PBXFileReference section */
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		1C7BB240268A7BF900D0E196 /* iconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconsHome.swift; sourceTree = "<group>"; };
-		1C7BB245268A7E6200D0E196 /* IconsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsConstants.swift; sourceTree = "<group>"; };
+		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
+		1C7BB245268A7E6200D0E196 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
+		1C7BB271268BAFCB00D0E196 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStringConstants.swift; sourceTree = "<group>"; };
+		1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListOfItems.swift; sourceTree = "<group>"; };
 		1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+.swift"; sourceTree = "<group>"; };
 		1CBBBB1E267BC6A80038C431 /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
 		1CC238BA26823325000653F6 /* RequestLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
@@ -245,8 +251,9 @@
 		1C7BB23C268A7ABA00D0E196 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1C7BB240268A7BF900D0E196 /* iconsHome.swift */,
-				1C7BB245268A7E6200D0E196 /* IconsConstants.swift */,
+				1C7BB240268A7BF900D0E196 /* IconsHome.swift */,
+				1C7BB245268A7E6200D0E196 /* HomeConstants.swift */,
+				1C7BB28E268BE6B800D0E196 /* HomeStringConstants.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -274,6 +281,8 @@
 			children = (
 				1CC238F326827715000653F6 /* HomeViewController.swift */,
 				1C7BB22F268A3D0A00D0E196 /* HomeView.swift */,
+				1C7BB271268BAFCB00D0E196 /* CustomCell.swift */,
+				1C7BB299268BE98F00D0E196 /* HomeListOfItems.swift */,
 			);
 			path = home1;
 			sourceTree = "<group>";
@@ -801,6 +810,8 @@
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				89C9FFCA2682450100B45338 /* SignInData.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
+				1C7BB28F268BE6B900D0E196 /* HomeStringConstants.swift in Sources */,
+				1C7BB272268BAFCB00D0E196 /* CustomCell.swift in Sources */,
 				C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */,
 				3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */,
 				89365A5C267A7FC80087531D /* SignInNameCoordinator.swift in Sources */,
@@ -814,8 +825,9 @@
 				C11FD8ED26838035009D5C9D /* ApiUrlRequest.swift in Sources */,
 				89365A51267A7F150087531D /* UITextField+.swift in Sources */,
 				1CBBBB1F267BC6A80038C431 /* FrameConstants.swift in Sources */,
-				1C7BB246268A7E6200D0E196 /* IconsConstants.swift in Sources */,
-				1C7BB241268A7BF900D0E196 /* iconsHome.swift in Sources */,
+				1C7BB246268A7E6200D0E196 /* HomeConstants.swift in Sources */,
+				1C7BB29A268BE98F00D0E196 /* HomeListOfItems.swift in Sources */,
+				1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */,
 				1CC238BF26823325000653F6 /* RequestBuilder.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
