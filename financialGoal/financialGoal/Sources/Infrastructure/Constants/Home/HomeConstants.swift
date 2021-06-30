@@ -7,9 +7,9 @@
 
 import UIKit
 
-struct IconsConstants {
+struct HomeConstants {
     //MARK: View top
-    static let cornerRadiusConstant: CGFloat = 60
+    static let cornerRadiusTopScreen: CGFloat = 60
     static let constantTwo: CGFloat = 2
     static let constantZero: CGFloat = 0
     
@@ -30,5 +30,19 @@ struct IconsConstants {
     static let leftAnchorButtonSimulation: CGFloat = 42
     static let rightAnchorButtonSimulation: CGFloat = -42
     static let heightAnchorButtonSimulation: CGFloat = 122
+    
+    //MARK: CustomCell
+    static let topAnchorTitle: CGFloat = 96
+    static let leftAnchorTitle: CGFloat = 1
+    static let rightAnchorTitle: CGFloat = -1
+    
+    static let topAnchorIcon: CGFloat = 5
+    static let rightAnchorIcon: CGFloat = -6
+
+    //MARK: Collection view
+    static let widthCell: CGFloat = 109
+    static let heightCell: CGFloat = 124
+    static let cornerRadiusFour: CGFloat = 4
+
 }
 

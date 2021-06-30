@@ -29,5 +29,10 @@ public extension UIImage {
         return UIImage(named: "iconMoneyCalc")!
     }
     
+    @objc
+    static var iconSimulator: UIImage {
+        return UIImage(named: "iconSimulador")!
+    }
+    
     
 }

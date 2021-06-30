@@ -8,68 +8,52 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
-    
-    //MARK: Criação dos elementos
-    var title: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .black)
-        label.textColor = .customColorResultLabel
         
-        return label
-    }()
-    
+    //MARK: Icones da celula
     var icon: UIImageView = {
         let img = UIImageView()
-        img.translatesAutoresizingMaskIntoConstraints = false
+        img.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         return img
     }()
- 
-    //MARK: Constrains
-    private func setTitle() {
-        addSubview(title)
-        title.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: 96),
-            title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1),
-            title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -1),
-        ])
-    }
     
     private func setIcon() {
         addSubview(icon)
-        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         
         NSLayoutConstraint.activate([
-            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            //icon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1),
-            icon.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -6),
+            icon.topAnchor.constraint(equalTo: self.topAnchor, constant: HomeConstants.topAnchorIcon),
+            icon.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorIcon),
         ])
     }
     
-    
+    //MARK: Titulo da celula
+    var title: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular) //Aguardando o leo criar
+        label.textColor = .customColorResultLabel
+        return label
+    }()
+ 
+    private func setTitle() {
+        addSubview(title)
+        title.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        
+        NSLayoutConstraint.activate([
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: HomeConstants.topAnchorTitle),
+            title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorTitle),
+            title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorTitle),
+        ])
+    }
+     
+    //MARK: Seta os elementos
     func setupView(title: String, icon: UIImage) {
         setTitle()
         setIcon()
-        
+    
         self.icon.image = icon
         self.title.text = title
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        contentView.backgroundColor = .colorOrangeCollection
-        
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    
 }
 
