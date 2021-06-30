@@ -20,7 +20,13 @@ extension UIViewController {
         ai.startAnimating()
         aView?.addSubview(ai)
         self.view?.addSubview(aView ?? UIView())
-      
+        
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
+            if aView != nil {
+                self.showDefaultAlert(.Warning, .TryAgainLatter)
+                self.removeActivity()
+            }
+        }
     }
     
     func removeActivity(){
