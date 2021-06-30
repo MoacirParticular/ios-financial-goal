@@ -53,11 +53,17 @@ public extension UIColor {
     static var customColorResultLabel: UIColor {
         return UIColor(named: "customColorResultLabel") ?? UIColor.white
     }
-    
-    
-    
-        
+    @objc
+    static var colorLabelCalcsType: UIColor {
+        return UIColor(named: "colorLabelCalcsType") ?? UIColor.gray
+    }
+    @objc
+    static var colorBackgroundCell: UIColor {
+        return UIColor(named: "colorBackgroundCell") ?? UIColor.white
+    }
+  
 }
+
 
 
 

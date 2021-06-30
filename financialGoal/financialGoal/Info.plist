@@ -24,6 +24,7 @@
 	<array>
 		<string>Roboto-Black.ttf</string>
 		<string>Roboto-Regular.ttf</string>
+		<string>Poppins-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
