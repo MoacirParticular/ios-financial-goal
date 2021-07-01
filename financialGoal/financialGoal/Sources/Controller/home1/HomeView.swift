@@ -160,10 +160,11 @@ class HomeView: UIView {
         button.contentHorizontalAlignment = .left
         button.semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
         button.setTitleColor(.blackCustomGoal, for: .normal)
+        
         button.layer.shadowColor = UIColor.customColorShadow.cgColor
-        button.layer.shadowOffset = CGSize(width: ShadowTextField.shadowWidth, height: ShadowTextField.shadowHeight)
-        button.layer.shadowRadius = ShadowTextField.shadowRadius
-        button.layer.shadowOpacity = ShadowTextField.shadowOpacity
+        button.layer.shadowOffset = CGSize(width: HomeConstants.shadowOffSetWidthButtonSimulator , height: HomeConstants.shadowOffSetHeightButtonSimulator)
+        button.layer.shadowRadius = HomeConstants.shadowRadiusButtonSimulator
+        button.layer.shadowOpacity = HomeConstants.shadowOpacityButtonSimulator
        return button
    }()
    
