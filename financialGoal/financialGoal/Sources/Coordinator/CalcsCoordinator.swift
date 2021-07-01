@@ -25,6 +25,9 @@ public class CalcsCoordinator: Coordinator {
             case .Yearly:
                 let coordinator = LoginCoordinator(navigationController: self.navigationController)
                 coordinator.start()
+            case .Taxes:
+                let coordinator = TaxesCoordinator(navigationController: self.navigationController)
+                coordinator.start()
             }
         }
         self.navigationController.pushViewController(calcsViewController, animated: true)

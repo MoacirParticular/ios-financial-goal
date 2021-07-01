@@ -10,4 +10,5 @@ import Foundation
 enum CalcsTypesScreen: CodingKey {
     case Yearly
     case Monthly
+    case Taxes
 }
