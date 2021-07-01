@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol RequestBuilderSignInProtocol {
+protocol RequestBuilderProtocol {
     func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest
 }
 
-class RequestBuilderSignIn: RequestBuilderSignInProtocol {
+class RequestBuilderSignIn: RequestBuilderProtocol {
     
     func signIn(_ username: String, _ nickname: String, _ password: String) -> URLRequest {
         let url: URL = {

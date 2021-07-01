@@ -42,6 +42,7 @@ enum AlertMessage: CustomStringConvertible {
     case NoConnection
     case SimulatorUnavailable
     case TryAgainLatter
+    case InputError
 
     
     var description: String {
@@ -58,6 +59,8 @@ enum AlertMessage: CustomStringConvertible {
             return "Simulador não disponível."
         case .TryAgainLatter:
             return "Erro, tente novamente mais tarde."
+        case .InputError:
+            return "Preencha todos os campos."
         }
     }
 }
