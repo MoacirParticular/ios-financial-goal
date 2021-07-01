@@ -60,7 +60,7 @@ struct HomeConstants {
     static let topButton: CGFloat = 25
     static let leftButton: CGFloat = 13
     static let bottomButton: CGFloat = 61
-    static let rightButton: CGFloat = 133
+    static let rightButton: CGFloat = 136
     static let numberLinesLastSimulation = 2
     static let cornerRadiusLasSimulation: CGFloat = 4
     
