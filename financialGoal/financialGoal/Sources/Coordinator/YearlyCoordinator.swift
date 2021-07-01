@@ -1,13 +1,13 @@
 //
-//  MonthlyCoordinator.swift
+//  YearlyCoordinator.swift
 //  financialGoal
 //
-//  Created by Jonattan Moises Sousa on 29/06/21.
+//  Created by Renilson Moreira Ferreira on 01/07/21.
 //
 
 import UIKit
 
-public class MonthlyCoordinator: Coordinator {
+public class YearlyCoordinator: Coordinator {
     let navigation: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -16,8 +16,8 @@ public class MonthlyCoordinator: Coordinator {
     
     public func start() {
         DispatchQueue.main.async {
-            let monthlyViewController = MonthlyViewController()
-            self.navigation.pushViewController(monthlyViewController, animated: true)
+            let yearlyViewController = YearlyViewController()
+            self.navigation.pushViewController(yearlyViewController, animated: true)
         }
     }
 }

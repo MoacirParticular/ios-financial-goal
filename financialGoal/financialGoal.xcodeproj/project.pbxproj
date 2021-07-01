@@ -49,6 +49,8 @@
 		1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5432B267A355000A807B4 /* StringConstants.swift */; };
 		1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54335267A3BB700A807B4 /* LoginType.swift */; };
 		1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */; };
+		1CECFECD268E0CCF00C928A2 /* YearlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFECC268E0CCF00C928A2 /* YearlyViewController.swift */; };
+		1CECFED2268E0D1700C928A2 /* YearlyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */; };
 		3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E3267792B70068E95B /* AppDelegate.swift */; };
 		3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E5267792B70068E95B /* SceneDelegate.swift */; };
 		3FE995E8267792B70068E95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E7267792B70068E95B /* ViewController.swift */; };
@@ -187,6 +189,8 @@
 		1CC5432B267A355000A807B4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		1CC54335267A3BB700A807B4 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAndScrollConstants.swift; sourceTree = "<group>"; };
+		1CECFECC268E0CCF00C928A2 /* YearlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyViewController.swift; sourceTree = "<group>"; };
+		1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyCoordinator.swift; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE995E5267792B70068E95B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -376,6 +380,14 @@
 			path = Logged_Out;
 			sourceTree = "<group>";
 		};
+		1CECFECB268E0CAF00C928A2 /* Yearly */ = {
+			isa = PBXGroup;
+			children = (
+				1CECFECC268E0CCF00C928A2 /* YearlyViewController.swift */,
+			);
+			path = Yearly;
+			sourceTree = "<group>";
+		};
 		3FE995D7267792B70068E95B = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +490,7 @@
 				89ACC02D268B57E000851CEC /* MonthlyCoordinator.swift */,
 				C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */,
 				C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */,
+				1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -485,6 +498,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CECFECB268E0CAF00C928A2 /* Yearly */,
 				C111DEAD268D417A00C4F987 /* Taxes */,
 				89ACC035268B58A800851CEC /* Monthly */,
 				C1589ACA268B66CB00390BAF /* Calcs */,
@@ -514,10 +528,10 @@
 			children = (
 				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
+				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
-				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -938,6 +952,7 @@
 				1CC238C026823325000653F6 /* RequestSignIn.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,
 				C16764FD268CE500001B90B8 /* CalcsCoordinator.swift in Sources */,
+				1CECFED2268E0D1700C928A2 /* YearlyCoordinator.swift in Sources */,
 				896822D42684EE3200DC5476 /* ConstantApiKey.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
 				C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */,
@@ -973,6 +988,7 @@
 				1CC238BF26823325000653F6 /* RequestBuilder.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
+				1CECFECD268E0CCF00C928A2 /* YearlyViewController.swift in Sources */,
 				1CC238BE26823325000653F6 /* RequestLogin.swift in Sources */,
 				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
 				C1184DAD268BF88C00A6AA57 /* ValueCalcsConstants.swift in Sources */,

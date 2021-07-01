@@ -19,5 +19,5 @@ struct InfoCalcScreen {
 
 struct TitleCalcScreen {
     static let monthlyTitle: String = "Aplicação mensal"
-    static let yearlyTitle: String = ""
+    static let yearlyTitle: String = "Aplicação única"
 }

@@ -23,11 +23,13 @@ public class CalcsCoordinator: Coordinator {
                 let coordinator = MonthlyCoordinator(navigationController: self.navigationController)
                 coordinator.start()
             case .Yearly:
-                let coordinator = LoginCoordinator(navigationController: self.navigationController)
+                let coordinator = YearlyCoordinator(navigationController: self.navigationController)
                 coordinator.start()
             case .Taxes:
                 let coordinator = TaxesCoordinator(navigationController: self.navigationController)
                 coordinator.start()
+            case .Index :
+                break
             }
         }
         self.navigationController.pushViewController(calcsViewController, animated: true)
