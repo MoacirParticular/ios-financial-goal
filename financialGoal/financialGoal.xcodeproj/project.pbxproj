@@ -51,6 +51,9 @@
 		1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */; };
 		1CECFECD268E0CCF00C928A2 /* YearlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFECC268E0CCF00C928A2 /* YearlyViewController.swift */; };
 		1CECFED2268E0D1700C928A2 /* YearlyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */; };
+		1CECFEDE268E35C200C928A2 /* RequestRecoveryYearly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFEDD268E35C200C928A2 /* RequestRecoveryYearly.swift */; };
+		1CECFEE3268E35DF00C928A2 /* RequestBuilderYearly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFEE2268E35DF00C928A2 /* RequestBuilderYearly.swift */; };
+		1CECFEEE268E59BC00C928A2 /* formatNumberToDecimal+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECFEED268E59BC00C928A2 /* formatNumberToDecimal+.swift */; };
 		3FE995E4267792B70068E95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E3267792B70068E95B /* AppDelegate.swift */; };
 		3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E5267792B70068E95B /* SceneDelegate.swift */; };
 		3FE995E8267792B70068E95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE995E7267792B70068E95B /* ViewController.swift */; };
@@ -191,6 +194,9 @@
 		1CC54348267A4D0000A807B4 /* PageAndScrollConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAndScrollConstants.swift; sourceTree = "<group>"; };
 		1CECFECC268E0CCF00C928A2 /* YearlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyViewController.swift; sourceTree = "<group>"; };
 		1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyCoordinator.swift; sourceTree = "<group>"; };
+		1CECFEDD268E35C200C928A2 /* RequestRecoveryYearly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRecoveryYearly.swift; sourceTree = "<group>"; };
+		1CECFEE2268E35DF00C928A2 /* RequestBuilderYearly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderYearly.swift; sourceTree = "<group>"; };
+		1CECFEED268E59BC00C928A2 /* formatNumberToDecimal+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "formatNumberToDecimal+.swift"; sourceTree = "<group>"; };
 		3FE995E0267792B70068E95B /* financialGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE995E3267792B70068E95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE995E5267792B70068E95B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -388,6 +394,15 @@
 			path = Yearly;
 			sourceTree = "<group>";
 		};
+		1CECFEDC268E359100C928A2 /* Yearly */ = {
+			isa = PBXGroup;
+			children = (
+				1CECFEDD268E35C200C928A2 /* RequestRecoveryYearly.swift */,
+				1CECFEE2268E35DF00C928A2 /* RequestBuilderYearly.swift */,
+			);
+			path = Yearly;
+			sourceTree = "<group>";
+		};
 		3FE995D7267792B70068E95B = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +534,7 @@
 				89365A50267A7F150087531D /* UITextField+.swift */,
 				8982EFF1267D17F40002085E /* UIViewController+.swift */,
 				1CBB6D0F2683FBBA0040FB61 /* Activity+.swift */,
+				1CECFEED268E59BC00C928A2 /* formatNumberToDecimal+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -650,6 +666,7 @@
 		89C9FFBB2682228200B45338 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				1CECFEDC268E359100C928A2 /* Yearly */,
 				C11FD8F126838055009D5C9D /* RecoveryPassword */,
 				1CC238B926823325000653F6 /* LoginApi */,
 				1CC238BB26823325000653F6 /* Sign_in */,
@@ -925,6 +942,8 @@
 				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
 				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
 				C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */,
+				1CECFEDE268E35C200C928A2 /* RequestRecoveryYearly.swift in Sources */,
+				1CECFEE3268E35DF00C928A2 /* RequestBuilderYearly.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
@@ -957,6 +976,7 @@
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
 				C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */,
 				89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */,
+				1CECFEEE268E59BC00C928A2 /* formatNumberToDecimal+.swift in Sources */,
 				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				89C9FFCA2682450100B45338 /* SignInData.swift in Sources */,
