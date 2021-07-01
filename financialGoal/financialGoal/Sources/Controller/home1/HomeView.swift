@@ -88,7 +88,7 @@ class HomeView: UIView {
     func setCollectionView(){
         addSubview(collectionView)
         
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .colorBackgroundCollection
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         var widthCollection = screenHeight
