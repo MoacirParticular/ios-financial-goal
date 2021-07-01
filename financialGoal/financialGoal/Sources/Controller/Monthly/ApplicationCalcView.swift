@@ -7,10 +7,10 @@
 
 import UIKit
 
-protocol viewCalcProtocol {
+protocol ViewCalcProtocol {
     var viewCalc: ApplicationCalcView { get }
 }
-extension viewCalcProtocol {
+extension ViewCalcProtocol {
     func setupView(infoScreen: CalcScreenData, viewBase: UIView) {
         viewCalc.configElements(infoScreen: infoScreen)
         viewCalc.setUp(viewBase: viewBase)
@@ -42,7 +42,6 @@ class ApplicationCalcView: UIView {
         bttn.setTitleColor(.white, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
         bttn.setTitle(ValuesSignIn_Mail.buttonTitle, for: .normal)
-//        bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         return bttn
     }()
     
@@ -81,9 +80,12 @@ class ApplicationCalcView: UIView {
         
         lbFifth.text = infoScreen.fifthLabel
         alignLabel(label: lbFifth, top: viewBase)
-        alignTextField(textField: tfFifth, top: lbFifth)// Sera estatico
+        tfFifth.isUserInteractionEnabled = false
+        tfFifth.backgroundColor = .customColorPageControl
+        alignTextField(textField: tfFifth, top: lbFifth)
         
         alignButton(button: bttnCalcular, top: tfFifth)
+        bttnCalcular.addTarget(self, action: #selector(setAction), for: .touchUpInside)
     }
     
     // MARK: - Monthly configuration
@@ -107,10 +109,14 @@ class ApplicationCalcView: UIView {
         tField.backgroundColor = .customColorTextField
         tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
-        tField.keyboardType = UIKeyboardType.emailAddress
+        tField.keyboardType = UIKeyboardType.decimalPad
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
+    }
+    
+    @objc private func setAction() {
+        buttonAction?()
     }
 }
 
