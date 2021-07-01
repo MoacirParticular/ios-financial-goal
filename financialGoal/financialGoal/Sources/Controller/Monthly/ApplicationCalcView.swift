@@ -41,7 +41,6 @@ class ApplicationCalcView: UIView {
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         bttn.setTitleColor(.white, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
-        bttn.setTitle(ValuesSignIn_Mail.buttonTitle, for: .normal)
         return bttn
     }()
     
@@ -86,6 +85,7 @@ class ApplicationCalcView: UIView {
         
         alignButton(button: bttnCalcular, top: tfFifth)
         bttnCalcular.addTarget(self, action: #selector(setAction), for: .touchUpInside)
+        bttnCalcular.setTitle(infoScreen.buttonTitle, for: .normal)
     }
     
     // MARK: - Monthly configuration
@@ -109,6 +109,7 @@ class ApplicationCalcView: UIView {
         tField.backgroundColor = .customColorTextField
         tField.layer.cornerRadius = ConstantsTextField.cornerRadius
         tField.addShadow()
+        tField.textColor = .customColorResultTaxes
         tField.keyboardType = UIKeyboardType.decimalPad
         tField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
