@@ -27,11 +27,11 @@ class YearlyViewController: MotherCalcs {
     }
     
     private func getDataInputs() {
-        guard let numberOfMonthly = self.viewCalc.tfFirst.text else { return }
-        guard let monthlyRate = self.viewCalc.tfSecond.text else { return }
+        guard let numberOfYearly = self.viewCalc.tfFirst.text else { return }
+        guard let yearlyRate = self.viewCalc.tfSecond.text else { return }
         guard let initialApplication = self.viewCalc.tfThird.text else { return }
-        guard let monthlyValue = self.viewCalc.tfFourth.text else { return }
-        self.viewCalc.tfFifth.text = numberOfMonthly + monthlyRate + initialApplication + monthlyValue
-        print(numberOfMonthly, monthlyRate, initialApplication, monthlyValue)
+        guard let yearlyValue = self.viewCalc.tfFourth.text else { return }
+        self.viewCalc.tfFifth.text = numberOfYearly + yearlyRate + initialApplication + yearlyValue
+        print(numberOfYearly, yearlyRate, initialApplication, yearlyValue)
     }
 }
