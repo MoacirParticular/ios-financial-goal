@@ -64,6 +64,12 @@ struct HomeConstants {
     static let numberLinesLastSimulation = 2
     static let cornerRadiusLasSimulation: CGFloat = 4
     
+    //MARK: Sombra do botão ultima simulação
+    static let shadowOffSetWidthButtonSimulator: CGFloat = 0
+    static let shadowOffSetHeightButtonSimulator: CGFloat = 2
+    static let shadowRadiusButtonSimulator: CGFloat = 2
+    static let shadowOpacityButtonSimulator: Float = 0.5
+        
     //MARK: imagem Ioga ultima simulacao
     static let topAnchorImageIoga : CGFloat = 27
     static let rightAnchorImageIoga : CGFloat = -14
