@@ -12,6 +12,7 @@ class CalcScreenData {
     let thirdLabel: String
     let fourthLabel: String
     let fifthLabel: String
+    let buttonTitle: String
     
     init(_ screen: TypeScreenCalc, _ lb1: String, _ lb2: String, _ lb3: String, _ lb4: String,
          _ lb5: String, _ button: String) {
@@ -21,5 +22,6 @@ class CalcScreenData {
         self.thirdLabel = lb3
         self.fourthLabel = lb4
         self.fifthLabel = lb5
+        self.buttonTitle = button
     }
 }
