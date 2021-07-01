@@ -26,6 +26,7 @@ class HomeView: UIView {
         setButtonIconCalculator()
         setButtonLastSimulation()
         setCollectionView()
+        setImageIoga()
         self.backgroundColor = .backgroundCustomGoal
     }
     
@@ -76,27 +77,34 @@ class HomeView: UIView {
   
     //MARK: CollectionView
     let collectionView: UICollectionView = {
-       let layout = UICollectionViewFlowLayout()
-       layout.scrollDirection = .horizontal
-       let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-       cv.translatesAutoresizingMaskIntoConstraints = false
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         cv.register(CustomCell.self, forCellWithReuseIdentifier: HomeStringConstants.identifier)
-       return cv
-   }()
+        return cv
+    }()
     
     func setCollectionView(){
         addSubview(collectionView)
         
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .colorBackgroundCollection
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
-        let widthCollection = screenHeight / 2 - 75
+        var widthCollection = screenHeight
+        
+        //Verifica o tamanho do device e centraliza a collection de acordo com a view
+        if UIScreen.main.bounds.height > PageAndScrollConstants.deviceScreenSizeCollection {
+            widthCollection = screenHeight / HomeConstants.numberTwoCv - HomeConstants.numberSeventyFourCv
+        }else{
+            widthCollection = screenHeight / HomeConstants.numberTwoCv - HomeConstants.numberSeventyCv
+        }
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.topScreenView.topAnchor, constant: widthCollection),
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 44),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-            collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.45)
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: HomeConstants.numberFortyFourCv),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: HomeConstants.numberMinusFortyCv),
+            collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: HomeConstants.numberZeroFortyFiveCv)
         ])
     }
     
@@ -144,20 +152,14 @@ class HomeView: UIView {
        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         button.backgroundColor = .customColorResultLabel
-        button.layer.cornerRadius = 4
+        button.layer.cornerRadius = HomeConstants.cornerRadiusLasSimulation
         button.setTitle(HomeStringConstants.textLastSimulation, for: .normal)
         button.titleLabel?.font = .fontLabelSubTitleRegular
-        
-        button.titleLabel?.numberOfLines = 2
-        button.titleEdgeInsets = UIEdgeInsets(top: 25, left: 13, bottom: 61, right: 60)
+        button.titleLabel?.numberOfLines = HomeConstants.numberLinesLastSimulation
+        button.titleEdgeInsets = UIEdgeInsets(top: HomeConstants.topButton, left: HomeConstants.leftButton, bottom: HomeConstants.bottomButton, right: HomeConstants.rightButton)
         button.contentHorizontalAlignment = .left
         button.semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
-        
         button.setTitleColor(.blackCustomGoal, for: .normal)
-        button.setImage(.imageIconIoga, for: .normal)
-        
-        button.imageEdgeInsets = UIEdgeInsets(top: 27, left: 60, bottom: 27, right: 14)
-        
         button.layer.shadowColor = UIColor.customColorShadow.cgColor
         button.layer.shadowOffset = CGSize(width: ShadowTextField.shadowWidth, height: ShadowTextField.shadowHeight)
         button.layer.shadowRadius = ShadowTextField.shadowRadius
@@ -175,5 +177,21 @@ class HomeView: UIView {
         buttonLastSimulation.heightAnchor.constraint(equalToConstant: HomeConstants.heightAnchorButtonSimulation)
        ])
    }
+    
+    //MARK: imagem Ioga Ultima simulacao
+     var imageIoga: UIImageView = {
+        let img = UIImageView(image: .imageIconIoga)
+        img.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        return img
+    }()
+    
+    func setImageIoga() {
+        addSubview(imageIoga)
+        
+        NSLayoutConstraint.activate([
+            imageIoga.topAnchor.constraint(equalTo: self.buttonLastSimulation.topAnchor, constant: HomeConstants.topAnchorImageIoga),
+            imageIoga.rightAnchor.constraint(equalTo: self.buttonLastSimulation.rightAnchor, constant: HomeConstants.rightAnchorImageIoga)
+        ])
+    }
    
 }
