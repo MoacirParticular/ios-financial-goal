@@ -18,3 +18,4 @@ class ApiUrlRequest {
         return URL(string: urlRequest)
     }
 }
+

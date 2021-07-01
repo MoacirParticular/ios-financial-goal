@@ -21,3 +21,6 @@ struct TitleCalcScreen {
     static let monthlyTitle: String = "Aplicação mensal"
     static let yearlyTitle: String = "Aplicação única"
 }
+struct YearlyConstants {
+    static let realValue: String = "R$"
+}
