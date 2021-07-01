@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
     override func loadView() {
         self.view = homeView
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -54,14 +53,17 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeStringConstants.identifier, for: indexPath) as! CustomCell
         cell.setupView(title: data[indexPath.row].title, icon: data[indexPath.row].icon)
         cell.backgroundColor = .colorOrangeCollection
-        cell.layer.cornerRadius = HomeConstants.cornerRadiusFour
+        
+        cell.layer.cornerRadius = HomeConstants.cornerRadiusFourCell
+        cell.layer.shadowColor = UIColor.customColorShadow.cgColor
+        cell.layer.shadowOffset =  CGSize(width: HomeConstants.shadowOffSetWidthCell, height: HomeConstants.shadowOffSetHeightCell )
+        cell.layer.shadowRadius = HomeConstants.shadowRadiusCell
+        cell.layer.shadowOpacity = HomeConstants.shadowOpacityCell
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        //Informa que o simulador esta indisponivel
-      
+              
         if data[indexPath.row].title == HomeStringConstants.simulator{
             showDefaultAlert(.Warning, .SimulatorUnavailable)
         }else{

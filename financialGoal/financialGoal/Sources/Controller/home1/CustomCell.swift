@@ -31,7 +31,7 @@ class CustomCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular) //Aguardando o leo criar
+        label.font = .fontLabelCollection
         label.textColor = .customColorResultLabel
         return label
     }()

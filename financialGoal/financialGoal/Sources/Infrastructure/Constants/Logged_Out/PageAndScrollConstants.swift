@@ -23,5 +23,6 @@ struct PageAndScrollConstants {
     static let numberTrue: CGFloat = 3
     static let numberThreePointThree: CGFloat = 3.3
     static let deviceScreenSize: CGFloat = 740.0
+    static let deviceScreenSizeCollection: CGFloat = 730
 
 }

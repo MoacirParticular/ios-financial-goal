@@ -9,7 +9,7 @@ import Foundation
 
 struct StringConstants {
     //MARK: Titles Buttons
-    static let titleButtonCreateAccount = "ABRA SUA CONTA"
+    static let titleButtonCreateAccount = "ABRA SUA CONTA" 
     static let titleButtonLogin = "LOGIN"
     
     //MARK: String do required error
