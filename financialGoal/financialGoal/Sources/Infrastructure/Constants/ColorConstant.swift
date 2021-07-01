@@ -65,8 +65,14 @@ public extension UIColor {
     static var colorOrangeCollection: UIColor {
         return UIColor(named: "colorOrangeCollection") ?? UIColor.orange
     }
+  
     @objc
     static var colorBackgroundCollection: UIColor = .clear
+  
+    @objc
+    static var customColorResultTaxes: UIColor {
+        return UIColor(named: "customColorResultTaxes") ?? UIColor.gray
+    }
 }
 
 

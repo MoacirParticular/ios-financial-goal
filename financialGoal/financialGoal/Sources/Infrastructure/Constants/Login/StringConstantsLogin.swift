@@ -23,3 +23,7 @@ struct StringContantsAlertForgotPass {
     static let actiontitleCancel:String = "Cancelar"
 }
 
+struct StringConstantsTaxes {
+    static let titleTaxes:String = "conversor de taxas"
+}
+

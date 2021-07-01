@@ -10,8 +10,9 @@ import UIKit
 struct MonthlyConstraints {
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
-    static let identBottom: CGFloat = 67
+    static let identBottom: CGFloat = 90// 67
 }
+
 struct MonthlyLabelConstraints {
     static let firstIdentTop: CGFloat = 32
     static let identTop: CGFloat = 16
@@ -27,12 +28,6 @@ struct MonthlyButtonConstraints {
     static let height: CGFloat = ValuesConstraintsButton.height
 }
 
-enum TypeScreenCalc {
-    case Monthly
-    case Yearly
-}
-
-struct InfoCalcScreen {
-    static let monthly: CalcScreenData = CalcScreenData(.Monthly, "Período em meses", "Taxa de juros mensal", "Valor da aplicação inicial", "Valor da aplicação mesal", "Valor obtido no final", "CALCULAR")
-    static let yearly: CalcScreenData = CalcScreenData(.Yearly, "Período em meses", "Taxa de juros mensal", "Valor da aplicação única hoje", String.empty, "Valor obtido no final", "CALCULAR")
+struct KeyboardListenner {
+    static let zeroCG: CGFloat = 0.0
 }
