@@ -81,6 +81,7 @@ class ApplicationCalcView: UIView {
         alignLabel(label: lbFifth, top: viewBase)
         tfFifth.isUserInteractionEnabled = false
         tfFifth.backgroundColor = .customColorPageControl
+        tfFifth.textColor = .customColorTextField
         alignTextField(textField: tfFifth, top: lbFifth)
         
         alignButton(button: bttnCalcular, top: tfFifth)
