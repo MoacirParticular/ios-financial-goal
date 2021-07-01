@@ -94,6 +94,10 @@
 		89C9FFCA2682450100B45338 /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFC92682450100B45338 /* SignInData.swift */; };
 		89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFCE2682652000B45338 /* StringAlertConstants.swift */; };
 		89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */; };
+		C111DEAF268D41D300C4F987 /* TaxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEAE268D41D300C4F987 /* TaxesView.swift */; };
+		C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEB3268D423A00C4F987 /* TaxesViewController.swift */; };
+		C111DEB9268D449700C4F987 /* TaxesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */; };
+		C111DEBE268D4CFA00C4F987 /* TaxesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEBD268D4CFA00C4F987 /* TaxesConstants.swift */; };
 		C1184DAD268BF88C00A6AA57 /* ValueCalcsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */; };
 		C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */; };
 		C11FD8ED26838035009D5C9D /* ApiUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11FD8EC26838035009D5C9D /* ApiUrlRequest.swift */; };
@@ -234,6 +238,10 @@
 		89C9FFC92682450100B45338 /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
 		89C9FFCE2682652000B45338 /* StringAlertConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlertConstants.swift; sourceTree = "<group>"; };
 		89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlStructEnum.swift; sourceTree = "<group>"; };
+		C111DEAE268D41D300C4F987 /* TaxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesView.swift; sourceTree = "<group>"; };
+		C111DEB3268D423A00C4F987 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
+		C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCoordinator.swift; sourceTree = "<group>"; };
+		C111DEBD268D4CFA00C4F987 /* TaxesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesConstants.swift; sourceTree = "<group>"; };
 		C1184DAC268BF88C00A6AA57 /* ValueCalcsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCalcsConstants.swift; sourceTree = "<group>"; };
 		C1184DBA268BFD9C00A6AA57 /* StringConstantsCalcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsCalcs.swift; sourceTree = "<group>"; };
 		C11FD8EC26838035009D5C9D /* ApiUrlRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlRequest.swift; sourceTree = "<group>"; };
@@ -469,6 +477,7 @@
 				1CC238FB2682774D000653F6 /* HomeCoordinator.swift */,
 				89ACC02D268B57E000851CEC /* MonthlyCoordinator.swift */,
 				C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */,
+				C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C111DEAD268D417A00C4F987 /* Taxes */,
 				89ACC035268B58A800851CEC /* Monthly */,
 				C1589ACA268B66CB00390BAF /* Calcs */,
 				1CC238F2268276FC000653F6 /* home1 */,
@@ -656,6 +666,16 @@
 				89C9FFC92682450100B45338 /* SignInData.swift */,
 			);
 			path = Sign_in;
+			sourceTree = "<group>";
+		};
+		C111DEAD268D417A00C4F987 /* Taxes */ = {
+			isa = PBXGroup;
+			children = (
+				C111DEAE268D41D300C4F987 /* TaxesView.swift */,
+				C111DEB3268D423A00C4F987 /* TaxesViewController.swift */,
+				C111DEBD268D4CFA00C4F987 /* TaxesConstants.swift */,
+			);
+			path = Taxes;
 			sourceTree = "<group>";
 		};
 		C1184DAB268BF86400A6AA57 /* Calcs */ = {
@@ -901,10 +921,12 @@
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
 				C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */,
+				C111DEAF268D41D300C4F987 /* TaxesView.swift in Sources */,
 				895D58EC267C00C700C4BE4B /* SignInPasswdCoordinator.swift in Sources */,
 				89C549C5268D49B9007290C5 /* MotherCalcs.swift in Sources */,
 				C1A18A8F268B9D8F002E252B /* CalcsTypes.swift in Sources */,
 				896ABDE0267A779B004A05F3 /* SignInMailView.swift in Sources */,
+				C111DEB9268D449700C4F987 /* TaxesCoordinator.swift in Sources */,
 				1CC54349267A4D0000A807B4 /* PageAndScrollConstants.swift in Sources */,
 				896ABDE1267A779B004A05F3 /* StringSignInConstants.swift in Sources */,
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
@@ -918,12 +940,14 @@
 				C16764FD268CE500001B90B8 /* CalcsCoordinator.swift in Sources */,
 				896822D42684EE3200DC5476 /* ConstantApiKey.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
+				C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */,
 				89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */,
 				C178D352267AC9F50079072F /* LoginViewController.swift in Sources */,
 				1CC542D126791A1400A807B4 /* ImageConstants.swift in Sources */,
 				89C9FFCA2682450100B45338 /* SignInData.swift in Sources */,
 				896ABDDF267A779B004A05F3 /* UIView+.swift in Sources */,
 				8916298B268D271800F199E6 /* MonthlyEarlyConstants.swift in Sources */,
+				C111DEBE268D4CFA00C4F987 /* TaxesConstants.swift in Sources */,
 				89ACC02E268B57E000851CEC /* MonthlyCoordinator.swift in Sources */,
 				1C7BB28F268BE6B900D0E196 /* HomeStringConstants.swift in Sources */,
 				1C7BB272268BAFCB00D0E196 /* CustomCell.swift in Sources */,
