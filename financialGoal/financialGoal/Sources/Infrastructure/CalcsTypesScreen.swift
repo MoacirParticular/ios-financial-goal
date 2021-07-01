@@ -11,4 +11,5 @@ enum CalcsTypesScreen: CodingKey {
     case Yearly
     case Monthly
     case Taxes
+    case Index
 }
