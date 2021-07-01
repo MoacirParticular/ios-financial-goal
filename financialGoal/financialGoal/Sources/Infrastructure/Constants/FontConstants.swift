@@ -51,14 +51,18 @@ public extension UIFont {
         return UIFont(name: "Roboto-Regular", size: 18) ?? fontDefaultGeorgia
     }
  
-    //MARK: Tamanho da fonte Tipo de Calculadora Tela Calcs
+    //MARK: Tamanho e fonte Tipo de Calculadora Tela Calcs
     static var fontCalcType: UIFont {
         return UIFont(name: "Poppins-Regular", size: 14) ?? fontDefaultGeorgia
     }
     
-    //MARK: Tamanho da fonte da Label da CollectionView Tela Home
+    //MARK: Tamanho e fonte da Label da CollectionView Tela Home
     static var fontLabelCollection: UIFont {
         return UIFont(name: "Poppins-Regular", size: 16) ?? fontDefaultGeorgia
+    }
+    //MARK: Tamanho e Fonte das Labels da tela Taxes
+    static var fontTextFieldTaxes: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 18) ?? fontDefaultGeorgia
     }
 }
 
