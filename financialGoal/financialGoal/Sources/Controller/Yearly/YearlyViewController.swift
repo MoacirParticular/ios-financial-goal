@@ -18,6 +18,7 @@ class YearlyViewController: MotherCalcs {
         navigationTitleConfig(title: TitleCalcScreen.yearlyTitle)
         listennerKeyBoardCalcs()
         listemButton()
+        setDelegates()
     }
     
     private func listemButton() {
