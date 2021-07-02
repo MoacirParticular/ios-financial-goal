@@ -58,7 +58,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: HomeConstants.widthCell, height: HomeConstants.heightCell)
+        
+        let screenHeigth = UIScreen.main.bounds.height
+        let screenWidth = UIScreen.main.bounds.width
+        
+        let widthCustom = screenWidth / HomeConstants.threeFortyFour
+        let heightCustom = screenHeigth / HomeConstants.fiveThirtySeven
+        
+        return CGSize(width: widthCustom, height: heightCustom)//
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

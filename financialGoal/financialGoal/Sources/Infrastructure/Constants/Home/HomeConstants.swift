@@ -26,30 +26,35 @@ struct HomeConstants {
     static let topAnchorLabelNickname: CGFloat = 112
     
     //MARK: Botão ultima simulação
-    static let bottomAnchorButtonSimulation: CGFloat = 141
+    static let bottomAnchorButtonSimulation: CGFloat = 79
     static let leftAnchorButtonSimulation: CGFloat = 42
     static let rightAnchorButtonSimulation: CGFloat = -42
     static let heightAnchorButtonSimulation: CGFloat = 122
     
-    //MARK: CustomCell
-    static let topAnchorTitle: CGFloat = 96
+    //MARK: CustomCell title
+    static let botomAnchorTitle: CGFloat = -8
     static let leftAnchorTitle: CGFloat = 1
     static let rightAnchorTitle: CGFloat = -1
+    
+    //MARK: CustomCell icon
     static let topAnchorIcon: CGFloat = 5
     static let rightAnchorIcon: CGFloat = -6
     
     //MARK: CollectionView
     static let numberTwoCv: CGFloat  = 2
-    static let numberSeventyFourCv: CGFloat  = 74
+    static let numberSeventyFourCv: CGFloat  = 78
     static let numberSeventyCv: CGFloat  = 70
     static let numberFortyFourCv: CGFloat = 44
     static let numberMinusFortyCv: CGFloat = -40
     static let numberZeroFortyFiveCv: CGFloat = 0.45
+    static let numberFiveCv: CGFloat = 5
+    static let numberTwoAndHalfCv: CGFloat = 2.5
 
     //MARK: Celula da collection
-    static let widthCell: CGFloat = 109
-    static let heightCell: CGFloat = 124
-    
+    static let threeFortyFour: CGFloat = 3.44
+    static let fiveThirtySeven: CGFloat = 5.37
+
+        
     static let cornerRadiusFourCell: CGFloat = 4
     static let shadowOffSetWidthCell: CGFloat = 0
     static let shadowOffSetHeightCell: CGFloat = 1

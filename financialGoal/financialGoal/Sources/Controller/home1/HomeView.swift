@@ -94,23 +94,19 @@ class HomeView: UIView {
         addSubview(collectionView)
         
         collectionView.backgroundColor = .colorBackgroundCollection
-        let screenSize = UIScreen.main.bounds
-        let screenHeight = screenSize.height
-        var widthCollection = screenHeight
         
         //Verifica o tamanho do device e centraliza a collection de acordo com a view
-        if UIScreen.main.bounds.height > PageAndScrollConstants.deviceScreenSizeCollection {
-            widthCollection = screenHeight / HomeConstants.numberTwoCv - HomeConstants.numberSeventyFourCv
-        }else{
-            widthCollection = screenHeight / HomeConstants.numberTwoCv - HomeConstants.numberSeventyCv
-        }
+        let screenHeight = UIScreen.main.bounds.height
+        let heightCustom = screenHeight / HomeConstants.numberFiveCv
+        let topCustom = screenHeight  / HomeConstants.numberTwoAndHalfCv
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: self.topScreenView.topAnchor, constant: widthCollection),
+            collectionView.topAnchor.constraint(equalTo: self.topScreenView.topAnchor, constant: topCustom),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: HomeConstants.numberFortyFourCv),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: HomeConstants.numberMinusFortyCv),
-            collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: HomeConstants.numberZeroFortyFiveCv)
+            collectionView.heightAnchor.constraint(equalToConstant: heightCustom)
         ])
+        
     }
     
     //MARK: Icone notificação
@@ -177,7 +173,7 @@ class HomeView: UIView {
         addSubview(buttonLastSimulation)
         buttonLastSimulation.addTarget(self, action: #selector(buttonActionLastSimulator), for: .touchUpInside)
         NSLayoutConstraint.activate([
-            buttonLastSimulation.topAnchor.constraint(equalTo: self.topScreenView.bottomAnchor, constant: HomeConstants.bottomAnchorButtonSimulation),
+            buttonLastSimulation.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: HomeConstants.bottomAnchorButtonSimulation),
             buttonLastSimulation.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorButtonSimulation ),
             buttonLastSimulation.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorButtonSimulation),
             buttonLastSimulation.heightAnchor.constraint(equalToConstant: HomeConstants.heightAnchorButtonSimulation)
