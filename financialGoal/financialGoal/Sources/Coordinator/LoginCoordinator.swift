@@ -28,6 +28,9 @@ public class LoginCoordinator: Coordinator {
     private func actionCoordinator(_ animated: Bool) {
         screenLoginViewController.setViewHome = { action in
             if action == .Logado {
+                DispatchQueue.main.async {
+                    self.navigationController.viewControllers.removeAll()
+                }
                 let home = HomeCoordinator(navigationController: self.navigationController)
                 home.start()
             }

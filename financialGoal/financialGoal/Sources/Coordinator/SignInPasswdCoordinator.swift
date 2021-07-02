@@ -20,7 +20,7 @@ public class SignInPasswdCoordinator: Coordinator {
             switch status {
             case .Failure:
                 break
-            case .Success:
+            case .Exists:
                 DispatchQueue.main.async {
                     repeat {
                         self.navigationController.viewControllers.removeLast()
@@ -28,6 +28,13 @@ public class SignInPasswdCoordinator: Coordinator {
                     let login = LoginCoordinator(navigationController: self.navigationController)
                     login.startToSignIn()
                 }
+            case .Logged:
+                DispatchQueue.main.async {
+                    self.navigationController.viewControllers.removeAll()
+                    let homeLogged = HomeCoordinator(navigationController: self.navigationController)
+                    homeLogged.start()
+                }
+                
             }
         }
         self.navigationController.pushViewController(screenViewController, animated: true)

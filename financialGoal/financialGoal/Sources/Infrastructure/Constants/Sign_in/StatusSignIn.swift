@@ -8,6 +8,7 @@
 import Foundation
 
 enum StatusSignIn {
-    case Success
+    case Exists
     case Failure
+    case Logged
 }
