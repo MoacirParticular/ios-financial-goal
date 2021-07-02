@@ -26,8 +26,8 @@ class TaxesViewController: UIViewController {
     
     //MARK: Inserindo resultado do cálculo e transformando em Duble
     func calcTaxes(tax: String){
-        guard let valueConvertedDouble = Double(tax) else {return}
-        self.taxesView.textFieldMonthly.text = calc2(valueConvertedDouble)+ValueCalcTaxes.formatPorcent
+        let valueConvertedDouble = Double(tax)
+        self.taxesView.textFieldMonthly.text = calc2(valueConvertedDouble ?? ValueCalcTaxes.zeroValueDefault)+ValueCalcTaxes.formatPorcent
     }
     
     //MARK: Cálculo para conversão de taxa anual para mensal.
@@ -43,7 +43,6 @@ class TaxesViewController: UIViewController {
 
 //MARK: Extension
 extension TaxesViewController: UITextFieldDelegate {
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = self.taxesView.textFieldYearly.text else { return false }
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
