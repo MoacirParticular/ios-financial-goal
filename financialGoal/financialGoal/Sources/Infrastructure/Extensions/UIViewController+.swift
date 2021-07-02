@@ -57,17 +57,4 @@ extension UIViewController {
             self.removeActivity()
         }
     }
-    
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        var responseBolean = true
-//        let invalidCharacters = CharacterSet(charactersIn: "0123456789.").inverted
-//        responseBolean = string.rangeOfCharacter(from: invalidCharacters) == nil
-//        if responseBolean {
-//            let currentText = textField.text ?? ""
-//            guard let stringRange = Range(range, in: currentText) else { return false }
-//            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-//            return updatedText.count <= ValueCalcsConstants.limitCharacters
-//        }
-//        return responseBolean
-//    }
 }
