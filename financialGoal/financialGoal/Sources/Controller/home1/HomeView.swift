@@ -9,6 +9,8 @@ import UIKit
 
 class HomeView: UIView {
     
+    var buttonActionView: (() -> Void)?
+
     //MARK: Cria e seta elementos na view
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,12 +26,22 @@ class HomeView: UIView {
         setLabelNickName()
         setButtonIconNotification()
         setButtonIconCalculator()
-        setButtonLastSimulation()
         setCollectionView()
-        setImageIoga()
+        //setButtonLastSimulation()
+        //setImageIoga()
         self.backgroundColor = .backgroundCustomGoal
     }
     
+    public func setButtonLastSimulatorAndImage(){
+        setButtonLastSimulation()
+        setImageIoga()
+    }
+    
+    //MARK: Acao do botao
+    @objc
+    func buttonActionLastSimulator(sender: UIButton!) {
+        buttonActionView?()
+    }
     //MARK: Criando e aplicando constraints na ViewTop
      var topScreenView: UIView = {
         let viewTop = UIView()
@@ -168,16 +180,16 @@ class HomeView: UIView {
        return button
    }()
    
-   func setButtonLastSimulation(){
-       addSubview(buttonLastSimulation)
-   
-       NSLayoutConstraint.activate([
-        buttonLastSimulation.topAnchor.constraint(equalTo: self.topScreenView.bottomAnchor, constant: HomeConstants.bottomAnchorButtonSimulation),
-        buttonLastSimulation.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorButtonSimulation ),
-        buttonLastSimulation.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorButtonSimulation),
-        buttonLastSimulation.heightAnchor.constraint(equalToConstant: HomeConstants.heightAnchorButtonSimulation)
-       ])
-   }
+    func setButtonLastSimulation(){
+        addSubview(buttonLastSimulation)
+        buttonLastSimulation.addTarget(self, action: #selector(buttonActionLastSimulator), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            buttonLastSimulation.topAnchor.constraint(equalTo: self.topScreenView.bottomAnchor, constant: HomeConstants.bottomAnchorButtonSimulation),
+            buttonLastSimulation.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorButtonSimulation ),
+            buttonLastSimulation.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorButtonSimulation),
+            buttonLastSimulation.heightAnchor.constraint(equalToConstant: HomeConstants.heightAnchorButtonSimulation)
+        ])
+    }
     
     //MARK: imagem Ioga Ultima simulacao
      var imageIoga: UIImageView = {

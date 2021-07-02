@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var onScreenSelected: ((_ setSelected: LoginActionType ) -> Void)?
+    var onButtonActionView: ((_ screenName: String) -> Void)?
+    var lastScreen: String = String.empty
     
     let data = [
         CustomData(title: HomeStringConstants.calculator, icon: .iconMoneyCalc),
@@ -23,12 +25,20 @@ class HomeViewController: UIViewController {
         self.removeActivity()
         homeView.collectionView.delegate = self
         homeView.collectionView.dataSource = self
+        listennerLastSimulator()
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        if let screenCalc = UserDefaults.standard.value(forKey: StringConstantsCalcs.forKeyCals) as? String{
+            self.homeView.setButtonLastSimulatorAndImage()
+            lastScreen = screenCalc
+        }
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -36,6 +46,12 @@ class HomeViewController: UIViewController {
     
     override func loadView() {
         self.view = homeView
+    }
+    
+    func listennerLastSimulator() {
+        homeView.buttonActionView = {
+            self.onButtonActionView?(self.lastScreen)
+        }
     }
 }
 

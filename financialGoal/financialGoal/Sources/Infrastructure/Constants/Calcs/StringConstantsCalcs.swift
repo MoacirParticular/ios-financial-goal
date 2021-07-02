@@ -17,5 +17,9 @@ struct StringConstantsCalcs {
     static let investAplicUnic:String = "Investimento com aplicação única"
     static let correcaoIndice:String = "Correção de valor por um índice"
     static let conversaoTaxas:String = "Conversão de taxas"
+    
+    //MARK: Chave do UserDefaults cals
+    static let forKeyCals: String = "screen"
+
 }
 
