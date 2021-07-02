@@ -41,9 +41,9 @@ class CustomCell: UICollectionViewCell {
         title.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: HomeConstants.topAnchorTitle),
-            title.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorTitle),
-            title.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorTitle),
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: HomeConstants.botomAnchorTitle),
+            title.leftAnchor.constraint(equalTo: leftAnchor, constant: HomeConstants.leftAnchorTitle),
+            title.rightAnchor.constraint(equalTo: rightAnchor, constant: HomeConstants.rightAnchorTitle),
         ])
     }
      
