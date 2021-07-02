@@ -17,6 +17,13 @@ class MotherCalcs: UIViewController, ViewCalcProtocol {
         self.view.backgroundColor = .backgroundCustomGoal
     }
     
+    func setDelegates() {
+        viewCalc.tfFirst.delegate = self
+        viewCalc.tfSecond.delegate = self
+        viewCalc.tfThird.delegate = self
+        viewCalc.tfFourth.delegate = self
+    }
+    
     func listennerKeyBoardCalcs() {
         NotificationCenter.default.addObserver(
             self, selector: #selector(self.keyboardWillShow),
@@ -38,5 +45,21 @@ class MotherCalcs: UIViewController, ViewCalcProtocol {
         let contentInsets = UIEdgeInsets(top: KeyboardListenner.zeroCG, left: KeyboardListenner.zeroCG, bottom: KeyboardListenner.zeroCG, right: KeyboardListenner.zeroCG)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
+    }
+}
+
+extension MotherCalcs: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var responseBolean = true
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789.").inverted
+        responseBolean = string.rangeOfCharacter(from: invalidCharacters) == nil
+        if responseBolean {
+            let currentText = textField.text ?? ""
+            guard let stringRange = Range(range, in: currentText) else { return false }
+            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+            return updatedText.count <= ValueCalcsConstants.limitCharacters
+        }
+        return responseBolean
     }
 }

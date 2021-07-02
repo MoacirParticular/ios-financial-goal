@@ -11,6 +11,8 @@ struct ValueCalcsConstants {
     static let valueXFrameSeparator:CGFloat = 0
     static let separatorHeight: CGFloat = 2
     static let valueHeightForRowAt:CGFloat = 72
+    static let limitCharacters: Int = 5
+    static let minimumValue: Double = 0.0001
     
     //backview
     static let valueFrameBackView = CGRect(x: 0, y: 0, width: 0, height: 72)

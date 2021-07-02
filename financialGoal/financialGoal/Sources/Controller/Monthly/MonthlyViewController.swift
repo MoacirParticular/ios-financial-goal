@@ -18,6 +18,7 @@ class MonthlyViewController: MotherCalcs {
         navigationTitleConfig(title: TitleCalcScreen.monthlyTitle)
         listennerKeyBoardCalcs()
         listemButton()
+        setDelegates()
     }
     
     private func listemButton() {
@@ -60,7 +61,7 @@ class MonthlyViewController: MotherCalcs {
             let valueString = NSString(string: i)
             let valueConvertedDouble = valueString.doubleValue
             
-            if valueConvertedDouble < 1 {
+            if valueConvertedDouble < ValueCalcsConstants.minimumValue {
                 return false
             }
         }
