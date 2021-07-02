@@ -35,4 +35,5 @@ struct ValueCalcTaxes {
     static let opPow: Double = 0.08333333333333
     static let formatDec:String = "%0.2f"
     static let formatPorcent:String = "%"
+    static let zeroValueDefault:Double = 0
 }
