@@ -30,6 +30,8 @@ struct HomeConstants {
     static let leftAnchorButtonSimulation: CGFloat = 42
     static let rightAnchorButtonSimulation: CGFloat = -42
     static let heightAnchorButtonSimulation: CGFloat = 122
+    static let topAnchorLink: CGFloat = 43.8
+    static let leftAnchorLink: CGFloat = 85
     
     //MARK: CustomCell
     static let topAnchorTitle: CGFloat = 96

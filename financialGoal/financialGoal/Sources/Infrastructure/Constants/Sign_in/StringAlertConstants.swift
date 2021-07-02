@@ -43,6 +43,7 @@ enum AlertMessage: CustomStringConvertible {
     case SimulatorUnavailable
     case TryAgainLatter
     case InputError
+    case Unavailable
     
     var description: String {
         switch self {
@@ -60,6 +61,8 @@ enum AlertMessage: CustomStringConvertible {
             return "Erro, tente novamente mais tarde."
         case .InputError:
             return "Todos os valores devem ser maior que zero."
+        case .Unavailable:
+            return "Funcionalidade indisponível."
         }
     }
 }

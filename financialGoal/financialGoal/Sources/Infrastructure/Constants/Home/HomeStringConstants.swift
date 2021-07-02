@@ -10,8 +10,8 @@ import Foundation
 struct HomeStringConstants {
     
     //MARK: buttonLastSimulation
-    static let textLastSimulation = "Acesse sua última simulação >"
-   
+    static let textLastSimulator = "Acesse sua última simulação  "
+    static let textLinkLastSimulator = ">"
     //MARK: Collection View
     static let identifier = "cell"
     
