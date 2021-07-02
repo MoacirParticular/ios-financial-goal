@@ -33,6 +33,7 @@ class HomeView: UIView {
     public func setButtonLastSimulatorAndImage(){
         setButtonLastSimulation()
         setImageIoga()
+        setlabelIconLink()
     }
     
     //MARK: Criando e aplicando constraints na ViewTop
@@ -154,7 +155,7 @@ class HomeView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         button.backgroundColor = .customColorResultLabel
         button.layer.cornerRadius = HomeConstants.cornerRadiusLasSimulation
-        button.setTitle(HomeStringConstants.textLastSimulation, for: .normal)
+        button.setTitle(HomeStringConstants.textLastSimulator, for: .normal)
         button.titleLabel?.font = .fontLabelSubTitleRegular
         button.titleLabel?.numberOfLines = HomeConstants.numberLinesLastSimulation
         button.titleEdgeInsets = UIEdgeInsets(top: HomeConstants.topButton, left: HomeConstants.leftButton, bottom: HomeConstants.bottomButton, right: HomeConstants.rightButton)
@@ -184,6 +185,26 @@ class HomeView: UIView {
     @objc
     func buttonActionLastSimulator(sender: UIButton!) {
         buttonActionView?()
+    }
+    
+    //MARK: Label icone em roxo
+    lazy var labelIconLink: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+        label.text = HomeStringConstants.textLinkLastSimulator
+        label.font = .fontLabelSubTitleRegular
+        label.textColor = .customColorRoxo
+        label.textAlignment = .center
+        return label
+    }()
+    
+    func setlabelIconLink() {
+        addSubview(labelIconLink)
+      
+        NSLayoutConstraint.activate([
+            labelIconLink.topAnchor.constraint(equalTo: buttonLastSimulation.topAnchor, constant: HomeConstants.topAnchorLink),
+           labelIconLink.leftAnchor.constraint(equalTo: buttonLastSimulation.leftAnchor, constant: HomeConstants.leftAnchorLink)
+        ])
     }
     
     //MARK: imagem Ioga Ultima simulacao

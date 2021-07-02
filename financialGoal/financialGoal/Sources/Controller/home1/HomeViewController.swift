@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
         homeView.collectionView.delegate = self
         homeView.collectionView.dataSource = self
         listennerLastSimulator()
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {

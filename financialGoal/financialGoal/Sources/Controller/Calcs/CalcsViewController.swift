@@ -57,8 +57,13 @@ extension CalcsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.onButtonCalcs?(CalcsTypes.calcTypes[indexPath.row].screenType)
-        UserDefaults.standard.set(CalcsTypes.calcTypes[indexPath.row].screenType.stringValue, forKey: StringConstantsCalcs.forKeyCals)
+        let screenName = CalcsTypes.calcTypes[indexPath.row].screenType
+        if screenName != .Index{
+            self.onButtonCalcs?(screenName)
+            UserDefaults.standard.set(screenName.stringValue, forKey: StringConstantsCalcs.forKeyCals)
+            return
+        }
+        self.showDefaultAlert(.Warning, .Unavailable)
     }
   
 }
