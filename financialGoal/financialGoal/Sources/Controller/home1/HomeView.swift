@@ -27,8 +27,6 @@ class HomeView: UIView {
         setButtonIconNotification()
         setButtonIconCalculator()
         setCollectionView()
-        //setButtonLastSimulation()
-        //setImageIoga()
         self.backgroundColor = .backgroundCustomGoal
     }
     
@@ -37,11 +35,6 @@ class HomeView: UIView {
         setImageIoga()
     }
     
-    //MARK: Acao do botao
-    @objc
-    func buttonActionLastSimulator(sender: UIButton!) {
-        buttonActionView?()
-    }
     //MARK: Criando e aplicando constraints na ViewTop
      var topScreenView: UIView = {
         let viewTop = UIView()
@@ -189,6 +182,12 @@ class HomeView: UIView {
             buttonLastSimulation.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorButtonSimulation),
             buttonLastSimulation.heightAnchor.constraint(equalToConstant: HomeConstants.heightAnchorButtonSimulation)
         ])
+    }
+    
+    //MARK: Acao do botao
+    @objc
+    func buttonActionLastSimulator(sender: UIButton!) {
+        buttonActionView?()
     }
     
     //MARK: imagem Ioga Ultima simulacao
