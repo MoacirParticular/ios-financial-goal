@@ -59,15 +59,14 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let screenSize = UIScreen.main.bounds
-        let screenHeigth = screenSize.height
+        let screenHeigth = UIScreen.main.bounds.height
+        let screenWidth = UIScreen.main.bounds.width
         
+        let widthCustom = screenWidth / HomeConstants.threeFortyFour
+        let heightCustom = screenHeigth / HomeConstants.fiveThirtySeven
         
-        if screenHeigth > PageAndScrollConstants.deviceScreenSizeCollection {
-            return CGSize(width: HomeConstants.widthCellLargerDevice, height: HomeConstants.heightCellLargerDevice)
-        } else{
-            return CGSize(width: HomeConstants.widthCell, height: HomeConstants.heightCell)
-        }
+        return CGSize(width: widthCustom, height: heightCustom)//
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

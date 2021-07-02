@@ -47,12 +47,13 @@ struct HomeConstants {
     static let numberFortyFourCv: CGFloat = 44
     static let numberMinusFortyCv: CGFloat = -40
     static let numberZeroFortyFiveCv: CGFloat = 0.45
+    static let numberFiveCv: CGFloat = 5
+    static let numberTwoAndHalfCv: CGFloat = 2.5
 
     //MARK: Celula da collection
-    static let widthCell: CGFloat = 109
-    static let heightCell: CGFloat = 124
-    static let widthCellLargerDevice: CGFloat = 129
-    static let heightCellLargerDevice: CGFloat = 144
+    static let threeFortyFour: CGFloat = 3.44
+    static let fiveThirtySeven: CGFloat = 5.37
+
         
     static let cornerRadiusFourCell: CGFloat = 4
     static let shadowOffSetWidthCell: CGFloat = 0
