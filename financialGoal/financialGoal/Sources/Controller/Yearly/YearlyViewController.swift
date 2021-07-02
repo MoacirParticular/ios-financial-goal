@@ -30,28 +30,50 @@ class YearlyViewController: MotherCalcs {
         guard let periodInMonths = self.viewCalc.tfFirst.text else { return }
         guard let monthlyRate = self.viewCalc.tfSecond.text else { return }
         guard let singleApplicationToday = self.viewCalc.tfThird.text else { return }
-        requestApi(periodInMonths, monthlyRate, singleApplicationToday )
+        let collectionData = [periodInMonths, monthlyRate, singleApplicationToday]
+        self.requestToApi(collectionData)
+
     }
     
-    //MARK: Resposta da API com alert ou direcionando para home
-    private func requestApi(_ periodInMonths: String, _ monthlyRate: String, _ singleApplicationToday: String) {
+    private func requestToApi(_ collectionValues: [String]) {
+        let request = MonthlyViewModel()
+        
+        if !dataValidation(collectionValues){
+            showDefaultAlert(.Warning, .InputError)
+            return
+        }
+        
+        let dataToSubmit = collectionToStruct(collectionValues)
         self.showActivity()
-        RequestYearly().yearly(periodInMonths, monthlyRate, singleApplicationToday) { (result) in
-            switch(result) {
-            case .success(let returnData):
-                guard let messsage = returnData.accruedEarnings else { return }
+        request.request(dataToSubmit) { (dataReturned, errorReturned) in
+            if let data = dataReturned?.accruedEarnings {
                 DispatchQueue.main.async {
                     self.removeActivity()
-                    //Converte o retorno da api para Double
-                    let valueString = NSString(string: messsage)
+                    let valueString = NSString(string: data)
                     let valueConvertedDouble = valueString.doubleValue
-                   
-                    self.viewCalc.tfFifth.text = ( YearlyConstants.realValue + self.formatNumberToDecimal(value: valueConvertedDouble ))
+                    self.viewCalc.tfFifth.text =  YearlyConstants.realValue + self.formatNumberToDecimal(value: valueConvertedDouble)
                 }
-            case .failure( _):
-                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
     }
+    
+    private func dataValidation(_ collectionValues: [String]) -> Bool {
+        for i in collectionValues {
+            
+            let valueString = NSString(string: i)
+            let valueConvertedDouble = valueString.doubleValue
+            
+            if valueConvertedDouble < 1 {
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func collectionToStruct(_ collectionValues: [String]) -> StructApplicationCalc {
+        return StructApplicationCalc(initial: collectionValues[2], monthly: String.empty,
+                                     profitability: collectionValues[1], period: collectionValues[0])
+    }
+
     
 }

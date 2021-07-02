@@ -29,6 +29,21 @@ public class HomeCoordinator: Coordinator {
                     break
                 }
             }
+            homeViewController.onButtonActionView = {setSelected in
+                if setSelected == CalcsTypesScreen.Monthly.stringValue{
+                    let screen = MonthlyCoordinator(navigationController: self.navigationController)
+                    screen.start()
+                }
+                if setSelected == CalcsTypesScreen.Yearly.stringValue{
+                    let screen = YearlyCoordinator(navigationController: self.navigationController)
+                    screen.start()
+                }
+                if setSelected == CalcsTypesScreen.Taxes.stringValue{
+                    let screen = TaxesCoordinator(navigationController: self.navigationController)
+                    screen.start()
+                }
+            }
+        
             self.navigationController.pushViewController(homeViewController, animated: true)
         }
     }

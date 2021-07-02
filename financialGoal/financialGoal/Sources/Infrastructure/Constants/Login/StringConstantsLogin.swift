@@ -24,6 +24,6 @@ struct StringContantsAlertForgotPass {
 }
 
 struct StringConstantsTaxes {
-    static let titleTaxes:String = "conversor de taxas"
+    static let titleTaxes:String = "Conversor de taxas"
 }
 
