@@ -5,7 +5,6 @@
 //  Created by Leonardo Oliveira Portes on 30/06/21.
 //
 
-
 import UIKit
 
 public class TaxesView: UIView {
@@ -23,32 +22,31 @@ public class TaxesView: UIView {
     //MARK: Grouping creations
     func createView() {
         self.backgroundColor = .backgroundCustomGoal
-        setTextFieldMonthly()
+        alignLbYearly()
+        alignLbMonthly()
         setTextFieldYearly()
-        
+        setTextFieldMonthly()
     }
-    //taxa anual //taxa mensal
+
    //MARK: Create TextFields
-   lazy var textFieldMonthly:UITextField = {
+   lazy var textFieldYearly:UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
     textField.textColor = .customColorResultTaxes
-    textField.keyboardType = UIKeyboardType.emailAddress
     textField.keyboardType = UIKeyboardType.numberPad
     textField.font = UIFont.fontTextFieldTaxes
     textField.backgroundColor = .customColorTextField
     textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
     textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-
     textField.addShadow()
     return textField
    }()
     
-   lazy var textFieldYearly:UITextField = {
+   lazy var textFieldMonthly:UITextField = {
     var textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-    textField.textColor = .white
+    textField.textColor = .customColorResultLabel
     textField.keyboardType = UIKeyboardType.numberPad
     textField.font = UIFont.fontTextFieldTaxes
     textField.backgroundColor = .customColorResultTaxes
@@ -56,28 +54,68 @@ public class TaxesView: UIView {
     textField.borderStyle = UITextField.BorderStyle.none
     textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
     textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-
     return textField
    }()
     
     //MARK: Constraints TextFields
-    func setTextFieldMonthly() {
-        addSubview(textFieldMonthly)
-        NSLayoutConstraint.activate([
-            textFieldMonthly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 36),
-            textFieldMonthly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            textFieldMonthly.heightAnchor.constraint(equalToConstant: TaxesConstants.heightTFMonthly),
-            textFieldMonthly.widthAnchor.constraint(equalToConstant: 215)
-       ])
-    }
-
     func setTextFieldYearly() {
         addSubview(textFieldYearly)
         NSLayoutConstraint.activate([
-            textFieldYearly.topAnchor.constraint(equalTo: self.textFieldMonthly.bottomAnchor, constant: 14),
-            textFieldYearly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
+            textFieldYearly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: TaxesConstants.topAnchorYearlyTF),
+            textFieldYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.leftAnchorTF),
             textFieldYearly.heightAnchor.constraint(equalToConstant: TaxesConstants.heightTFMonthly),
-            textFieldYearly.widthAnchor.constraint(equalToConstant: 215)
+            textFieldYearly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: TaxesConstants.rightAnchorTF)
        ])
+    }
+    
+    func setTextFieldMonthly() {
+        addSubview(textFieldMonthly)
+        NSLayoutConstraint.activate([
+            textFieldMonthly.topAnchor.constraint(equalTo: self.textFieldYearly.bottomAnchor, constant: TaxesConstants.topAnchorMonthlyTF),
+            textFieldMonthly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.leftAnchorTF),
+            textFieldMonthly.heightAnchor.constraint(equalToConstant: TaxesConstants.heightTFMonthly),
+            textFieldMonthly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: TaxesConstants.rightAnchorTF)
+       ])
+    }
+    
+    
+    // MARK: - Labels
+    let lbYearly: UILabel = {
+        let label = UILabel()
+        UIView.configInitailElements(label)
+        label.text = TaxesConstants.lbYearlyText
+        label.textAlignment = TaxesConstants.lbAlignment
+        label.textColor = .blackCustomGoal
+        label.font = .fontTextFieldTaxes
+        return label
+    }()
+    
+    let lbMonthly: UILabel = {
+        let label = UILabel()
+        UIView.configInitailElements(label)
+        label.textAlignment = TaxesConstants.lbAlignment
+        label.text = TaxesConstants.lbMonthlyText
+        label.textColor = .blackCustomGoal
+        label.font = .fontTextFieldTaxes
+        return label
+    }()
+    
+    // MARK: - Constraints Labels
+    private func alignLbYearly() {
+        self.addSubview(lbYearly)
+        NSLayoutConstraint.activate([
+            lbYearly.safeAreaLayoutGuide.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: TaxesConstants.topAnchorYearly),
+            lbYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.LbLeftAnchor),
+            lbYearly.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.LbRightAnchor)
+        ])
+    }
+    
+    private func alignLbMonthly() {
+        self.addSubview(lbMonthly)
+        NSLayoutConstraint.activate([
+            lbMonthly.safeAreaLayoutGuide.topAnchor.constraint(equalTo: self.lbYearly.bottomAnchor, constant: TaxesConstants.topAnchorMonthly),
+            lbMonthly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.LbLeftAnchor),
+            lbMonthly.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: TaxesConstants.LbRightAnchor)
+        ])
     }
 }
