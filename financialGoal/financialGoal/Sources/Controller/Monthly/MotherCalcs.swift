@@ -52,10 +52,10 @@ extension MotherCalcs: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var responseBolean = true
-        let invalidCharacters = CharacterSet(charactersIn: "0123456789.").inverted
+        let invalidCharacters = CharacterSet(charactersIn: ValueCalcsConstants.charactersAccepted).inverted
         responseBolean = string.rangeOfCharacter(from: invalidCharacters) == nil
         if responseBolean {
-            let currentText = textField.text ?? ""
+            let currentText = textField.text ?? String.empty
             guard let stringRange = Range(range, in: currentText) else { return false }
             let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
             return updatedText.count <= ValueCalcsConstants.limitCharacters

@@ -13,6 +13,7 @@ struct ValueCalcsConstants {
     static let valueHeightForRowAt:CGFloat = 72
     static let limitCharacters: Int = 5
     static let minimumValue: Double = 0.0001
+    static let charactersAccepted: String = "0123456789."
     
     //backview
     static let valueFrameBackView = CGRect(x: 0, y: 0, width: 0, height: 72)
