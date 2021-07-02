@@ -70,6 +70,7 @@ class LoginViewController: UIViewController {
                         SignInData.nickname = nickNameLogado
                     }
                     self.saveCredentials(user: username, pass: password)
+                    
                 }else{
                     self.showAlert(.Warning, messsage)
                 }

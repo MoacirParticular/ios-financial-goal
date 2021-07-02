@@ -17,6 +17,7 @@ class SignInMailViewController: UIViewController {
     override func loadView() {
         dataRecover()
         self.view = self.overrideView
+        dataRestore()
     }
     
     override func viewDidLoad() {
@@ -44,6 +45,11 @@ class SignInMailViewController: UIViewController {
     
     private func checkMail(_ username: String) -> Bool {
         return username.isValidEmail
+    }
+    
+    private func dataRestore() {
+        SignInData.username = String.empty
+        SignInData.nickname = String.empty
     }
 }
 

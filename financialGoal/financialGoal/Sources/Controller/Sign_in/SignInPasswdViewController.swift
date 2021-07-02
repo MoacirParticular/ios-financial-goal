@@ -35,15 +35,30 @@ class SignInPasswdViewController: UIViewController {
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
                 if status == true{
-                    self.showAlertStatusSignIn(.CountSuccess, messageToAlert, status)
+                    self.actionLogin(SignInData.username, passwd) // self.status?(.Logged) // chamar requisição de login
+                    return
                 }
                 self.showAlertStatusSignIn(.Warning, messageToAlert, status)
             }
         }
     }
     
+    private func actionLogin(_ user: String, _ pass: String) {
+        requestLogin().login(user, pass) { (result) in
+            switch(result) {
+            case .success(let returnData):
+                guard let nickNameLogado = returnData.user?.nickname else {return}
+                if returnData.res == true {
+                    SignInData.nickname = nickNameLogado
+                    self.status?(.Logged)
+                }
+            case .failure( _):
+                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+            }
+        }
+    }
+    
     private func requestApi(_ passwd: String, completionHandler: @escaping(String,Bool) -> Void) {
-        
         RequestSignIn().signIn(SignInData.username, SignInData.nickname, passwd) { (result) in
             var status = false
             switch(result) {
@@ -51,7 +66,7 @@ class SignInPasswdViewController: UIViewController {
                 status = returnData.res ?? status
                 guard let messsage = returnData.message else { return }
                 completionHandler(messsage,status)
-            case .failure(let error):
+            case .failure(_ ):
                 self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
             }
         }
@@ -61,7 +76,7 @@ class SignInPasswdViewController: UIViewController {
         DispatchQueue.main.sync {
             let alert = UIAlertController(title: title.description, message: message, preferredStyle: .alert)
             let ok = UIAlertAction(title: AlertButton.OK.rawValue, style: .default) { (action) in
-                self.status?(self.setActionValue(message, status))
+                self.status?(self.setActionValue(message))
             }
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
@@ -69,12 +84,9 @@ class SignInPasswdViewController: UIViewController {
         }
     }
     
-    private func setActionValue(_ messageToAlert: String, _ status: Bool) -> StatusSignIn {
+    private func setActionValue(_ messageToAlert: String) -> StatusSignIn { // Remover status, pois qnd true, vai logar
         if messageToAlert.contains("já cadastrado") {
-            return .Success
-        }
-        if status {
-            return .Success
+            return .Exists
         }
         return .Failure
     }

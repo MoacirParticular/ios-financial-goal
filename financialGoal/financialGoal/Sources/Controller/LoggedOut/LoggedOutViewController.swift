@@ -66,11 +66,15 @@ class LoggedOutViewController: UIViewController {
             requestLogin().login(user, pass) { (result) in
                 switch(result) {
                 case .success(let returnData):
-                    guard let nickNameLogado = returnData.user?.nickname else {return}
-                    if returnData.res == true {
-                        SignInData.nickname = nickNameLogado
-                        self.onLoginButton?(.AutoLogin)
+                    if let nickNameLogado = returnData.user?.nickname {
+//                        if returnData.res == true {
+                            SignInData.nickname = nickNameLogado
+                            self.onLoginButton?(.AutoLogin)
+//                        }
+                        return
                     }
+                    guard let message = returnData.message else { return }
+                    self.showAlert(.Warning, message)
                 case .failure( _):
                     self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
                 }

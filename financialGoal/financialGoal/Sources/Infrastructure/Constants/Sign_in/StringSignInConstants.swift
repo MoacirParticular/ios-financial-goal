@@ -73,6 +73,6 @@ struct ShadowTextField {
 }
 
 struct ElementsInNavigation {
-    static let one: Int = 1
+    static let one: Int = 1	
 }
 
