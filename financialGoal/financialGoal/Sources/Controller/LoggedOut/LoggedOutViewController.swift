@@ -13,7 +13,6 @@ class LoggedOutViewController: UIViewController {
     private let loggedOutView = LoggedOutView(frame: FrameConstants.frameZero)
     
     override func viewDidLoad() {
-        self.showActivity()
         setupView()
         setActions()
         callAutoLogin()
@@ -63,6 +62,7 @@ class LoggedOutViewController: UIViewController {
             }
         }
         if containCredential{
+            self.showActivity()
             requestLogin().login(user, pass) { (result) in
                 switch(result) {
                 case .success(let returnData):
