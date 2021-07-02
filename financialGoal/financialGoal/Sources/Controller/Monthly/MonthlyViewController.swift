@@ -37,8 +37,8 @@ class MonthlyViewController: MotherCalcs {
     
     private func requestToApi(_ collectionValues: [String]) {
         let request = MonthlyViewModel()
-        if !dataValidation(collectionValues) {
-            self.showDefaultAlert(.Warning, .InputError)
+        if !dataValidation(collectionValues){
+            showDefaultAlert(.Warning, .InputError)
             return
         }
         let dataToSubmit = collectionToStruct(collectionValues)
@@ -47,7 +47,9 @@ class MonthlyViewController: MotherCalcs {
             if let data = dataReturned?.accruedEarnings {
                 DispatchQueue.main.async {
                     self.removeActivity()
-                    self.viewCalc.tfFifth.text = data
+                    let valueString = NSString(string: data)
+                    let valueConvertedDouble = valueString.doubleValue
+                    self.viewCalc.tfFifth.text =  YearlyConstants.realValue + self.formatNumberToDecimal(value: valueConvertedDouble)
                 }
             }
         }
@@ -55,7 +57,10 @@ class MonthlyViewController: MotherCalcs {
     
     private func dataValidation(_ collectionValues: [String]) -> Bool {
         for i in collectionValues {
-            if i.isEmpty {
+            let valueString = NSString(string: i)
+            let valueConvertedDouble = valueString.doubleValue
+            
+            if valueConvertedDouble < 1 {
                 return false
             }
         }

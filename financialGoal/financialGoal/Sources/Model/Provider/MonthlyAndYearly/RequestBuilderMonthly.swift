@@ -13,7 +13,7 @@ protocol RequestBuilderMonthlyProtocol {
 class RequestBuilderMonthly: RequestBuilderMonthlyProtocol {
     func monthy(dataCalc: StructApplicationCalc) -> URLRequest {
         let url: URL = {
-            guard let urlReceived = ApiUrlRequest(operation: .monthly).getData() else { return URL(string: String.empty)! }
+            guard let urlReceived = ApiUrlRequest(operation: .monthlyYearlyCalcs).getData() else { return URL(string: String.empty)! }
             return urlReceived
         }()
         var request = URLRequest(url: url)
