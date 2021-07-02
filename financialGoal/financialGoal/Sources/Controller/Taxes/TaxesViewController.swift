@@ -15,25 +15,18 @@ class TaxesViewController: UIViewController {
     //MARK: Lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
-        calcTaxes()
         self.view.backgroundColor = .backgroundCustomGoal
         navigationTitleConfig(title: StringConstantsTaxes.titleTaxes)
+        self.taxesView.textFieldYearly.delegate = self
     }
     
     override func loadView() {
         self.view = taxesView
     }
     
-    //MARK: Função para acionar o cálculo no click do textField
-    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        calcTaxes()
-    }
-    
     //MARK: Inserindo resultado do cálculo e transformando em Duble
-    func calcTaxes(){
-        guard let tfYearly = self.taxesView.textFieldYearly.text else {return}
-        let valueString = NSString(string: tfYearly)
-        let valueConvertedDouble = valueString.doubleValue
+    func calcTaxes(tax: String){
+        guard let valueConvertedDouble = Double(tax) else {return}
         self.taxesView.textFieldMonthly.text = calc2(valueConvertedDouble)+ValueCalcTaxes.formatPorcent
     }
     
@@ -45,5 +38,16 @@ class TaxesViewController: UIViewController {
         let final = String(format: ValueCalcTaxes.formatDec, resultado)
         return final
     }
+    
+}
 
+//MARK: Extension
+extension TaxesViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = self.taxesView.textFieldYearly.text else { return false }
+        let newString = (text as NSString).replacingCharacters(in: range, with: string)
+        calcTaxes(tax: newString)
+        return true
+    }
 }
