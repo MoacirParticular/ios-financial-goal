@@ -16,7 +16,7 @@ final class LoginViewModel {
                 guard let messsage = returnData.message else { return }
                 if returnData.res == true {
                     SignInData.nickname = returnData.user?.nickname ?? String.empty
-                    CrudUserDefaults().save(username, password)
+                    KeychainService.saveCredentials(user: username, pass: password)
                     completion(true)
                 } else {
                     viewC.showAlert(.Warning, messsage)

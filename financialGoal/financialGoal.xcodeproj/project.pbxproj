@@ -87,6 +87,7 @@
 		893F1E58268E2D4D00880717 /* ReturnMonthlyCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */; };
 		893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E60268E3D9800880717 /* MonthlyViewModel.swift */; };
 		893F1E6C268E627200880717 /* StructApplicationCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E6B268E627200880717 /* StructApplicationCalc.swift */; };
+		8941B3AD26932EC300890117 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941B3AC26932EC300890117 /* KeychainService.swift */; };
 		895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D4267BF47A00C4BE4B /* SignInNameView.swift */; };
 		895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */; };
 		895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */; };
@@ -241,6 +242,7 @@
 		893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnMonthlyCalc.swift; sourceTree = "<group>"; };
 		893F1E60268E3D9800880717 /* MonthlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewModel.swift; sourceTree = "<group>"; };
 		893F1E6B268E627200880717 /* StructApplicationCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructApplicationCalc.swift; sourceTree = "<group>"; };
+		8941B3AC26932EC300890117 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		895D58D4267BF47A00C4BE4B /* SignInNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameView.swift; sourceTree = "<group>"; };
 		895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameViewController.swift; sourceTree = "<group>"; };
 		895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdView.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				891D9FC22692A03B00352D6D /* CrudUserDefaults.swift */,
+				8941B3AC26932EC300890117 /* KeychainService.swift */,
 			);
 			path = SaveCredentials;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */,
+				8941B3AD26932EC300890117 /* KeychainService.swift in Sources */,
 				893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
 				C1AD75E126791E4A00BB9729 /* (null) in Sources */,
