@@ -29,7 +29,8 @@ public class CalcsCoordinator: Coordinator {
                 let coordinator = TaxesCoordinator(navigationController: self.navigationController)
                 coordinator.start()
             case .Index :
-                break
+                let coordinator = IndexCoordinator(navigationController: self.navigationController)
+                coordinator.start()
             }
         }
         self.navigationController.pushViewController(calcsViewController, animated: true)

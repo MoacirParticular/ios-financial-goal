@@ -124,6 +124,9 @@
 		C178D352267AC9F50079072F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D34F267AC9F50079072F /* LoginViewController.swift */; };
 		C178D357267ACA100079072F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D356267ACA100079072F /* LoginCoordinator.swift */; };
 		C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D35E267ACA620079072F /* ConstraintsConstants.swift */; };
+		C17A5B4326937248007669A7 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B4226937248007669A7 /* IndexViewController.swift */; };
+		C17A5B4526937258007669A7 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B4426937258007669A7 /* IndexView.swift */; };
+		C17A5B47269374EF007669A7 /* IndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B46269374EF007669A7 /* IndexCoordinator.swift */; };
 		C1A18A8F268B9D8F002E252B /* CalcsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */; };
 		C1A18A9C268BDE39002E252B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9A268BDE39002E252B /* OFL.txt */; };
 		C1A18A9D268BDE39002E252B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */; };
@@ -275,6 +278,9 @@
 		C178D34F267AC9F50079072F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C178D356267ACA100079072F /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C178D35E267ACA620079072F /* ConstraintsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsConstants.swift; sourceTree = "<group>"; };
+		C17A5B4226937248007669A7 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		C17A5B4426937258007669A7 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
+		C17A5B46269374EF007669A7 /* IndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCoordinator.swift; sourceTree = "<group>"; };
 		C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTypes.swift; sourceTree = "<group>"; };
 		C1A18A9A268BDE39002E252B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -504,6 +510,7 @@
 				C16764FC268CE500001B90B8 /* CalcsCoordinator.swift */,
 				C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */,
 				1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */,
+				C17A5B46269374EF007669A7 /* IndexCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -511,6 +518,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C17A5B4126937231007669A7 /* Index */,
 				1CECFECB268E0CAF00C928A2 /* Yearly */,
 				C111DEAD268D417A00C4F987 /* Taxes */,
 				89ACC035268B58A800851CEC /* Monthly */,
@@ -773,6 +781,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C17A5B4126937231007669A7 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				C17A5B4226937248007669A7 /* IndexViewController.swift */,
+				C17A5B4426937258007669A7 /* IndexView.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
 		C1A18A99268BDE39002E252B /* PoppinsRegular */ = {
 			isa = PBXGroup;
 			children = (
@@ -966,6 +983,7 @@
 				89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */,
 				C16764F8268CDEDA001B90B8 /* IconsCalcs.swift in Sources */,
 				1CC54336267A3BB700A807B4 /* LoginType.swift in Sources */,
+				C17A5B4326937248007669A7 /* IndexViewController.swift in Sources */,
 				3FE995E8267792B70068E95B /* ViewController.swift in Sources */,
 				1CC5430F26791E3900A807B4 /* LoggedOutViewController.swift in Sources */,
 				C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */,
@@ -1037,6 +1055,7 @@
 				C1AD75DB26791E2500BB9729 /* (null) in Sources */,
 				C15A6E39267A846300B23B05 /* (null) in Sources */,
 				3FE996232677A6550068E95B /* StartCoordinator.swift in Sources */,
+				C17A5B4526937258007669A7 /* IndexView.swift in Sources */,
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */,
 				C1A18AA3268BEBC7002E252B /* CalcsModel.swift in Sources */,
@@ -1046,6 +1065,7 @@
 				893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
 				C1AD75E126791E4A00BB9729 /* (null) in Sources */,
+				C17A5B47269374EF007669A7 /* IndexCoordinator.swift in Sources */,
 				3FE996292677BC070068E95B /* LocalizableStrings.swift in Sources */,
 				C178D351267AC9F50079072F /* AlertViewController.swift in Sources */,
 				89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */,
