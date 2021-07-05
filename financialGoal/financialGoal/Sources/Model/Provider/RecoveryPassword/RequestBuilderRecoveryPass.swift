@@ -19,9 +19,9 @@ class RequestBuilderRecoveryPass: RequestBuilderRecoveryPassProtocol {
             return url
         }()
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = [ "x-api-key": ApiKey.value ]
+        request.allHTTPHeaderFields = [ StringConstants.headFieldKey : ApiKey.value ]
         let body = [
-            "username" : username,
+            StringConstants.headUsername : username,
         ]
         do {
             let bodyData = try JSONSerialization.data(withJSONObject: body, options: [])

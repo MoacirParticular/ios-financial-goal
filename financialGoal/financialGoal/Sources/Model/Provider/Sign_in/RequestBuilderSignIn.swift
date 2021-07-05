@@ -19,11 +19,11 @@ class RequestBuilderSignIn: RequestBuilderProtocol {
             return url
         }()
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = [ "x-api-key": ApiKey.value ]
+        request.allHTTPHeaderFields = [ StringConstants.headFieldKey : ApiKey.value ]
         let body = [
-            "username" : username,
-            "nickname" : nickname,
-            "password" : password
+            StringConstants.headUsername : username,
+            StringConstants.headNickname : nickname,
+            StringConstants.headPassword : password
         ]
         do {
             let bodyData = try JSONSerialization.data(withJSONObject: body, options: [])
