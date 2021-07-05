@@ -9,6 +9,7 @@
 import UIKit
 
 public class IndexView: UIView {
+    var onButtonCorrectionIndex: ((_ type: EnumIndex) -> Void)?
     
     //MARK: Starting creations
     override init(frame: CGRect){
@@ -23,17 +24,18 @@ public class IndexView: UIView {
     //MARK: Grouping creations
     func createView() {
         self.backgroundColor = .backgroundCustomGoal
-        setTextFieldOne()
+        setTextFieldCorrectionIndex()
         setButtonChange()
     }
     
     //MARK: Create TextField
-    lazy var textFieldOne:UITextField = {
+    lazy var textFieldCorrectionIndex:UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
         textField.textColor = .customColorResultTaxes
         textField.keyboardType = UIKeyboardType.numberPad
         textField.font = UIFont.fontTextFieldTaxes
+        textField.isUserInteractionEnabled = false
         textField.backgroundColor = .customColorTextField
         textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
         textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
@@ -41,15 +43,15 @@ public class IndexView: UIView {
         textField.addShadow()
         return textField
     }()
-    
+        
     //MARK: Constraints TextField
-    func setTextFieldOne() {
-        addSubview(textFieldOne)
+    func setTextFieldCorrectionIndex() {
+        addSubview(textFieldCorrectionIndex)
         NSLayoutConstraint.activate([
-            textFieldOne.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 64),
-            textFieldOne.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldOne.heightAnchor.constraint(equalToConstant: 60),
-            textFieldOne.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -123)
+            textFieldCorrectionIndex.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 64),
+            textFieldCorrectionIndex.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
+            textFieldCorrectionIndex.heightAnchor.constraint(equalToConstant: 60),
+            textFieldCorrectionIndex.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -123)
         ])
     }
     
@@ -75,7 +77,8 @@ public class IndexView: UIView {
     //MARK: Actions Buttons
     @objc
     func actionBtChange (sender: UIButton!) {
-       print("Primeiro Botao")
+        onButtonCorrectionIndex?(.IndexCorrection)
+        
     }
     
 }
