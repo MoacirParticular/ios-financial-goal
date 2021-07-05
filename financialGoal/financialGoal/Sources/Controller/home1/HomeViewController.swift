@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         homeView.collectionView.delegate = self
         homeView.collectionView.dataSource = self
         listennerLastSimulator()
+        listennerLogout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +51,12 @@ class HomeViewController: UIViewController {
     func listennerLastSimulator() {
         homeView.buttonActionView = {
             self.onButtonActionView?(self.lastScreen)
+        }
+    }
+    
+    func listennerLogout() {
+        homeView.logout = { act in
+            self.onScreenSelected?(.Logout)
         }
     }
 }

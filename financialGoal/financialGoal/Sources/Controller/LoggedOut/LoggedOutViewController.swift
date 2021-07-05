@@ -49,34 +49,16 @@ class LoggedOutViewController: UIViewController {
         }
     }
     
-    func callAutoLogin(){
-        var user = String.empty
-        var pass = String.empty
-        var containCredential:Bool = false
+    func callAutoLogin() {
+        let userDefaults = CrudUserDefaults()
         
-        if let userKey = UserDefaults.standard.value(forKey: StringConstants.userKey) as? String{
-            user = userKey
-            if let passKey = UserDefaults.standard.value(forKey: StringConstants.passKey) as? String{
-                pass = passKey
-                containCredential = true
-            }
-        }
-        if containCredential{
+        if userDefaults.verifyHaveData() {
+            let credentials = userDefaults.getUserCredentials()
             self.showActivity()
-            requestLogin().login(user, pass) { (result) in
-                switch(result) {
-                case .success(let returnData):
-                    if let nickNameLogado = returnData.user?.nickname {
-//                        if returnData.res == true {
-                            SignInData.nickname = nickNameLogado
-                            self.onLoginButton?(.AutoLogin)
-//                        }
-                        return
-                    }
-                    guard let message = returnData.message else { return }
-                    self.showAlert(.Warning, message)
-                case .failure( _):
-                    self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+            let login = LoginViewModel()
+            login.login(credentials.first ?? String.empty, credentials.last ?? String.empty, self) { (returnApi) in
+                if returnApi {
+                    self.onLoginButton?(.AutoLogin)
                 }
             }
         }
@@ -84,7 +66,7 @@ class LoggedOutViewController: UIViewController {
 }
 
 //MARK: Liga o scrollView com o page controll
-extension LoggedOutViewController: UIScrollViewDelegate{
+extension LoggedOutViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         loggedOutView.pageControl.currentPage = Int(floor(Float(scrollView.contentOffset.x) / Float(scrollView.frame.size.width)))
     }

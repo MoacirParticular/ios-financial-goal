@@ -76,3 +76,6 @@ struct ElementsInNavigation {
     static let one: Int = 1	
 }
 
+struct ComparationString {
+    static let haveAccount: String = "já cadastrado"
+}
