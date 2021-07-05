@@ -1,5 +1,5 @@
 //
-//  StaticText.swift
+//  StringSignInConstants.swift
 //  financialGoal
 //
 //  Created by Jonattan Moises Sousa on 15/06/21.
@@ -43,7 +43,7 @@ struct StaticConfigLabel {
 }
 
 struct ValuesConstraintsTextField {
-    static let identTop: CGFloat = 200
+    static let identTop: CGFloat = 20
     static let identLeft: CGFloat = 16
     static let identRight: CGFloat = -16
     static let textIdent: CGFloat = 15
@@ -64,10 +64,15 @@ struct ValuesConstraintsButton {
     static let radiusValue: CGFloat = 6
     static let titleSize: CGFloat = 16
 }
+
 struct ShadowTextField {
     static let shadowWidth: CGFloat = -4
     static let shadowHeight: CGFloat = 0
     static let shadowRadius: CGFloat = 6.0
     static let shadowOpacity: Float = 0.1
-    
 }
+
+struct ElementsInNavigation {
+    static let one: Int = 1	
+}
+

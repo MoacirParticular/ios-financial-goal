@@ -10,4 +10,5 @@ import Foundation
 enum LoginType: CodingKey {
     case CreateAccount
     case Login
+    case AutoLogin
 }

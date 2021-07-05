@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+public class LoginView: UIView {
     
     //MARK: Properties
     var onLoginButton: ((_ option: LoginActionType) -> Void)?
@@ -34,6 +34,7 @@ class LoginView: UIView {
     //MARK: Actions Buttons
     @objc
     func loginActionButton (sender: UIButton!) {
+        onLoginButton?(.Login)
     }
     
     @objc

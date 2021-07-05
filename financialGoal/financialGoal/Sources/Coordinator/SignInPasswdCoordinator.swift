@@ -16,11 +16,27 @@ public class SignInPasswdCoordinator: Coordinator {
     
     public func start() {
         let screenViewController = SignInPasswdViewController()
-        
-        screenViewController.buttonAction = {
-            // 
+        screenViewController.status = { status in
+            switch status {
+            case .Failure:
+                break
+            case .Exists:
+                DispatchQueue.main.async {
+                    repeat {
+                        self.navigationController.viewControllers.removeLast()
+                    } while self.navigationController.viewControllers.count > ElementsInNavigation.one
+                    let login = LoginCoordinator(navigationController: self.navigationController)
+                    login.startToSignIn()
+                }
+            case .Logged:
+                DispatchQueue.main.async {
+                    self.navigationController.viewControllers.removeAll()
+                    let homeLogged = HomeCoordinator(navigationController: self.navigationController)
+                    homeLogged.start()
+                }
+                
+            }
         }
         self.navigationController.pushViewController(screenViewController, animated: true)
-        
     }
 }

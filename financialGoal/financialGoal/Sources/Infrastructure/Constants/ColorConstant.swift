@@ -45,9 +45,36 @@ public extension UIColor {
     static var customColorShadow: UIColor {
         return UIColor(named: "customColorShadow") ?? UIColor.black
     }
-    
-        
+    @objc
+    static var customColorActivity: UIColor {
+        return UIColor(named: "customColorActivity") ?? UIColor.gray
+    }
+    @objc
+    static var customColorResultLabel: UIColor {
+        return UIColor(named: "customColorResultLabel") ?? UIColor.white
+    }
+    @objc
+    static var colorLabelCalcsType: UIColor {
+        return UIColor(named: "colorLabelCalcsType") ?? UIColor.gray
+    }
+    @objc
+    static var colorBackgroundCell: UIColor {
+        return UIColor(named: "colorBackgroundCell") ?? UIColor.white
+    }
+    @objc
+    static var colorOrangeCollection: UIColor {
+        return UIColor(named: "colorOrangeCollection") ?? UIColor.orange
+    }
+  
+    @objc
+    static var colorBackgroundCollection: UIColor = .clear
+  
+    @objc
+    static var customColorResultTaxes: UIColor {
+        return UIColor(named: "customColorResultTaxes") ?? UIColor.gray
+    }
 }
+
 
 
 
