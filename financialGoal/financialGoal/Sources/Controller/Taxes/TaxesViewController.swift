@@ -42,11 +42,23 @@ class TaxesViewController: UIViewController {
 }
 
 //MARK: Extension
+
+
 extension TaxesViewController: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = self.taxesView.textFieldYearly.text else { return false }
-        let newString = (text as NSString).replacingCharacters(in: range, with: string)
-        calcTaxes(tax: newString)
-        return true
+        var responseBolean = true
+        let invalidCharacters = CharacterSet(charactersIn: ValueCalcsConstants.charactersAccepted).inverted
+        responseBolean = string.rangeOfCharacter(from: invalidCharacters) == nil
+        if responseBolean {
+            let currentText = textField.text ?? String.empty
+            guard let stringRange = Range(range, in: currentText) else { return false }
+            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+            guard let text = self.taxesView.textFieldYearly.text else { return false }
+            let newString = (text as NSString).replacingCharacters(in: range, with: string)
+            calcTaxes(tax: newString)
+            return updatedText.count <= ValueCalcsConstants.limitCharacters
+        }
+        return responseBolean
     }
 }
