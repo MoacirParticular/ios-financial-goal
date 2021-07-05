@@ -39,7 +39,7 @@ class ApplicationCalcView: UIView {
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
-        bttn.setTitleColor(.white, for: .normal)
+        bttn.setTitleColor(.customColorTextButton, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
         return bttn
     }()
@@ -50,7 +50,7 @@ class ApplicationCalcView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(StringConstants.requiredError)
     }
     
     // MARK: - Configuration elements
