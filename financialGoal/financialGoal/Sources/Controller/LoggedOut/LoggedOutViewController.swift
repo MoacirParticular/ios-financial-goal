@@ -51,8 +51,7 @@ class LoggedOutViewController: UIViewController {
     
     func callAutoLogin() {
         let data = KeychainService.loadCredentials()
-        if data.first?.count ?? String.empty.count > 6 {
-            print("--Temos credenciais.")
+        if KeychainService.verifyIfExists() {
             guard let username = data.first else { return }
             guard let password = data.last else { return }
             

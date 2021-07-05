@@ -48,6 +48,10 @@ public class KeychainService: NSObject {
         self.delete()
     }
     
+    public class func verifyIfExists() -> Bool {
+        return self.verifyIfExists(service: KeychainIdentifiers.userAccount as NSString)
+    }
+    
     private class func save(service: NSString, data: NSString) {
         guard let dataFromString: NSData = data.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: false) as NSData? else { return }
         
@@ -70,18 +74,11 @@ public class KeychainService: NSObject {
             if let retrievedData = dataTypeRef as? NSData {
                 contentsOfKeychain = NSString(data: retrievedData as Data, encoding: String.Encoding.utf8.rawValue)
             }
-        } else {
-            print(describe)
         }
         return contentsOfKeychain
     }
     
     private class func delete() {
-//        guard let dataFromString: NSData = data.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: false) as NSData? else { return }
-//        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, KeychainIdentifiers.userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrServiceValue, kSecAttrAccountValue, kSecValueDataValue])
-//
-//        SecItemDelete(keychainQuery as CFDictionary)
-        
         let secItemClasses = [kSecClassGenericPasswordValue]
         for itemClass in secItemClasses {
             let spec: NSDictionary = [kSecClass: itemClass]
