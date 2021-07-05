@@ -71,7 +71,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let widthCustom = screenWidth / HomeConstants.threeFortyFour
         let heightCustom = screenHeigth / HomeConstants.fiveThirtySeven
         
-        return CGSize(width: widthCustom, height: heightCustom)//
+        return CGSize(width: widthCustom, height: heightCustom)
         
     }
 

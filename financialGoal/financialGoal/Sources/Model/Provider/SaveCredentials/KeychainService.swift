@@ -44,11 +44,8 @@ public class KeychainService: NSObject {
         return [String.empty]
     }
     
-    public class func deleteCredentials(user: String, pass: String) {
-        guard let usr = user as NSString? else { return }
-        guard let pass = pass as NSString? else { return }
-        self.delete(service: KeychainIdentifiers.userAccount as NSString, data: usr)
-        self.delete(service: KeychainIdentifiers.passwordKey as NSString, data: pass)
+    public class func deleteCredentials() {
+        self.delete()
     }
     
     private class func save(service: NSString, data: NSString) {
@@ -79,11 +76,17 @@ public class KeychainService: NSObject {
         return contentsOfKeychain
     }
     
-    private class func delete(service: NSString, data: NSString) {
-        guard let dataFromString: NSData = data.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: false) as NSData? else { return }
-        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, KeychainIdentifiers.userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrServiceValue, kSecAttrAccountValue, kSecValueDataValue])
+    private class func delete() {
+//        guard let dataFromString: NSData = data.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: false) as NSData? else { return }
+//        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, KeychainIdentifiers.userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrServiceValue, kSecAttrAccountValue, kSecValueDataValue])
+//
+//        SecItemDelete(keychainQuery as CFDictionary)
         
-        SecItemDelete(keychainQuery as CFDictionary)
+        let secItemClasses = [kSecClassGenericPasswordValue]
+        for itemClass in secItemClasses {
+            let spec: NSDictionary = [kSecClass: itemClass]
+            SecItemDelete(spec)
+        }
     }
     
     private class func verifyIfExists(service: NSString) -> Bool {

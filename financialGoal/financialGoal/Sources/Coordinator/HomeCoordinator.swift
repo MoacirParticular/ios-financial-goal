@@ -25,6 +25,7 @@ public class HomeCoordinator: Coordinator {
                     calcs.start()
                 case .Logout:
                     CrudUserDefaults().delete()
+                    KeychainService.deleteCredentials()
                     let startScreen = StartCoordinator(navigationController: self.navigationController)
                     startScreen.start()
                 case .Simulator:
