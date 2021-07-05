@@ -17,7 +17,7 @@ class RequestBuilderMonthly: RequestBuilderMonthlyProtocol {
             return urlReceived
         }()
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = [ "x-api-key": ApiKey.value ]
+        request.allHTTPHeaderFields = [ StringConstants.headFieldKey : ApiKey.value ]
         let body = [
             "initial": dataCalc.initial,
             "monthly": dataCalc.monthly,
