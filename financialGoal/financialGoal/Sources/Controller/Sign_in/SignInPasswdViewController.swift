@@ -35,7 +35,7 @@ class SignInPasswdViewController: UIViewController {
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
                 if status == true{
-                    self.actionLogin(SignInData.username, passwd) // self.status?(.Logged) // chamar requisição de login
+                    self.actionLogin(SignInData.username, passwd)
                     return
                 }
                 self.showAlertStatusSignIn(.Warning, messageToAlert, status)

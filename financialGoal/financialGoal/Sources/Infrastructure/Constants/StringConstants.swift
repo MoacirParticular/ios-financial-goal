@@ -22,4 +22,8 @@ struct StringConstants {
     //MARK: String de criação Cell tela Calcs
     static let fatalErroCell:String = "Unable to create cell"
     static let cellIdentifier:String = "cell"
+    static let headFieldKey:String = "x-api-key"
+    static let headUsername: String = "username"
+    static let headNickname: String = "nickname"
+    static let headPassword: String = "password"
 }
