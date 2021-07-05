@@ -58,12 +58,8 @@ extension CalcsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let screenName = CalcsTypes.calcTypes[indexPath.row].screenType
-        if screenName != .Index{
-            self.onButtonCalcs?(screenName)
-            UserDefaults.standard.set(screenName.stringValue, forKey: StringConstantsCalcs.forKeyCals)
-            return
-        }
-        self.showDefaultAlert(.Warning, .Unavailable)
+        self.onButtonCalcs?(screenName)
+        UserDefaults.standard.set(screenName.stringValue, forKey: StringConstantsCalcs.forKeyCals)
     }
   
 }
