@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C197B89269388890013F347 /* EnumIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C197B88269388890013F347 /* EnumIndex.swift */; };
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
 		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
@@ -161,6 +162,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C197B88269388890013F347 /* EnumIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIndex.swift; sourceTree = "<group>"; };
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
+				1C197B88269388890013F347 /* EnumIndex.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
@@ -1084,6 +1087,7 @@
 				1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */,
 				893F1E58268E2D4D00880717 /* ReturnMonthlyCalc.swift in Sources */,
 				1CC238BF26823325000653F6 /* RequestBuilderSignIn.swift in Sources */,
+				1C197B89269388890013F347 /* EnumIndex.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
 				1CECFECD268E0CCF00C928A2 /* YearlyViewController.swift in Sources */,
