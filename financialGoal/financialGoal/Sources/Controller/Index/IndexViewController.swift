@@ -14,7 +14,7 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var indexView = IndexView(frame: FrameConstants.frameZero)
     let scrollView: UIScrollView = UIScrollView(frame: .zero)
     
-    var dataCorrectionIndex = ["CDI", "SELIC", "Poupança", "TR"]
+    var dataCorrectionIndex = ["CDB", "LCI"]
     var dataPreAndPostFixed = ["PRE", "POS"]
     var dataSelected = [String]()
     var typeData: EnumIndex?
@@ -28,7 +28,7 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         indexView.translatesAutoresizingMaskIntoConstraints = false
         indexView.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
         indexView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
-        indexView.bottomAnchor.constraint(equalTo: self.indexView.textFieldResult.bottomAnchor, constant: 105).isActive = true
+        indexView.bottomAnchor.constraint(equalTo: self.indexView.bttnCalc.bottomAnchor, constant: 90).isActive = true
         indexView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
         
         listennerKeyBoardCalcs()
