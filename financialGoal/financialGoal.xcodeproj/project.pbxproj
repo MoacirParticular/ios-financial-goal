@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C197B89269388890013F347 /* EnumIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C197B88269388890013F347 /* EnumIndex.swift */; };
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
 		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
@@ -85,6 +86,11 @@
 		893F1E58268E2D4D00880717 /* ReturnMonthlyCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */; };
 		893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E60268E3D9800880717 /* MonthlyViewModel.swift */; };
 		893F1E6C268E627200880717 /* StructApplicationCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E6B268E627200880717 /* StructApplicationCalc.swift */; };
+		8958E6892693A41B00F121C2 /* IndexCalcCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E6882693A41B00F121C2 /* IndexCalcCodable.swift */; };
+		8958E68F2693A5AA00F121C2 /* IndexCalcSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E68E2693A5AA00F121C2 /* IndexCalcSubmit.swift */; };
+		8958E6982693A67200F121C2 /* RequestBuilderIndexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E6972693A67200F121C2 /* RequestBuilderIndexCalc.swift */; };
+		8958E69D2693AA6700F121C2 /* RequestIndexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E69C2693AA6700F121C2 /* RequestIndexCalc.swift */; };
+		8958E6A32693B41C00F121C2 /* IndexCalcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E6A22693B41C00F121C2 /* IndexCalcViewModel.swift */; };
 		895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D4267BF47A00C4BE4B /* SignInNameView.swift */; };
 		895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */; };
 		895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */; };
@@ -156,6 +162,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C197B88269388890013F347 /* EnumIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIndex.swift; sourceTree = "<group>"; };
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
@@ -240,6 +247,11 @@
 		893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnMonthlyCalc.swift; sourceTree = "<group>"; };
 		893F1E60268E3D9800880717 /* MonthlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewModel.swift; sourceTree = "<group>"; };
 		893F1E6B268E627200880717 /* StructApplicationCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructApplicationCalc.swift; sourceTree = "<group>"; };
+		8958E6882693A41B00F121C2 /* IndexCalcCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCalcCodable.swift; sourceTree = "<group>"; };
+		8958E68E2693A5AA00F121C2 /* IndexCalcSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCalcSubmit.swift; sourceTree = "<group>"; };
+		8958E6972693A67200F121C2 /* RequestBuilderIndexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderIndexCalc.swift; sourceTree = "<group>"; };
+		8958E69C2693AA6700F121C2 /* RequestIndexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestIndexCalc.swift; sourceTree = "<group>"; };
+		8958E6A22693B41C00F121C2 /* IndexCalcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCalcViewModel.swift; sourceTree = "<group>"; };
 		895D58D4267BF47A00C4BE4B /* SignInNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameView.swift; sourceTree = "<group>"; };
 		895D58D9267BF49300C4BE4B /* SignInNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNameViewController.swift; sourceTree = "<group>"; };
 		895D58E1267BFD1000C4BE4B /* SignInPasswdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswdView.swift; sourceTree = "<group>"; };
@@ -490,6 +502,7 @@
 		3FE99615267794210068E95B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8958E6A12693B3FF00F121C2 /* IndexCalc */,
 				893F1E5F268E3D7800880717 /* MonthlyAndYearly */,
 				C1A18AA1268BEBA9002E252B /* Calcs */,
 			);
@@ -551,6 +564,7 @@
 				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
+				1C197B88269388890013F347 /* EnumIndex.swift */,
 				3FE996272677BBE30068E95B /* LocalizableStrings */,
 				3FE9961F2677A4EB0068E95B /* Constants */,
 				3FE9961B2677A4970068E95B /* Extensions */,
@@ -638,6 +652,31 @@
 			path = MonthlyAndYearly;
 			sourceTree = "<group>";
 		};
+		8958E68D2693A58500F121C2 /* IndexCalc */ = {
+			isa = PBXGroup;
+			children = (
+				8958E68E2693A5AA00F121C2 /* IndexCalcSubmit.swift */,
+			);
+			path = IndexCalc;
+			sourceTree = "<group>";
+		};
+		8958E6962693A64500F121C2 /* IndexCalc */ = {
+			isa = PBXGroup;
+			children = (
+				8958E6972693A67200F121C2 /* RequestBuilderIndexCalc.swift */,
+				8958E69C2693AA6700F121C2 /* RequestIndexCalc.swift */,
+			);
+			path = IndexCalc;
+			sourceTree = "<group>";
+		};
+		8958E6A12693B3FF00F121C2 /* IndexCalc */ = {
+			isa = PBXGroup;
+			children = (
+				8958E6A22693B41C00F121C2 /* IndexCalcViewModel.swift */,
+			);
+			path = IndexCalc;
+			sourceTree = "<group>";
+		};
 		896ABDCE267A76FE004A05F3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +728,7 @@
 		89C9FFBB2682228200B45338 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				8958E6962693A64500F121C2 /* IndexCalc */,
 				893F1E4C268E279E00880717 /* MonthlyAndYearly */,
 				C11FD8F126838055009D5C9D /* RecoveryPassword */,
 				1CC238B926823325000653F6 /* LoginApi */,
@@ -702,6 +742,7 @@
 			children = (
 				C1F726C226811CB100F3B997 /* UsersModel.swift */,
 				893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */,
+				8958E6882693A41B00F121C2 /* IndexCalcCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -709,6 +750,7 @@
 		89C9FFD326826E0300B45338 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				8958E68D2693A58500F121C2 /* IndexCalc */,
 				89C9FFD426826E2F00B45338 /* Sign_in */,
 				89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */,
 				893F1E6B268E627200880717 /* StructApplicationCalc.swift */,
@@ -972,8 +1014,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8958E6982693A67200F121C2 /* RequestBuilderIndexCalc.swift in Sources */,
 				89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */,
 				895D58E2267BFD1000C4BE4B /* SignInPasswdView.swift in Sources */,
+				8958E6A32693B41C00F121C2 /* IndexCalcViewModel.swift in Sources */,
 				895D58E7267BFFFB00C4BE4B /* SignInPasswdViewController.swift in Sources */,
 				C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
@@ -998,6 +1042,7 @@
 				1CC543262679847E00A807B4 /* ButtonConstants.swift in Sources */,
 				C1589B03268B88C900390BAF /* CalcsTableViewCell.swift in Sources */,
 				1CC5432C267A355000A807B4 /* StringConstants.swift in Sources */,
+				8958E69D2693AA6700F121C2 /* RequestIndexCalc.swift in Sources */,
 				892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */,
 				1CC238C526823594000653F6 /* RequestBuilderLogin.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
@@ -1042,6 +1087,7 @@
 				1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */,
 				893F1E58268E2D4D00880717 /* ReturnMonthlyCalc.swift in Sources */,
 				1CC238BF26823325000653F6 /* RequestBuilderSignIn.swift in Sources */,
+				1C197B89269388890013F347 /* EnumIndex.swift in Sources */,
 				3FE995E6267792B70068E95B /* SceneDelegate.swift in Sources */,
 				C178D350267AC9F50079072F /* LoginView.swift in Sources */,
 				1CECFECD268E0CCF00C928A2 /* YearlyViewController.swift in Sources */,
@@ -1059,9 +1105,11 @@
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */,
 				C1A18AA3268BEBC7002E252B /* CalcsModel.swift in Sources */,
+				8958E68F2693A5AA00F121C2 /* IndexCalcSubmit.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */,
+				8958E6892693A41B00F121C2 /* IndexCalcCodable.swift in Sources */,
 				893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,
 				C1AD75E126791E4A00BB9729 /* (null) in Sources */,

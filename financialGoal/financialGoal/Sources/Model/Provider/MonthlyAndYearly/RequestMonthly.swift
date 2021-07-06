@@ -15,7 +15,7 @@ protocol RequestMonthlyCalcProtocol {
 
 final class RequestMonthlyCalc: RequestMonthlyCalcProtocol {
     func calc(_ dataCalc: StructApplicationCalc, completionHandler: @escaping returnMonthlyCompletion) {
-        let bodyTask = RequestBuilderMonthly().monthy(dataCalc: dataCalc)
+        let bodyTask = RequestBuilderMonthly().monthly(dataCalc: dataCalc)
         let session = URLSession.shared
         let task = session.dataTask(with: bodyTask) { (data, response, error) in
             if let error = error {
