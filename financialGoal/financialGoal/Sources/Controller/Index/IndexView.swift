@@ -39,13 +39,13 @@ public class IndexView: UIView {
         setlbResult()
         setlbDueDate()
         setlbValueInvest()
-        
     }
+
     //MARK: Label 1
     let lbCorrectionIndex: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Indices para correção"
+        label.text = IndexConstants.textLbCorrectionIndex
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
@@ -55,11 +55,12 @@ public class IndexView: UIView {
     private func setlbCorrectionIndex() {
         addSubview(lbCorrectionIndex)
         NSLayoutConstraint.activate([
-            lbCorrectionIndex.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32 ),
-            lbCorrectionIndex.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbCorrectionIndex.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbCorrectionIndex.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbCorrectionTopAnchor),
+            lbCorrectionIndex.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbCorrectionIndex.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
+    
     //MARK: Create TextField 1
     lazy var textFieldCorrectionIndex:UITextField = {
         let textField = UITextField()
@@ -79,33 +80,32 @@ public class IndexView: UIView {
     func setTextFieldCorrectionIndex() {
         addSubview(textFieldCorrectionIndex)
         NSLayoutConstraint.activate([
-            textFieldCorrectionIndex.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 64),
-            textFieldCorrectionIndex.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldCorrectionIndex.heightAnchor.constraint(equalToConstant: 60),
-            textFieldCorrectionIndex.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -123)
+            textFieldCorrectionIndex.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfCorrectionTopAnchor),
+            textFieldCorrectionIndex.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldCorrectionIndex.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor),
+            textFieldCorrectionIndex.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfRightAnchorOneAndTwo)
         ])
     }
     
-    //MARK: Botão mudar 1
+    //MARK: Button "mudar" 1
     var buttonCorrectionIndex: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.setTitle("mudar", for: .normal)
+        button.setTitle(IndexConstants.titleButton, for: .normal)
         button.titleLabel?.font = .fontTextFieldTaxes
         button.setTitleColor(.customColorRoxo, for: .normal)
         return button
     }()
-    
+
     func setButtonCorrectionIndex(){
         addSubview(buttonCorrectionIndex)
         buttonCorrectionIndex.addTarget(self, action: #selector(actionBtChange), for: .touchUpInside)
         addSubview(buttonCorrectionIndex)
         NSLayoutConstraint.activate([
-            buttonCorrectionIndex.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 64),
-            buttonCorrectionIndex.leftAnchor.constraint(equalTo: textFieldCorrectionIndex.rightAnchor, constant: 8),
-            buttonCorrectionIndex.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -16),
-            buttonCorrectionIndex.heightAnchor.constraint(equalToConstant: 60),
-            
+            buttonCorrectionIndex.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: IndexConstants.btCorrectionIndex),
+            buttonCorrectionIndex.leftAnchor.constraint(equalTo: textFieldCorrectionIndex.rightAnchor, constant: IndexConstants.btLeftAnchor),
+            buttonCorrectionIndex.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.btRightAnchor),
+            buttonCorrectionIndex.heightAnchor.constraint(equalToConstant: IndexConstants.btHeightAnchor),
         ])
     }
     
@@ -113,19 +113,19 @@ public class IndexView: UIView {
     let lbPreAndPostFixed: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "É pré fixado ou pós fixado?"
+        label.text = IndexConstants.titleLbPreAndPosFix
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
         return label
     }()
-    
+      
     private func setlbPreAndPostFixed() {
         addSubview(lbPreAndPostFixed)
         NSLayoutConstraint.activate([
-            lbPreAndPostFixed.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 140 ),
-            lbPreAndPostFixed.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbPreAndPostFixed.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbPreAndPostFixed.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbPreAndPosTopAnchor),
+            lbPreAndPostFixed.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbPreAndPostFixed.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
     
@@ -148,18 +148,18 @@ public class IndexView: UIView {
     func setTextFieldPreAndPostFixed() {
         addSubview(textFieldPreAndPostFixed)
         NSLayoutConstraint.activate([
-            textFieldPreAndPostFixed.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 172),
-            textFieldPreAndPostFixed.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldPreAndPostFixed.heightAnchor.constraint(equalToConstant: 60),
-            textFieldPreAndPostFixed.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -123)
+            textFieldPreAndPostFixed.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfPreAndPostTopAnchor),
+            textFieldPreAndPostFixed.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldPreAndPostFixed.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor),
+            textFieldPreAndPostFixed.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfPreAndPostRightAnchor)
         ])
     }
     
-    //MARK: Botão mudar 2
+    //MARK: Button "mudar" 2
     var buttonPreAndPostFixed: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.setTitle("mudar", for: .normal)
+        button.setTitle(IndexConstants.titleButton, for: .normal)
         button.titleLabel?.font = .fontTextFieldTaxes
         button.setTitleColor(.customColorRoxo, for: .normal)
         return button
@@ -170,10 +170,10 @@ public class IndexView: UIView {
         buttonPreAndPostFixed.addTarget(self, action: #selector(actionButtonChangeTwo), for: .touchUpInside)
         addSubview(buttonPreAndPostFixed)
         NSLayoutConstraint.activate([
-            buttonPreAndPostFixed.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 172),
-            buttonPreAndPostFixed.leftAnchor.constraint(equalTo: textFieldCorrectionIndex.rightAnchor, constant: 8),
-            buttonPreAndPostFixed.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -16),
-            buttonPreAndPostFixed.heightAnchor.constraint(equalToConstant: 60),
+            buttonPreAndPostFixed.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: IndexConstants.btPreAndPosTopAnchor),
+            buttonPreAndPostFixed.leftAnchor.constraint(equalTo: textFieldCorrectionIndex.rightAnchor, constant: IndexConstants.btLeftAnchor),
+            buttonPreAndPostFixed.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor),
+            buttonPreAndPostFixed.heightAnchor.constraint(equalToConstant: IndexConstants.btHeightAnchor),
         ])
     }
     
@@ -195,18 +195,18 @@ public class IndexView: UIView {
     func setTextFieldValueInvest() {
         addSubview(textFieldValueInvest)
         NSLayoutConstraint.activate([
-            textFieldValueInvest.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 280),
-            textFieldValueInvest.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldValueInvest.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            textFieldValueInvest.heightAnchor.constraint(equalToConstant: 60)
+            textFieldValueInvest.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfValueInvestTopAnchor),
+            textFieldValueInvest.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldValueInvest.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfRightAnchor),
+            textFieldValueInvest.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor)
         ])
     }
-  
-    //MARK: Label 3
-    let lbPreAndValueInvest: UILabel = {
+   
+    //MARK: Create Label 3
+    let lbValueInvest: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Valor que você vai investir"
+        label.text = IndexConstants.tfTitleValueInvest
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
@@ -214,13 +214,14 @@ public class IndexView: UIView {
     }()
     
     private func setlbValueInvest() {
-        addSubview(lbPreAndValueInvest)
+        addSubview(lbValueInvest)
         NSLayoutConstraint.activate([
-            lbPreAndValueInvest.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 248 ),
-            lbPreAndValueInvest.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbPreAndValueInvest.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbValueInvest.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbValueInvestTopAnchor),
+            lbValueInvest.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbValueInvest.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
+   
     
     //MARK: Create TextField 4
     lazy var textFieldDueDate:UITextField = {
@@ -240,30 +241,30 @@ public class IndexView: UIView {
     func setTextFieldDueDate() {
         addSubview(textFieldDueDate)
         NSLayoutConstraint.activate([
-            textFieldDueDate.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 388),
-            textFieldDueDate.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldDueDate.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            textFieldDueDate.heightAnchor.constraint(equalToConstant: 60)
+            textFieldDueDate.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfDueDateTopAnchor),
+            textFieldDueDate.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldDueDate.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfRightAnchor),
+            textFieldDueDate.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor)
         ])
     }
-    
+ 
     //MARK: Label 4
-    let lbPreAndDueDate: UILabel = {
+    let lbDueDate: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Prazo ou vencimento"
+        label.text = IndexConstants.lbDueDateTitle
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
         return label
     }()
-    
+
     private func setlbDueDate() {
-        addSubview(lbPreAndDueDate)
+        addSubview(lbDueDate)
         NSLayoutConstraint.activate([
-            lbPreAndDueDate.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 356 ),
-            lbPreAndDueDate.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbPreAndDueDate.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbDueDate.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbDueDataTopAnchor ),
+            lbDueDate.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbDueDate.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
     
@@ -285,18 +286,18 @@ public class IndexView: UIView {
     func setTextFieldPorcentYearly() {
         addSubview(textFieldPorcentYearly)
         NSLayoutConstraint.activate([
-            textFieldPorcentYearly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 496),
-            textFieldPorcentYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldPorcentYearly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            textFieldPorcentYearly.heightAnchor.constraint(equalToConstant: 60)
+            textFieldPorcentYearly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfPorcentYearlyTopAnchor),
+            textFieldPorcentYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldPorcentYearly.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfRightAnchor),
+            textFieldPorcentYearly.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor)
         ])
     }
     
     //MARK: Label 5
-    let lbPreAndPorcentYearly: UILabel = {
+    let lbPorcentYearly: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Porcentagem ao ano"
+        label.text = IndexConstants.lbTitlePorcentYearly
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
@@ -304,11 +305,11 @@ public class IndexView: UIView {
     }()
    
     private func setlbPorcentYearly() {
-        addSubview(lbPreAndPorcentYearly)
+        addSubview(lbPorcentYearly)
         NSLayoutConstraint.activate([
-            lbPreAndPorcentYearly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 464 ),
-            lbPreAndPorcentYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbPreAndPorcentYearly.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbPorcentYearly.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbPorcentYearlyTopAnchor ),
+            lbPorcentYearly.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbPorcentYearly.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
     
@@ -330,10 +331,10 @@ public class IndexView: UIView {
     func setTextFieldResult() {
         addSubview(textFieldResult)
         NSLayoutConstraint.activate([
-            textFieldResult.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 604),
-            textFieldResult.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            textFieldResult.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            textFieldResult.heightAnchor.constraint(equalToConstant: 60)
+            textFieldResult.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.tfResult),
+            textFieldResult.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.tfLeftAnchor),
+            textFieldResult.rightAnchor.constraint(equalTo: self.rightAnchor, constant: IndexConstants.tfRightAnchor),
+            textFieldResult.heightAnchor.constraint(equalToConstant: IndexConstants.tfHeightAnchor)
         ])
     }
     
@@ -341,7 +342,7 @@ public class IndexView: UIView {
     let lbPreAndResult: UILabel = {
         let label = UILabel()
         UIView.configInitailElements(label)
-        label.text = "Valor obtido no final"
+        label.text = IndexConstants.lbTitleResult
         label.textAlignment = .left
         label.textColor = .blackCustomGoal
         label.font = .fontTextFieldTaxes
@@ -351,34 +352,35 @@ public class IndexView: UIView {
     private func setlbResult() {
         addSubview(lbPreAndResult)
         NSLayoutConstraint.activate([
-            lbPreAndResult.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 572 ),
-            lbPreAndResult.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            lbPreAndResult.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16)
+            lbPreAndResult.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: IndexConstants.lbResultTopAnchor ),
+            lbPreAndResult.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.lbLeftAnchor),
+            lbPreAndResult.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.lbRightAnchor)
         ])
     }
     
-    // MARK: - Button
+    // MARK: - Button "CALCULAR"
     let bttnCalc: UIButton = {
         let button = UIButton()
         UIView.configInitailElements(button)
         button.backgroundColor = .blackCustomGoal
-        button.setTitle("CALCULAR", for: .normal)
+        button.setTitle(IndexConstants.titleButtonCalc, for: .normal)
         button.layer.cornerRadius = ValuesConstraintsButton.radiusValue
         button.titleLabel?.font = .fontButtonsBlack
         return button
     }()
-    
+
     func setButtonCalc(){
         addSubview(bttnCalc)
         bttnCalc.addTarget(self, action: #selector(actionButtonCalc), for: .touchUpInside)
         addSubview(bttnCalc)
         NSLayoutConstraint.activate([
-            bttnCalc.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 696),
-            bttnCalc.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 16),
-            bttnCalc.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -16),
-            bttnCalc.heightAnchor.constraint(equalToConstant: 60),
+            bttnCalc.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: IndexConstants.btCalcTopAnchor),
+            bttnCalc.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: IndexConstants.btLeftAnchor),
+            bttnCalc.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: IndexConstants.btRightAnchor),
+            bttnCalc.heightAnchor.constraint(equalToConstant: IndexConstants.btHeightAnchor),
         ])
     }
+    
     
     //MARK: Actions Buttons
     

@@ -119,6 +119,7 @@
 		C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11FD8F326838055009D5C9D /* RequestBuilderRecoveryPass.swift */; };
 		C12D228C267B82AA002C0275 /* LoginActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D228B267B82AA002C0275 /* LoginActionType.swift */; };
 		C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D2293267B971B002C0275 /* StringConstantsLogin.swift */; };
+		C13CBE1C2694CC2500CF6244 /* IndexConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CBE1B2694CC2500CF6244 /* IndexConstants.swift */; };
 		C1589ACC268B66EE00390BAF /* CalcsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589ACB268B66EE00390BAF /* CalcsViewController.swift */; };
 		C1589B03268B88C900390BAF /* CalcsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */; };
 		C15A6E39267A846300B23B05 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -280,6 +281,7 @@
 		C11FD8F326838055009D5C9D /* RequestBuilderRecoveryPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilderRecoveryPass.swift; sourceTree = "<group>"; };
 		C12D228B267B82AA002C0275 /* LoginActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionType.swift; sourceTree = "<group>"; };
 		C12D2293267B971B002C0275 /* StringConstantsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstantsLogin.swift; sourceTree = "<group>"; };
+		C13CBE1B2694CC2500CF6244 /* IndexConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexConstants.swift; sourceTree = "<group>"; };
 		C1589ACB268B66EE00390BAF /* CalcsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsViewController.swift; sourceTree = "<group>"; };
 		C1589B02268B88C900390BAF /* CalcsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTableViewCell.swift; sourceTree = "<group>"; };
 		C16764F7268CDEDA001B90B8 /* IconsCalcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsCalcs.swift; sourceTree = "<group>"; };
@@ -828,6 +830,7 @@
 			children = (
 				C17A5B4226937248007669A7 /* IndexViewController.swift */,
 				C17A5B4426937258007669A7 /* IndexView.swift */,
+				C13CBE1B2694CC2500CF6244 /* IndexConstants.swift */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				C17A5B4526937258007669A7 /* IndexView.swift in Sources */,
 				1CC5430A26791DC800A807B4 /* LoggedOutView.swift in Sources */,
 				896ABDE2267A779B004A05F3 /* SignInMailViewController.swift in Sources */,
+				C13CBE1C2694CC2500CF6244 /* IndexConstants.swift in Sources */,
 				C1A18AA3268BEBC7002E252B /* CalcsModel.swift in Sources */,
 				8958E68F2693A5AA00F121C2 /* IndexCalcSubmit.swift in Sources */,
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
