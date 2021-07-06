@@ -17,6 +17,7 @@ enum Operation: String, CodingKey {
     case signIn = "usuarios/"
     case forgot = "recovery-password/"
     case monthlyYearlyCalcs = "calcularjuroscomposto/"
+    case indexCalcs = "calcularjurosindexado/"
 }
 
 enum Environment: String, CodingKey {

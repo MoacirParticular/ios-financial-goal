@@ -7,11 +7,11 @@
 
 import Foundation
 protocol RequestBuilderMonthlyProtocol {
-    func monthy(dataCalc: StructApplicationCalc) -> URLRequest
+    func monthly(dataCalc: StructApplicationCalc) -> URLRequest
 }
 
 class RequestBuilderMonthly: RequestBuilderMonthlyProtocol {
-    func monthy(dataCalc: StructApplicationCalc) -> URLRequest {
+    func monthly(dataCalc: StructApplicationCalc) -> URLRequest {
         let url: URL = {
             guard let urlReceived = ApiUrlRequest(operation: .monthlyYearlyCalcs).getData() else { return URL(string: String.empty)! }
             return urlReceived
