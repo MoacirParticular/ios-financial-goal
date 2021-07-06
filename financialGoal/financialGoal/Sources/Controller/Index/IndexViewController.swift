@@ -12,7 +12,8 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     //MARK: Proprieties:
     var indexView = IndexView(frame: FrameConstants.frameZero)
-
+    let scrollView: UIScrollView = UIScrollView(frame: .zero)
+    
     var dataCorrectionIndex = ["CDI", "SELIC", "Poupança", "TR"]
     var dataPreAndPostFixed = ["PRE", "POS"]
     var dataSelected = [String]()
@@ -21,14 +22,23 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     //MARK: Lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .backgroundCustomGoal
+        self.view = scrollView
+        self.scrollView.backgroundColor = .backgroundCustomGoal
+        
+        indexView.translatesAutoresizingMaskIntoConstraints = false
+        indexView.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
+        indexView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
+        indexView.bottomAnchor.constraint(equalTo: self.indexView.textFieldResult.bottomAnchor, constant: 105).isActive = true
+        indexView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
+        
+        listennerKeyBoardCalcs()
         navigationTitleConfig(title: "Correção por índice")
         listenIndex()
         setInitial()
     }
     
     override func loadView() {
-        self.view = indexView
+        self.scrollView.addSubview(indexView)
     }
     
     //MARK: Verifica o tipo do botão clicado
@@ -53,7 +63,6 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func setInitial(){
         self.indexView.textFieldCorrectionIndex.text = dataCorrectionIndex[0]
         self.indexView.textFieldPreAndPostFixed.text = dataPreAndPostFixed[0]
-
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -61,13 +70,13 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return dataSelected.count
+        return dataSelected.count
         
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            let seleted = dataSelected[row]
-            return seleted
-     
+        let seleted = dataSelected[row]
+        return seleted
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -91,10 +100,33 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         let editRadiusAlert = UIAlertController(title: "Selecione uma opção", message: "", preferredStyle: UIAlertController.Style.alert)
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
-    
+        
         editRadiusAlert.addAction(UIAlertAction(title: "Selecionar", style: .cancel, handler: nil))
         self.present(editRadiusAlert, animated: true)
     }
+    
+    func listennerKeyBoardCalcs() {
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(self.keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(self.keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
+        let contentInsets = UIEdgeInsets(top: KeyboardListenner.zeroCG, left: KeyboardListenner.zeroCG, bottom: keyboardSize.height , right: KeyboardListenner.zeroCG)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInsets = UIEdgeInsets(top: KeyboardListenner.zeroCG, left: KeyboardListenner.zeroCG, bottom: KeyboardListenner.zeroCG, right: KeyboardListenner.zeroCG)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
 }
-
 
