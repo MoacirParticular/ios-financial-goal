@@ -13,26 +13,15 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     //MARK: Proprieties:
     var indexView = IndexView(frame: FrameConstants.frameZero)
     let scrollView: UIScrollView = UIScrollView(frame: .zero)
-    
-    var dataCorrectionIndex = ["CDB", "LCI"]
-    var dataPreAndPostFixed = ["PRE", "POS"]
     var dataSelected = [String]()
     var typeData: EnumIndex?
     
     //MARK: Lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = scrollView
-        self.scrollView.backgroundColor = .backgroundCustomGoal
-        
-        indexView.translatesAutoresizingMaskIntoConstraints = false
-        indexView.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
-        indexView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
-        indexView.bottomAnchor.constraint(equalTo: self.indexView.bttnCalc.bottomAnchor, constant: 90).isActive = true
-        indexView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
-        
+        setScrollView()
         listennerKeyBoardCalcs()
-        navigationTitleConfig(title: "Correção por índice")
+        navigationTitleConfig(title: IndexData.titlenavigation)
         listenIndex()
         setInitial()
     }
@@ -41,19 +30,28 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.scrollView.addSubview(indexView)
     }
     
+    //MARK: Set ScrollView
+    func setScrollView(){
+        self.view = scrollView
+        self.scrollView.backgroundColor = .backgroundCustomGoal
+        indexView.translatesAutoresizingMaskIntoConstraints = false
+        indexView.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
+        indexView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
+        indexView.bottomAnchor.constraint(equalTo: self.indexView.bttnCalc.bottomAnchor, constant: IndexConstants.bottomScrolView).isActive = true
+        indexView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
+    }
+    
     //MARK: Verifica o tipo do botão clicado
     func listenIndex() {
         indexView.onButtonCorrectionIndex = { type in
             self.typeData = type
-            
             switch type {
             case .IndexCorrection:
-                self.dataSelected = self.dataCorrectionIndex
-                self.alertTest()
-                
+                self.dataSelected = IndexData.dataCorrectionIndex
+                self.alertPickerView()
             case .PeriodFix:
-                self.dataSelected = self.dataPreAndPostFixed
-                self.alertTest()
+                self.dataSelected = IndexData.dataPreAndPostFixed
+                self.alertPickerView()
                 break
             case .Result:
                 self.getDataInputs()
@@ -64,22 +62,25 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     //MARK: Inicia os textField com valores na primeira posição do array
     func setInitial(){
+
+        self.indexView.textFieldCorrectionIndex.text = IndexData.initialValueCorretion
+        self.indexView.textFieldPreAndPostFixed.text = IndexData.initialValuePreAndPostFixed
+      
         //self.indexView.textFieldCorrectionIndex.text = dataCorrectionIndex[0]
        //self.indexView.textFieldPreAndPostFixed.text = dataPreAndPostFixed[0]
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return IndexConstants.numberOfComponentsValue
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return dataSelected.count
-        
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let seleted = dataSelected[row]
         return seleted
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -93,19 +94,17 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     //MARK: Exibe um alert com o pickerView
-    func alertTest() {
+    func alertPickerView() {
         let vc = UIViewController()
-        vc.preferredContentSize = CGSize(width: 250,height: 200)
-        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 150))
+        vc.preferredContentSize = IndexConstants.areaPickerView
+        let pickerView = UIPickerView(frame: IndexConstants.framePickerView)
         pickerView.delegate = self
         pickerView.dataSource = self
         vc.view.addSubview(pickerView)
-        
-        let editRadiusAlert = UIAlertController(title: "Selecione uma opção", message: "", preferredStyle: UIAlertController.Style.alert)
-        editRadiusAlert.setValue(vc, forKey: "contentViewController")
-        
-        editRadiusAlert.addAction(UIAlertAction(title: "Selecionar", style: .cancel, handler: nil))
-        self.present(editRadiusAlert, animated: true)
+        let alert = UIAlertController(title: IndexConstants.alertTitle, message: String.empty, preferredStyle: UIAlertController.Style.alert)
+        alert.setValue(vc, forKey: IndexConstants.alertKey)
+        alert.addAction(UIAlertAction(title: IndexConstants.alertButton, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func listennerKeyBoardCalcs() {
@@ -130,7 +129,6 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
-    
     
     private func getDataInputs() {
         guard let correctionIndex = self.indexView.textFieldCorrectionIndex.text else { return }
