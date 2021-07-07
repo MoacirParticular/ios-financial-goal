@@ -60,7 +60,7 @@ class SignInPasswdView: UIView {
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal
         bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
-        bttn.setTitleColor(.white, for: .normal)
+        bttn.setTitleColor(.customColorTextButton, for: .normal)
         bttn.titleLabel?.font = .fontButtonsBlack
         bttn.setTitle(ValuesSignIn_Passwd.buttonTitle, for: .normal)
         bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
@@ -74,7 +74,7 @@ class SignInPasswdView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(StringConstants.requiredError)
     }
     
     private func createView() {
