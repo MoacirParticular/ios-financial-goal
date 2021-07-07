@@ -49,6 +49,7 @@ public class TaxesView: UIView {
     textField.textColor = .customColorResultLabel
     textField.keyboardType = UIKeyboardType.numberPad
     textField.font = UIFont.fontTextFieldTaxes
+    textField.isUserInteractionEnabled = false
     textField.backgroundColor = .customColorResultTaxes
     textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
     textField.borderStyle = UITextField.BorderStyle.none
