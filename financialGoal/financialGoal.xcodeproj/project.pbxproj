@@ -111,6 +111,7 @@
 		89C9FFCA2682450100B45338 /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFC92682450100B45338 /* SignInData.swift */; };
 		89C9FFCF2682652000B45338 /* StringAlertConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFCE2682652000B45338 /* StringAlertConstants.swift */; };
 		89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */; };
+		89FC312726962C02009D4091 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC312626962C01009D4091 /* LabelComponent.swift */; };
 		C111DEAF268D41D300C4F987 /* TaxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEAE268D41D300C4F987 /* TaxesView.swift */; };
 		C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEB3268D423A00C4F987 /* TaxesViewController.swift */; };
 		C111DEB9268D449700C4F987 /* TaxesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */; };
@@ -276,6 +277,7 @@
 		89C9FFC92682450100B45338 /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
 		89C9FFCE2682652000B45338 /* StringAlertConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlertConstants.swift; sourceTree = "<group>"; };
 		89C9FFD526826E9A00B45338 /* UrlStructEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlStructEnum.swift; sourceTree = "<group>"; };
+		89FC312626962C01009D4091 /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
 		C111DEAE268D41D300C4F987 /* TaxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesView.swift; sourceTree = "<group>"; };
 		C111DEB3268D423A00C4F987 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
 		C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCoordinator.swift; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 				892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */,
 				89ACC036268B58CA00851CEC /* MonthlyViewController.swift */,
 				89C549C4268D49B9007290C5 /* MotherCalcs.swift */,
+				89FC312626962C01009D4091 /* LabelComponent.swift */,
 			);
 			path = Monthly;
 			sourceTree = "<group>";
@@ -1050,6 +1053,7 @@
 				C1184DBB268BFD9C00A6AA57 /* StringConstantsCalcs.swift in Sources */,
 				C178D361267ACA620079072F /* ConstraintsConstants.swift in Sources */,
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
+				89FC312726962C02009D4091 /* LabelComponent.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
 				89ACC037268B58CA00851CEC /* MonthlyViewController.swift in Sources */,
 				89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */,

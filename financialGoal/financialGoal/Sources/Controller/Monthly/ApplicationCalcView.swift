@@ -20,11 +20,11 @@ class ApplicationCalcView: UIView {
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
-    lazy var lbFirst: UILabel = { createLabel() }()
-    lazy var lbSecond: UILabel = { createLabel() }()
-    lazy var lbThird: UILabel = { createLabel() }()
-    lazy var lbFourth: UILabel = { createLabel() }()
-    lazy var lbFifth: UILabel = { createLabel() }()
+    lazy var lbFirst: UILabel = { LabelComponent() }()
+    lazy var lbSecond: UILabel = { LabelComponent() }()
+    lazy var lbThird: UILabel = { LabelComponent() }()
+    lazy var lbFourth: UILabel = { LabelComponent() }()
+    lazy var lbFifth: UILabel = { LabelComponent() }()
     
     // MARK: - TextField
     lazy var tfFirst: UITextField = { createTextField() }()
@@ -97,13 +97,6 @@ class ApplicationCalcView: UIView {
     }
     
     // MARK: - Element Factory
-    private func createLabel() -> UILabel {
-        let label = UILabel()
-        label.font = .fontLabelCalc
-        UIView.configInitailElements(label)
-        return label
-    }
-    
     private func createTextField() -> UITextField {
         let tField = UITextField()
         UIView.configInitailElements(tField)

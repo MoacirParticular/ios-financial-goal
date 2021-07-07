@@ -27,7 +27,7 @@ class CustomCell: UICollectionViewCell {
     }
     
     //MARK: Titulo da celula
-    var title: UILabel = {
+    var title: UILabel = { // LabelComponent(.fontLabelCollection, String.empty, .customColorResultLabel, .center)}()
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         label.textAlignment = .center

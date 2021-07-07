@@ -81,23 +81,11 @@ public class TaxesView: UIView {
     
     // MARK: - Labels
     let lbYearly: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = TaxesConstants.lbYearlyText
-        label.textAlignment = TaxesConstants.lbAlignment
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, TaxesConstants.lbYearlyText, .blackCustomGoal, TaxesConstants.lbAlignment)
     }()
     
     let lbMonthly: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.textAlignment = TaxesConstants.lbAlignment
-        label.text = TaxesConstants.lbMonthlyText
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, TaxesConstants.lbMonthlyText, .blackCustomGoal, TaxesConstants.lbAlignment)
     }()
     
     // MARK: - Constraints Labels
