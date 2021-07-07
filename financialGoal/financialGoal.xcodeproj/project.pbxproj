@@ -88,6 +88,7 @@
 		893F1E58268E2D4D00880717 /* ReturnMonthlyCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */; };
 		893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E60268E3D9800880717 /* MonthlyViewModel.swift */; };
 		893F1E6C268E627200880717 /* StructApplicationCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F1E6B268E627200880717 /* StructApplicationCalc.swift */; };
+		8941B3AD26932EC300890117 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941B3AC26932EC300890117 /* KeychainService.swift */; };
 		8958E6892693A41B00F121C2 /* IndexCalcCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E6882693A41B00F121C2 /* IndexCalcCodable.swift */; };
 		8958E68F2693A5AA00F121C2 /* IndexCalcSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E68E2693A5AA00F121C2 /* IndexCalcSubmit.swift */; };
 		8958E6982693A67200F121C2 /* RequestBuilderIndexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958E6972693A67200F121C2 /* RequestBuilderIndexCalc.swift */; };
@@ -252,6 +253,7 @@
 		893F1E57268E2D4D00880717 /* ReturnMonthlyCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnMonthlyCalc.swift; sourceTree = "<group>"; };
 		893F1E60268E3D9800880717 /* MonthlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewModel.swift; sourceTree = "<group>"; };
 		893F1E6B268E627200880717 /* StructApplicationCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructApplicationCalc.swift; sourceTree = "<group>"; };
+		8941B3AC26932EC300890117 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		8958E6882693A41B00F121C2 /* IndexCalcCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCalcCodable.swift; sourceTree = "<group>"; };
 		8958E68E2693A5AA00F121C2 /* IndexCalcSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCalcSubmit.swift; sourceTree = "<group>"; };
 		8958E6972693A67200F121C2 /* RequestBuilderIndexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderIndexCalc.swift; sourceTree = "<group>"; };
@@ -619,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				891D9FC22692A03B00352D6D /* CrudUserDefaults.swift */,
+				8941B3AC26932EC300890117 /* KeychainService.swift */,
 			);
 			path = SaveCredentials;
 			sourceTree = "<group>";
@@ -1137,6 +1140,7 @@
 				3FE996212677A50E0068E95B /* ColorConstant.swift in Sources */,
 				1CC542D226791A1400A807B4 /* FontConstants.swift in Sources */,
 				C1F726C326811CB100F3B997 /* UsersModel.swift in Sources */,
+				8941B3AD26932EC300890117 /* KeychainService.swift in Sources */,
 				8958E6892693A41B00F121C2 /* IndexCalcCodable.swift in Sources */,
 				893F1E61268E3D9800880717 /* MonthlyViewModel.swift in Sources */,
 				3FE9962D2677C6A00068E95B /* accessibilityLocalizebleStrings.swift in Sources */,

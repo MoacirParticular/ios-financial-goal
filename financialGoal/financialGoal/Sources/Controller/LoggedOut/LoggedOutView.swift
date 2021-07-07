@@ -163,6 +163,5 @@ class LoggedOutView: UIView {
     required init?(coder: NSCoder) {
         fatalError(StringConstants.requiredError)
     }
-    
 }
 

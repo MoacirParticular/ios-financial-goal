@@ -50,13 +50,14 @@ class LoggedOutViewController: UIViewController {
     }
     
     func callAutoLogin() {
-        let userDefaults = CrudUserDefaults()
-        
-        if userDefaults.verifyHaveData() {
-            let credentials = userDefaults.getUserCredentials()
+        let data = KeychainService.loadCredentials()
+        if KeychainService.verifyIfExists() {
+            guard let username = data.first else { return }
+            guard let password = data.last else { return }
+            
             self.showActivity()
             let login = LoginViewModel()
-            login.login(credentials.first ?? String.empty, credentials.last ?? String.empty, self) { (returnApi) in
+            login.login(username, password, self) { (returnApi) in
                 if returnApi {
                     self.onLoginButton?(.AutoLogin)
                 }
