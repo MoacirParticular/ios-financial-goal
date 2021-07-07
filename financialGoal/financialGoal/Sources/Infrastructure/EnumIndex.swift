@@ -10,5 +10,6 @@ import Foundation
 enum EnumIndex: CodingKey {
     case IndexCorrection
     case PeriodFix
+    case Result
 
 }

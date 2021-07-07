@@ -317,7 +317,7 @@ public class IndexView: UIView {
     lazy var textFieldResult:UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
+        textField.textColor = .blackCustomGoal
         textField.keyboardType = UIKeyboardType.numberPad
         textField.font = UIFont.fontTextFieldTaxes
         textField.isUserInteractionEnabled = false
@@ -386,6 +386,7 @@ public class IndexView: UIView {
     
     @objc
     func actionButtonCalc (sender: UIButton!) {
+        onButtonCorrectionIndex?(.Result)
     }
     
     @objc
