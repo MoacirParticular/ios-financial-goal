@@ -55,14 +55,17 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 self.dataSelected = self.dataPreAndPostFixed
                 self.alertTest()
                 break
+            case .Result:
+                self.getDataInputs()
+                break
             }
         }
     }
     
     //MARK: Inicia os textField com valores na primeira posição do array
     func setInitial(){
-        self.indexView.textFieldCorrectionIndex.text = dataCorrectionIndex[0]
-        self.indexView.textFieldPreAndPostFixed.text = dataPreAndPostFixed[0]
+        //self.indexView.textFieldCorrectionIndex.text = dataCorrectionIndex[0]
+       //self.indexView.textFieldPreAndPostFixed.text = dataPreAndPostFixed[0]
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -128,5 +131,37 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
+    
+    private func getDataInputs() {
+        guard let correctionIndex = self.indexView.textFieldCorrectionIndex.text else { return }
+        guard let preAndPostFixed = self.indexView.textFieldPreAndPostFixed.text else { return }
+        
+        guard let valueInvest = self.indexView.textFieldValueInvest.text  else { return }
+        let valueInvestDouble = NSString(string: valueInvest).doubleValue
+        
+        guard let dueDate = self.indexView.textFieldDueDate.text else { return }
+        let dueDateInt = NSString(string: dueDate).integerValue
+        
+        guard let porcentYesarly = self.indexView.textFieldPorcentYearly.text else { return }
+        let porcentYesarlyDouble = NSString(string: porcentYesarly).doubleValue
+
+        let dataSubmit = IndexCalcSubmit(initial: valueInvestDouble, cdiPercent: porcentYesarlyDouble, profitabilityDefinition: preAndPostFixed, period: dueDateInt, type: correctionIndex)
+        requestApi(dataSubmit: dataSubmit)
+    }
+    
+    func requestApi(dataSubmit: IndexCalcSubmit) {
+        print(dataSubmit)
+       let requestIndex = IndexCalcViewModel()
+        requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
+            print(returnApi)
+            if let totalInvestment = returnApi?.data?.updatedInvestedAmount{
+                DispatchQueue.main.async {
+                    self.indexView.textFieldResult.text = totalInvestment
+                }
+            }
+            
+        }
+        
+    }
 }
 
