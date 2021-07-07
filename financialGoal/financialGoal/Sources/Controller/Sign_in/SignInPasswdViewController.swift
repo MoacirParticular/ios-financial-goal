@@ -34,7 +34,7 @@ class SignInPasswdViewController: UIViewController {
             }
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
-                if status == true{
+                if status == true {
                     self.actionLogin(SignInData.username, passwd)
                     return
                 }
@@ -44,16 +44,10 @@ class SignInPasswdViewController: UIViewController {
     }
     
     private func actionLogin(_ user: String, _ pass: String) {
-        requestLogin().login(user, pass) { (result) in
-            switch(result) {
-            case .success(let returnData):
-                guard let nickNameLogado = returnData.user?.nickname else {return}
-                if returnData.res == true {
-                    SignInData.nickname = nickNameLogado
-                    self.status?(.Logged)
-                }
-            case .failure( _):
-                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+        let login = LoginViewModel()
+        login.login(user, pass, self) { (returnApi) in
+            if returnApi {
+                self.status?(.Logged)
             }
         }
     }
@@ -84,8 +78,8 @@ class SignInPasswdViewController: UIViewController {
         }
     }
     
-    private func setActionValue(_ messageToAlert: String) -> StatusSignIn { // Remover status, pois qnd true, vai logar
-        if messageToAlert.contains("já cadastrado") {
+    private func setActionValue(_ messageToAlert: String) -> StatusSignIn {
+        if messageToAlert.contains(ComparationString.haveAccount) {
             return .Exists
         }
         return .Failure

@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
         guard let username = self.loginView.textFieldUser.text?.lowercased() else { return }
         if username.isValidEmail{
             if password.isValidPassword {
-                self.requestApi(username, password)
+                self.requestLogin(username, password)
             } else{
                 self.showDefaultAlert(.InvalidPassword, .NoPasswd)
             }
@@ -58,24 +58,12 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: Resposta da API com alert ou direcionando para home
-    private func requestApi(_ username: String, _ password:String) {
+    private func requestLogin(_ username: String, _ password:String) {
         self.showActivity()
-        requestLogin().login(username, password) { (result) in
-            switch(result) {
-            case .success(let returnData):
-                guard let messsage = returnData.message else { return }
-                if returnData.res == true {
-                    self.setViewHome?(.Logado)
-                    if let nickNameLogado = returnData.user?.nickname {
-                        SignInData.nickname = nickNameLogado
-                    }
-                    self.saveCredentials(user: username, pass: password)
-                    
-                }else{
-                    self.showAlert(.Warning, messsage)
-                }
-            case .failure( _):
-                self.showDefaultAlert(.Warning, AlertMessage.NoConnection)
+        let login = LoginViewModel()
+        login.login(username, password, self) { (resApi) in
+            if resApi {
+                self.setViewHome?(.Logado)
             }
         }
     }
@@ -89,11 +77,5 @@ class LoginViewController: UIViewController {
         SignInData.username = String.empty
         SignInData.nickname = String.empty
     }
-    
-    private func saveCredentials(user:String, pass:String){
-        UserDefaults.standard.set(user, forKey: StringConstants.userKey)
-        UserDefaults.standard.set(pass, forKey: StringConstants.passKey)
-    }
-    
 }
 

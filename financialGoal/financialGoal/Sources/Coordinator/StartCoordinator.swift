@@ -13,7 +13,7 @@ class StartCoordinator: Coordinator {
     init (navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+  
     func start() {
         let loggedOutViewController = LoggedOutViewController()
         

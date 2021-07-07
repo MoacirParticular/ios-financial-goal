@@ -18,17 +18,22 @@ public class HomeCoordinator: Coordinator {
     public func start() {
         DispatchQueue.main.async {
             let homeViewController = HomeViewController()
-            homeViewController.onScreenSelected = {setSelected in
+            homeViewController.onScreenSelected = { setSelected in
                 switch setSelected {
                 case .Calcs:
                     let calcs = CalcsCoordinator(navigationController: self.navigationController)
                     calcs.start()
+                case .Logout:
+                    CrudUserDefaults().delete()
+                    let startScreen = StartCoordinator(navigationController: self.navigationController)
+                    startScreen.start()
                 case .Simulator:
                     homeViewController.showDefaultAlert(.Warning, .SimulatorUnavailable)
                 default:
                     break
                 }
             }
+            
             homeViewController.onButtonActionView = {setSelected in
                 if setSelected == CalcsTypesScreen.Monthly.stringValue{
                     let screen = MonthlyCoordinator(navigationController: self.navigationController)

@@ -10,6 +10,7 @@ import UIKit
 class HomeView: UIView {
     
     var buttonActionView: (() -> Void)?
+    var logout: ((_ act: LoginActionType) -> Void)?
 
     //MARK: Cria e seta elementos na view
     override init(frame: CGRect) {
@@ -116,6 +117,7 @@ class HomeView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
         button.frame = FrameConstants.frameZero
         button.setImage(.imageIconNotification, for: .normal)
+        button.addTarget(self, action: #selector(buttonActionLogout), for: .touchUpInside)
         return button
     }()
     
@@ -185,6 +187,11 @@ class HomeView: UIView {
     @objc
     func buttonActionLastSimulator(sender: UIButton!) {
         buttonActionView?()
+    }
+    
+    @objc
+    func buttonActionLogout(sender: UIButton!) {
+        logout?(.Logout)
     }
     
     //MARK: Label icone em roxo

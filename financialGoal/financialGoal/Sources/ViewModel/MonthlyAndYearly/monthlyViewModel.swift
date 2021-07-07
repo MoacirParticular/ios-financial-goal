@@ -27,7 +27,5 @@ final class MonthlyViewModel {
             }
             completionHandler(dataRet, errorReceived)
         }
-        
     }
-    
 }
