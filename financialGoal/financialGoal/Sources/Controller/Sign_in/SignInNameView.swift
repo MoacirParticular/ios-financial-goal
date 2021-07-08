@@ -11,25 +11,16 @@ class SignInNameView: UIView {
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
-    let lbSubtitle: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = ValuesSignIn_Name.subtitile
-        label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
-        label.font = .fontLabelTitleRegular
-        return label
+    lazy var lbSubtitle: UILabel = {
+        LabelComponent(.fontLabelTitleRegular, ValuesSignIn_Name.subtitile)
     }()
-    let lbDescription: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_Name.description
-        label.font = .fontLabelSubTitleRegular
-        return label
+    lazy var lbDescription: UILabel = {
+        LabelComponent(.fontLabelSubTitleRegular, ValuesSignIn_Name.description,
+                       .customColorPageControl)
     }()
     
     // MARK: - TextField
-    let txtField: UITextField = {
+    lazy var txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
         tField.backgroundColor = .customColorTextField
@@ -42,7 +33,7 @@ class SignInNameView: UIView {
     }()
     
     // MARK: - Button
-    let bttnContinue: UIButton = {
+    lazy var bttnContinue: UIButton = {
         let bttn = UIButton()
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal

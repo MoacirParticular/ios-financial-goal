@@ -572,6 +572,7 @@
 		3FE9961E2677A4DD0068E95B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				89FC312B2697352A009D4091 /* Component */,
 				C12D228B267B82AA002C0275 /* LoginActionType.swift */,
 				1CC54335267A3BB700A807B4 /* LoginType.swift */,
 				C1676501268CE69F001B90B8 /* CalcsTypesScreen.swift */,
@@ -741,7 +742,6 @@
 				892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */,
 				89ACC036268B58CA00851CEC /* MonthlyViewController.swift */,
 				89C549C4268D49B9007290C5 /* MotherCalcs.swift */,
-				89FC312626962C01009D4091 /* LabelComponent.swift */,
 			);
 			path = Monthly;
 			sourceTree = "<group>";
@@ -794,6 +794,14 @@
 				89C9FFC92682450100B45338 /* SignInData.swift */,
 			);
 			path = Sign_in;
+			sourceTree = "<group>";
+		};
+		89FC312B2697352A009D4091 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				89FC312626962C01009D4091 /* LabelComponent.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		C111DEAD268D417A00C4F987 /* Taxes */ = {

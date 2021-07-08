@@ -13,25 +13,16 @@ class SignInPasswdView: UIView {
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
-    let lbSubtitle: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = ValuesSignIn_Passwd.subtitile
-        label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
-        label.font = .fontLabelTitleRegular
-        return label
+    lazy var lbSubtitle: UILabel = {
+        LabelComponent(.fontLabelTitleRegular, ValuesSignIn_Passwd.subtitile)
     }()
-    let lbDescription: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_Passwd.description
-        label.font = .fontLabelSubTitleRegular
-        return label
+    lazy var lbDescription: UILabel = {
+        LabelComponent(.fontLabelSubTitleRegular, ValuesSignIn_Passwd.description,
+                       .customColorPageControl)
     }()
     
     // MARK: - TextField
-    let txtField: UITextField = {
+    lazy var txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
         tField.backgroundColor = .customColorTextField
@@ -43,19 +34,15 @@ class SignInPasswdView: UIView {
         tField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
         return tField
     }()
-    let lbObservation: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_Passwd.observation
-        label.font = .fontDescriptionRegular
-//        label.backgroundColor = .cyan
-        label.textAlignment = .center
-        return label
+    
+    // MARK: - Label observation
+    lazy var lbObservation: UILabel = {
+        LabelComponent(.fontDescriptionRegular, ValuesSignIn_Passwd.observation,
+                       .customColorPageControl, .center)
     }()
     
     // MARK: - Button
-    let bttnContinue: UIButton = {
+    lazy var bttnContinue: UIButton = {
         let bttn = UIButton()
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal
