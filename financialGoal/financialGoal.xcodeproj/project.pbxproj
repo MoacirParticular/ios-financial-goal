@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C197B89269388890013F347 /* EnumIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C197B88269388890013F347 /* EnumIndex.swift */; };
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
+		1C36EF54269744F0001A5B06 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C36EF53269744F0001A5B06 /* ButtonComponent.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
 		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
 		1C7BB246268A7E6200D0E196 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB245268A7E6200D0E196 /* HomeConstants.swift */; };
@@ -169,6 +170,7 @@
 /* Begin PBXFileReference section */
 		1C197B88269388890013F347 /* EnumIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIndex.swift; sourceTree = "<group>"; };
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
+		1C36EF53269744F0001A5B06 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
 		1C7BB245268A7E6200D0E196 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
@@ -800,6 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				89FC312626962C01009D4091 /* LabelComponent.swift */,
+				1C36EF53269744F0001A5B06 /* ButtonComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				C1676502268CE69F001B90B8 /* CalcsTypesScreen.swift in Sources */,
 				893F1E6C268E627200880717 /* StructApplicationCalc.swift in Sources */,
 				892A29EA268B8D9F00DF9299 /* ApplicationCalcView.swift in Sources */,
+				1C36EF54269744F0001A5B06 /* ButtonComponent.swift in Sources */,
 				C11FD8F526838056009D5C9D /* RequestBuilderRecoveryPass.swift in Sources */,
 				1CBB6D102683FBBA0040FB61 /* Activity+.swift in Sources */,
 				895D58DA267BF49300C4BE4B /* SignInNameViewController.swift in Sources */,
