@@ -101,27 +101,10 @@ public class LoginView: UIView {
     }
 
     //MARK: Create Buttons
-    let buttonLogin: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.frame = ConstantsConstraintsBtLogin.frameBtLogin
-        button.layer.cornerRadius = ConstantsConstraintsBtLogin.cornerRadiusButton
-        button.backgroundColor = .blackCustomGoal
-        button.setTitle(StringConstantsLogin.titleButtonLogin, for: .normal)
-        button.titleLabel?.font = .fontButtonsBlack
-        return button
-    }()
+    let buttonLogin: UIButton = {ButtonComponent(title: StringConstantsLogin.titleButtonLogin, background: .blackCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ConstantsConstraintsBtLogin.cornerRadiusButton
+)}()
 
-    let buttonForgotPassword: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.frame = ConstantsConstraintsBtForgetPass.frameBtForgotPass
-        button.setTitleColor(.blackCustomGoal, for: .normal)
-        button.contentHorizontalAlignment = .left
-        button.setTitle(StringConstantsLogin.titleButtonPassword, for: .normal)
-        button.titleLabel?.font = .fontForgetPasswordSubTitleRegular
-        return button
-    }()
+    let buttonForgotPassword: UIButton = {ButtonComponent(title: StringConstantsLogin.titleButtonPassword, colorTitle: .blackCustomGoal, font: .fontForgetPasswordSubTitleRegular)}()
 
     //MARK: Constraints Buttons
     func setButtonLogin(){

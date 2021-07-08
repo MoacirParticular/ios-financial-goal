@@ -79,29 +79,9 @@ class LoggedOutView: UIView {
     }
     
     //MARK: BUTTONS
-     let buttonCreateAccount: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        button.frame = FrameConstants.frameZero
-        button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
-        button.backgroundColor = .greenCustomGoal
-        button.titleLabel?.font = .fontButtonsBlack
-        button.setTitle(StringConstants.titleButtonCreateAccount, for: .normal)
-        button.tintColor = .customColorTextButton
-        return button
-    }()
+     let buttonCreateAccount: UIButton = {ButtonComponent(title: StringConstants.titleButtonCreateAccount, background: .greenCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ButtonConstants.cornerRadiusButtom)}()
     
-    let buttonLogin: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.frame = FrameConstants.frameZero
-        button.layer.cornerRadius = ButtonConstants.cornerRadiusButtom
-        button.backgroundColor = .blackCustomGoal
-        button.titleLabel?.font = .fontButtonsBlack
-        button.setTitle(StringConstants.titleButtonLogin, for: .normal)
-        button.tintColor = .customColorTextButton
-        return button
-    }()
+    let buttonLogin: UIButton = {ButtonComponent(title: StringConstants.titleButtonLogin, background: .blackCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ButtonConstants.cornerRadiusButtom)}()
     
     //MARK: Constraints Buttons
     func setButtonCreateAccount(){
