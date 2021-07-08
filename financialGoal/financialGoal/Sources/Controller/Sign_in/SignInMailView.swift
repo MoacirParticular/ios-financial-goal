@@ -13,25 +13,18 @@ class SignInMailView: UIView {
     var buttonAction: (() -> Void)?
     
     // MARK: - Label
-    let lbSubtitle: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = ValuesSignIn_Mail.subtitile
+    lazy var lbSubtitle: UILabel = {
+        let label = LabelComponent(.fontLabelTitleRegular, ValuesSignIn_Mail.subtitile)
         label.numberOfLines = StaticConfigLabel.subtitleNumberOfLines
-        label.font = .fontLabelTitleRegular
         return label
     }()
-    let lbDescription: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.textColor = .customColorPageControl
-        label.text = ValuesSignIn_Mail.description
-        label.font = .fontLabelSubTitleRegular
-        return label
+    lazy var lbDescription: UILabel = {
+        LabelComponent(.fontLabelSubTitleRegular, ValuesSignIn_Mail.description,
+                       .customColorPageControl)
     }()
     
     // MARK: - TextField
-    let txtField: UITextField = {
+    lazy var txtField: UITextField = {
        let tField = UITextField()
         UIView.configInitailElements(tField)
         tField.backgroundColor = .customColorTextField
@@ -45,7 +38,7 @@ class SignInMailView: UIView {
     }()
     
     // MARK: - Button
-    let bttnContinue: UIButton = {
+    lazy var bttnContinue: UIButton = {
         let bttn = UIButton()
         UIView.configInitailElements(bttn)
         bttn.backgroundColor = .blackCustomGoal

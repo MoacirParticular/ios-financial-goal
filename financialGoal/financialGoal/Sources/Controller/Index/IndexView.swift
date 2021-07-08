@@ -43,13 +43,7 @@ public class IndexView: UIView {
 
     //MARK: Label 1
     let lbCorrectionIndex: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = IndexConstants.textLbCorrectionIndex
-        label.textAlignment = .left
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, IndexConstants.textLbCorrectionIndex)
     }()
     
     private func setlbCorrectionIndex() {
@@ -111,13 +105,7 @@ public class IndexView: UIView {
     
     //MARK: Label 2
     let lbPreAndPostFixed: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = IndexConstants.titleLbPreAndPosFix
-        label.textAlignment = .left
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, IndexConstants.titleLbPreAndPosFix)
     }()
       
     private func setlbPreAndPostFixed() {
@@ -204,13 +192,7 @@ public class IndexView: UIView {
    
     //MARK: Create Label 3
     let lbValueInvest: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = IndexConstants.tfTitleValueInvest
-        label.textAlignment = .left
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, IndexConstants.tfTitleValueInvest)
     }()
     
     private func setlbValueInvest() {
@@ -250,13 +232,7 @@ public class IndexView: UIView {
  
     //MARK: Label 4
     let lbDueDate: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = IndexConstants.lbDueDateTitle
-        label.textAlignment = .left
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, IndexConstants.lbDueDateTitle)
     }()
 
     private func setlbDueDate() {
@@ -295,13 +271,7 @@ public class IndexView: UIView {
     
     //MARK: Label 5
     let lbPorcentYearly: UILabel = {
-        let label = UILabel()
-        UIView.configInitailElements(label)
-        label.text = IndexConstants.lbTitlePorcentYearly
-        label.textAlignment = .left
-        label.textColor = .blackCustomGoal
-        label.font = .fontTextFieldTaxes
-        return label
+        LabelComponent(.fontTextFieldTaxes, IndexConstants.lbTitlePorcentYearly)
     }()
    
     private func setlbPorcentYearly() {
@@ -381,7 +351,6 @@ public class IndexView: UIView {
         ])
     }
     
-    
     //MARK: Actions Buttons
     
     @objc
@@ -398,7 +367,4 @@ public class IndexView: UIView {
     func actionButtonChangeTwo (sender: UIButton!) {
         onButtonCorrectionIndex?(.PeriodFix)
     }
-    
 }
-
-
