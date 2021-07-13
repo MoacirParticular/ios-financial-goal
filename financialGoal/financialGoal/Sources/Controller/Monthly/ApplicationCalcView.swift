@@ -34,16 +34,8 @@ class ApplicationCalcView: UIView {
     lazy var tfFifth: UITextField = { createTextField() }()
     
     // MARK: - Button
-    let bttnCalcular: UIButton = {
-        let bttn = UIButton()
-        UIView.configInitailElements(bttn)
-        bttn.backgroundColor = .blackCustomGoal
-        bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
-        bttn.setTitleColor(.customColorTextButton, for: .normal)
-        bttn.titleLabel?.font = .fontButtonsBlack
-        return bttn
-    }()
-    
+    let bttnCalcular: UIButton = {ButtonComponent(title: "CALCULAR" , background: .blackCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ValuesConstraintsButton.radiusValue)}()
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .backgroundCustomGoal
@@ -86,7 +78,7 @@ class ApplicationCalcView: UIView {
         
         alignButton(button: bttnCalcular, top: tfFifth)
         bttnCalcular.addTarget(self, action: #selector(setAction), for: .touchUpInside)
-        bttnCalcular.setTitle(infoScreen.buttonTitle, for: .normal)
+       // bttnCalcular.setTitle(infoScreen.buttonTitle, for: .normal)
     }
     
     // MARK: - Monthly configuration

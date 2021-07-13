@@ -33,17 +33,7 @@ class SignInNameView: UIView {
     }()
     
     // MARK: - Button
-    lazy var bttnContinue: UIButton = {
-        let bttn = UIButton()
-        UIView.configInitailElements(bttn)
-        bttn.backgroundColor = .blackCustomGoal
-        bttn.layer.cornerRadius = ValuesConstraintsButton.radiusValue
-        bttn.setTitleColor(.customColorTextButton, for: .normal)
-        bttn.titleLabel?.font = .fontButtonsBlack
-        bttn.setTitle(ValuesSignIn_Name.buttonTitle, for: .normal)
-        bttn.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
-        return bttn
-    }()
+    lazy var bttnContinue: UIButton = {ButtonComponent(title: ValuesSignIn_Name.buttonTitle, background: .blackCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ValuesConstraintsButton.radiusValue)}()
     
     // MARK: - Methods/ Functions
     override init(frame: CGRect) {
@@ -93,6 +83,7 @@ class SignInNameView: UIView {
     }
     
     private func alignBttnContinue() {
+        bttnContinue.addTarget(self, action: #selector(receiveActionButton), for: .touchUpInside)
         self.addSubview(bttnContinue)
         NSLayoutConstraint.alignDefaultButton(bttnContinue, self)
         NSLayoutConstraint.activate([

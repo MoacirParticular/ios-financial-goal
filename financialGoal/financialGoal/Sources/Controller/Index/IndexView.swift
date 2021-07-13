@@ -75,14 +75,7 @@ public class IndexView: UIView {
     }
     
     //MARK: Button "mudar" 1
-    var buttonCorrectionIndex: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.setTitle(IndexConstants.titleButton, for: .normal)
-        button.titleLabel?.font = .fontTextFieldTaxes
-        button.setTitleColor(.customColorRoxo, for: .normal)
-        return button
-    }()
+    var buttonCorrectionIndex: UIButton = {ButtonComponent(title: IndexConstants.titleButton, colorTitle: .customColorRoxo, font: .fontTextFieldTaxes)}()
 
     func setButtonCorrectionIndex(){
         addSubview(buttonCorrectionIndex)
@@ -130,15 +123,9 @@ public class IndexView: UIView {
     }
     
     //MARK: Button "mudar" 2
-    var buttonPreAndPostFixed: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        button.setTitle(IndexConstants.titleButton, for: .normal)
-        button.titleLabel?.font = .fontTextFieldTaxes
-        button.setTitleColor(.customColorRoxo, for: .normal)
-        return button
-    }()
+    var buttonPreAndPostFixed: UIButton = {ButtonComponent(title: IndexConstants.titleButton, colorTitle: .customColorRoxo, font: .fontTextFieldTaxes)}()
     
+     
     func setButtonPreAndPostFixed(){
         addSubview(buttonPreAndPostFixed)
         buttonPreAndPostFixed.addTarget(self, action: #selector(actionButtonChangeTwo), for: .touchUpInside)
@@ -285,15 +272,8 @@ public class IndexView: UIView {
     }
     
     // MARK: - Button "CALCULAR"
-    let bttnCalc: UIButton = {
-        let button = UIButton()
-        UIView.configInitailElements(button)
-        button.backgroundColor = .blackCustomGoal
-        button.setTitle(IndexConstants.titleButtonCalc, for: .normal)
-        button.layer.cornerRadius = ValuesConstraintsButton.radiusValue
-        button.titleLabel?.font = .fontButtonsBlack
-        return button
-    }()
+    let bttnCalc: UIButton = {ButtonComponent(title: IndexConstants.titleButtonCalc, background: .blackCustomGoal, colorTitle: .customColorTextButton, font: .fontButtonsBlack, radius: ValuesConstraintsButton.radiusValue)}()
+    
 
     func setButtonCalc(){
         addSubview(bttnCalc)
