@@ -58,17 +58,10 @@ public class IndexView: UIView {
     //MARK: Create TextField 1
     lazy var textFieldCorrectionIndex:UITextField = {
         let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.isUserInteractionEnabled = false
-        textField.backgroundColor = .customColorTextField
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.addShadow()
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.isUserInteractionEnabled = false
+        tf.addShadow()
+        return tf
     }()
     
     func setTextFieldCorrectionIndex() {
@@ -105,7 +98,8 @@ public class IndexView: UIView {
     
     //MARK: Label 2
     let lbPreAndPostFixed: UILabel = {
-        LabelComponent(.fontTextFieldTaxes, IndexConstants.titleLbPreAndPosFix)
+        LabelComponent(.fontTextFieldTaxes,
+                       IndexConstants.titleLbPreAndPosFix)
     }()
       
     private func setlbPreAndPostFixed() {
@@ -119,18 +113,10 @@ public class IndexView: UIView {
     
     //MARK: Create TextField 2
     lazy var textFieldPreAndPostFixed:UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.isUserInteractionEnabled = false
-        textField.backgroundColor = .customColorTextField
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.addShadow()
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.isUserInteractionEnabled = false
+        tf.addShadow()
+        return tf
     }()
     
     func setTextFieldPreAndPostFixed() {
@@ -167,17 +153,9 @@ public class IndexView: UIView {
     
     //MARK: Create TextField 3
     lazy var textFieldValueInvest:UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.backgroundColor = .customColorTextField
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.addShadow()
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.addShadow()
+        return tf
     }()
     
     func setTextFieldValueInvest() {
@@ -207,17 +185,9 @@ public class IndexView: UIView {
     
     //MARK: Create TextField 4
     lazy var textFieldDueDate:UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.backgroundColor = .customColorTextField
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.addShadow()
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.addShadow()
+        return tf
     }()
     
     func setTextFieldDueDate() {
@@ -246,17 +216,9 @@ public class IndexView: UIView {
     
     //MARK: Create TextField 5
     lazy var textFieldPorcentYearly:UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .customColorResultTaxes
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.backgroundColor = .customColorTextField
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.addShadow()
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.addShadow()
+        return tf
     }()
     
     func setTextFieldPorcentYearly() {
@@ -285,17 +247,11 @@ public class IndexView: UIView {
     
     //MARK: Create TextField 6
     lazy var textFieldResult:UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-        textField.textColor = .blackCustomGoal
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.font = UIFont.fontTextFieldTaxes
-        textField.isUserInteractionEnabled = false
-        textField.backgroundColor = .customColorResultTaxes
-        textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-        textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-        textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-        return textField
+        let tf:UITextField = TextFieldComponent()
+        tf.isUserInteractionEnabled = false
+        tf.backgroundColor = .customColorResultTaxes
+        tf.textColor = .customColorResultLabel
+        return tf
     }()
     
     func setTextFieldResult() {

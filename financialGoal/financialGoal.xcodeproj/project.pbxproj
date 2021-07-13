@@ -138,6 +138,7 @@
 		C17A5B4326937248007669A7 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B4226937248007669A7 /* IndexViewController.swift */; };
 		C17A5B4526937258007669A7 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B4426937258007669A7 /* IndexView.swift */; };
 		C17A5B47269374EF007669A7 /* IndexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5B46269374EF007669A7 /* IndexCoordinator.swift */; };
+		C17B740D269739D70085200F /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B740C269739D60085200F /* TextFieldComponent.swift */; };
 		C1A18A8F268B9D8F002E252B /* CalcsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */; };
 		C1A18A9C268BDE39002E252B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9A268BDE39002E252B /* OFL.txt */; };
 		C1A18A9D268BDE39002E252B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */; };
@@ -303,6 +304,7 @@
 		C17A5B4226937248007669A7 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		C17A5B4426937258007669A7 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		C17A5B46269374EF007669A7 /* IndexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCoordinator.swift; sourceTree = "<group>"; };
+		C17B740C269739D60085200F /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		C1A18A8E268B9D8F002E252B /* CalcsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcsTypes.swift; sourceTree = "<group>"; };
 		C1A18A9A268BDE39002E252B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		C1A18A9B268BDE39002E252B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -800,6 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				89FC312626962C01009D4091 /* LabelComponent.swift */,
+				C17B740C269739D60085200F /* TextFieldComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1086,6 +1089,7 @@
 				8958E69D2693AA6700F121C2 /* RequestIndexCalc.swift in Sources */,
 				892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */,
 				1CC238C526823594000653F6 /* RequestBuilderLogin.swift in Sources */,
+				C17B740D269739D70085200F /* TextFieldComponent.swift in Sources */,
 				3FE9961D2677A4B30068E95B /* String+.swift in Sources */,
 				1CC238C026823325000653F6 /* RequestSignIn.swift in Sources */,
 				89365A4C267A7ED50087531D /* NSLayoutConstraint+.swift in Sources */,

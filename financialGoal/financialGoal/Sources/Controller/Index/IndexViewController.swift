@@ -24,10 +24,17 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         navigationTitleConfig(title: IndexData.titlenavigation)
         listenIndex()
         setInitial()
+        textfieldsDelegate()
     }
     
     override func loadView() {
         self.scrollView.addSubview(indexView)
+    }
+    
+    func textfieldsDelegate(){
+        self.indexView.textFieldPorcentYearly.delegate = self
+        self.indexView.textFieldDueDate.delegate = self
+        self.indexView.textFieldValueInvest.delegate = self
     }
     
     //MARK: Set ScrollView
@@ -62,12 +69,9 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     //MARK: Inicia os textField com valores na primeira posição do array
     func setInitial(){
-
+        
         self.indexView.textFieldCorrectionIndex.text = IndexData.initialValueCorretion
         self.indexView.textFieldPreAndPostFixed.text = IndexData.initialValuePreAndPostFixed
-      
-        //self.indexView.textFieldCorrectionIndex.text = dataCorrectionIndex[0]
-       //self.indexView.textFieldPreAndPostFixed.text = dataPreAndPostFixed[0]
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -142,24 +146,38 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         guard let porcentYesarly = self.indexView.textFieldPorcentYearly.text else { return }
         let porcentYesarlyDouble = NSString(string: porcentYesarly).doubleValue
-
+        
         let dataSubmit = IndexCalcSubmit(initial: valueInvestDouble, cdiPercent: porcentYesarlyDouble, profitabilityDefinition: preAndPostFixed, period: dueDateInt, type: correctionIndex)
         requestApi(dataSubmit: dataSubmit)
     }
     
     func requestApi(dataSubmit: IndexCalcSubmit) {
         print(dataSubmit)
-       let requestIndex = IndexCalcViewModel()
+        let requestIndex = IndexCalcViewModel()
         requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
-            print(returnApi)
             if let totalInvestment = returnApi?.data?.updatedInvestedAmount{
                 DispatchQueue.main.async {
                     self.indexView.textFieldResult.text = totalInvestment
                 }
             }
-            
         }
-        
+    }
+    
+}
+
+extension IndexViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var responseBolean = true
+        let invalidCharacters = CharacterSet(charactersIn: ValueCalcsConstants.charactersAccepted).inverted
+        responseBolean = string.rangeOfCharacter(from: invalidCharacters) == nil
+        if responseBolean {
+            let currentText = textField.text ?? String.empty
+            guard let stringRange = Range(range, in: currentText) else { return false }
+            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+            return updatedText.count <= ValueCalcsConstants.limitCharacters
+        }
+        return responseBolean
     }
 }
 
