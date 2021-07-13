@@ -29,32 +29,19 @@ public class TaxesView: UIView {
     }
 
    //MARK: Create TextFields
-   lazy var textFieldYearly:UITextField = {
-    let textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-    textField.textColor = .customColorResultTaxes
-    textField.keyboardType = UIKeyboardType.numberPad
-    textField.font = UIFont.fontTextFieldTaxes
-    textField.backgroundColor = .customColorTextField
-    textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-    textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-    textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-    textField.addShadow()
-    return textField
-   }()
+    lazy var textFieldYearly:UITextField = {
+        let tf:UITextField = TextFieldComponent()
+        tf.isUserInteractionEnabled = true
+        tf.addShadow()
+        return tf
+    }()
     
    lazy var textFieldMonthly:UITextField = {
-    var textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = ConstantsConstraintsLogin.maskIntoConstraints
-    textField.textColor = .customColorResultLabel
-    textField.keyboardType = UIKeyboardType.numberPad
-    textField.font = UIFont.fontTextFieldTaxes
-    textField.backgroundColor = .customColorResultTaxes
-    textField.layer.cornerRadius = ConstantsConstraintsLogin.cornerRadiusTF
-    textField.borderStyle = UITextField.BorderStyle.none
-    textField.setLeftPaddingPoints(ValuesConstraintsTextField.textIdent)
-    textField.setRightPaddingPoints(ValuesConstraintsTextField.textIdent)
-    return textField
+    let tf = TextFieldComponent()
+    tf.textColor = .customColorResultLabel
+    tf.backgroundColor = .customColorResultTaxes
+    tf.borderStyle = UITextField.BorderStyle.none
+    return tf
    }()
     
     //MARK: Constraints TextFields
