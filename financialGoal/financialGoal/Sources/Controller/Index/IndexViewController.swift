@@ -152,8 +152,6 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func requestApi(dataSubmit: IndexCalcSubmit) {
-       let requestIndex = IndexCalcViewModel()
-        print(dataSubmit)
         let requestIndex = IndexCalcViewModel()
         requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
             if let totalInvestment = returnApi?.data?.updatedInvestedAmount{
