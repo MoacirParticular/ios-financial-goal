@@ -134,18 +134,37 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
+    private func getInputValues() -> [String] {
+        guard let valueInvest = self.indexView.textFieldValueInvest.text  else { return [String.empty] }
+        guard let dueDate = self.indexView.textFieldDueDate.text else { return [String.empty] }
+        guard let porcentYesarly = self.indexView.textFieldPorcentYearly.text else { return [String.empty] }
+        
+        return [valueInvest, dueDate, porcentYesarly]
+    }
+    
+    private func checkIfLessThan(fields: [String]) -> Bool {
+        for i in fields {
+            let value = NSString(string: i).doubleValue
+            if value < ValueCalcsConstants.minimumValue {
+                return false
+            }
+        }
+        return true
+    }
+    
     private func getDataInputs() {
+        let values = getInputValues()
+        if !checkIfLessThan(fields: values) {
+            self.showDefaultAlert(.Warning, .InputError)
+            return
+        }
+        
         guard let correctionIndex = self.indexView.textFieldCorrectionIndex.text else { return }
         guard let preAndPostFixed = self.indexView.textFieldPreAndPostFixed.text else { return }
         
-        guard let valueInvest = self.indexView.textFieldValueInvest.text  else { return }
-        let valueInvestDouble = NSString(string: valueInvest).doubleValue
-        
-        guard let dueDate = self.indexView.textFieldDueDate.text else { return }
-        let dueDateInt = NSString(string: dueDate).integerValue
-        
-        guard let porcentYesarly = self.indexView.textFieldPorcentYearly.text else { return }
-        let porcentYesarlyDouble = NSString(string: porcentYesarly).doubleValue
+        let valueInvestDouble = NSString(string: values[0]).doubleValue
+        let dueDateInt = NSString(string: values[1]).integerValue
+        let porcentYesarlyDouble = NSString(string: values[2]).doubleValue
         
         let dataSubmit = IndexCalcSubmit(initial: valueInvestDouble, cdiPercent: porcentYesarlyDouble, profitabilityDefinition: preAndPostFixed, period: dueDateInt, type: correctionIndex)
         requestApi(dataSubmit: dataSubmit)
@@ -156,13 +175,12 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
             if let totalInvestment = returnApi?.data?.updatedInvestedAmount{
                 DispatchQueue.main.async {
-                    self.indexView.textFieldResult.text = totalInvestment
+                    let valueToPrint = YearlyConstants.realValue + self.formatNumberToDecimal(value: NSString(string: totalInvestment).doubleValue)
+                    self.indexView.textFieldResult.text = valueToPrint
                 }
             }
         }
-
     }
-    
 }
 
 extension IndexViewController: UITextFieldDelegate {
