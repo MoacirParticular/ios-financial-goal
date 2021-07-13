@@ -16,7 +16,6 @@ protocol RequestIndexCalcProtocol {
 final class RequestIndexCalc: RequestIndexCalcProtocol {
     func calc(_ indexCalc: IndexCalcSubmit, completionHandler: @escaping returnIndexCalc) {
         let bodyTask = RequestBuilderIndexCalc().calc(indexCalc)
-        print("FUNCIONOU",bodyTask.httpBody?.description)
         let session = URLSession.shared
         let task = session.dataTask(with: bodyTask) { (data, response, error) in
             if let error = error {

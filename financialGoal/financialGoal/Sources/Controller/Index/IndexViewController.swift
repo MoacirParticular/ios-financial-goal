@@ -148,18 +148,14 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func requestApi(dataSubmit: IndexCalcSubmit) {
-        print(dataSubmit)
        let requestIndex = IndexCalcViewModel()
         requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
-            print(returnApi)
             if let totalInvestment = returnApi?.data?.updatedInvestedAmount{
                 DispatchQueue.main.async {
                     self.indexView.textFieldResult.text = totalInvestment
                 }
             }
-            
         }
-        
     }
 }
 
