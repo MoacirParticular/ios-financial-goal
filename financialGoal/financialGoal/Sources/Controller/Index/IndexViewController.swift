@@ -152,6 +152,7 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func requestApi(dataSubmit: IndexCalcSubmit) {
+       let requestIndex = IndexCalcViewModel()
         print(dataSubmit)
         let requestIndex = IndexCalcViewModel()
         requestIndex.requestCalc(dataSubmit) { (returnApi, error) in
@@ -161,6 +162,7 @@ class IndexViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 }
             }
         }
+
     }
     
 }
@@ -178,6 +180,7 @@ extension IndexViewController: UITextFieldDelegate {
             return updatedText.count <= ValueCalcsConstants.limitCharacters
         }
         return responseBolean
+
     }
 }
 

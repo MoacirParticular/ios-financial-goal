@@ -17,7 +17,6 @@ struct DataResponse: Codable {
     let cdbIndex: Double?
     let initial: Double?
     let updatedInvestedAmount: String?
-    let incomeTaxOnProfitability: String?
     let grossProfit: String?
     let netAmountOfInvestment: String?
 }
