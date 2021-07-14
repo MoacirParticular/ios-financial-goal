@@ -43,7 +43,7 @@ public extension UIFont {
     
     //MARK: Tamanho da fonte NickName tela home
     static var fontNickNameHome: UIFont {
-        return UIFont(name: "Roboto-Regular", size: 32) ?? fontDefaultGeorgia
+        return UIFont(name: "Roboto-Regular", size: 28) ?? fontDefaultGeorgia
     }
   
     //MARK: Tamanho e fonte Labels Telas de calculos
@@ -63,6 +63,10 @@ public extension UIFont {
     //MARK: Tamanho e Fonte das Labels da tela Taxes
     static var fontTextFieldTaxes: UIFont {
         return UIFont(name: "Roboto-Regular", size: 18) ?? fontDefaultGeorgia
+    }
+    //MARK: Tamanho da fonte "acessar perfil"
+    static var fontAccessProfile: UIFont {
+        return UIFont(name: "Roboto-Regular", size: 14) ?? fontDefaultGeorgia
     }
 }
 

@@ -25,6 +25,10 @@ class HomeView: UIView {
     private func setView(){
         setTopScreenView()
         setLabelNickName()
+        setScreenInCircle()
+        setImageProfile()
+        setButtonAccessProfile()
+        setLineView()
         setButtonIconNotification()
         setButtonIconCalculator()
         setCollectionView()
@@ -68,7 +72,7 @@ class HomeView: UIView {
         label.text = SignInData.nickname
         label.font = .fontNickNameHome
         label.textColor = .customColorResultLabel
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
     
@@ -77,8 +81,81 @@ class HomeView: UIView {
       
         NSLayoutConstraint.activate([
             labelNickName.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: HomeConstants.topAnchorLabelNickname),
-            labelNickName.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.constantZero),
+            labelNickName.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 89),
             labelNickName.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.constantZero)
+        ])
+    }
+    //MARK: View Circle
+    var screenInCircle: UIView = {
+        let circle = UIView()
+        circle.translatesAutoresizingMaskIntoConstraints = false
+        circle.layer.cornerRadius = 22
+        circle.layer.borderWidth = 2
+        circle.layer.borderColor = UIColor.customColorResultLabel.cgColor
+        return circle
+    }()
+    
+    public func setScreenInCircle(){
+        addSubview(screenInCircle)
+        NSLayoutConstraint.activate([
+            screenInCircle.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 118),
+            screenInCircle.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 30),
+            screenInCircle.heightAnchor.constraint(equalToConstant: 46),
+            screenInCircle.widthAnchor.constraint(equalToConstant: 46)
+        ])
+    }
+    
+    //MARK: Image profile
+    var imageProfile: UIImageView = {
+       let img = UIImageView(image: .iconProfile)
+       img.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
+       return img
+   }()
+   
+   func setImageProfile() {
+    screenInCircle.addSubview(imageProfile)
+    
+
+       NSLayoutConstraint.activate([
+        imageProfile.centerXAnchor.constraint(equalTo: screenInCircle.centerXAnchor),
+        imageProfile.centerYAnchor.constraint(equalTo: screenInCircle.centerYAnchor)
+       ])
+   }
+    
+    //MARK: Label access profile
+     lazy var buttonAccessProfile: UIButton = {ButtonComponent(title: "acessar perfil >", colorTitle: .customColorResultLabel, font: .fontAccessProfile)}()
+     
+     func setButtonAccessProfile() {
+         addSubview(buttonAccessProfile)
+        buttonAccessProfile.addTarget(self, action: #selector(buttonActionAccessProfile), for: .touchUpInside)
+         NSLayoutConstraint.activate([
+             buttonAccessProfile.topAnchor.constraint(equalTo: labelNickName.bottomAnchor, constant: 1),
+             buttonAccessProfile.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 89),
+             buttonAccessProfile.heightAnchor.constraint(equalToConstant: 20)
+         ])
+     }
+    @objc
+    func buttonActionAccessProfile(sender: UIButton!) {
+        print("Tela de profile")
+    }
+ 
+    //MARK: Linha após o botão acessar perfil
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .customColorResultLabel
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    public func setLineView() {
+        addSubview(lineView)
+        let screenWidth = UIScreen.main.bounds.width - 32
+        NSLayoutConstraint.activate([
+            lineView.topAnchor.constraint(equalTo: self.buttonAccessProfile.bottomAnchor, constant: 31),
+            lineView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: 1),
+            lineView.widthAnchor.constraint(equalToConstant: screenWidth )
+            
         ])
     }
   
