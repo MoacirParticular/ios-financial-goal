@@ -23,11 +23,9 @@ public class HomeCoordinator: Coordinator {
                 case .Calcs:
                     let calcs = CalcsCoordinator(navigationController: self.navigationController)
                     calcs.start()
-                case .Logout:
-                    CrudUserDefaults().delete()
-                    KeychainService.deleteCredentials()
-                    let startScreen = StartCoordinator(navigationController: self.navigationController)
-                    startScreen.start()
+                case .Profile:
+                    let profileScreen = ProfileCoordinator(navigationController: self.navigationController)
+                    profileScreen.start()
                 case .Simulator:
                     homeViewController.showDefaultAlert(.Warning, .SimulatorUnavailable)
                 default:

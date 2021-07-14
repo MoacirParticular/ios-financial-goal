@@ -29,7 +29,6 @@ class HomeView: UIView {
         setImageProfile()
         setButtonAccessProfile()
         setLineView()
-        setButtonIconNotification()
         setButtonIconCalculator()
         setCollectionView()
         self.backgroundColor = .backgroundCustomGoal
@@ -122,7 +121,7 @@ class HomeView: UIView {
        ])
    }
     
-    //MARK: Label access profile
+    //MARK: Button access profile
      lazy var buttonAccessProfile: UIButton = {ButtonComponent(title: "acessar perfil >", colorTitle: .customColorResultLabel, font: .fontAccessProfile)}()
      
      func setButtonAccessProfile() {
@@ -136,7 +135,7 @@ class HomeView: UIView {
      }
     @objc
     func buttonActionAccessProfile(sender: UIButton!) {
-        print("Tela de profile")
+        logout?(.Profile)
     }
  
     //MARK: Linha após o botão acessar perfil
@@ -187,27 +186,7 @@ class HomeView: UIView {
         ])
         
     }
-    
-    //MARK: Icone notificação
-    let buttonIconNotification: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        button.frame = FrameConstants.frameZero
-        button.setImage(.imageIconNotification, for: .normal)
-        button.addTarget(self, action: #selector(buttonActionLogout), for: .touchUpInside)
-        return button
-    }()
-    
-    func setButtonIconNotification(){
-        addSubview(buttonIconNotification)
-      
-        NSLayoutConstraint.activate([
-            buttonIconNotification.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: HomeConstants.topAnchorNotification),
-            buttonIconNotification.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.rightAnchorNotification),
-        ])
 
-    }
-    
     //MARK: Icone calculadora topo
     let buttonIconCalculator: UIButton = {
         let button = UIButton()
@@ -266,11 +245,7 @@ class HomeView: UIView {
         buttonActionView?()
     }
     
-    @objc
-    func buttonActionLogout(sender: UIButton!) {
-        logout?(.Logout)
-    }
-    
+   
     //MARK: Label icone em roxo
     lazy var labelIconLink: UILabel = {
         let label = UILabel()

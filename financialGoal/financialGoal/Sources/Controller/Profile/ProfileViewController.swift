@@ -10,7 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     lazy var profileView = ProfileView(frame: .zero)
     var onLogoff: (() -> Void)?
-    let dataUser = UserData(nick: "Sabino Sampaio", user: "sabino@hotmail.com")
+    let dataUser = UserData(nick: SignInData.nickname, user: SignInData.username)
     
     override func loadView() {
         self.view = profileView
@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationTitleConfig(title: "Perfil")
         listenButton()
         
     }

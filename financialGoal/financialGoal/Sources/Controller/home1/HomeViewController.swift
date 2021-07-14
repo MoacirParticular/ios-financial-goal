@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
     
     func listennerLogout() {
         homeView.logout = { act in
-            self.onScreenSelected?(.Logout)
+            self.onScreenSelected?(.Profile)
         }
     }
 }
