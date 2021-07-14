@@ -120,6 +120,5 @@ class ProfileView: UIView {
     
     @objc private func setActionValue(sender: UIButton!) {
         self.onLogoff?()
-        print("View Foi")
     }
 }

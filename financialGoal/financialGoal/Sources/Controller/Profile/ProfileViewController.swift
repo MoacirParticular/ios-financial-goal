@@ -27,7 +27,5 @@ class ProfileViewController: UIViewController {
         profileView.onLogoff = {
             self.onLogoff?()
         }
-        print("vc Foi")
     }
-    
 }
