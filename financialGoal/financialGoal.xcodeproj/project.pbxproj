@@ -74,6 +74,9 @@
 		89192603267A664700EECCB5 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89192602267A664700EECCB5 /* SignInCoordinator.swift */; };
 		891D9FC32692A03B00352D6D /* CrudUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D9FC22692A03B00352D6D /* CrudUserDefaults.swift */; };
 		891D9FCF2692ADC600352D6D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D9FCE2692ADC600352D6D /* LoginViewModel.swift */; };
+		891EC9DA269F447600725D3A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891EC9D9269F447600725D3A /* ProfileView.swift */; };
+		891EC9DF269F51C800725D3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891EC9DE269F51C800725D3A /* ProfileViewController.swift */; };
+		891EC9E4269F538100725D3A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891EC9E3269F538100725D3A /* ProfileCoordinator.swift */; };
 		89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89266BBC2684F7330033D52C /* StatusSignIn.swift */; };
 		892A29DF268B8CAB00DF9299 /* ConstraintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */; };
 		892A29EA268B8D9F00DF9299 /* ApplicationCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */; };
@@ -242,6 +245,9 @@
 		89192602267A664700EECCB5 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		891D9FC22692A03B00352D6D /* CrudUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudUserDefaults.swift; sourceTree = "<group>"; };
 		891D9FCE2692ADC600352D6D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		891EC9D9269F447600725D3A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		891EC9DE269F51C800725D3A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		891EC9E3269F538100725D3A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		89266BBC2684F7330033D52C /* StatusSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSignIn.swift; sourceTree = "<group>"; };
 		892A29DE268B8CAB00DF9299 /* ConstraintConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstants.swift; sourceTree = "<group>"; };
 		892A29E9268B8D9F00DF9299 /* ApplicationCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCalcView.swift; sourceTree = "<group>"; };
@@ -539,6 +545,7 @@
 				C111DEB8268D449700C4F987 /* TaxesCoordinator.swift */,
 				1CECFED1268E0D1700C928A2 /* YearlyCoordinator.swift */,
 				C17A5B46269374EF007669A7 /* IndexCoordinator.swift */,
+				891EC9E3269F538100725D3A /* ProfileCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -546,6 +553,7 @@
 		3FE996182677942B0068E95B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				891EC9D8269F445500725D3A /* Profile */,
 				C17A5B4126937231007669A7 /* Index */,
 				1CECFECB268E0CAF00C928A2 /* Yearly */,
 				C111DEAD268D417A00C4F987 /* Taxes */,
@@ -639,6 +647,15 @@
 				891D9FCE2692ADC600352D6D /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		891EC9D8269F445500725D3A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				891EC9D9269F447600725D3A /* ProfileView.swift */,
+				891EC9DE269F51C800725D3A /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		892A29DD268B8CAB00DF9299 /* Monthly */ = {
@@ -804,11 +821,8 @@
 			isa = PBXGroup;
 			children = (
 				89FC312626962C01009D4091 /* LabelComponent.swift */,
-
 				C17B740C269739D60085200F /* TextFieldComponent.swift */,
-
 				1C36EF53269744F0001A5B06 /* ButtonComponent.swift */,
-
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1072,6 +1086,7 @@
 				C12D2294267B971B002C0275 /* StringConstantsLogin.swift in Sources */,
 				89FC312726962C02009D4091 /* LabelComponent.swift in Sources */,
 				3FE9961A2677A4770068E95B /* Coordinator.swift in Sources */,
+				891EC9E4269F538100725D3A /* ProfileCoordinator.swift in Sources */,
 				89ACC037268B58CA00851CEC /* MonthlyViewController.swift in Sources */,
 				89C9FFD626826E9A00B45338 /* UrlStructEnum.swift in Sources */,
 				C16764F8268CDEDA001B90B8 /* IconsCalcs.swift in Sources */,
@@ -1102,7 +1117,9 @@
 				C16764FD268CE500001B90B8 /* CalcsCoordinator.swift in Sources */,
 				1CECFED2268E0D1700C928A2 /* YearlyCoordinator.swift in Sources */,
 				896822D42684EE3200DC5476 /* ConstantApiKey.swift in Sources */,
+				891EC9DA269F447600725D3A /* ProfileView.swift in Sources */,
 				895D58D5267BF47A00C4BE4B /* SignInNameView.swift in Sources */,
+				891EC9DF269F51C800725D3A /* ProfileViewController.swift in Sources */,
 				893F1E4E268E27DC00880717 /* RequestBuilderMonthly.swift in Sources */,
 				C111DEB4268D423A00C4F987 /* TaxesViewController.swift in Sources */,
 				89266BBD2684F7330033D52C /* StatusSignIn.swift in Sources */,
