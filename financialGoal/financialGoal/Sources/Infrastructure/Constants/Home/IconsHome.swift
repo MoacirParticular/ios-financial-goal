@@ -34,5 +34,10 @@ public extension UIImage {
         return UIImage(named: "iconSimulador")!
     }
     
+    @objc
+    static var iconProfile: UIImage {
+        return UIImage(named: "iconProfile")!
+    }
+    
     
 }
