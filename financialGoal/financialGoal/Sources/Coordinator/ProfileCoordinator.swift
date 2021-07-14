@@ -24,4 +24,5 @@ class ProfileCoordinator: Coordinator {
         }
         self.navigationController.pushViewController(profileScreen, animated: true)
     }
+    
 }
