@@ -48,6 +48,10 @@ public class HomeCoordinator: Coordinator {
                     let screen = TaxesCoordinator(navigationController: self.navigationController)
                     screen.start()
                 }
+                if setSelected == CalcsTypesScreen.Index.stringValue{
+                    let screen = IndexCoordinator(navigationController: self.navigationController)
+                    screen.start()
+                }
             }
         
             self.navigationController.pushViewController(homeViewController, animated: true)
