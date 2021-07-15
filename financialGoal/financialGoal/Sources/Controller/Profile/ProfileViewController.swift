@@ -21,7 +21,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.navigationTitleConfig(title: "Perfil")
         listenButton()
-        
     }
     
     private func listenButton() {
