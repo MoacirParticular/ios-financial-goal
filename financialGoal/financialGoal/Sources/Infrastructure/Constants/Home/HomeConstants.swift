@@ -24,6 +24,25 @@ struct HomeConstants {
     
     //MARK: Label Nickname
     static let topAnchorLabelNickname: CGFloat = 112
+    static let leftAnchorLabelNickName: CGFloat = 89
+    
+    //MARK: View circulo
+    static let cornerRadiusCircle: CGFloat = 22
+    static let borderWidthCircle: CGFloat = 2
+    static let topAnchorCircle: CGFloat = 118
+    static let leftAnchorCircle: CGFloat = 30
+    static let heigthAnchorCircle: CGFloat = 46
+    static let widthAnchorCircle: CGFloat = 46
+    
+    //MARK: Botão acessar perfil
+    static let topAnchorAccessProfile: CGFloat = 1
+    static let leftAnchorAccessProfile: CGFloat = 89
+    static let heigthAnchorAccessProfile: CGFloat = 20
+    
+    //MARK: View em formato de linha
+    static let thirtyTwoLineView: CGFloat = 32
+    static let topAnchorLineView: CGFloat = 31
+    static let heigthAnchorLineView: CGFloat = 1
     
     //MARK: Botão ultima simulação
     static let bottomAnchorButtonSimulation: CGFloat = 79

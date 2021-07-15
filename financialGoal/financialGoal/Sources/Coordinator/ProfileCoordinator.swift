@@ -23,6 +23,7 @@ class ProfileCoordinator: Coordinator {
         profileScreen.onLogoff = {
             CrudUserDefaults().delete()
             KeychainService.deleteCredentials()
+            self.navigationController.viewControllers.removeAll()
             let startScreen = StartCoordinator(navigationController: self.navigationController)
             startScreen.start()
         }
