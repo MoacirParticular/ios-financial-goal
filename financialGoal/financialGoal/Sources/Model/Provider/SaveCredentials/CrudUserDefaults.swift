@@ -9,6 +9,12 @@ import Foundation
 
 class CrudUserDefaults {
     
+    
+    // MARK: - User identify
+    func verifyHaveData() -> Bool {
+        return UserDefaults.standard.object(forKey: StringConstants.username) != nil
+    }
+    
     func save(_ user: String, _ nick: String) {
         if user != String.empty {
             UserDefaults.standard.set(user, forKey: StringConstants.username)
@@ -18,6 +24,12 @@ class CrudUserDefaults {
         }
     }
     
+    func getUserCredentials() -> [String] {
+        let nickname = UserDefaults.standard.value(forKey: StringConstants.nickname) as? String ?? String.empty
+        let username = UserDefaults.standard.value(forKey: StringConstants.username) as? String ?? String.empty
+        return[nickname, username]
+    }
+    
     public func delete() {
         if let project = Bundle.main.bundleIdentifier {
             UserDefaults.standard.removePersistentDomain(forName: project)
@@ -25,13 +37,19 @@ class CrudUserDefaults {
         }
     }
     
-    func verifyHaveData() -> Bool {
-        return UserDefaults.standard.object(forKey: StringConstants.username) != nil
+    // MARK: - Screen calc
+    func saveScreen(_ screen: String) {
+        UserDefaults.standard.set(screen, forKey: StringConstantsCalcs.forKeyCals)
     }
     
-    func getUserCredentials() -> [String] {
-        let nickname = UserDefaults.standard.value(forKey: StringConstants.nickname) as? String ?? String.empty
-        let username = UserDefaults.standard.value(forKey: StringConstants.username) as? String ?? String.empty
-        return[nickname, username]
+    func verifyHaveScreenData() -> Bool {
+        if let _ = UserDefaults.standard.value(forKey: StringConstantsCalcs.forKeyCals) as? String {
+            return true
+        }
+        return false
+    }
+    
+    func getLastScreenCalc() -> String {
+        return UserDefaults.standard.value(forKey: StringConstantsCalcs.forKeyCals) as? String ?? String.empty
     }
 }

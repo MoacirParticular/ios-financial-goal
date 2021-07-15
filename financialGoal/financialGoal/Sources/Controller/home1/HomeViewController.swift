@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     var onScreenSelected: ((_ setSelected: LoginActionType ) -> Void)?
     var onButtonActionView: ((_ screenName: String) -> Void)?
     var lastScreen: String = String.empty
+    let userDefaults = CrudUserDefaults()
     
     let data = [
         CustomData(title: HomeStringConstants.calculator, icon: .iconMoneyCalc),
@@ -33,9 +34,9 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        if let screenCalc = UserDefaults.standard.value(forKey: StringConstantsCalcs.forKeyCals) as? String{
+        if userDefaults.verifyHaveScreenData() {
             self.homeView.setButtonLastSimulatorAndImage()
-            lastScreen = screenCalc
+            lastScreen = userDefaults.getLastScreenCalc()
         }
     }
     
