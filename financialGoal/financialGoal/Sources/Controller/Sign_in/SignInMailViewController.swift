@@ -12,12 +12,12 @@ class SignInMailViewController: UIViewController {
     // MARK: - Attributes
     let overrideView = SignInMailView(frame: FrameConstants.frameZero)
     var buttonAction: (() -> Void)?
+    let userDefaults = CrudUserDefaults()
     
     // MARK: - Methods/ Functions
     override func loadView() {
         dataRecover()
         self.view = self.overrideView
-        dataRestore()
     }
     
     override func viewDidLoad() {
@@ -28,14 +28,14 @@ class SignInMailViewController: UIViewController {
     }
     
     private func dataRecover() {
-        overrideView.txtField.text = SignInData.username
+        overrideView.txtField.text = self.userDefaults.getUserCredentials().last
     }
     
     private func getButtonAction() {
         overrideView.buttonAction = {
             guard let receivedMail = self.overrideView.txtField.text?.lowercased() else { return }
             if self.checkMail(receivedMail) {
-                SignInData.username = receivedMail
+                self.userDefaults.save(receivedMail, String.empty)
                 self.buttonAction?()
             } else {
                 self.showDefaultAlert(.InvalidMail, .MailError)
@@ -45,11 +45,6 @@ class SignInMailViewController: UIViewController {
     
     private func checkMail(_ username: String) -> Bool {
         return username.isValidEmail
-    }
-    
-    private func dataRestore() {
-        SignInData.username = String.empty
-        SignInData.nickname = String.empty
     }
 }
 

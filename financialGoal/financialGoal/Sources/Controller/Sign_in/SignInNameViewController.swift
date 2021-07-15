@@ -12,6 +12,7 @@ class SignInNameViewController: UIViewController {
     // MARK: - Attributes
     let overrideView = SignInNameView(frame: FrameConstants.frameZero)
     var buttonAction: (() -> Void)?
+    let userDefaults = CrudUserDefaults()
     
     // MARK: - Methods/ Functions
     override func loadView() {
@@ -27,14 +28,14 @@ class SignInNameViewController: UIViewController {
     }
     
     private func dataRecover() {
-        overrideView.txtField.text = SignInData.nickname
+        overrideView.txtField.text = userDefaults.getUserCredentials().first
     }
     
     private func getButtonAction() {
         overrideView.buttonAction = {
             if let receivedNickname = self.overrideView.txtField.text {
                 if self.checkNickname(receivedNickname) {
-                    SignInData.nickname = receivedNickname
+                    self.userDefaults.save(String.empty, receivedNickname)
                     self.buttonAction?()
                 } else {
                     self.showDefaultAlert(.InvalidNickname, .NoNickname)

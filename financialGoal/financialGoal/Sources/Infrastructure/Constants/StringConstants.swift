@@ -16,8 +16,8 @@ struct StringConstants {
     static let requiredError = "init(coder:) has not been implemented"
     
     //MARK: String Autologin Key UserDefault
-    static let userKey = "user"
-    static let passKey = "pass"
+    static let username = "user"
+    static let nickname = "nick"
     
     //MARK: String de criação Cell tela Calcs
     static let fatalErroCell:String = "Unable to create cell"

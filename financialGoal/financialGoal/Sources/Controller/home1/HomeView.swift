@@ -11,6 +11,7 @@ class HomeView: UIView {
     
     var buttonActionView: (() -> Void)?
     var logout: ((_ act: LoginActionType) -> Void)?
+    let userDefaults = CrudUserDefaults()
 
     //MARK: Cria e seta elementos na view
     override init(frame: CGRect) {
@@ -65,7 +66,7 @@ class HomeView: UIView {
     }
     
     //MARK: Label nome ou apelido
-    lazy var labelNickName: UILabel = {LabelComponent(.fontNickNameHome, SignInData.nickname, .customColorResultLabel, .left)}()
+    lazy var labelNickName: UILabel = {LabelComponent(.fontNickNameHome, userDefaults.getUserCredentials().first ?? String.empty, .customColorResultLabel, .left)}()
     func setLabelNickName() {
         addSubview(labelNickName)
       

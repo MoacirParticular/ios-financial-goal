@@ -15,7 +15,11 @@ class ProfileCoordinator: Coordinator {
     }
     
     func start() {
-        let profileScreen = ProfileViewController()
+        let usrData = CrudUserDefaults().getUserCredentials()
+        let nickname = usrData.first ?? String.empty
+        let username = usrData.last ?? String.empty
+        
+        let profileScreen = ProfileViewController(dataUser: UserData(nick: nickname, user: username))
         profileScreen.onLogoff = {
             CrudUserDefaults().delete()
             KeychainService.deleteCredentials()

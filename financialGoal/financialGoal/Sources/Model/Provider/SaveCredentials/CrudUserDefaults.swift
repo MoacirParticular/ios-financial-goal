@@ -9,9 +9,13 @@ import Foundation
 
 class CrudUserDefaults {
     
-    func save(_ user: String, _ pass: String) {
-        UserDefaults.standard.set(user, forKey: StringConstants.userKey)
-        UserDefaults.standard.set(pass, forKey: StringConstants.passKey)
+    func save(_ user: String, _ nick: String) {
+        if user != String.empty {
+            UserDefaults.standard.set(user, forKey: StringConstants.username)
+        }
+        if nick != String.empty {
+            UserDefaults.standard.set(nick, forKey: StringConstants.nickname)
+        }
     }
     
     public func delete() {
@@ -22,12 +26,12 @@ class CrudUserDefaults {
     }
     
     func verifyHaveData() -> Bool {
-        return UserDefaults.standard.object(forKey: StringConstants.userKey) != nil
+        return UserDefaults.standard.object(forKey: StringConstants.username) != nil
     }
     
     func getUserCredentials() -> [String] {
-        let username = UserDefaults.standard.value(forKey: StringConstants.userKey) as? String ?? String.empty
-        let password = UserDefaults.standard.value(forKey: StringConstants.passKey) as? String ?? String.empty
-        return[username,password]
+        let nickname = UserDefaults.standard.value(forKey: StringConstants.nickname) as? String ?? String.empty
+        let username = UserDefaults.standard.value(forKey: StringConstants.username) as? String ?? String.empty
+        return[nickname, username]
     }
 }
