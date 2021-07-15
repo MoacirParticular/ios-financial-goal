@@ -27,6 +27,13 @@ class SignInMailViewController: UIViewController {
         listennerKeyBoard()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            userDefaults.delete()
+        }
+    }
+    
     private func dataRecover() {
         overrideView.txtField.text = self.userDefaults.getUserCredentials().last
     }
