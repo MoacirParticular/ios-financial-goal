@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationTitleConfig(title: "Perfil")
+        self.navigationTitleConfig(title: ScreenProfileAtributes.nameNavigation)
         listenButton()
         
     }
