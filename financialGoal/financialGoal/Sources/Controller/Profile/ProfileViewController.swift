@@ -21,7 +21,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.navigationTitleConfig(title: ScreenProfileAtributes.nameNavigation)
         listenButton()
-        
     }
     
     private func listenButton() {

@@ -40,7 +40,7 @@ class HomeView: UIView {
         setlabelIconLink()
     }
     
-    //MARK: Criando e aplicando constraints na ViewTop
+    //MARK: View green topo
      var topScreenView: UIView = {
         let viewTop = UIView()
         viewTop.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
@@ -65,42 +65,27 @@ class HomeView: UIView {
     }
     
     //MARK: Label nome ou apelido
-    lazy var labelNickName: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        label.text = SignInData.nickname
-        label.font = .fontNickNameHome
-        label.textColor = .customColorResultLabel
-        label.textAlignment = .left
-        return label
-    }()
-    
+    lazy var labelNickName: UILabel = {LabelComponent(.fontNickNameHome, SignInData.nickname, .customColorResultLabel, .left)}()
     func setLabelNickName() {
         addSubview(labelNickName)
       
         NSLayoutConstraint.activate([
             labelNickName.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: HomeConstants.topAnchorLabelNickname),
-            labelNickName.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 89),
+            labelNickName.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorLabelNickName),
             labelNickName.rightAnchor.constraint(equalTo: self.rightAnchor, constant: HomeConstants.constantZero)
         ])
     }
+    
     //MARK: View Circle
-    var screenInCircle: UIView = {
-        let circle = UIView()
-        circle.translatesAutoresizingMaskIntoConstraints = false
-        circle.layer.cornerRadius = 22
-        circle.layer.borderWidth = 2
-        circle.layer.borderColor = UIColor.customColorResultLabel.cgColor
-        return circle
-    }()
+    var screenInCircle: UIView = {ViewComponent(radius: HomeConstants.cornerRadiusCircle, borderWidth: HomeConstants.borderWidthCircle, borderColor: .customColorResultLabel)}()
     
     public func setScreenInCircle(){
         addSubview(screenInCircle)
         NSLayoutConstraint.activate([
-            screenInCircle.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 118),
-            screenInCircle.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 30),
-            screenInCircle.heightAnchor.constraint(equalToConstant: 46),
-            screenInCircle.widthAnchor.constraint(equalToConstant: 46)
+            screenInCircle.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: HomeConstants.topAnchorCircle),
+            screenInCircle.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: HomeConstants.leftAnchorCircle),
+            screenInCircle.heightAnchor.constraint(equalToConstant: HomeConstants.heigthAnchorCircle),
+            screenInCircle.widthAnchor.constraint(equalToConstant: HomeConstants.widthAnchorCircle)
         ])
     }
     
@@ -113,8 +98,6 @@ class HomeView: UIView {
    
    func setImageProfile() {
     screenInCircle.addSubview(imageProfile)
-    
-
        NSLayoutConstraint.activate([
         imageProfile.centerXAnchor.constraint(equalTo: screenInCircle.centerXAnchor),
         imageProfile.centerYAnchor.constraint(equalTo: screenInCircle.centerYAnchor)
@@ -122,39 +105,34 @@ class HomeView: UIView {
    }
     
     //MARK: Button access profile
-     lazy var buttonAccessProfile: UIButton = {ButtonComponent(title: "acessar perfil >", colorTitle: .customColorResultLabel, font: .fontAccessProfile)}()
+    lazy var buttonAccessProfile: UIButton = {ButtonComponent(title: HomeStringConstants.accessProfile, colorTitle: .customColorResultLabel, font: .fontAccessProfile)}()
      
      func setButtonAccessProfile() {
          addSubview(buttonAccessProfile)
         buttonAccessProfile.addTarget(self, action: #selector(buttonActionAccessProfile), for: .touchUpInside)
          NSLayoutConstraint.activate([
-             buttonAccessProfile.topAnchor.constraint(equalTo: labelNickName.bottomAnchor, constant: 1),
-             buttonAccessProfile.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 89),
-             buttonAccessProfile.heightAnchor.constraint(equalToConstant: 20)
+            buttonAccessProfile.topAnchor.constraint(equalTo: labelNickName.bottomAnchor, constant: HomeConstants.topAnchorAccessProfile),
+            buttonAccessProfile.leftAnchor.constraint(equalTo: self.leftAnchor, constant: HomeConstants.leftAnchorAccessProfile),
+            buttonAccessProfile.heightAnchor.constraint(equalToConstant: HomeConstants.heigthAnchorAccessProfile)
          ])
      }
+    
     @objc
     func buttonActionAccessProfile(sender: UIButton!) {
         logout?(.Profile)
     }
  
     //MARK: Linha após o botão acessar perfil
-    lazy var lineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .customColorResultLabel
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    lazy var lineView: UIView = {ViewComponent(background: .customColorResultLabel)}()
     
     public func setLineView() {
         addSubview(lineView)
-        let screenWidth = UIScreen.main.bounds.width - 32
+        let screenWidth = UIScreen.main.bounds.width - HomeConstants.thirtyTwoLineView
         NSLayoutConstraint.activate([
-            lineView.topAnchor.constraint(equalTo: self.buttonAccessProfile.bottomAnchor, constant: 31),
+            lineView.topAnchor.constraint(equalTo: self.buttonAccessProfile.bottomAnchor, constant: HomeConstants.topAnchorLineView),
             lineView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 1),
+            lineView.heightAnchor.constraint(equalToConstant: HomeConstants.heigthAnchorLineView),
             lineView.widthAnchor.constraint(equalToConstant: screenWidth )
-            
         ])
     }
   
@@ -204,7 +182,6 @@ class HomeView: UIView {
             buttonIconCalculator.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: HomeConstants.rightAnchorCalculator),
             buttonIconCalculator.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: HomeConstants.leftAnchorCalculator)
         ])
-
     }
     
     //MARK: Botão ultima visualização
@@ -245,21 +222,11 @@ class HomeView: UIView {
         buttonActionView?()
     }
     
-   
     //MARK: Label icone em roxo
-    lazy var labelIconLink: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        label.text = HomeStringConstants.textLinkLastSimulator
-        label.font = .fontLabelSubTitleRegular
-        label.textColor = .customColorRoxo
-        label.textAlignment = .center
-        return label
-    }()
+    lazy var labelIconLink: UILabel = {LabelComponent(.fontLabelSubTitleRegular, HomeStringConstants.textLinkLastSimulator, .customColorRoxo, .center)}()
     
     func setlabelIconLink() {
         addSubview(labelIconLink)
-      
         NSLayoutConstraint.activate([
             labelIconLink.topAnchor.constraint(equalTo: buttonLastSimulation.topAnchor, constant: HomeConstants.topAnchorLink),
            labelIconLink.leftAnchor.constraint(equalTo: buttonLastSimulation.leftAnchor, constant: HomeConstants.leftAnchorLink)
@@ -275,7 +242,6 @@ class HomeView: UIView {
     
     func setImageIoga() {
         addSubview(imageIoga)
-        
         NSLayoutConstraint.activate([
             imageIoga.topAnchor.constraint(equalTo: self.buttonLastSimulation.topAnchor, constant: HomeConstants.topAnchorImageIoga),
             imageIoga.rightAnchor.constraint(equalTo: self.buttonLastSimulation.rightAnchor, constant: HomeConstants.rightAnchorImageIoga)
