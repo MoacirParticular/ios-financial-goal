@@ -21,6 +21,5 @@ public class SignInCoordinator: Coordinator {
             newVc.start()
         }
         self.navigationController.pushViewController(screenViewController, animated: true)
-        
     }
 }
