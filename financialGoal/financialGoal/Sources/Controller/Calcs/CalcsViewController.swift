@@ -11,6 +11,7 @@ class CalcsViewController: UIViewController {
     //MARK: - Propertys
     var tableView = UITableView()
     var onButtonCalcs: ((_ screen: CalcsTypesScreen) -> Void)?
+    let userDefaults = CrudUserDefaults()
     
     //MARK: - DidLoad
     override func viewDidLoad() {
@@ -59,7 +60,7 @@ extension CalcsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let screenName = CalcsTypes.calcTypes[indexPath.row].screenType
         self.onButtonCalcs?(screenName)
-        UserDefaults.standard.set(screenName.stringValue, forKey: StringConstantsCalcs.forKeyCals)
+        userDefaults.saveScreen(screenName.stringValue)
     }
   
 }
