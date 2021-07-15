@@ -10,6 +10,7 @@ import UIKit
 struct ScreenProfileAtributes {
     static let button: String = "SAIR DO APLICATIVO"
     static let version: String = "versao 1.0.0"
+    static let nameNavigation: String = "Perfil"
 }
 
 struct UserData {
@@ -55,8 +56,8 @@ class ProfileView: UIView {
     required init?(coder: NSCoder) {
         fatalError(StringConstants.requiredError)
     }
-    // MARK: - Method set values of data user
     
+    // MARK: - Method set values of data user
     private func setValues(_ data: UserData) {
         lbNickname.text = data.nick
         lbUsername.text = data.user
