@@ -13,7 +13,7 @@ enum LoginActionType: CodingKey {
     case Logado
     case Calcs
     case Simulator
-    case Logout
+    case Profile
 }
 
 

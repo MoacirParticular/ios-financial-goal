@@ -16,6 +16,7 @@ final class LoginViewModel {
                 guard let messsage = returnData.message else { return }
                 if returnData.res == true {
                     SignInData.nickname = returnData.user?.nickname ?? String.empty
+                    SignInData.username = returnData.user?.username ?? String.empty
                     KeychainService.saveCredentials(user: username, pass: password)
                     completion(true)
                 } else {
