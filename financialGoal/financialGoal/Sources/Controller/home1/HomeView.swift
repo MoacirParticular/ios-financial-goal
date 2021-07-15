@@ -40,7 +40,7 @@ class HomeView: UIView {
         setlabelIconLink()
     }
     
-    //MARK: Criando e aplicando constraints na ViewTop
+    //MARK: View green topo
      var topScreenView: UIView = {
         let viewTop = UIView()
         viewTop.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
@@ -77,14 +77,7 @@ class HomeView: UIView {
     }
     
     //MARK: View Circle
-    var screenInCircle: UIView = {
-        let circle = UIView()
-        circle.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        circle.layer.cornerRadius = HomeConstants.cornerRadiusCircle
-        circle.layer.borderWidth = HomeConstants.borderWidthCircle
-        circle.layer.borderColor = UIColor.customColorResultLabel.cgColor
-        return circle
-    }()
+    var screenInCircle: UIView = {ViewComponent(radius: HomeConstants.cornerRadiusCircle, borderWidth: HomeConstants.borderWidthCircle, borderColor: .customColorResultLabel)}()
     
     public func setScreenInCircle(){
         addSubview(screenInCircle)
@@ -130,12 +123,7 @@ class HomeView: UIView {
     }
  
     //MARK: Linha após o botão acessar perfil
-    lazy var lineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .customColorResultLabel
-        view.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        return view
-    }()
+    lazy var lineView: UIView = {ViewComponent(background: .customColorResultLabel)}()
     
     public func setLineView() {
         addSubview(lineView)

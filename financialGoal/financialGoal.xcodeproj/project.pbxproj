@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C197B89269388890013F347 /* EnumIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C197B88269388890013F347 /* EnumIndex.swift */; };
 		1C1E7D3C2686769D005B3DBA /* requestLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */; };
+		1C2DA64F26A0697A003BF621 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA64E26A0697A003BF621 /* ViewComponent.swift */; };
 		1C36EF54269744F0001A5B06 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C36EF53269744F0001A5B06 /* ButtonComponent.swift */; };
 		1C7BB230268A3D0A00D0E196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB22F268A3D0A00D0E196 /* HomeView.swift */; };
 		1C7BB241268A7BF900D0E196 /* IconsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BB240268A7BF900D0E196 /* IconsHome.swift */; };
@@ -174,6 +175,7 @@
 /* Begin PBXFileReference section */
 		1C197B88269388890013F347 /* EnumIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIndex.swift; sourceTree = "<group>"; };
 		1C1E7D3B2686769D005B3DBA /* requestLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLoginTests.swift; sourceTree = "<group>"; };
+		1C2DA64E26A0697A003BF621 /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		1C36EF53269744F0001A5B06 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		1C7BB22F268A3D0A00D0E196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C7BB240268A7BF900D0E196 /* IconsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsHome.swift; sourceTree = "<group>"; };
@@ -831,6 +833,7 @@
 				89FC312626962C01009D4091 /* LabelComponent.swift */,
 				C17B740C269739D60085200F /* TextFieldComponent.swift */,
 				1C36EF53269744F0001A5B06 /* ButtonComponent.swift */,
+				1C2DA64E26A0697A003BF621 /* ViewComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1172,6 +1175,7 @@
 				8982EFF2267D17F40002085E /* UIViewController+.swift in Sources */,
 				C1184DAD268BF88C00A6AA57 /* ValueCalcsConstants.swift in Sources */,
 				C1AD75D326791E0200BB9729 /* (null) in Sources */,
+				1C2DA64F26A0697A003BF621 /* ViewComponent.swift in Sources */,
 				1CC238F426827715000653F6 /* HomeViewController.swift in Sources */,
 				891D9FC32692A03B00352D6D /* CrudUserDefaults.swift in Sources */,
 				893F1E53268E27F200880717 /* RequestMonthly.swift in Sources */,
