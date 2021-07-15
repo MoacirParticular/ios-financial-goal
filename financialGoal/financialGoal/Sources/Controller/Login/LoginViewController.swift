@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     //MARK: Proprieties:
     var loginView = LoginView(frame: FrameConstants.frameZero)
     let alertVC = AlertViewController()
+    let userDefaults = CrudUserDefaults()
     
     var setViewHome: ((_ login: LoginActionType) -> Void)?
         
@@ -69,13 +70,7 @@ class LoginViewController: UIViewController {
     }
     
     private func dataRecover() {
-        loginView.textFieldUser.text = SignInData.username
-        self.dataRestore()
-    }
-    
-    private func dataRestore() {
-        SignInData.username = String.empty
-        SignInData.nickname = String.empty
+        loginView.textFieldUser.text = self.userDefaults.getUserCredentials().last
     }
 }
 

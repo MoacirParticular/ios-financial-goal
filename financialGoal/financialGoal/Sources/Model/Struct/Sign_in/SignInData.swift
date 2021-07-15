@@ -6,8 +6,3 @@
 //
 
 import Foundation
-
-public struct SignInData {
-    public static var username: String = String.empty
-    public static var nickname: String = String.empty
-}

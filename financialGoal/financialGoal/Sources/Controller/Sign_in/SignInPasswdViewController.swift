@@ -12,6 +12,7 @@ class SignInPasswdViewController: UIViewController {
     // MARK: - Attributes
     let overrideView = SignInPasswdView(frame: FrameConstants.frameZero)
     var status: ((_ status: StatusSignIn) -> Void)?
+    let userDefaults = CrudUserDefaults()
     
     // MARK: - Methods/ Functions
     override func loadView() {
@@ -35,7 +36,9 @@ class SignInPasswdViewController: UIViewController {
             self.showActivity()
             self.requestApi(passwd) { (messageToAlert,status) in
                 if status == true {
-                    self.actionLogin(SignInData.username, passwd)
+                    if let user = self.userDefaults.getUserCredentials().last {
+                        self.actionLogin(user, passwd)
+                    }
                     return
                 }
                 self.showAlertStatusSignIn(.Warning, messageToAlert, status)
@@ -53,7 +56,10 @@ class SignInPasswdViewController: UIViewController {
     }
     
     private func requestApi(_ passwd: String, completionHandler: @escaping(String,Bool) -> Void) {
-        RequestSignIn().signIn(SignInData.username, SignInData.nickname, passwd) { (result) in
+        guard let nickname = userDefaults.getUserCredentials().first else { return }
+        guard let username = userDefaults.getUserCredentials().last else { return }
+        
+        RequestSignIn().signIn(username, nickname, passwd) { (result) in
             var status = false
             switch(result) {
             case .success(let returnData):

@@ -11,6 +11,7 @@ class HomeView: UIView {
     
     var buttonActionView: (() -> Void)?
     var logout: ((_ act: LoginActionType) -> Void)?
+    let userDefaults = CrudUserDefaults()
 
     //MARK: Cria e seta elementos na view
     override init(frame: CGRect) {
@@ -68,7 +69,7 @@ class HomeView: UIView {
     lazy var labelNickName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = FrameConstants.frameAutoresizing
-        label.text = SignInData.nickname
+        label.text = userDefaults.getUserCredentials().first
         label.font = .fontNickNameHome
         label.textColor = .customColorResultLabel
         label.textAlignment = .left
